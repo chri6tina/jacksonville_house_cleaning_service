@@ -421,7 +421,7 @@ export default function DowntownJacksonvillePage() {
               Why Choose Us for Downtown Jacksonville?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local expertise that understands Downtown Jacksonville's unique cleaning needs
+              Local expertise that understands Downtown Jacksonville&apos;s unique cleaning needs
             </p>
           </div>
           
@@ -432,7 +432,7 @@ export default function DowntownJacksonvillePage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Knowledge</h3>
               <p className="text-gray-600">
-                We understand Downtown Jacksonville's unique architecture, traffic patterns, and cleaning challenges
+                We understand Downtown Jacksonville&apos;s unique architecture, traffic patterns, and cleaning challenges
               </p>
             </div>
             

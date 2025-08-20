@@ -94,7 +94,7 @@ export default function DowntownJacksonvilleVacationRentalTurnoverPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's urban environment requires vacation rental turnover cleaning services 
+                  Downtown Jacksonville&apos;s urban environment requires vacation rental turnover cleaning services 
                   that understand the unique challenges of high-rise properties and urban maintenance. From 
                   guest coordination to building access, we provide comprehensive turnover solutions.
                 </p>
@@ -110,7 +110,7 @@ export default function DowntownJacksonvilleVacationRentalTurnoverPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {turnoverFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function DowntownJacksonvilleVacationRentalTurnoverPage() {
               Downtown Jacksonville Vacation Rental Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique vacation rental environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique vacation rental environment
             </p>
           </div>
           
@@ -157,7 +157,7 @@ export default function DowntownJacksonvilleVacationRentalTurnoverPage() {
               Our Downtown Jacksonville Turnover Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to vacation rental turnover in Downtown Jacksonville's unique urban environment
+              A systematic approach to vacation rental turnover in Downtown Jacksonville&apos;s unique urban environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function DowntownJacksonvilleVacationRentalTurnoverPage() {
               Downtown Jacksonville Turnover Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized turnover cleaning solutions for Downtown Jacksonville's unique vacation rental properties
+              Specialized turnover cleaning solutions for Downtown Jacksonville&apos;s unique vacation rental properties
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function DowntownJacksonvilleVacationRentalTurnoverPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise Turnover Management</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise vacation rentals require specialized turnover approaches. 
+                Downtown Jacksonville&apos;s high-rise vacation rentals require specialized turnover approaches. 
                 We handle building access, elevator coordination, and urban property maintenance.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function DowntownJacksonvilleVacationRentalTurnoverPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Flexible Downtown Scheduling</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's busy environment requires flexible turnover cleaning scheduling. 
+                Downtown Jacksonville&apos;s busy environment requires flexible turnover cleaning scheduling. 
                 We work around guest check-ins and Downtown building requirements.
               </p>
               <ul className="space-y-2 text-gray-600">

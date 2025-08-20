@@ -111,7 +111,7 @@ export default function SanMarcoPage() {
 
             {/* Subtitle */}
             <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-              We're proud to serve the sophisticated San Marco neighborhood of Jacksonville. From elegant 
+              We&apos;re proud to serve the sophisticated San Marco neighborhood of Jacksonville. From elegant 
               homes to upscale businesses, we provide premium cleaning services that match the high standards 
               of this distinguished community.
             </p>
@@ -178,7 +178,7 @@ export default function SanMarcoPage() {
                 cleaning services that exceed expectations.
               </p>
               <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
-                Our team is familiar with San Marco's unique architectural styles, luxury finishes, and 
+                Our team is familiar with San Marco&apos;s unique architectural styles, luxury finishes, and 
                 the specific cleaning requirements of high-end homes. We provide discreet, professional 
                 service that respects your privacy and maintains the elegance of your San Marco property.
               </p>
@@ -274,7 +274,7 @@ export default function SanMarcoPage() {
                 </div>
                 
                 <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
+                  <h4 className="font-semibold text-charcoal mb-3">What&apos;s Included:</h4>
                   {service.includes.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex items-center gap-3">
                       <Check className="w-4 h-4 text-accent-green flex-shrink-0" />
@@ -332,11 +332,11 @@ export default function SanMarcoPage() {
       <section className="py-20 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Experience San Marco's Preferred Cleaning Service?
+            Ready to Experience San Marco&apos;s Preferred Cleaning Service?
           </h2>
           <p className="text-xl text-white/90 mb-8">
             Join over 80 San Marco families who trust us with their homes. 
-            Get your free quote today and see why we're the neighborhood's choice.
+            Get your free quote today and see why we&apos;re the neighborhood's choice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

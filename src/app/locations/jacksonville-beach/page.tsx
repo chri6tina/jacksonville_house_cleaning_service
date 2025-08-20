@@ -449,7 +449,7 @@ export default function JacksonvilleBeachPage() {
               Why Choose Us for Jacksonville Beach?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local expertise that understands Jacksonville Beach's unique cleaning needs
+              Local expertise that understands Jacksonville Beach&apos;s unique cleaning needs
             </p>
           </div>
           
@@ -460,7 +460,7 @@ export default function JacksonvilleBeachPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Coastal Expertise</h3>
               <p className="text-gray-600">
-                We understand Jacksonville Beach's unique coastal environment and cleaning challenges
+                We understand Jacksonville Beach&apos;s unique coastal environment and cleaning challenges
               </p>
             </div>
             

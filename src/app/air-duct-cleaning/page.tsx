@@ -111,7 +111,7 @@ export default function AirDuctCleaningPage() {
           </h1>
           <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed mb-8">
             Breathe easier with professional air duct cleaning that removes allergens, improves air quality, 
-            and boosts your HVAC system's efficiency. Starting at just $150 per system.
+            and boosts your HVAC system&apos;s efficiency. Starting at just $150 per system.
           </p>
           
           {/* Quick Actions */}
@@ -183,11 +183,11 @@ export default function AirDuctCleaningPage() {
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* What&apos;s Included */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">What's Included in Our Service</h2>
+            <h2 className="text-4xl font-bold text-charcoal mb-6">What&apos;s Included in Our Service</h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
               Our comprehensive air duct cleaning service covers every aspect of your HVAC system 
               to ensure maximum cleanliness and efficiency.
@@ -264,7 +264,7 @@ export default function AirDuctCleaningPage() {
             Ready to Breathe Easier?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Contact us today for a free air duct cleaning quote and improve your home's air quality.
+            Contact us today for a free air duct cleaning quote and improve your home&apos;s air quality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

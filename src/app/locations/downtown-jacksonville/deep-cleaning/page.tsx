@@ -64,7 +64,7 @@ export default function DowntownJacksonvilleDeepCleaningPage() {
           </h1>
           <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-4xl mx-auto">
             Professional deep cleaning services designed specifically for Downtown Jacksonville properties. 
-            From luxury condos to historic buildings, we provide comprehensive deep cleaning that meets Downtown's high standards.
+            From luxury condos to historic buildings, we provide comprehensive deep cleaning that meets Downtown&apos;s high standards.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -94,7 +94,7 @@ export default function DowntownJacksonvilleDeepCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's diverse property types require deep cleaning services that understand 
+                  Downtown Jacksonville&apos;s diverse property types require deep cleaning services that understand 
                   the unique challenges of urban environments. From high-rise condos to historic townhomes, 
                   we provide thorough deep cleaning solutions.
                 </p>
@@ -110,7 +110,7 @@ export default function DowntownJacksonvilleDeepCleaningPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {deepCleaningFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function DowntownJacksonvilleDeepCleaningPage() {
               Downtown Jacksonville Deep Cleaning Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique urban environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique urban environment
             </p>
           </div>
           
@@ -157,7 +157,7 @@ export default function DowntownJacksonvilleDeepCleaningPage() {
               Our Downtown Jacksonville Deep Cleaning Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to deep cleaning in Downtown Jacksonville's unique environment
+              A systematic approach to deep cleaning in Downtown Jacksonville&apos;s unique environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function DowntownJacksonvilleDeepCleaningPage() {
               Downtown Jacksonville Deep Cleaning Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized deep cleaning solutions for Downtown Jacksonville's unique property types
+              Specialized deep cleaning solutions for Downtown Jacksonville&apos;s unique property types
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function DowntownJacksonvilleDeepCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise Deep Cleaning</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise buildings require specialized deep cleaning approaches. 
+                Downtown Jacksonville&apos;s high-rise buildings require specialized deep cleaning approaches. 
                 We handle elevator access, multi-floor coordination, and security protocols for thorough deep cleaning.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function DowntownJacksonvilleDeepCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Historic Property Care</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's historic properties require careful deep cleaning approaches. 
+                Downtown Jacksonville&apos;s historic properties require careful deep cleaning approaches. 
                 We use gentle yet effective methods to preserve architectural integrity while achieving deep cleanliness.
               </p>
               <ul className="space-y-2 text-gray-600">

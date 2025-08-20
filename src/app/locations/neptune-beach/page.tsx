@@ -199,14 +199,14 @@ export default function NeptuneBeachPage() {
                   perfect blend of beachfront living and small-town charm.
                 </p>
                 <p>
-                  The area's coastal environment creates unique cleaning challenges that require specialized 
+                  The area&apos;s coastal environment creates unique cleaning challenges that require specialized 
                   expertise. From salt air damage and beach sand infiltration to humidity control and 
                   coastal property preservation, Neptune Beach properties need cleaning services that 
                   understand the coastal environment and local business community.
                 </p>
                 <p>
                   Our local team has deep roots in Neptune Beach, with strong partnerships with local 
-                  businesses, restaurants, and community organizations. We understand the area's unique 
+                  businesses, restaurants, and community organizations. We understand the area&apos;s unique 
                   character and coastal challenges, providing cleaning services that preserve Neptune 
                   Beach's charm while maintaining modern cleanliness standards.
                 </p>
@@ -264,7 +264,7 @@ export default function NeptuneBeachPage() {
               Why Choose Us for Neptune Beach Cleaning?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Coastal expertise that understands Neptune Beach's unique cleaning challenges and community needs
+              Coastal expertise that understands Neptune Beach&apos;s unique cleaning challenges and community needs
             </p>
           </div>
           
@@ -275,7 +275,7 @@ export default function NeptuneBeachPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Coastal Environment Expertise</h3>
               <p className="text-gray-600">
-                We understand Neptune Beach's coastal challenges, from salt air damage and beach sand 
+                We understand Neptune Beach&apos;s coastal challenges, from salt air damage and beach sand 
                 infiltration to humidity control and coastal property preservation.
               </p>
             </div>
@@ -286,7 +286,7 @@ export default function NeptuneBeachPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Beach Cottage Care</h3>
               <p className="text-gray-600">
-                With Neptune Beach's charming beach cottages, we provide cleaning methods that 
+                With Neptune Beach&apos;s charming beach cottages, we provide cleaning methods that 
                 preserve architectural character while maintaining modern cleanliness standards.
               </p>
             </div>
@@ -297,7 +297,7 @@ export default function NeptuneBeachPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Business Support</h3>
               <p className="text-gray-600">
-                We're proud partners with Neptune Beach restaurants, shops, and community organizations, 
+                We&apos;re proud partners with Neptune Beach restaurants, shops, and community organizations, 
                 demonstrating our commitment to the area's growth and prosperity.
               </p>
             </div>
@@ -321,7 +321,7 @@ export default function NeptuneBeachPage() {
             <div className="bg-blue-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-blue-900 mb-4">Salt Air & Coastal Environment</h3>
               <p className="text-blue-800 mb-4">
-                Neptune Beach's coastal location means constant exposure to salt air, humidity, and 
+                Neptune Beach&apos;s coastal location means constant exposure to salt air, humidity, and 
                 beach sand, creating unique cleaning challenges that require specialized expertise.
               </p>
               <ul className="space-y-2 text-blue-700">
@@ -343,7 +343,7 @@ export default function NeptuneBeachPage() {
             <div className="bg-green-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-green-900 mb-4">Beach Cottage Preservation</h3>
               <p className="text-green-800 mb-4">
-                With Neptune Beach's charming beach cottages, we provide cleaning methods that 
+                With Neptune Beach&apos;s charming beach cottages, we provide cleaning methods that 
                 preserve architectural character while maintaining modern cleanliness standards.
               </p>
               <ul className="space-y-2 text-green-700">
@@ -455,7 +455,7 @@ export default function NeptuneBeachPage() {
           </h2>
           <p className="text-xl text-blue-800 mb-8 max-w-3xl mx-auto">
             Join hundreds of satisfied Neptune Beach residents and businesses who trust us with their cleaning needs. 
-            Get your free quote today and discover why we're the preferred cleaning service in Neptune Beach!
+            Get your free quote today and discover why we&apos;re the preferred cleaning service in Neptune Beach!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

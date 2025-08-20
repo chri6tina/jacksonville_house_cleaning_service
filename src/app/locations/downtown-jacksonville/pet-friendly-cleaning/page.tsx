@@ -94,7 +94,7 @@ export default function DowntownJacksonvillePetFriendlyCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's urban environment requires pet-friendly cleaning services that understand 
+                  Downtown Jacksonville&apos;s urban environment requires pet-friendly cleaning services that understand 
                   the unique challenges of high-rise living with pets. From odor elimination to safe cleaning 
                   products, we provide comprehensive pet-friendly solutions.
                 </p>
@@ -110,7 +110,7 @@ export default function DowntownJacksonvillePetFriendlyCleaningPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {petCleaningFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function DowntownJacksonvillePetFriendlyCleaningPage() {
               Downtown Jacksonville Pet Cleaning Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique pet-friendly environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique pet-friendly environment
             </p>
           </div>
           
@@ -157,7 +157,7 @@ export default function DowntownJacksonvillePetFriendlyCleaningPage() {
               Our Downtown Jacksonville Pet Cleaning Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to pet-friendly cleaning in Downtown Jacksonville's unique environment
+              A systematic approach to pet-friendly cleaning in Downtown Jacksonville&apos;s unique environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function DowntownJacksonvillePetFriendlyCleaningPage() {
               Downtown Jacksonville Pet Cleaning Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized pet-friendly cleaning solutions for Downtown Jacksonville's unique urban properties
+              Specialized pet-friendly cleaning solutions for Downtown Jacksonville&apos;s unique urban properties
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function DowntownJacksonvillePetFriendlyCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise Pet Care</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise properties require specialized pet-friendly cleaning approaches. 
+                Downtown Jacksonville&apos;s high-rise properties require specialized pet-friendly cleaning approaches. 
                 We handle building regulations, pet safety, and urban pet maintenance protocols.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function DowntownJacksonvillePetFriendlyCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Pet-Safe Downtown Standards</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's urban environment requires the highest pet safety standards. 
+                Downtown Jacksonville&apos;s urban environment requires the highest pet safety standards. 
                 We use only pet-safe products and maintain strict safety protocols.
               </p>
               <ul className="space-y-2 text-gray-600">

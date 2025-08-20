@@ -238,7 +238,7 @@ export default function EventVenueCleaningPage() {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
+                    <h4 className="font-semibold text-charcoal mb-3">What&apos;s Included:</h4>
                     <ul className="space-y-2">
                       {service.includes.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start space-x-3">

@@ -294,7 +294,7 @@ export default function InformationPage() {
               Need More Specific Information?
             </h2>
             <p className="text-gray-700 text-lg mb-8">
-              Can't find what you're looking for? Our team is here to help with any questions 
+              Can&apos;t find what you're looking for? Our team is here to help with any questions 
               about our services or cleaning in general.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

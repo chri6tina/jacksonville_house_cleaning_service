@@ -150,7 +150,7 @@ export default function PressureWashingPage() {
             Professional <span className="text-emerald-600">Pressure Washing</span>
           </h1>
           <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed mb-8">
-            Transform your property's appearance with our professional pressure washing services. 
+            Transform your property&apos;s appearance with our professional pressure washing services. 
             From driveways to building exteriors, we restore surfaces to like-new condition. Starting at just $100.
           </p>
           
@@ -328,7 +328,7 @@ export default function PressureWashingPage() {
             Ready to Transform Your Property?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Contact us today for a free pressure washing quote and restore your property's curb appeal.
+            Contact us today for a free pressure washing quote and restore your property&apos;s curb appeal.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

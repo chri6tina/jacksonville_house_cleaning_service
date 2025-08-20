@@ -94,7 +94,7 @@ export default function DowntownJacksonvilleMedicalFacilityCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's urban environment requires medical facility cleaning services that understand 
+                  Downtown Jacksonville&apos;s urban environment requires medical facility cleaning services that understand 
                   the unique challenges of high-rise medical centers and urban healthcare. From sterile environments 
                   to infection control, we provide comprehensive medical cleaning solutions.
                 </p>
@@ -111,7 +111,7 @@ export default function DowntownJacksonvilleMedicalFacilityCleaningPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {medicalFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -133,7 +133,7 @@ export default function DowntownJacksonvilleMedicalFacilityCleaningPage() {
               Downtown Jacksonville Medical Facility Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique medical facility environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique medical facility environment
             </p>
           </div>
           
@@ -158,7 +158,7 @@ export default function DowntownJacksonvilleMedicalFacilityCleaningPage() {
               Our Downtown Jacksonville Medical Facility Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to medical facility cleaning in Downtown Jacksonville's unique environment
+              A systematic approach to medical facility cleaning in Downtown Jacksonville&apos;s unique environment
             </p>
           </div>
           
@@ -187,7 +187,7 @@ export default function DowntownJacksonvilleMedicalFacilityCleaningPage() {
               Downtown Jacksonville Medical Facility Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized medical facility cleaning solutions for Downtown Jacksonville's unique urban healthcare environment
+              Specialized medical facility cleaning solutions for Downtown Jacksonville&apos;s unique urban healthcare environment
             </p>
           </div>
           
@@ -198,7 +198,7 @@ export default function DowntownJacksonvilleMedicalFacilityCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise Medical Management</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise medical facilities require specialized cleaning approaches. 
+                Downtown Jacksonville&apos;s high-rise medical facilities require specialized cleaning approaches. 
                 We handle building access, elevator coordination, and urban healthcare maintenance.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -215,7 +215,7 @@ export default function DowntownJacksonvilleMedicalFacilityCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Healthcare Standards Compliance</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's medical environment requires the highest healthcare standards. 
+                Downtown Jacksonville&apos;s medical environment requires the highest healthcare standards. 
                 We maintain strict infection control and safety protocols.
               </p>
               <ul className="space-y-2 text-gray-600">

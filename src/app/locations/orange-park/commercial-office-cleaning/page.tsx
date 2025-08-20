@@ -43,19 +43,19 @@ export default function OrangeParkCommercialOfficeCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Orange Park's unique suburban character, with its mix of military families from NAS Jacksonville, 
+                  Orange Park&apos;s unique suburban character, with its mix of military families from NAS Jacksonville, 
                   medical professionals from the Orange Park Medical Center, and growing businesses, requires commercial 
                   office cleaning services that understand local needs and schedules.
                 </p>
                 <p>
-                  Our commercial office cleaning service in Orange Park is designed specifically for the area's diverse 
+                  Our commercial office cleaning service in Orange Park is designed specifically for the area&apos;s diverse 
                   business community, from medical offices to military support businesses. We understand that medical 
                   facilities need specialized cleaning protocols, military support businesses require flexible scheduling, 
                   and all businesses need reliable, professional cleaning services.
                 </p>
                 <p>
                   With strong partnerships with local Orange Park businesses, schools, and community organizations, 
-                  we provide commercial office cleaning that supports the area's growth and prosperity while maintaining 
+                  we provide commercial office cleaning that supports the area&apos;s growth and prosperity while maintaining 
                   the high standards Orange Park businesses expect.
                 </p>
               </div>
@@ -142,7 +142,7 @@ export default function OrangeParkCommercialOfficeCleaningPage() {
             <div className="bg-green-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-green-900 mb-4">Military Support Business Focus</h3>
               <p className="text-green-800 mb-4">
-                Orange Park's proximity to NAS Jacksonville means we understand the unique needs of 
+                Orange Park&apos;s proximity to NAS Jacksonville means we understand the unique needs of 
                 military support businesses and their cleaning requirements.
               </p>
               <ul className="space-y-2 text-green-700">
@@ -183,7 +183,7 @@ export default function OrangeParkCommercialOfficeCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Assessment</h3>
               <p className="text-gray-600">
-                We evaluate your Orange Park business's specific cleaning needs, considering 
+                We evaluate your Orange Park business&apos;s specific cleaning needs, considering 
                 the area's business regulations and industry requirements.
               </p>
             </div>
@@ -194,7 +194,7 @@ export default function OrangeParkCommercialOfficeCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Customized Plan</h3>
               <p className="text-gray-600">
-                Develop a commercial cleaning plan tailored to your Orange Park business's layout, 
+                Develop a commercial cleaning plan tailored to your Orange Park business&apos;s layout, 
                 schedule, and specific industry needs.
               </p>
             </div>

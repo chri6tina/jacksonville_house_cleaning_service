@@ -228,7 +228,7 @@ export default function PetFriendlyCleaningPage() {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
+                    <h4 className="font-semibold text-charcoal mb-3">What&apos;s Included:</h4>
                     <ul className="space-y-2">
                       {service.includes.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start space-x-3">
@@ -316,7 +316,7 @@ export default function PetFriendlyCleaningPage() {
               <p className="text-lg text-charcoal/70 mb-8 leading-relaxed">
                 Regular cleaning services often miss the specific challenges that pets create. Our 
                 pet-friendly cleaning service uses specialized equipment, pet-safe products, and proven 
-                techniques to eliminate pet odors, allergens, and messes that standard cleaning can't handle.
+                techniques to eliminate pet odors, allergens, and messes that standard cleaning can&apos;t handle.
               </p>
               
               <div className="space-y-4">

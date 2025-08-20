@@ -80,7 +80,7 @@ export default function ApartmentCleaningPage() {
                 Professional Apartment Cleaning
               </h2>
               <p className="text-xl text-charcoal/70 mb-8 leading-relaxed">
-                Whether you're a busy professional, student, or just want to enjoy a clean living space, 
+                Whether you&apos;re a busy professional, student, or just want to enjoy a clean living space, 
                 our apartment cleaning services are designed to fit your lifestyle and budget. We understand 
                 the unique challenges of apartment living and provide thorough, efficient cleaning solutions.
               </p>
@@ -137,7 +137,7 @@ export default function ApartmentCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              What's Included in Our Apartment Cleaning
+              What&apos;s Included in Our Apartment Cleaning
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
               Our comprehensive apartment cleaning service covers every area of your living space 

@@ -94,7 +94,7 @@ export default function DowntownJacksonvilleAirDuctCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's high-rise buildings and urban environments require air duct cleaning 
+                  Downtown Jacksonville&apos;s high-rise buildings and urban environments require air duct cleaning 
                   services that understand the unique challenges of complex HVAC systems. From modern office 
                   buildings to luxury condos, we provide comprehensive air duct cleaning solutions.
                 </p>
@@ -110,7 +110,7 @@ export default function DowntownJacksonvilleAirDuctCleaningPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {airDuctFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function DowntownJacksonvilleAirDuctCleaningPage() {
               Downtown Jacksonville Air Duct Cleaning Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique HVAC environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique HVAC environment
             </p>
           </div>
           
@@ -157,7 +157,7 @@ export default function DowntownJacksonvilleAirDuctCleaningPage() {
               Our Downtown Jacksonville Air Duct Cleaning Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to air duct cleaning in Downtown Jacksonville's unique environment
+              A systematic approach to air duct cleaning in Downtown Jacksonville&apos;s unique environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function DowntownJacksonvilleAirDuctCleaningPage() {
               Downtown Jacksonville Air Duct Cleaning Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized air duct cleaning solutions for Downtown Jacksonville's unique building types
+              Specialized air duct cleaning solutions for Downtown Jacksonville&apos;s unique building types
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function DowntownJacksonvilleAirDuctCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise HVAC Systems</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise buildings require specialized air duct cleaning approaches. 
+                Downtown Jacksonville&apos;s high-rise buildings require specialized air duct cleaning approaches. 
                 We handle complex HVAC systems, safety protocols, and building management coordination.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function DowntownJacksonvilleAirDuctCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Downtown Safety Compliance</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's buildings require strict safety compliance for air duct cleaning. 
+                Downtown Jacksonville&apos;s buildings require strict safety compliance for air duct cleaning. 
                 Our services ensure all Downtown building codes and safety standards are met.
               </p>
               <ul className="space-y-2 text-gray-600">

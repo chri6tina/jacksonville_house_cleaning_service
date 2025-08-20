@@ -71,7 +71,7 @@ const WhyChooseUs: React.FC = () => {
             Why Choose Jacksonville House Cleaning Service?
           </h2>
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-            We don't just clean homes – we create healthier, more comfortable living spaces. 
+            We don&apos;t just clean homes – we create healthier, more comfortable living spaces. 
             Our commitment to excellence sets us apart from the competition.
           </p>
         </div>

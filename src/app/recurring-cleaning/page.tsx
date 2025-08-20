@@ -79,7 +79,7 @@ export default function RecurringCleaningPage() {
               </h2>
               <p className="text-xl text-charcoal/70 mb-8 leading-relaxed">
                 Our recurring cleaning service provides consistent, reliable cleaning to maintain your 
-                home's cleanliness week after week. With flexible scheduling and discounted rates, 
+                home&apos;s cleanliness week after week. With flexible scheduling and discounted rates, 
                 you can enjoy a clean home without the hassle of finding and scheduling cleaners.
               </p>
               
@@ -135,7 +135,7 @@ export default function RecurringCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              What's Included in Recurring Cleaning
+              What&apos;s Included in Recurring Cleaning
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
               Our recurring cleaning service provides consistent, reliable cleaning with added benefits 

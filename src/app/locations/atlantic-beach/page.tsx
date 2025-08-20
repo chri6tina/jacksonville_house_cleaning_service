@@ -199,14 +199,14 @@ export default function AtlanticBeachPage() {
                   beachfront living and small-town charm.
                 </p>
                 <p>
-                  The area's coastal environment creates unique cleaning challenges that require specialized 
+                  The area&apos;s coastal environment creates unique cleaning challenges that require specialized 
                   expertise. From salt air damage and beach sand infiltration to humidity control and 
                   coastal property preservation, Atlantic Beach properties need cleaning services that 
                   understand the coastal environment.
                 </p>
                 <p>
                   Our local team has deep roots in Atlantic Beach, with strong partnerships with local 
-                  businesses, restaurants, and community organizations. We understand the area's historic 
+                  businesses, restaurants, and community organizations. We understand the area&apos;s historic 
                   significance and coastal character, providing cleaning services that preserve Atlantic 
                   Beach's unique charm while maintaining modern cleanliness standards.
                 </p>
@@ -264,7 +264,7 @@ export default function AtlanticBeachPage() {
               Why Choose Us for Atlantic Beach Cleaning?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Coastal expertise that understands Atlantic Beach's unique cleaning challenges and community needs
+              Coastal expertise that understands Atlantic Beach&apos;s unique cleaning challenges and community needs
             </p>
           </div>
           
@@ -275,7 +275,7 @@ export default function AtlanticBeachPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Coastal Environment Expertise</h3>
               <p className="text-gray-600">
-                We understand Atlantic Beach's coastal challenges, from salt air damage and beach sand 
+                We understand Atlantic Beach&apos;s coastal challenges, from salt air damage and beach sand 
                 infiltration to humidity control and coastal property preservation.
               </p>
             </div>
@@ -286,7 +286,7 @@ export default function AtlanticBeachPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Historic Property Care</h3>
               <p className="text-gray-600">
-                With Atlantic Beach's historic homes and buildings, we provide cleaning methods that 
+                With Atlantic Beach&apos;s historic homes and buildings, we provide cleaning methods that 
                 preserve architectural integrity while maintaining modern cleanliness standards.
               </p>
             </div>
@@ -297,7 +297,7 @@ export default function AtlanticBeachPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Business Partnership</h3>
               <p className="text-gray-600">
-                We're proud partners with Atlantic Beach restaurants, shops, and community organizations, 
+                We&apos;re proud partners with Atlantic Beach restaurants, shops, and community organizations, 
                 demonstrating our commitment to the area's growth and prosperity.
               </p>
             </div>
@@ -321,7 +321,7 @@ export default function AtlanticBeachPage() {
             <div className="bg-blue-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-blue-900 mb-4">Salt Air & Coastal Environment</h3>
               <p className="text-blue-800 mb-4">
-                Atlantic Beach's coastal location means constant exposure to salt air, humidity, and 
+                Atlantic Beach&apos;s coastal location means constant exposure to salt air, humidity, and 
                 beach sand, creating unique cleaning challenges that require specialized expertise.
               </p>
               <ul className="space-y-2 text-blue-700">
@@ -343,7 +343,7 @@ export default function AtlanticBeachPage() {
             <div className="bg-green-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-green-900 mb-4">Historic Property Preservation</h3>
               <p className="text-green-800 mb-4">
-                With Atlantic Beach's historic homes and buildings, we provide cleaning methods that 
+                With Atlantic Beach&apos;s historic homes and buildings, we provide cleaning methods that 
                 preserve architectural integrity while maintaining modern cleanliness standards.
               </p>
               <ul className="space-y-2 text-green-700">
@@ -455,7 +455,7 @@ export default function AtlanticBeachPage() {
           </h2>
           <p className="text-xl text-blue-800 mb-8 max-w-3xl mx-auto">
             Join hundreds of satisfied Atlantic Beach residents and businesses who trust us with their cleaning needs. 
-            Get your free quote today and discover why we're the preferred cleaning service in Atlantic Beach!
+            Get your free quote today and discover why we&apos;re the preferred cleaning service in Atlantic Beach!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

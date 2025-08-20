@@ -240,7 +240,7 @@ export default function ArlingtonPage() {
                   long-term residents and growing businesses.
                 </p>
                 <p>
-                  Our local team appreciates Arlington Jacksonville's community values and established 
+                  Our local team appreciates Arlington Jacksonville&apos;s community values and established 
                   character, providing cleaning services that respect the area's history while meeting 
                   modern cleaning standards.
                 </p>
@@ -406,7 +406,7 @@ export default function ArlingtonPage() {
               Why Choose Us for Arlington Jacksonville?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local expertise that understands Arlington Jacksonville's unique cleaning needs
+              Local expertise that understands Arlington Jacksonville&apos;s unique cleaning needs
             </p>
           </div>
           
@@ -417,7 +417,7 @@ export default function ArlingtonPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Community Knowledge</h3>
               <p className="text-gray-600">
-                We understand Arlington Jacksonville's established character and community values
+                We understand Arlington Jacksonville&apos;s established character and community values
               </p>
             </div>
             

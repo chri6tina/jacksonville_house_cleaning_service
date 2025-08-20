@@ -140,7 +140,7 @@ export default function ExtremeDeepCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              What's Included in Extreme Deep Cleaning
+              What&apos;s Included in Extreme Deep Cleaning
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
               Our comprehensive extreme deep cleaning service covers every area of your home, 
@@ -222,7 +222,7 @@ export default function ExtremeDeepCleaningPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-3">Neglected Homes</h3>
               <p className="text-charcoal/70">
-                Homes that haven't been properly cleaned for months or years need our extreme deep cleaning service.
+                Homes that haven&apos;t been properly cleaned for months or years need our extreme deep cleaning service.
               </p>
             </div>
 
@@ -242,7 +242,7 @@ export default function ExtremeDeepCleaningPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-3">Seasonal Deep Cleaning</h3>
               <p className="text-charcoal/70">
-                Annual or seasonal deep cleaning to maintain your home's cleanliness and health.
+                Annual or seasonal deep cleaning to maintain your home&apos;s cleanliness and health.
               </p>
             </div>
 

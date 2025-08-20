@@ -545,7 +545,7 @@ export default function ServicesPage() {
 
             {/* Subtitle */}
             <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-              We're your neighbors in Jacksonville, providing reliable, eco-friendly cleaning services 
+              We&apos;re your neighbors in Jacksonville, providing reliable, eco-friendly cleaning services 
               that keep our community's homes and offices spotless. No corporate chains, just local 
               professionals who care about your space like it's our own.
             </p>
@@ -607,7 +607,7 @@ export default function ServicesPage() {
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
               From regular maintenance to specialized deep cleaning, we offer comprehensive solutions 
-              tailored to Jacksonville's unique climate and your specific needs.
+              tailored to Jacksonville&apos;s unique climate and your specific needs.
             </p>
           </div>
 
@@ -795,7 +795,7 @@ export default function ServicesPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-6">Why Choose Jacksonville House Cleaning Service?</h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We're committed to delivering exceptional cleaning services that exceed your expectations.
+              We&apos;re committed to delivering exceptional cleaning services that exceed your expectations.
             </p>
           </div>
 

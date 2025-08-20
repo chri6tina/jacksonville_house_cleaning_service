@@ -43,18 +43,18 @@ export default function OrangeParkMedicalFacilityCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Orange Park's unique suburban character, with its mix of military families from NAS Jacksonville, 
+                  Orange Park&apos;s unique suburban character, with its mix of military families from NAS Jacksonville, 
                   medical professionals from the Orange Park Medical Center, and growing healthcare community, requires 
                   medical facility cleaning services that understand local needs and compliance standards.
                 </p>
                 <p>
-                  Our medical facility cleaning service in Orange Park is designed specifically for the area's healthcare 
+                  Our medical facility cleaning service in Orange Park is designed specifically for the area&apos;s healthcare 
                   providers, from the Orange Park Medical Center to private medical practices. We understand that medical 
                   facilities need specialized cleaning protocols, HIPAA compliance, and reliable, professional cleaning services.
                 </p>
                 <p>
                   With strong partnerships with local Orange Park businesses, schools, and community organizations, 
-                  we provide medical facility cleaning that supports the area's healthcare growth while maintaining 
+                  we provide medical facility cleaning that supports the area&apos;s healthcare growth while maintaining 
                   the highest standards Orange Park medical providers expect.
                 </p>
               </div>
@@ -141,7 +141,7 @@ export default function OrangeParkMedicalFacilityCleaningPage() {
             <div className="bg-green-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-green-900 mb-4">Healthcare Compliance Expertise</h3>
               <p className="text-green-800 mb-4">
-                Orange Park's healthcare community requires cleaning services that understand medical compliance 
+                Orange Park&apos;s healthcare community requires cleaning services that understand medical compliance 
                 standards and infection control protocols.
               </p>
               <ul className="space-y-2 text-green-700">
@@ -182,7 +182,7 @@ export default function OrangeParkMedicalFacilityCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Medical Assessment</h3>
               <p className="text-gray-600">
-                We evaluate your Orange Park medical facility's specific cleaning needs, considering 
+                We evaluate your Orange Park medical facility&apos;s specific cleaning needs, considering 
                 the area's healthcare regulations and compliance requirements.
               </p>
             </div>
@@ -193,7 +193,7 @@ export default function OrangeParkMedicalFacilityCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Compliance Plan</h3>
               <p className="text-gray-600">
-                Develop a medical cleaning plan tailored to your Orange Park facility's layout, 
+                Develop a medical cleaning plan tailored to your Orange Park facility&apos;s layout, 
                 schedule, and specific healthcare needs.
               </p>
             </div>

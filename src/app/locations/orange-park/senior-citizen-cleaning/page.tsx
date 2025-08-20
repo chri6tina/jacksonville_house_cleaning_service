@@ -43,18 +43,18 @@ export default function OrangeParkSeniorCitizenCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Orange Park's unique suburban character, with its mix of military families from NAS Jacksonville, 
+                  Orange Park&apos;s unique suburban character, with its mix of military families from NAS Jacksonville, 
                   medical professionals from the Orange Park Medical Center, and growing families, requires senior 
                   citizen cleaning services that understand local needs and compassionate care.
                 </p>
                 <p>
-                  Our senior citizen cleaning service in Orange Park is designed specifically for the area's diverse 
+                  Our senior citizen cleaning service in Orange Park is designed specifically for the area&apos;s diverse 
                   senior community, from military families to medical professionals. We understand that seniors need 
                   gentle cleaning methods, flexible scheduling, and reliable, compassionate cleaning services.
                 </p>
                 <p>
                   With strong partnerships with local Orange Park businesses, schools, and community organizations, 
-                  we provide senior citizen cleaning that supports the area's family growth while maintaining 
+                  we provide senior citizen cleaning that supports the area&apos;s family growth while maintaining 
                   the highest standards Orange Park families expect.
                 </p>
               </div>
@@ -141,7 +141,7 @@ export default function OrangeParkSeniorCitizenCleaningPage() {
             <div className="bg-green-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-green-900 mb-4">Compassionate Senior Care</h3>
               <p className="text-green-800 mb-4">
-                Orange Park's senior community requires cleaning services that understand the unique 
+                Orange Park&apos;s senior community requires cleaning services that understand the unique 
                 needs of elderly residents and their families.
               </p>
               <ul className="space-y-2 text-green-700">
@@ -182,7 +182,7 @@ export default function OrangeParkSeniorCitizenCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Compassionate Assessment</h3>
               <p className="text-gray-600">
-                We evaluate your Orange Park senior's specific cleaning needs, considering 
+                We evaluate your Orange Park senior&apos;s specific cleaning needs, considering 
                 the area's family requirements and compassionate care standards.
               </p>
             </div>
@@ -193,7 +193,7 @@ export default function OrangeParkSeniorCitizenCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Gentle Care Plan</h3>
               <p className="text-gray-600">
-                Develop a senior cleaning plan tailored to your Orange Park family's layout, 
+                Develop a senior cleaning plan tailored to your Orange Park family&apos;s layout, 
                 schedule, and specific senior care needs.
               </p>
             </div>

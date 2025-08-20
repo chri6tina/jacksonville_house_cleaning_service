@@ -199,14 +199,14 @@ export default function PonteVedraBeachPage() {
                   offers the perfect blend of coastal luxury and golf course living.
                 </p>
                 <p>
-                  The area's luxury environment creates unique cleaning challenges that require specialized 
+                  The area&apos;s luxury environment creates unique cleaning challenges that require specialized 
                   expertise. From luxury home maintenance and golf course property care to premium cleaning 
                   standards and luxury property preservation, Ponte Vedra Beach properties need cleaning 
                   services that understand the luxury market and golf course community.
                 </p>
                 <p>
                   Our local team has deep roots in Ponte Vedra Beach, with strong partnerships with luxury 
-                  home builders, golf course management, and community organizations. We understand the area's 
+                  home builders, golf course management, and community organizations. We understand the area&apos;s 
                   unique luxury character and golf course challenges, providing cleaning services that preserve 
                   Ponte Vedra Beach's prestige while maintaining premium cleanliness standards.
                 </p>
@@ -264,7 +264,7 @@ export default function PonteVedraBeachPage() {
               Why Choose Us for Ponte Vedra Beach Cleaning?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Luxury expertise that understands Ponte Vedra Beach's unique cleaning challenges and golf course community needs
+              Luxury expertise that understands Ponte Vedra Beach&apos;s unique cleaning challenges and golf course community needs
             </p>
           </div>
           
@@ -275,7 +275,7 @@ export default function PonteVedraBeachPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Luxury Home Expertise</h3>
               <p className="text-gray-600">
-                We understand Ponte Vedra Beach's luxury home challenges, from premium surface care and 
+                We understand Ponte Vedra Beach&apos;s luxury home challenges, from premium surface care and 
                 luxury property preservation to golf course property maintenance and luxury home standards.
               </p>
             </div>
@@ -297,7 +297,7 @@ export default function PonteVedraBeachPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Premium Service Standards</h3>
               <p className="text-gray-600">
-                We're proud partners with Ponte Vedra Beach luxury home builders, golf course management, 
+                We&apos;re proud partners with Ponte Vedra Beach luxury home builders, golf course management, 
                 and community organizations, demonstrating our commitment to the area's luxury standards.
               </p>
             </div>
@@ -321,7 +321,7 @@ export default function PonteVedraBeachPage() {
             <div className="bg-blue-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-blue-900 mb-4">Luxury Home Maintenance</h3>
               <p className="text-blue-800 mb-4">
-                Ponte Vedra Beach's luxury environment means premium homes with high-end finishes, 
+                Ponte Vedra Beach&apos;s luxury environment means premium homes with high-end finishes, 
                 golf course views, and luxury standards that require specialized cleaning expertise.
               </p>
               <ul className="space-y-2 text-blue-700">
@@ -455,7 +455,7 @@ export default function PonteVedraBeachPage() {
           </h2>
           <p className="text-xl text-blue-800 mb-8 max-w-3xl mx-auto">
             Join hundreds of satisfied Ponte Vedra Beach residents and golf course property owners who trust us with their cleaning needs. 
-            Get your free quote today and discover why we're the preferred cleaning service in Ponte Vedra Beach!
+            Get your free quote today and discover why we&apos;re the preferred cleaning service in Ponte Vedra Beach!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

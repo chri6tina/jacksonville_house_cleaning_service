@@ -94,7 +94,7 @@ export default function SouthsideCommercialOfficeCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Southside Jacksonville's growing business district requires cleaning services that understand 
+                  Southside Jacksonville&apos;s growing business district requires cleaning services that understand 
                   the unique needs of suburban office environments. From modern office parks to established 
                   corporate headquarters, we provide comprehensive cleaning solutions.
                 </p>
@@ -110,7 +110,7 @@ export default function SouthsideCommercialOfficeCleaningPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {commercialCleaningFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function SouthsideCommercialOfficeCleaningPage() {
               Southside Jacksonville Commercial Cleaning Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Southside Jacksonville's growing business environment
+              Local knowledge that makes a difference in Southside Jacksonville&apos;s growing business environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function SouthsideCommercialOfficeCleaningPage() {
               Southside Jacksonville Business Park Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized solutions for Southside Jacksonville's unique business environment
+              Specialized solutions for Southside Jacksonville&apos;s unique business environment
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function SouthsideCommercialOfficeCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Office Park Expertise</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Southside Jacksonville's office parks require specialized cleaning approaches. 
+                Southside Jacksonville&apos;s office parks require specialized cleaning approaches. 
                 We handle multi-building coordination, shared spaces, and corporate standards.
               </p>
               <ul className="space-y-2 text-gray-600">

@@ -64,7 +64,7 @@ export default function DowntownJacksonvilleSeniorCitizenCleaningPage() {
           </h1>
           <p className="text-xl md:text-2xl text-pink-100 mb-8 max-w-4xl mx-auto">
             Compassionate senior citizen cleaning services designed specifically for Downtown Jacksonville properties. 
-            From high-rise condos to luxury apartments, we provide gentle cleaning that respects Downtown's senior residents.
+            From high-rise condos to luxury apartments, we provide gentle cleaning that respects Downtown&apos;s senior residents.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -94,7 +94,7 @@ export default function DowntownJacksonvilleSeniorCitizenCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's senior community requires cleaning services that understand the 
+                  Downtown Jacksonville&apos;s senior community requires cleaning services that understand the 
                   unique challenges of aging in an urban environment. From accessibility needs to gentle 
                   cleaning approaches, we provide compassionate solutions.
                 </p>
@@ -110,7 +110,7 @@ export default function DowntownJacksonvilleSeniorCitizenCleaningPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {seniorFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function DowntownJacksonvilleSeniorCitizenCleaningPage() {
               Downtown Jacksonville Senior Cleaning Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique senior citizen environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique senior citizen environment
             </p>
           </div>
           
@@ -157,7 +157,7 @@ export default function DowntownJacksonvilleSeniorCitizenCleaningPage() {
               Our Downtown Jacksonville Senior Cleaning Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A compassionate approach to senior citizen cleaning in Downtown Jacksonville's unique environment
+              A compassionate approach to senior citizen cleaning in Downtown Jacksonville&apos;s unique environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function DowntownJacksonvilleSeniorCitizenCleaningPage() {
               Downtown Jacksonville Senior Cleaning Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized senior citizen cleaning solutions for Downtown Jacksonville's unique senior communities
+              Specialized senior citizen cleaning solutions for Downtown Jacksonville&apos;s unique senior communities
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function DowntownJacksonvilleSeniorCitizenCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise Senior Care</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise senior communities require specialized cleaning approaches. 
+                Downtown Jacksonville&apos;s high-rise senior communities require specialized cleaning approaches. 
                 We handle elevator access, multi-floor coordination, and senior safety protocols.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function DowntownJacksonvilleSeniorCitizenCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Compassionate Downtown Service</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's senior environment requires compassionate cleaning approaches. 
+                Downtown Jacksonville&apos;s senior environment requires compassionate cleaning approaches. 
                 We work around senior schedules and provide gentle, respectful service.
               </p>
               <ul className="space-y-2 text-gray-600">

@@ -1,4 +1,4 @@
-import { MapPin, Star, Phone, Clock, Users, Shield, Building2, Home, Car, Wind, Sparkles, Truck, Hammer, PawPrint, Heart, PartyPopper, ShoppingBag, CheckCircle, Beach } from 'lucide-react';
+import { MapPin, Star, Phone, Clock, Users, Shield, Building2, Home, Car, Wind, Sparkles, Truck, Hammer, PawPrint, Heart, PartyPopper, ShoppingBag, CheckCircle, Waves } from 'lucide-react';
 import Link from 'next/link';
 
 export default function JacksonvilleBeachVacationRentalTurnoverPage() {
@@ -57,7 +57,7 @@ export default function JacksonvilleBeachVacationRentalTurnoverPage() {
       <section className="relative bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
-            <Beach className="w-16 h-16 text-cyan-200" />
+            <Waves className="w-16 h-16 text-cyan-200" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Vacation Rental Turnover Cleaning in Jacksonville Beach
@@ -94,7 +94,7 @@ export default function JacksonvilleBeachVacationRentalTurnoverPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Jacksonville Beach's coastal environment requires vacation rental turnover cleaning services 
+                  Jacksonville Beach&apos;s coastal environment requires vacation rental turnover cleaning services 
                   that understand the unique challenges of beach properties. From salt air damage to sand 
                   management, we provide comprehensive turnover solutions.
                 </p>
@@ -110,7 +110,7 @@ export default function JacksonvilleBeachVacationRentalTurnoverPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {turnoverFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function JacksonvilleBeachVacationRentalTurnoverPage() {
               Jacksonville Beach Vacation Rental Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Jacksonville Beach's unique coastal environment
+              Local knowledge that makes a difference in Jacksonville Beach&apos;s unique coastal environment
             </p>
           </div>
           
@@ -157,7 +157,7 @@ export default function JacksonvilleBeachVacationRentalTurnoverPage() {
               Our Jacksonville Beach Turnover Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to vacation rental turnover in Jacksonville Beach's unique coastal environment
+              A systematic approach to vacation rental turnover in Jacksonville Beach&apos;s unique coastal environment
             </p>
           </div>
           
@@ -186,18 +186,18 @@ export default function JacksonvilleBeachVacationRentalTurnoverPage() {
               Jacksonville Beach Turnover Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized turnover cleaning solutions for Jacksonville Beach's unique coastal properties
+              Specialized turnover cleaning solutions for Jacksonville Beach&apos;s unique coastal properties
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <div className="flex items-center mb-4">
-                <Beach className="w-12 h-12 text-cyan-600 mr-4" />
+                <Waves className="w-12 h-12 text-cyan-600 mr-4" />
                 <h3 className="text-2xl font-bold text-gray-900">Coastal Environment Care</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Jacksonville Beach's coastal environment requires specialized turnover cleaning approaches. 
+                Jacksonville Beach&apos;s coastal environment requires specialized turnover cleaning approaches. 
                 We handle salt air damage, sand infiltration, and coastal maintenance protocols.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function JacksonvilleBeachVacationRentalTurnoverPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Beach Turnover Scheduling</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Jacksonville Beach's tourism industry requires flexible turnover cleaning scheduling. 
+                Jacksonville Beach&apos;s tourism industry requires flexible turnover cleaning scheduling. 
                 We work around guest check-ins and coastal weather conditions.
               </p>
               <ul className="space-y-2 text-gray-600">

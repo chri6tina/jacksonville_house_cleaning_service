@@ -94,7 +94,7 @@ export default function DowntownJacksonvilleOfficeCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's business district requires cleaning services that understand the 
+                  Downtown Jacksonville&apos;s business district requires cleaning services that understand the 
                   unique challenges of urban office environments. From high-rise buildings to historic storefronts, 
                   we provide comprehensive cleaning solutions.
                 </p>
@@ -110,7 +110,7 @@ export default function DowntownJacksonvilleOfficeCleaningPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {officeCleaningFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function DowntownJacksonvilleOfficeCleaningPage() {
               Downtown Jacksonville Office Cleaning Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique business environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique business environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function DowntownJacksonvilleOfficeCleaningPage() {
               Downtown Jacksonville Office Cleaning Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized cleaning solutions for Downtown Jacksonville's diverse office environments
+              Specialized cleaning solutions for Downtown Jacksonville&apos;s diverse office environments
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function DowntownJacksonvilleOfficeCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise Challenges</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise buildings require specialized cleaning approaches. 
+                Downtown Jacksonville&apos;s high-rise buildings require specialized cleaning approaches. 
                 We handle elevator access, multi-floor coordination, and security protocols.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function DowntownJacksonvilleOfficeCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">After-Hours Service</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                We understand Downtown Jacksonville businesses can't afford cleaning disruptions. 
+                We understand Downtown Jacksonville businesses can&apos;t afford cleaning disruptions. 
                 Our after-hours cleaning ensures minimal impact on your operations.
               </p>
               <ul className="space-y-2 text-gray-600">

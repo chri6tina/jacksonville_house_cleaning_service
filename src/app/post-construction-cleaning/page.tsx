@@ -137,7 +137,7 @@ export default function PostConstructionCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              What's Included in Post-Construction Cleaning
+              What&apos;s Included in Post-Construction Cleaning
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
               Our comprehensive post-construction cleaning service removes all traces of construction 
@@ -270,7 +270,7 @@ export default function PostConstructionCleaningPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-3">New Construction</h3>
               <p className="text-charcoal/70">
-                Comprehensive cleaning for newly built homes, ensuring they're move-in ready.
+                Comprehensive cleaning for newly built homes, ensuring they&apos;re move-in ready.
               </p>
             </div>
           </div>

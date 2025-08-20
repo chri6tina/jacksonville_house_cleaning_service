@@ -236,7 +236,7 @@ export default function GutterCleaningPage() {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
+                    <h4 className="font-semibold text-charcoal mb-3">What&apos;s Included:</h4>
                     <ul className="space-y-2">
                       {service.includes.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start space-x-3">
@@ -269,7 +269,7 @@ export default function GutterCleaningPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-6">Warning Signs You Need Gutter Cleaning</h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Don't wait until it's too late! These signs indicate your gutters need immediate attention 
+              Don&apos;t wait until it's too late! These signs indicate your gutters need immediate attention 
               to prevent costly water damage.
             </p>
           </div>
@@ -301,7 +301,7 @@ export default function GutterCleaningPage() {
                 Why Choose Professional Gutter Cleaning?
               </h2>
               <p className="text-lg text-charcoal/70 mb-8 leading-relaxed">
-                Professional gutter cleaning is essential for protecting your home's foundation and 
+                Professional gutter cleaning is essential for protecting your home&apos;s foundation and 
                 preventing expensive water damage. Our trained technicians use proper safety equipment 
                 and techniques to ensure your gutters function properly year-round.
               </p>

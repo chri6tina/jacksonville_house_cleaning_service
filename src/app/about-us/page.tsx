@@ -42,7 +42,7 @@ export default function AboutUsPage() {
             </h1>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
               Serving Jacksonville families since 2010 with professional, reliable, and eco-friendly cleaning services. 
-              We're your trusted neighbors, committed to making your home a healthier, more comfortable place to live.
+              We&apos;re your trusted neighbors, committed to making your home a healthier, more comfortable place to live.
             </p>
           </div>
         </div>
@@ -60,16 +60,16 @@ export default function AboutUsPage() {
                 <p>
                   Jacksonville House Cleaning Service was founded in 2010 by Sarah Johnson, a local resident who 
                   recognized the need for reliable, professional cleaning services in our community. What started 
-                  as a small family business has grown into one of Jacksonville's most trusted cleaning companies.
+                  as a small family business has grown into one of Jacksonville&apos;s most trusted cleaning companies.
                 </p>
                 <p>
-                  Over the past 13+ years, we've served over 500 families throughout Northeast Florida, building 
+                  Over the past 13+ years, we&apos;ve served over 500 families throughout Northeast Florida, building 
                   lasting relationships based on trust, quality, and exceptional customer service. Our commitment 
                   to using eco-friendly products and providing thorough, consistent cleaning has earned us a 
                   reputation for excellence.
                 </p>
                 <p>
-                  Today, we're proud to be a local family business that continues to serve our neighbors with 
+                  Today, we&apos;re proud to be a local family business that continues to serve our neighbors with 
                   the same dedication and care that we would want for our own homes.
                 </p>
               </div>
@@ -137,7 +137,7 @@ export default function AboutUsPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-3">Community Focus</h3>
               <p className="text-charcoal/70">
-                As your neighbors, we're committed to serving and supporting our Jacksonville community.
+                As your neighbors, we&apos;re committed to serving and supporting our Jacksonville community.
               </p>
             </div>
 

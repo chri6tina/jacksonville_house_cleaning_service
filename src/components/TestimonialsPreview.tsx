@@ -58,7 +58,7 @@ const TestimonialsPreview: React.FC = () => {
             What Our Customers Say
           </h2>
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what Jacksonville families and businesses 
+            Don&apos;t just take our word for it. Here's what Jacksonville families and businesses 
             are saying about our cleaning services.
           </p>
         </div>

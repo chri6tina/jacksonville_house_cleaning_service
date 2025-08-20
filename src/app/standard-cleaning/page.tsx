@@ -80,7 +80,7 @@ export default function StandardCleaningPage() {
               </h2>
               <p className="text-xl text-charcoal/70 mb-8 leading-relaxed">
                 Our standard house cleaning service provides thorough, consistent cleaning to maintain 
-                your home's cleanliness and comfort. Perfect for regular maintenance and keeping your 
+                your home&apos;s cleanliness and comfort. Perfect for regular maintenance and keeping your 
                 living space fresh and inviting.
               </p>
               
@@ -136,7 +136,7 @@ export default function StandardCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              What's Included in Standard House Cleaning
+              What&apos;s Included in Standard House Cleaning
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
               Our comprehensive standard cleaning service covers all the essential areas of your home 
@@ -298,7 +298,7 @@ export default function StandardCleaningPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-3">Regular Maintenance</h3>
               <p className="text-charcoal/70">
-                Establish a consistent cleaning routine to maintain your home's value and appearance.
+                Establish a consistent cleaning routine to maintain your home&apos;s value and appearance.
               </p>
             </div>
           </div>

@@ -43,18 +43,18 @@ export default function OrangeParkEventVenueCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Orange Park's unique suburban character, with its mix of military families from NAS Jacksonville, 
+                  Orange Park&apos;s unique suburban character, with its mix of military families from NAS Jacksonville, 
                   medical professionals from the Orange Park Medical Center, and growing community, requires event 
                   venue cleaning services that understand local needs and schedules.
                 </p>
                 <p>
-                  Our event venue cleaning service in Orange Park is designed specifically for the area's diverse 
+                  Our event venue cleaning service in Orange Park is designed specifically for the area&apos;s diverse 
                   event spaces, from community centers to military support venues. We understand that event venues 
                   need flexible scheduling, quick turnaround times, and reliable, professional cleaning services.
                 </p>
                 <p>
                   With strong partnerships with local Orange Park businesses, schools, and community organizations, 
-                  we provide event venue cleaning that supports the area's community growth while maintaining 
+                  we provide event venue cleaning that supports the area&apos;s community growth while maintaining 
                   the high standards Orange Park event organizers expect.
                 </p>
               </div>
@@ -141,7 +141,7 @@ export default function OrangeParkEventVenueCleaningPage() {
             <div className="bg-green-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-green-900 mb-4">Community Event Expertise</h3>
               <p className="text-green-800 mb-4">
-                Orange Park's growing community requires event venue cleaning services that understand 
+                Orange Park&apos;s growing community requires event venue cleaning services that understand 
                 local event schedules and community center requirements.
               </p>
               <ul className="space-y-2 text-green-700">
@@ -182,7 +182,7 @@ export default function OrangeParkEventVenueCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Assessment</h3>
               <p className="text-gray-600">
-                We evaluate your Orange Park event venue's specific cleaning needs, considering 
+                We evaluate your Orange Park event venue&apos;s specific cleaning needs, considering 
                 the area's event schedules and community requirements.
               </p>
             </div>
@@ -193,7 +193,7 @@ export default function OrangeParkEventVenueCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Customized Plan</h3>
               <p className="text-gray-600">
-                Develop an event venue cleaning plan tailored to your Orange Park venue's layout, 
+                Develop an event venue cleaning plan tailored to your Orange Park venue&apos;s layout, 
                 schedule, and specific event needs.
               </p>
             </div>

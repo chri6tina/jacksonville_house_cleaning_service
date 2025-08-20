@@ -155,7 +155,7 @@ export default function TestimonialsPage() {
 
             {/* Subtitle */}
             <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Don't just take our word for it - hear from the Jacksonville families and businesses 
+              Don&apos;t just take our word for it - hear from the Jacksonville families and businesses 
               who've experienced our cleaning services firsthand. These are real reviews from real 
               people in your community.
             </p>

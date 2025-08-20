@@ -43,19 +43,19 @@ export default function OrangeParkPostConstructionCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Orange Park's unique suburban character, with its mix of military families from NAS Jacksonville, 
+                  Orange Park&apos;s unique suburban character, with its mix of military families from NAS Jacksonville, 
                   medical professionals from the Orange Park Medical Center, and growing families, requires post-construction 
                   cleaning services that understand local needs and schedules.
                 </p>
                 <p>
-                  Our post-construction cleaning service in Orange Park is designed specifically for the area's larger 
+                  Our post-construction cleaning service in Orange Park is designed specifically for the area&apos;s larger 
                   suburban homes, multiple bathroom layouts, and family-focused living spaces. We understand 
                   that military families need flexible scheduling, medical professionals require reliable service, 
                   and busy families need quick project completion.
                 </p>
                 <p>
                   With strong partnerships with local Orange Park businesses, schools, and community organizations, 
-                  we provide post-construction cleaning that supports the area's growth and prosperity while maintaining 
+                  we provide post-construction cleaning that supports the area&apos;s growth and prosperity while maintaining 
                   the high standards Orange Park residents expect.
                 </p>
               </div>
@@ -142,7 +142,7 @@ export default function OrangeParkPostConstructionCleaningPage() {
             <div className="bg-green-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-green-900 mb-4">Suburban Home Expertise</h3>
               <p className="text-green-800 mb-4">
-                Orange Park's suburban setting means larger homes with more square footage, 
+                Orange Park&apos;s suburban setting means larger homes with more square footage, 
                 multiple bathrooms, and family-focused living spaces that require thorough post-construction cleaning.
               </p>
               <ul className="space-y-2 text-green-700">
@@ -183,7 +183,7 @@ export default function OrangeParkPostConstructionCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Assessment</h3>
               <p className="text-gray-600">
-                We evaluate your Orange Park property's specific post-construction cleaning needs, considering 
+                We evaluate your Orange Park property&apos;s specific post-construction cleaning needs, considering 
                 the area's suburban layout and family-focused design.
               </p>
             </div>
@@ -194,7 +194,7 @@ export default function OrangeParkPostConstructionCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Customized Plan</h3>
               <p className="text-gray-600">
-                Develop a post-construction cleaning plan tailored to your Orange Park home's layout, 
+                Develop a post-construction cleaning plan tailored to your Orange Park home&apos;s layout, 
                 schedule, and specific family needs.
               </p>
             </div>

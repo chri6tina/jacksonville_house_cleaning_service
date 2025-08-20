@@ -94,7 +94,7 @@ export default function SouthsideJacksonvillePetFriendlyCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Southside Jacksonville's family-friendly environment requires pet-friendly cleaning services 
+                  Southside Jacksonville&apos;s family-friendly environment requires pet-friendly cleaning services 
                   that understand the unique challenges of homes with pets. From odor elimination to safe 
                   cleaning products, we provide comprehensive pet-friendly solutions.
                 </p>
@@ -111,7 +111,7 @@ export default function SouthsideJacksonvillePetFriendlyCleaningPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {petCleaningFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -133,7 +133,7 @@ export default function SouthsideJacksonvillePetFriendlyCleaningPage() {
               Southside Jacksonville Pet Cleaning Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Southside Jacksonville's unique family environment
+              Local knowledge that makes a difference in Southside Jacksonville&apos;s unique family environment
             </p>
           </div>
           
@@ -158,7 +158,7 @@ export default function SouthsideJacksonvillePetFriendlyCleaningPage() {
               Our Southside Jacksonville Pet Cleaning Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to pet-friendly cleaning in Southside Jacksonville's unique family environment
+              A systematic approach to pet-friendly cleaning in Southside Jacksonville&apos;s unique family environment
             </p>
           </div>
           
@@ -187,7 +187,7 @@ export default function SouthsideJacksonvillePetFriendlyCleaningPage() {
               Southside Jacksonville Pet Cleaning Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized pet-friendly cleaning solutions for Southside Jacksonville's unique family properties
+              Specialized pet-friendly cleaning solutions for Southside Jacksonville&apos;s unique family properties
             </p>
           </div>
           
@@ -198,7 +198,7 @@ export default function SouthsideJacksonvillePetFriendlyCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Family Home Pet Care</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Southside Jacksonville's family homes require specialized pet-friendly cleaning approaches. 
+                Southside Jacksonville&apos;s family homes require specialized pet-friendly cleaning approaches. 
                 We handle family scheduling, pet safety, and community standards for pet maintenance.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -215,7 +215,7 @@ export default function SouthsideJacksonvillePetFriendlyCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Pet-Safe Cleaning Standards</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Southside Jacksonville's family environment requires the highest pet safety standards. 
+                Southside Jacksonville&apos;s family environment requires the highest pet safety standards. 
                 We use only pet-safe products and maintain strict safety protocols.
               </p>
               <ul className="space-y-2 text-gray-600">

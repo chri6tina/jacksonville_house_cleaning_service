@@ -43,19 +43,19 @@ export default function OrangeParkApartmentCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Orange Park's unique suburban character, with its mix of military families from NAS Jacksonville, 
+                  Orange Park&apos;s unique suburban character, with its mix of military families from NAS Jacksonville, 
                   medical professionals from the Orange Park Medical Center, and growing families, requires apartment 
                   cleaning services that understand local needs and schedules.
                 </p>
                 <p>
-                  Our apartment cleaning service in Orange Park is designed specifically for the area's diverse 
+                  Our apartment cleaning service in Orange Park is designed specifically for the area&apos;s diverse 
                   apartment communities, from military family housing to medical professional residences. We understand 
                   that military families need flexible scheduling, medical professionals require reliable service, 
                   and busy families need convenient apartment cleaning solutions.
                 </p>
                 <p>
                   With strong partnerships with local Orange Park businesses, schools, and community organizations, 
-                  we provide apartment cleaning that supports the area's growth and prosperity while maintaining 
+                  we provide apartment cleaning that supports the area&apos;s growth and prosperity while maintaining 
                   the high standards Orange Park residents expect.
                 </p>
               </div>
@@ -142,7 +142,7 @@ export default function OrangeParkApartmentCleaningPage() {
             <div className="bg-green-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-green-900 mb-4">Apartment Community Expertise</h3>
               <p className="text-green-800 mb-4">
-                Orange Park's diverse apartment communities require cleaning services that understand 
+                Orange Park&apos;s diverse apartment communities require cleaning services that understand 
                 the unique challenges of apartment living and community regulations.
               </p>
               <ul className="space-y-2 text-green-700">
@@ -183,7 +183,7 @@ export default function OrangeParkApartmentCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Assessment</h3>
               <p className="text-gray-600">
-                We evaluate your Orange Park apartment's specific cleaning needs, considering 
+                We evaluate your Orange Park apartment&apos;s specific cleaning needs, considering 
                 the area's community regulations and family-focused design.
               </p>
             </div>
@@ -194,7 +194,7 @@ export default function OrangeParkApartmentCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Customized Plan</h3>
               <p className="text-gray-600">
-                Develop an apartment cleaning plan tailored to your Orange Park apartment's layout, 
+                Develop an apartment cleaning plan tailored to your Orange Park apartment&apos;s layout, 
                 schedule, and specific family needs.
               </p>
             </div>

@@ -81,7 +81,7 @@ export default function ContactPage() {
           <CheckCircle className="w-20 h-20 text-accent-green mx-auto mb-6" />
           <h2 className="text-3xl font-bold text-charcoal mb-4">Thank You!</h2>
           <p className="text-charcoal/70 mb-6">
-            Your cleaning request has been submitted successfully. We'll contact you within 24 hours 
+            Your cleaning request has been submitted successfully. We&apos;ll contact you within 24 hours 
             to confirm your appointment and provide a quote.
           </p>
           <div className="text-sm text-charcoal/60">
@@ -127,7 +127,7 @@ export default function ContactPage() {
 
             {/* Subtitle */}
             <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-              We're here to help with all your Jacksonville cleaning needs. Whether you need a quote, 
+              We&apos;re here to help with all your Jacksonville cleaning needs. Whether you need a quote, 
               want to schedule service, or just have questions, reach out to your local cleaning team. 
               No automated systems - just real people ready to help.
             </p>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                   <Clock className="w-6 h-6 text-accent-green" />
                 </div>
                 <h3 className="font-bold text-white text-base mb-2">24-Hour Response</h3>
-                <p className="text-white/80 text-xs leading-relaxed">We'll get back to you fast</p>
+                <p className="text-white/80 text-xs leading-relaxed">We&apos;ll get back to you fast</p>
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
@@ -340,7 +340,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-3xl font-bold text-charcoal mb-6">Get in Touch</h2>
               <p className="text-lg text-charcoal/70 mb-8">
-                Have questions or need immediate assistance? We're here to help!
+                Have questions or need immediate assistance? We&apos;re here to help!
               </p>
             </div>
 

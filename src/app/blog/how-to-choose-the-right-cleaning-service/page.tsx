@@ -46,7 +46,7 @@ export default function HowToChooseCleaningService() {
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Finding the perfect cleaning service can be overwhelming, especially in a city like Jacksonville with so many options. 
-                Whether you're looking for regular maintenance or a one-time deep clean, choosing the right cleaning company is crucial 
+                Whether you&apos;re looking for regular maintenance or a one-time deep clean, choosing the right cleaning company is crucial 
                 for your home's cleanliness and your peace of mind.
               </p>
 
@@ -74,7 +74,7 @@ export default function HowToChooseCleaningService() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-accent-green mt-0.5 flex-shrink-0" />
-                      <span>Check worker's compensation insurance</span>
+                      <span>Check worker&apos;s compensation insurance</span>
                     </li>
                   </ul>
                 </div>
@@ -85,7 +85,7 @@ export default function HowToChooseCleaningService() {
                     Reputation and Reviews
                   </h3>
                   <p className="text-gray-700 mb-4">
-                    Customer reviews and testimonials provide valuable insights into a company's reliability and quality of service. 
+                    Customer reviews and testimonials provide valuable insights into a company&apos;s reliability and quality of service. 
                     Look for consistent positive feedback and how the company handles any negative reviews.
                   </p>
                   <ul className="list-none space-y-2">
@@ -110,7 +110,7 @@ export default function HowToChooseCleaningService() {
                     Cleaning Products and Methods
                   </h3>
                   <p className="text-gray-700 mb-4">
-                    The cleaning products and methods used can significantly impact your home's environment and your family's health. 
+                    The cleaning products and methods used can significantly impact your home&apos;s environment and your family's health. 
                     Eco-friendly options are often safer and more sustainable.
                   </p>
                   <ul className="list-none space-y-2">
@@ -124,7 +124,7 @@ export default function HowToChooseCleaningService() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-accent-green mt-0.5 flex-shrink-0" />
-                      <span>Ensure they're safe for pets and children</span>
+                      <span>Ensure they&apos;re safe for pets and children</span>
                     </li>
                   </ul>
                 </div>
@@ -166,7 +166,7 @@ export default function HowToChooseCleaningService() {
               
               <p className="text-gray-700 mb-6">
                 At Jacksonville House Cleaning, we understand the importance of choosing the right cleaning service. 
-                That's why we've built our reputation on transparency, reliability, and exceptional service quality.
+                That&apos;s why we've built our reputation on transparency, reliability, and exceptional service quality.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -180,7 +180,7 @@ export default function HowToChooseCleaningService() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-semibold text-charcoal mb-2">✓ Satisfaction Guaranteed</h4>
-                  <p className="text-gray-600 text-sm">100% satisfaction or we'll make it right</p>
+                  <p className="text-gray-600 text-sm">100% satisfaction or we&apos;ll make it right</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-semibold text-charcoal mb-2">✓ Local Jacksonville Service</h4>
@@ -191,7 +191,7 @@ export default function HowToChooseCleaningService() {
               <div className="bg-accent-coral/10 rounded-lg p-6 text-center">
                 <h3 className="text-2xl font-bold text-charcoal mb-4">Ready to Get Started?</h3>
                 <p className="text-gray-700 mb-6">
-                  Contact us today for a free consultation and quote. Let us show you why we're Jacksonville's 
+                  Contact us today for a free consultation and quote. Let us show you why we&apos;re Jacksonville's 
                   trusted choice for professional cleaning services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

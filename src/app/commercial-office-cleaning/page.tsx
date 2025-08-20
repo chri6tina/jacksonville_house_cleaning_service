@@ -173,7 +173,7 @@ export default function CommercialOfficeCleaningPage() {
             Commercial <span className="text-slate-600">Office Cleaning</span>
           </h1>
           <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed mb-8">
-            Professional office cleaning services that maintain your business's professional image, 
+            Professional office cleaning services that maintain your business&apos;s professional image, 
             improve workplace health, and boost employee productivity. Starting at just $200.
           </p>
           
@@ -234,7 +234,7 @@ export default function CommercialOfficeCleaningPage() {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
+                    <h4 className="font-semibold text-charcoal mb-3">What&apos;s Included:</h4>
                     <ul className="space-y-2">
                       {service.includes.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start space-x-3">

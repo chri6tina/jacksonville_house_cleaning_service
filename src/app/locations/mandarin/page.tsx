@@ -111,7 +111,7 @@ export default function MandarinPage() {
 
             {/* Subtitle */}
             <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-              We're proud to serve the beautiful Mandarin neighborhood of Jacksonville. From spacious family 
+              We&apos;re proud to serve the beautiful Mandarin neighborhood of Jacksonville. From spacious family 
               homes to cozy condos, we provide reliable cleaning services that keep Mandarin beautiful and 
               family-friendly. As your neighbors, we understand the unique needs of this growing community.
             </p>
@@ -173,12 +173,12 @@ export default function MandarinPage() {
                 Why Mandarin Chooses Our Cleaning Services
               </h2>
               <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
-                Mandarin is one of Jacksonville's most family-friendly neighborhoods, known for its excellent 
+                Mandarin is one of Jacksonville&apos;s most family-friendly neighborhoods, known for its excellent 
                 schools, beautiful parks, and spacious homes. We understand the unique cleaning needs of 
                 families and provide services that keep homes safe and healthy for children.
               </p>
               <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
-                Our team is familiar with Mandarin's suburban layout, family-oriented businesses, and the 
+                Our team is familiar with Mandarin&apos;s suburban layout, family-oriented businesses, and the 
                 specific challenges that come with maintaining family homes. We provide reliable, consistent 
                 cleaning that fits busy family schedules.
               </p>
@@ -274,7 +274,7 @@ export default function MandarinPage() {
                 </div>
                 
                 <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
+                  <h4 className="font-semibold text-charcoal mb-3">What&apos;s Included:</h4>
                   {service.includes.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex items-center gap-3">
                       <Check className="w-4 h-4 text-accent-green flex-shrink-0" />
@@ -332,11 +332,11 @@ export default function MandarinPage() {
       <section className="py-20 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Experience Mandarin's Trusted Cleaning Service?
+            Ready to Experience Mandarin&apos;s Trusted Cleaning Service?
           </h2>
           <p className="text-xl text-white/90 mb-8">
             Join over 120 Mandarin families who trust us with their homes. 
-            Get your free quote today and see why we're the neighborhood's choice.
+            Get your free quote today and see why we&apos;re the neighborhood's choice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

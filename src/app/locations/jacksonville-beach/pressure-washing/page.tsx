@@ -64,7 +64,7 @@ export default function JacksonvilleBeachPressureWashingPage() {
           </h1>
           <p className="text-xl md:text-2xl text-cyan-100 mb-8 max-w-4xl mx-auto">
             Professional pressure washing services designed specifically for Jacksonville Beach properties. 
-            From salt-damaged driveways to sandy patios, we restore your property's beauty in the coastal environment.
+            From salt-damaged driveways to sandy patios, we restore your property&apos;s beauty in the coastal environment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -94,7 +94,7 @@ export default function JacksonvilleBeachPressureWashingPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Jacksonville Beach's coastal environment presents unique challenges for property maintenance. 
+                  Jacksonville Beach&apos;s coastal environment presents unique challenges for property maintenance. 
                   Salt air, sand, and coastal weather require specialized pressure washing techniques and solutions.
                 </p>
                 <p>
@@ -104,12 +104,12 @@ export default function JacksonvilleBeachPressureWashingPage() {
                 </p>
                 <p>
                   From residential driveways to commercial properties, we provide comprehensive pressure 
-                  washing solutions that stand up to Jacksonville Beach's coastal environment.
+                  washing solutions that stand up to Jacksonville Beach&apos;s coastal environment.
                 </p>
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {pressureWashingFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -131,7 +131,7 @@ export default function JacksonvilleBeachPressureWashingPage() {
               Jacksonville Beach Pressure Washing Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Coastal knowledge that makes a difference in Jacksonville Beach's unique environment
+              Coastal knowledge that makes a difference in Jacksonville Beach&apos;s unique environment
             </p>
           </div>
           
@@ -156,7 +156,7 @@ export default function JacksonvilleBeachPressureWashingPage() {
               Our Jacksonville Beach Pressure Washing Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to restoring beauty in Jacksonville Beach's coastal environment
+              A systematic approach to restoring beauty in Jacksonville Beach&apos;s coastal environment
             </p>
           </div>
           
@@ -185,7 +185,7 @@ export default function JacksonvilleBeachPressureWashingPage() {
               Jacksonville Beach Coastal Cleaning Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized solutions for Jacksonville Beach's unique coastal challenges
+              Specialized solutions for Jacksonville Beach&apos;s unique coastal challenges
             </p>
           </div>
           
@@ -196,7 +196,7 @@ export default function JacksonvilleBeachPressureWashingPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Salt Air Damage</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Jacksonville Beach's salt air can cause significant damage to surfaces over time. 
+                Jacksonville Beach&apos;s salt air can cause significant damage to surfaces over time. 
                 We use specialized techniques to remove salt buildup and prevent future corrosion.
               </p>
               <ul className="space-y-2 text-gray-600">

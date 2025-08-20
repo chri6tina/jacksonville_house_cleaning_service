@@ -111,7 +111,7 @@ export default function RiversidePage() {
 
             {/* Subtitle */}
             <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-              We're proud to serve the beautiful Riverside neighborhood of Jacksonville. From historic homes 
+              We&apos;re proud to serve the beautiful Riverside neighborhood of Jacksonville. From historic homes 
               to modern apartments, we provide reliable cleaning services that keep Riverside beautiful. 
               As your neighbors, we understand the unique needs of this special community.
             </p>
@@ -173,12 +173,12 @@ export default function RiversidePage() {
                 Why Riverside Chooses Our Cleaning Services
               </h2>
               <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
-                Riverside is one of Jacksonville's most beautiful and historic neighborhoods, known for its 
+                Riverside is one of Jacksonville&apos;s most beautiful and historic neighborhoods, known for its 
                 tree-lined streets, charming homes, and vibrant community. We understand the unique cleaning 
                 needs of this special area.
               </p>
               <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
-                Our team is familiar with Riverside's historic homes, local businesses, and the specific 
+                Our team is familiar with Riverside&apos;s historic homes, local businesses, and the specific 
                 challenges that come with maintaining properties in this area. We provide personalized 
                 cleaning solutions that respect the character of your Riverside home.
               </p>
@@ -274,7 +274,7 @@ export default function RiversidePage() {
                 </div>
                 
                 <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
+                  <h4 className="font-semibold text-charcoal mb-3">What&apos;s Included:</h4>
                   {service.includes.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex items-center gap-3">
                       <Check className="w-4 h-4 text-accent-green flex-shrink-0" />
@@ -332,11 +332,11 @@ export default function RiversidePage() {
       <section className="py-20 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Experience Riverside's Favorite Cleaning Service?
+            Ready to Experience Riverside&apos;s Favorite Cleaning Service?
           </h2>
           <p className="text-xl text-white/90 mb-8">
             Join over 100 Riverside families who trust us with their homes. 
-            Get your free quote today and see why we're the neighborhood's choice.
+            Get your free quote today and see why we&apos;re the neighborhood's choice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

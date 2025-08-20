@@ -324,7 +324,7 @@ export default function PricingPage() {
             100% Satisfaction Guarantee
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            If you're not completely satisfied with our service, we'll come back 
+            If you&apos;re not completely satisfied with our service, we'll come back 
             and make it right at no additional cost.
           </p>
           <div className="bg-white/10 rounded-2xl p-8">
@@ -344,7 +344,7 @@ export default function PricingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Satisfaction Guaranteed</h3>
                 <p className="text-white/80 text-sm">
-                  Not happy? We'll fix it for free
+                  Not happy? We&apos;ll fix it for free
                 </p>
               </div>
               <div className="text-center">

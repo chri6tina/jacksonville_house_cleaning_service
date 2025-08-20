@@ -64,7 +64,7 @@ export default function DowntownJacksonvilleRecurringCleaningPage() {
           </h1>
           <p className="text-xl md:text-2xl text-emerald-100 mb-8 max-w-4xl mx-auto">
             Professional recurring cleaning services designed specifically for Downtown Jacksonville properties. 
-            From high-rise offices to luxury condos, we maintain Downtown's high standards with every visit.
+            From high-rise offices to luxury condos, we maintain Downtown&apos;s high standards with every visit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -94,7 +94,7 @@ export default function DowntownJacksonvilleRecurringCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's dynamic business environment requires recurring cleaning services 
+                  Downtown Jacksonville&apos;s dynamic business environment requires recurring cleaning services 
                   that understand the unique challenges of urban maintenance. From high-rise offices to 
                   luxury condos, we provide consistent cleaning solutions.
                 </p>
@@ -110,7 +110,7 @@ export default function DowntownJacksonvilleRecurringCleaningPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {recurringFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function DowntownJacksonvilleRecurringCleaningPage() {
               Downtown Jacksonville Recurring Cleaning Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique recurring cleaning environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique recurring cleaning environment
             </p>
           </div>
           
@@ -157,7 +157,7 @@ export default function DowntownJacksonvilleRecurringCleaningPage() {
               Our Downtown Jacksonville Recurring Cleaning Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to recurring cleaning in Downtown Jacksonville's unique environment
+              A systematic approach to recurring cleaning in Downtown Jacksonville&apos;s unique environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function DowntownJacksonvilleRecurringCleaningPage() {
               Downtown Jacksonville Recurring Cleaning Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized recurring cleaning solutions for Downtown Jacksonville's unique property types
+              Specialized recurring cleaning solutions for Downtown Jacksonville&apos;s unique property types
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function DowntownJacksonvilleRecurringCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise Maintenance</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise buildings require specialized recurring cleaning approaches. 
+                Downtown Jacksonville&apos;s high-rise buildings require specialized recurring cleaning approaches. 
                 We handle multi-floor coordination, building access, and consistent quality standards.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function DowntownJacksonvilleRecurringCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Flexible Downtown Scheduling</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's busy environment requires flexible recurring cleaning scheduling. 
+                Downtown Jacksonville&apos;s busy environment requires flexible recurring cleaning scheduling. 
                 We work around your business hours and Downtown building requirements.
               </p>
               <ul className="space-y-2 text-gray-600">

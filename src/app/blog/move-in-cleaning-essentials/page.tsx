@@ -39,7 +39,7 @@ export default function MoveInCleaningEssentials() {
           <article className="bg-white rounded-lg shadow-md p-8 md:p-12">
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Moving into a new home is an exciting milestone, but before you unpack your boxes, it's crucial to ensure 
+                Moving into a new home is an exciting milestone, but before you unpack your boxes, it&apos;s crucial to ensure 
                 your new space is thoroughly cleaned. Whether you're moving into a newly built home or a previously occupied 
                 property, a comprehensive move-in cleaning will give you peace of mind and a fresh start.
               </p>
@@ -59,7 +59,7 @@ export default function MoveInCleaningEssentials() {
                   <h3 className="text-lg font-semibold text-charcoal mb-3">Fresh Start</h3>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Begin with a clean slate</li>
-                    <li>• Remove previous occupants' traces</li>
+                    <li>• Remove previous occupants&apos; traces</li>
                     <li>• Create your own clean environment</li>
                   </ul>
                 </div>

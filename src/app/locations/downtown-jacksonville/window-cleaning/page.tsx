@@ -94,7 +94,7 @@ export default function DowntownJacksonvilleWindowCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's diverse building types require window cleaning services that understand 
+                  Downtown Jacksonville&apos;s diverse building types require window cleaning services that understand 
                   the unique challenges of urban environments. From modern high-rises to historic buildings, 
                   we provide comprehensive window cleaning solutions.
                 </p>
@@ -110,7 +110,7 @@ export default function DowntownJacksonvilleWindowCleaningPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {windowCleaningFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function DowntownJacksonvilleWindowCleaningPage() {
               Downtown Jacksonville Window Cleaning Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique window cleaning environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique window cleaning environment
             </p>
           </div>
           
@@ -157,7 +157,7 @@ export default function DowntownJacksonvilleWindowCleaningPage() {
               Our Downtown Jacksonville Window Cleaning Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to window cleaning in Downtown Jacksonville's unique environment
+              A systematic approach to window cleaning in Downtown Jacksonville&apos;s unique environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function DowntownJacksonvilleWindowCleaningPage() {
               Downtown Jacksonville Window Cleaning Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized window cleaning solutions for Downtown Jacksonville's unique building types
+              Specialized window cleaning solutions for Downtown Jacksonville&apos;s unique building types
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function DowntownJacksonvilleWindowCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise Window Cleaning</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise buildings require specialized window cleaning approaches. 
+                Downtown Jacksonville&apos;s high-rise buildings require specialized window cleaning approaches. 
                 We handle high-altitude access, safety protocols, and building management coordination.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function DowntownJacksonvilleWindowCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Historic Building Care</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's historic properties require careful window cleaning approaches. 
+                Downtown Jacksonville&apos;s historic properties require careful window cleaning approaches. 
                 We use gentle yet effective methods to preserve architectural integrity.
               </p>
               <ul className="space-y-2 text-gray-600">

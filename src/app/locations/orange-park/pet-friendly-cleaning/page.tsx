@@ -43,18 +43,18 @@ export default function OrangeParkPetFriendlyCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Orange Park's unique suburban character, with its mix of military families from NAS Jacksonville, 
+                  Orange Park&apos;s unique suburban character, with its mix of military families from NAS Jacksonville, 
                   medical professionals from the Orange Park Medical Center, and growing families, requires pet-friendly 
                   cleaning services that understand local needs and pet safety.
                 </p>
                 <p>
-                  Our pet-friendly cleaning service in Orange Park is designed specifically for the area's diverse 
+                  Our pet-friendly cleaning service in Orange Park is designed specifically for the area&apos;s diverse 
                   pet families, from military families to medical professionals. We understand that pet families need 
                   safe cleaning products, pet odor elimination, and reliable, pet-conscious cleaning services.
                 </p>
                 <p>
                   With strong partnerships with local Orange Park businesses, schools, and community organizations, 
-                  we provide pet-friendly cleaning that supports the area's family growth while maintaining 
+                  we provide pet-friendly cleaning that supports the area&apos;s family growth while maintaining 
                   the highest standards Orange Park pet families expect.
                 </p>
               </div>
@@ -141,7 +141,7 @@ export default function OrangeParkPetFriendlyCleaningPage() {
             <div className="bg-green-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-green-900 mb-4">Pet-Safe Cleaning Expertise</h3>
               <p className="text-green-800 mb-4">
-                Orange Park's pet community requires cleaning services that understand the unique 
+                Orange Park&apos;s pet community requires cleaning services that understand the unique 
                 needs of pet families and safe cleaning protocols.
               </p>
               <ul className="space-y-2 text-green-700">
@@ -182,7 +182,7 @@ export default function OrangeParkPetFriendlyCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Pet-Safe Assessment</h3>
               <p className="text-gray-600">
-                We evaluate your Orange Park pet family's specific cleaning needs, considering 
+                We evaluate your Orange Park pet family&apos;s specific cleaning needs, considering 
                 the area's family requirements and pet safety standards.
               </p>
             </div>
@@ -193,7 +193,7 @@ export default function OrangeParkPetFriendlyCleaningPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Pet-Conscious Plan</h3>
               <p className="text-gray-600">
-                Develop a pet-friendly cleaning plan tailored to your Orange Park family's layout, 
+                Develop a pet-friendly cleaning plan tailored to your Orange Park family&apos;s layout, 
                 schedule, and specific pet care needs.
               </p>
             </div>

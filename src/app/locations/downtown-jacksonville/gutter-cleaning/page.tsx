@@ -64,7 +64,7 @@ export default function DowntownJacksonvilleGutterCleaningPage() {
           </h1>
           <p className="text-xl md:text-2xl text-amber-100 mb-8 max-w-4xl mx-auto">
             Professional gutter cleaning services designed specifically for Downtown Jacksonville properties. 
-            From high-rise buildings to luxury condos, we provide comprehensive gutter maintenance that protects Downtown's investments.
+            From high-rise buildings to luxury condos, we provide comprehensive gutter maintenance that protects Downtown&apos;s investments.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -94,7 +94,7 @@ export default function DowntownJacksonvilleGutterCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's urban environment requires gutter cleaning services that understand 
+                  Downtown Jacksonville&apos;s urban environment requires gutter cleaning services that understand 
                   the unique challenges of high-rise buildings and urban maintenance. From roof access to 
                   safety compliance, we provide comprehensive gutter solutions.
                 </p>
@@ -105,12 +105,12 @@ export default function DowntownJacksonvilleGutterCleaningPage() {
                 </p>
                 <p>
                   Whether you need seasonal gutter cleaning, emergency clearing, or regular maintenance, 
-                  our local team ensures your Downtown Jacksonville property's drainage system functions perfectly.
+                  our local team ensures your Downtown Jacksonville property&apos;s drainage system functions perfectly.
                 </p>
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {gutterFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function DowntownJacksonvilleGutterCleaningPage() {
               Downtown Jacksonville Gutter Cleaning Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique gutter cleaning environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique gutter cleaning environment
             </p>
           </div>
           
@@ -157,7 +157,7 @@ export default function DowntownJacksonvilleGutterCleaningPage() {
               Our Downtown Jacksonville Gutter Cleaning Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to gutter cleaning in Downtown Jacksonville's unique environment
+              A systematic approach to gutter cleaning in Downtown Jacksonville&apos;s unique environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function DowntownJacksonvilleGutterCleaningPage() {
               Downtown Jacksonville Gutter Cleaning Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized gutter cleaning solutions for Downtown Jacksonville's unique building types
+              Specialized gutter cleaning solutions for Downtown Jacksonville&apos;s unique building types
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function DowntownJacksonvilleGutterCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise Gutter Maintenance</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise buildings require specialized gutter cleaning approaches. 
+                Downtown Jacksonville&apos;s high-rise buildings require specialized gutter cleaning approaches. 
                 We handle roof access, safety equipment, and multi-story gutter systems.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function DowntownJacksonvilleGutterCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Downtown Safety Standards</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's urban environment requires the highest safety standards for gutter cleaning. 
+                Downtown Jacksonville&apos;s urban environment requires the highest safety standards for gutter cleaning. 
                 We maintain strict safety protocols and building compliance.
               </p>
               <ul className="space-y-2 text-gray-600">

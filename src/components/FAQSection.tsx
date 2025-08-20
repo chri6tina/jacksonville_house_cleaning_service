@@ -44,7 +44,7 @@ const FAQSection: React.FC = () => {
       questions: [
         {
           question: "How do I book a cleaning service?",
-          answer: "You can book our services in three ways: 1) Call us directly at (904) 456-3851, 2) Fill out our online contact form at /contact, or 3) Email us at info@jaxcleaning.com. We'll schedule a convenient time for you and provide a detailed quote. We offer flexible scheduling including early morning, evening, and weekend appointments."
+          answer: "You can book our services in three ways: 1) Call us directly at (904) 456-3851, 2) Fill out our online contact form at /contact, or 3) Email us at info@jaxcleaning.com. We&apos;ll schedule a convenient time for you and provide a detailed quote. We offer flexible scheduling including early morning, evening, and weekend appointments."
         },
         {
           question: "How far in advance should I book?",
@@ -160,7 +160,7 @@ const FAQSection: React.FC = () => {
           </h2>
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
             Get answers to the most common questions about our Jacksonville cleaning services. 
-            Can't find what you're looking for? Contact us directly at (904) 456-3851.
+            Can&apos;t find what you're looking for? Contact us directly at (904) 456-3851.
           </p>
         </div>
 

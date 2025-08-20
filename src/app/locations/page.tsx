@@ -133,13 +133,13 @@ export default function LocationsPage() {
               <span className="block">Jacksonville</span>
               <span className="block text-cyan-400">Service Areas</span>
               <span className="block text-lg sm:text-xl lg:text-2xl font-medium text-white/90 mt-3">
-                From the Beaches to Downtown, We're Your Local Cleaning Team
+                From the Beaches to Downtown, We&apos;re Your Local Cleaning Team
               </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-              As your Jacksonville neighbors, we're proud to serve homes and businesses throughout 
+              As your Jacksonville neighbors, we&apos;re proud to serve homes and businesses throughout 
               the city and surrounding communities. No matter where you are in the area, we bring 
               the same quality service and local care.
             </p>
@@ -278,7 +278,7 @@ export default function LocationsPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Knowledge</h3>
               <p className="text-gray-600">
-                We understand Jacksonville's unique climate, housing types, and local cleaning challenges
+                We understand Jacksonville&apos;s unique climate, housing types, and local cleaning challenges
               </p>
             </div>
             

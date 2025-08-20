@@ -41,7 +41,7 @@ export default function EcoFriendlyCleaningProducts() {
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Making the switch to eco-friendly cleaning products is one of the best decisions you can make for your family, 
                 pets, and the environment. Traditional cleaning products often contain harsh chemicals that can be harmful 
-                to your health and the planet. Let's explore why eco-friendly alternatives are the better choice.
+                to your health and the planet. Let&apos;s explore why eco-friendly alternatives are the better choice.
               </p>
 
               <h2 className="text-3xl font-bold text-charcoal mb-6">Health Benefits for Your Family</h2>
@@ -107,7 +107,7 @@ export default function EcoFriendlyCleaningProducts() {
                     Water and Air Quality
                   </h3>
                   <p className="text-gray-700 mb-4">
-                    When you use eco-friendly cleaning products, you're helping to protect our waterways and air quality. 
+                    When you use eco-friendly cleaning products, you&apos;re helping to protect our waterways and air quality. 
                     Traditional cleaning chemicals can contaminate water supplies and contribute to air pollution.
                   </p>
                   <ul className="list-none space-y-2">
@@ -132,7 +132,7 @@ export default function EcoFriendlyCleaningProducts() {
                     Sustainable Packaging
                   </h3>
                   <p className="text-gray-700 mb-4">
-                    Eco-friendly cleaning products often come in sustainable packaging that's better for the environment.
+                    Eco-friendly cleaning products often come in sustainable packaging that&apos;s better for the environment.
                   </p>
                   <ul className="list-none space-y-2">
                     <li className="flex items-start gap-2">
@@ -178,7 +178,7 @@ export default function EcoFriendlyCleaningProducts() {
               <h2 className="text-3xl font-bold text-charcoal mb-6">Our Eco-Friendly Commitment</h2>
               
               <p className="text-gray-700 mb-6">
-                At Jacksonville House Cleaning, we're committed to using only eco-friendly cleaning products. 
+                At Jacksonville House Cleaning, we&apos;re committed to using only eco-friendly cleaning products. 
                 We believe that professional cleaning should be effective, safe, and environmentally responsible.
               </p>
 

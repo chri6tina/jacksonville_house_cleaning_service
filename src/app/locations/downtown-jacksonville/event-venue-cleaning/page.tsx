@@ -94,7 +94,7 @@ export default function DowntownJacksonvilleEventVenueCleaningPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's urban environment requires event venue cleaning services that understand 
+                  Downtown Jacksonville&apos;s urban environment requires event venue cleaning services that understand 
                   the unique challenges of high-rise venues and urban event management. From pre-event preparation 
                   to post-event cleanup, we provide comprehensive venue solutions.
                 </p>
@@ -110,7 +110,7 @@ export default function DowntownJacksonvilleEventVenueCleaningPage() {
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {eventVenueFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function DowntownJacksonvilleEventVenueCleaningPage() {
               Downtown Jacksonville Event Venue Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique event venue environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique event venue environment
             </p>
           </div>
           
@@ -157,7 +157,7 @@ export default function DowntownJacksonvilleEventVenueCleaningPage() {
               Our Downtown Jacksonville Event Venue Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to event venue cleaning in Downtown Jacksonville's unique environment
+              A systematic approach to event venue cleaning in Downtown Jacksonville&apos;s unique environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function DowntownJacksonvilleEventVenueCleaningPage() {
               Downtown Jacksonville Event Venue Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized event venue cleaning solutions for Downtown Jacksonville's unique urban venues
+              Specialized event venue cleaning solutions for Downtown Jacksonville&apos;s unique urban venues
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function DowntownJacksonvilleEventVenueCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise Event Management</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise event venues require specialized cleaning approaches. 
+                Downtown Jacksonville&apos;s high-rise event venues require specialized cleaning approaches. 
                 We handle building access, elevator coordination, and urban venue maintenance.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function DowntownJacksonvilleEventVenueCleaningPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Flexible Event Scheduling</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's busy event environment requires flexible venue cleaning scheduling. 
+                Downtown Jacksonville&apos;s busy event environment requires flexible venue cleaning scheduling. 
                 We work around event schedules and Downtown building requirements.
               </p>
               <ul className="space-y-2 text-gray-600">

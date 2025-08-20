@@ -199,13 +199,13 @@ export default function OrangeParkPage() {
                   suburban comfort and urban convenience.
                 </p>
                 <p>
-                  The area's proximity to NAS Jacksonville, the Orange Park Medical Center, and major shopping 
+                  The area&apos;s proximity to NAS Jacksonville, the Orange Park Medical Center, and major shopping 
                   centers like the Orange Park Mall creates diverse cleaning needs that require specialized expertise. 
                   From military families who need flexible scheduling to medical professionals who require 
                   sanitization-focused services, Orange Park residents have unique cleaning requirements.
                 </p>
                 <p>
-                  Our local team understands Orange Park's distinctive character, from the historic homes in 
+                  Our local team understands Orange Park&apos;s distinctive character, from the historic homes in 
                   the Town Center area to the modern developments near the St. Johns Town Center. We've built 
                   strong relationships with local businesses, schools, and community organizations to provide 
                   cleaning services that truly serve the Orange Park community.
@@ -264,7 +264,7 @@ export default function OrangeParkPage() {
               Why Choose Us for Orange Park Cleaning?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local expertise that understands Orange Park's unique cleaning challenges and community needs
+              Local expertise that understands Orange Park&apos;s unique cleaning challenges and community needs
             </p>
           </div>
           
@@ -297,7 +297,7 @@ export default function OrangeParkPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Community Partnership</h3>
               <p className="text-gray-600">
-                We're proud partners with Orange Park schools, local businesses, and community 
+                We&apos;re proud partners with Orange Park schools, local businesses, and community 
                 organizations, demonstrating our commitment to the area's growth and prosperity.
               </p>
             </div>
@@ -321,7 +321,7 @@ export default function OrangeParkPage() {
             <div className="bg-blue-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-blue-900 mb-4">Suburban Family Homes</h3>
               <p className="text-blue-800 mb-4">
-                Orange Park's suburban setting means larger homes with more square footage, 
+                Orange Park&apos;s suburban setting means larger homes with more square footage, 
                 multiple bathrooms, and family-focused living spaces that require efficient, 
                 thorough cleaning approaches.
               </p>
@@ -503,7 +503,7 @@ export default function OrangeParkPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Local Assessment</h4>
-                    <p className="text-gray-600">We evaluate your Orange Park property's specific cleaning needs</p>
+                    <p className="text-gray-600">We evaluate your Orange Park property&apos;s specific cleaning needs</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -538,7 +538,7 @@ export default function OrangeParkPage() {
           </h2>
           <p className="text-xl text-blue-800 mb-8 max-w-3xl mx-auto">
             Join hundreds of satisfied Orange Park residents and businesses who trust us with their cleaning needs. 
-            Get your free quote today and discover why we're the preferred cleaning service in Orange Park!
+            Get your free quote today and discover why we&apos;re the preferred cleaning service in Orange Park!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

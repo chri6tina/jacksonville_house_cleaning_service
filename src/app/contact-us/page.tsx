@@ -13,7 +13,7 @@ export default function ContactUsPage() {
             </h1>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
               Ready to experience the difference? Get in touch with us today for a free quote 
-              or to schedule your cleaning service. We're here to help!
+              or to schedule your cleaning service. We&apos;re here to help!
             </p>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function ContactUsPage() {
                     >
                       jaxhousecleaningservice@gmail.com
                     </a>
-                    <p className="text-charcoal/70 mt-1">We'll respond within 24 hours</p>
+                    <p className="text-charcoal/70 mt-1">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
 
@@ -283,7 +283,7 @@ export default function ContactUsPage() {
               Service Areas
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We proudly serve Jacksonville and surrounding areas. Don't see your neighborhood? 
+              We proudly serve Jacksonville and surrounding areas. Don&apos;t see your neighborhood? 
               Give us a call - we may still be able to help!
             </p>
           </div>
@@ -340,7 +340,7 @@ export default function ContactUsPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Have questions? We're here to help! Here are answers to some common questions.
+              Have questions? We&apos;re here to help! Here are answers to some common questions.
             </p>
           </div>
 
@@ -371,9 +371,9 @@ export default function ContactUsPage() {
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">What if I'm not satisfied with the cleaning?</h3>
+                <h3 className="text-xl font-bold text-charcoal mb-3">What if I&apos;m not satisfied with the cleaning?</h3>
                 <p className="text-charcoal/70">
-                  We offer a 100% satisfaction guarantee. If you're not happy, we'll come back and make it right.
+                  We offer a 100% satisfaction guarantee. If you&apos;re not happy, we'll come back and make it right.
                 </p>
               </div>
               

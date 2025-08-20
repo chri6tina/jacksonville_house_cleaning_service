@@ -240,7 +240,7 @@ export default function SouthsidePage() {
                   properties efficiently.
                 </p>
                 <p>
-                  Our local team understands Southside Jacksonville's unique characteristics, from the 
+                  Our local team understands Southside Jacksonville&apos;s unique characteristics, from the 
                   busy shopping districts to the quiet residential communities, providing tailored 
                   cleaning solutions for every property type.
                 </p>
@@ -406,7 +406,7 @@ export default function SouthsidePage() {
               Why Choose Us for Southside Jacksonville?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local expertise that understands Southside Jacksonville's unique cleaning needs
+              Local expertise that understands Southside Jacksonville&apos;s unique cleaning needs
             </p>
           </div>
           
@@ -417,7 +417,7 @@ export default function SouthsidePage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Knowledge</h3>
               <p className="text-gray-600">
-                We understand Southside Jacksonville's growth patterns, traffic flow, and local business needs
+                We understand Southside Jacksonville&apos;s growth patterns, traffic flow, and local business needs
               </p>
             </div>
             
@@ -437,7 +437,7 @@ export default function SouthsidePage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Growth-Ready</h3>
               <p className="text-gray-600">
-                Our services scale with Southside Jacksonville's continued development and expansion
+                Our services scale with Southside Jacksonville&apos;s continued development and expansion
               </p>
             </div>
           </div>

@@ -40,7 +40,7 @@ export default function SpringCleaningChecklist() {
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Spring cleaning in Jacksonville is the perfect opportunity to refresh your home after the winter months. 
-                With our humid subtropical climate, it's especially important to tackle areas that may have accumulated 
+                With our humid subtropical climate, it&apos;s especially important to tackle areas that may have accumulated 
                 moisture and dust. This comprehensive checklist will help you get your home ready for the warmer months ahead.
               </p>
 

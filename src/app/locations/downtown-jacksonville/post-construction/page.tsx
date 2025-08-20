@@ -94,7 +94,7 @@ export default function DowntownJacksonvillePostConstructionPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Downtown Jacksonville's construction boom requires post-construction cleaning services 
+                  Downtown Jacksonville&apos;s construction boom requires post-construction cleaning services 
                   that understand the unique challenges of urban development. From high-rise renovations 
                   to historic building restorations, we provide comprehensive post-construction cleaning solutions.
                 </p>
@@ -104,13 +104,13 @@ export default function DowntownJacksonvillePostConstructionPage() {
                   and the high standards expected in Downtown properties.
                 </p>
                 <p>
-                  Whether you're renovating a Downtown Jacksonville office, condo, or retail space, our 
+                  Whether you&apos;re renovating a Downtown Jacksonville office, condo, or retail space, our 
                   local team ensures your construction project meets the highest cleanliness standards.
                 </p>
               </div>
             </div>
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included</h3>
               <div className="space-y-4">
                 {postConstructionFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function DowntownJacksonvillePostConstructionPage() {
               Downtown Jacksonville Post-Construction Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local knowledge that makes a difference in Downtown Jacksonville's unique construction environment
+              Local knowledge that makes a difference in Downtown Jacksonville&apos;s unique construction environment
             </p>
           </div>
           
@@ -157,7 +157,7 @@ export default function DowntownJacksonvillePostConstructionPage() {
               Our Downtown Jacksonville Post-Construction Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to post-construction cleaning in Downtown Jacksonville's unique environment
+              A systematic approach to post-construction cleaning in Downtown Jacksonville&apos;s unique environment
             </p>
           </div>
           
@@ -186,7 +186,7 @@ export default function DowntownJacksonvillePostConstructionPage() {
               Downtown Jacksonville Post-Construction Specialties
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized post-construction cleaning solutions for Downtown Jacksonville's unique development needs
+              Specialized post-construction cleaning solutions for Downtown Jacksonville&apos;s unique development needs
             </p>
           </div>
           
@@ -197,7 +197,7 @@ export default function DowntownJacksonvillePostConstructionPage() {
                 <h3 className="text-2xl font-bold text-gray-900">High-Rise Construction Cleaning</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's high-rise construction projects require specialized post-construction cleaning. 
+                Downtown Jacksonville&apos;s high-rise construction projects require specialized post-construction cleaning. 
                 We handle elevator access, safety protocols, and building management coordination for seamless cleaning.
               </p>
               <ul className="space-y-2 text-gray-600">
@@ -214,7 +214,7 @@ export default function DowntownJacksonvillePostConstructionPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Downtown Safety Compliance</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Downtown Jacksonville's construction projects require strict safety compliance. 
+                Downtown Jacksonville&apos;s construction projects require strict safety compliance. 
                 Our post-construction cleaning ensures all Downtown building codes and safety standards are met.
               </p>
               <ul className="space-y-2 text-gray-600">

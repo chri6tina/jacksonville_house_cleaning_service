@@ -37,7 +37,7 @@ export default function AboutPage() {
 
             {/* Subtitle */}
             <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-              We're not just another cleaning company - we're your neighbors in Jacksonville. 
+              We&apos;re not just another cleaning company - we're your neighbors in Jacksonville. 
               Our family-owned business has been serving this community for years, building 
               trust one clean home at a time.
             </p>
@@ -82,15 +82,15 @@ export default function AboutPage() {
               </h2>
               <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
                 Founded in 2015, Jacksonville House Cleaning Service began with a simple mission: 
-                to provide our neighbors with the same level of care and attention we'd want for our own homes.
+                to provide our neighbors with the same level of care and attention we&apos;d want for our own homes.
               </p>
               <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
-                What started as a small family operation has grown into one of Jacksonville's most trusted 
+                What started as a small family operation has grown into one of Jacksonville&apos;s most trusted 
                 cleaning services, but we've never lost sight of what makes us special - our commitment to 
                 treating every home like it's our own.
               </p>
               <p className="text-lg text-charcoal/70 leading-relaxed">
-                We're proud to call Jacksonville home and even prouder to serve this amazing community 
+                We&apos;re proud to call Jacksonville home and even prouder to serve this amazing community 
                 with reliable, eco-friendly cleaning services that families can depend on.
               </p>
             </div>
@@ -115,7 +115,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-6">Our Growth Journey</h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              From humble beginnings to Jacksonville's most trusted cleaning company
+              From humble beginnings to Jacksonville&apos;s most trusted cleaning company
             </p>
           </div>
 
@@ -335,7 +335,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Community</h3>
               <p className="text-charcoal/70">
-                We're proud to serve Jacksonville and give back to the community that supports us.
+                We&apos;re proud to serve Jacksonville and give back to the community that supports us.
               </p>
             </div>
           </div>
