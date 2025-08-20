@@ -1,254 +1,169 @@
+'use client';
+
+import React from 'react';
 import Link from 'next/link';
-import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Waves, Umbrella, Anchor, Store, Trophy, Crown, Diamond } from 'lucide-react';
+import { MapPin, Phone, Clock, Star, Home, Shield, Users, CheckCircle, Award, Leaf, Sparkles, Waves } from 'lucide-react';
 
 export default function PonteVedraBeachPage() {
-  const ponteVedraBeachServices = [
+  const localServices = [
     {
-      id: 'standard-cleaning',
-      title: 'Standard Cleaning',
-      description: 'Regular maintenance cleaning designed for Ponte Vedra Beach luxury homes and golf course properties',
-      icon: Home,
-      features: ['Luxury home maintenance', 'Golf course property care', 'Premium cleaning standards', 'Regular maintenance', 'Luxury property preservation']
+      name: 'Luxury Beach Home Cleaning',
+      description: 'Premium cleaning for Ponte Vedra Beach\'s luxury residences',
+      price: 'Starting at $350',
+      features: ['High-end finish care', 'Premium cleaning products', 'White-glove service', 'Attention to architectural details']
     },
     {
-      id: 'deep-cleaning',
-      title: 'Deep Cleaning',
-      description: 'Comprehensive cleaning service for thorough Ponte Vedra Beach luxury home refreshment',
-      icon: Sparkles,
-      features: ['Luxury home deep cleaning', 'Golf course property restoration', 'Premium surface care', 'Luxury home preservation', 'Golf course property maintenance']
+      name: 'Beachfront Property Care',
+      description: 'Specialized cleaning for homes near the Atlantic Ocean',
+      price: 'Starting at $400',
+      features: ['Salt air considerations', 'Outdoor space maintenance', 'Window and screen care', 'Deck and patio cleaning']
     },
     {
-      id: 'move-in-move-out',
-      title: 'Move In/Out Cleaning',
-      description: 'Complete cleaning service for smooth transitions in Ponte Vedra Beach luxury properties',
-      icon: Car,
-      features: ['Pre-move luxury cleaning', 'Post-move restoration', 'Golf course property preparation', 'Luxury home assessment', 'Final luxury inspection']
-    },
-    {
-      id: 'recurring-cleaning',
-      title: 'Recurring Cleaning',
-      description: 'Consistent cleaning schedule to maintain your Ponte Vedra Beach luxury home',
-      icon: Calendar,
-      features: ['Weekly, bi-weekly, or monthly options', 'Luxury home maintenance', 'Golf course property care', 'Flexible scheduling', 'Priority booking']
-    },
-    {
-      id: 'vacation-rental-cleaning',
-      title: 'Vacation Rental Turnover',
-      description: 'Professional cleaning for Ponte Vedra Beach luxury vacation rental properties',
-      icon: Building2,
-      features: ['Quick luxury property turnaround', 'Guest-ready luxury standards', 'Golf course property cleaning', 'Outdoor area maintenance', 'Luxury charm preservation']
-    },
-    {
-      id: 'post-construction-cleaning',
-      title: 'Post-Construction Cleaning',
-      description: 'Comprehensive cleanup after construction or renovation projects',
-      icon: Target,
-      features: ['Construction debris removal', 'Luxury home cleanup', 'Golf course property restoration', 'Luxury surface restoration', 'Quality inspection']
-    },
-    {
-      id: 'carpet-cleaning',
-      title: 'Carpet Cleaning',
-      description: 'Professional carpet cleaning with luxury home considerations',
-      icon: Droplets,
-      features: ['Luxury carpet care', 'Premium cleaning products', 'Golf course property maintenance', 'Luxury carpet protection', 'Fast drying technology']
-    },
-    {
-      id: 'window-cleaning',
-      title: 'Window Cleaning',
-      description: 'Crystal clear windows for your Ponte Vedra Beach luxury home',
-      icon: Building2,
-      features: ['Luxury window care', 'Golf course view optimization', 'Premium window protection', 'Streak-free results', 'Safety equipment used']
-    },
-    {
-      id: 'pressure-washing',
-      title: 'Pressure Washing',
-      description: 'Exterior surface cleaning for Ponte Vedra Beach luxury properties',
-      icon: Zap,
-      features: ['Luxury property cleaning', 'Golf course property maintenance', 'Premium surface restoration', 'Safe pressure settings', 'Eco-friendly solutions']
-    },
-    {
-      id: 'gutter-cleaning',
-      title: 'Gutter Cleaning',
-      description: 'Maintain proper drainage with Ponte Vedra Beach luxury property considerations',
-      icon: Droplets,
-      features: ['Luxury property maintenance', 'Golf course property care', 'Premium drainage maintenance', 'Preventive maintenance', 'Safety protocols']
-    },
-    {
-      id: 'air-duct-cleaning',
-      title: 'Air Duct Cleaning',
-      description: 'Improve indoor air quality with luxury home environment focus',
-      icon: Gauge,
-      features: ['Luxury home air quality', 'Premium duct cleaning', 'Golf course property maintenance', 'Energy efficiency improvement', 'Luxury home care']
-    },
-    {
-      id: 'apartment-cleaning',
-      title: 'Apartment Cleaning',
-      description: 'Specialized cleaning for Ponte Vedra Beach luxury apartment residents',
-      icon: Building2,
-      features: ['Luxury apartment care', 'Premium cleaning standards', 'Golf course property maintenance', 'Move-in/out services', 'Regular maintenance']
-    },
-    {
-      id: 'commercial-office-cleaning',
-      title: 'Commercial Office Cleaning',
-      description: 'Professional cleaning for Ponte Vedra Beach luxury businesses and offices',
-      icon: Building2,
-      features: ['Daily luxury maintenance', 'Premium cleaning protocols', 'Golf course business support', 'Restroom maintenance', 'Flexible scheduling']
-    },
-    {
-      id: 'medical-facility-cleaning',
-      title: 'Medical Facility Cleaning',
-      description: 'Specialized cleaning for healthcare environments',
-      icon: Shield,
-      features: ['Medical-grade sanitization', 'Infection control protocols', 'HIPAA compliance', 'Specialized equipment', 'Certified technicians']
-    },
-    {
-      id: 'event-venue-cleaning',
-      title: 'Event Venue Cleaning',
-      description: 'Pre and post-event cleaning for Ponte Vedra Beach luxury venues',
-      icon: Users,
-      features: ['Luxury venue preparation', 'Post-event luxury cleanup', 'Golf course venue maintenance', 'Quick turnaround', 'Luxury venue expertise']
-    },
-    {
-      id: 'senior-citizen-cleaning',
-      title: 'Senior Citizen Cleaning',
-      description: 'Compassionate cleaning services for seniors in Ponte Vedra Beach',
-      icon: Users,
-      features: ['Gentle luxury cleaning methods', 'Golf course property care', 'Regular maintenance', 'Companionship during service', 'Flexible scheduling']
-    },
-    {
-      id: 'pet-friendly-cleaning',
-      title: 'Pet-Friendly Cleaning',
-      description: 'Safe cleaning solutions for luxury homes with pets in Ponte Vedra Beach',
-      icon: Leaf,
-      features: ['Pet-safe luxury cleaning products', 'Golf course property care', 'Premium pet odor elimination', 'Stain treatment', 'Non-toxic solutions']
+      name: 'Executive Beach Maintenance',
+      description: 'Comprehensive cleaning for busy professionals',
+      price: 'Starting at $300',
+      features: ['Flexible scheduling', 'Keyless entry access', 'Detailed reporting', 'Premium service standards']
     }
   ];
 
+  const neighborhoodFeatures = [
+    'Luxury beachfront community',
+    'Proximity to Atlantic Ocean',
+    'World-class golf courses',
+    'High-end residential properties',
+    'Exclusive shopping and dining',
+    'Professional and executive residents'
+  ];
+
+  const localLandmarks = [
+    'TPC Sawgrass',
+    'Ponte Vedra Beach',
+    'Sawgrass Marriott',
+    'Ponte Vedra Concert Hall',
+    'Golf Hall of Fame',
+    'Atlantic Ocean access'
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 py-20">
-        <div className="absolute inset-0 bg-white/30"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6">
-            Professional Cleaning Services in Ponte Vedra Beach
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-800 mb-8 max-w-4xl mx-auto">
-            Trusted cleaning solutions for luxury homes and golf course properties in Ponte Vedra Beach, Jacksonville. 
-            Serving ZIP code 32082 with luxury home expertise and golf course partnerships.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/contact?location=ponte-vedra-beach"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 flex items-center space-x-2"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Get Free Quote</span>
-            </Link>
-            <Link
-              href="#services"
-              className="bg-white/80 hover:bg-white text-blue-700 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 border-2 border-blue-600"
-            >
-              View Services
-            </Link>
-          </div>
-          
-          {/* Trust Indicators */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Star className="w-8 h-8 text-blue-600" />
-              </div>
-              <p className="text-blue-800 font-semibold">5-Star Rated</p>
+    <div className="min-h-screen">
+      {/* Hero Section - Local Business Style */}
+      <section
+        className="relative py-20 lg:py-24 overflow-hidden"
+        style={{
+          backgroundImage: 'url(/hero1.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60 sm:bg-black/75"></div>
+
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            {/* Local Business Badge */}
+            <div className="inline-flex items-center gap-2 bg-white text-gray-800 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-white shadow-lg">
+              <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-primary-blue" />
+              Serving Ponte Vedra Beach Since 2015
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Shield className="w-8 h-8 text-blue-600" />
-              </div>
-              <p className="text-blue-800 font-semibold">Fully Insured</p>
+
+            {/* Main Headline */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight text-white drop-shadow-lg">
+              <span className="block">Ponte Vedra Beach</span>
+              <span className="block text-cyan-300 sm:text-cyan-400">House Cleaning Services</span>
+              <span className="block text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white mt-2 sm:mt-3 drop-shadow-md">
+                Luxury Beach Home Cleaning Specialists
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 drop-shadow-md">
+              Professional cleaning services designed for Ponte Vedra Beach's luxury homes and beachfront properties. 
+              Our Jacksonville team delivers the premium service this prestigious community deserves.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-10 px-4">
+              <Link
+                href="/contact?location=Ponte%20Vedra%20Beach"
+                className="bg-accent-coral hover:bg-accent-coral/90 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 sm:gap-3"
+              >
+                <Home className="w-4 h-4 sm:w-5 sm:h-5" />
+                Get Ponte Vedra Quote
+              </Link>
+              <a
+                href="tel:9044563851"
+                className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-gray-800 px-6 sm:px-8 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
+              >
+                <Phone className="w-4 h-4 sm:w-5 sm:w-5" />
+                Call (904) 456-3851
+              </a>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Clock className="w-8 h-8 text-blue-600" />
+
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mt-8 sm:mt-10 px-4">
+              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-green/30 sm:bg-accent-green/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
+                  <Award className="w-5 h-5 sm:w-6 sm:h-6 text-accent-green" />
+                </div>
+                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Luxury Standards</h3>
+                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Premium service</p>
               </div>
-              <p className="text-blue-800 font-semibold">On-Time Service</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <CheckCircle className="w-8 h-8 text-blue-600" />
+
+              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-blue/30 sm:bg-primary-blue/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
+                  <Waves className="w-5 h-5 sm:w-6 sm:h-6 text-primary-blue" />
+                </div>
+                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Beachfront Experts</h3>
+                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Ocean property care</p>
               </div>
-              <p className="text-blue-800 font-semibold">Satisfaction Guaranteed</p>
+
+              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center sm:col-span-2 lg:col-span-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-coral/30 sm:bg-accent-coral/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
+                  <Users className="w-5 h-5 sm:w-6 sm:h-6 text-accent-coral" />
+                </div>
+                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Local Team</h3>
+                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Jacksonville neighbors</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Ponte Vedra Beach Overview Section */}
-      <section className="py-16 bg-white">
+      {/* Neighborhood Overview */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Ponte Vedra Beach: A Luxury Coastal Community with Premium Cleaning Needs
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                Ponte Vedra Beach: Jacksonville's Premier Beach Community
               </h2>
-              <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
-                <p>
-                  Ponte Vedra Beach, located along the Atlantic coast north of Jacksonville Beach, 
-                  is a prestigious beach community known for its luxury homes, world-class golf courses, 
-                  and affluent residents. With a population of over 25,000 residents, Ponte Vedra Beach 
-                  offers the perfect blend of coastal luxury and golf course living.
-                </p>
-                <p>
-                  The area&apos;s luxury environment creates unique cleaning challenges that require specialized 
-                  expertise. From luxury home maintenance and golf course property care to premium cleaning 
-                  standards and luxury property preservation, Ponte Vedra Beach properties need cleaning 
-                  services that understand the luxury market and golf course community.
-                </p>
-                <p>
-                  Our local team has deep roots in Ponte Vedra Beach, with strong partnerships with luxury 
-                  home builders, golf course management, and community organizations. We understand the area&apos;s 
-                  unique luxury character and golf course challenges, providing cleaning services that preserve 
-                  Ponte Vedra Beach's prestige while maintaining premium cleanliness standards.
-                </p>
+              <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
+                Ponte Vedra Beach represents the pinnacle of luxury living in Jacksonville, featuring stunning beachfront 
+                properties, world-class golf courses, and an exclusive community atmosphere. Our cleaning services are 
+                tailored to meet the exacting standards of this prestigious area.
+              </p>
+              <div className="space-y-4">
+                {neighborhoodFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-accent-green" />
+                    <span className="text-charcoal/80">{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="bg-gray-100 rounded-2xl p-8">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">ZIP Code</h3>
-                    <p className="text-gray-600">32082</p>
-                  </div>
+            <div className="bg-gradient-to-br from-primary-blue/20 to-accent-aqua/20 rounded-2xl p-8">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                  <MapPin className="w-10 h-10 text-white" />
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <Users className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Population</h3>
-                    <p className="text-gray-600">25,000+ residents</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                    <Building2 className="w-6 h-6 text-orange-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Property Types</h3>
-                    <p className="text-gray-600">Luxury homes, golf course properties</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <Trophy className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Golf Features</h3>
-                    <p className="text-gray-600">TPC Sawgrass, luxury golf courses</p>
-                  </div>
+                <h3 className="text-2xl font-bold text-charcoal mb-2">Local Landmarks</h3>
+                <p className="text-charcoal/70 mb-4">Discover Ponte Vedra Beach</p>
+                <div className="space-y-2 text-sm text-charcoal/70">
+                  {localLandmarks.map((landmark, index) => (
+                    <p key={index}>• {landmark}</p>
+                  ))}
                 </div>
               </div>
             </div>
@@ -256,221 +171,182 @@ export default function PonteVedraBeachPage() {
         </div>
       </section>
 
-      {/* Luxury Expertise Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Specialized Services */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why Choose Us for Ponte Vedra Beach Cleaning?
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
+              Ponte Vedra Beach Specialized Services
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Luxury expertise that understands Ponte Vedra Beach&apos;s unique cleaning challenges and golf course community needs
+            <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
+              Our Jacksonville team understands the unique needs of luxury homes and beachfront properties in this prestigious community
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Crown className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Luxury Home Expertise</h3>
-              <p className="text-gray-600">
-                We understand Ponte Vedra Beach&apos;s luxury home challenges, from premium surface care and 
-                luxury property preservation to golf course property maintenance and luxury home standards.
-              </p>
-            </div>
-            
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Trophy className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Golf Course Property Care</h3>
-              <p className="text-gray-600">
-                With TPC Sawgrass and other luxury golf courses nearby, we provide cleaning methods that 
-                preserve golf course property value while maintaining premium cleanliness standards.
-              </p>
-            </div>
-            
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Diamond className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Premium Service Standards</h3>
-              <p className="text-gray-600">
-                We&apos;re proud partners with Ponte Vedra Beach luxury home builders, golf course management, 
-                and community organizations, demonstrating our commitment to the area's luxury standards.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Luxury Challenges & Solutions */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Ponte Vedra Beach-Specific Cleaning Challenges & Solutions
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Understanding and addressing the unique cleaning needs of Ponte Vedra Beach luxury properties
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-blue-50 p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-blue-900 mb-4">Luxury Home Maintenance</h3>
-              <p className="text-blue-800 mb-4">
-                Ponte Vedra Beach&apos;s luxury environment means premium homes with high-end finishes, 
-                golf course views, and luxury standards that require specialized cleaning expertise.
-              </p>
-              <ul className="space-y-2 text-blue-700">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-600" />
-                  <span>Premium surface care and preservation</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-600" />
-                  <span>Luxury home maintenance protocols</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-600" />
-                  <span>Premium cleaning product standards</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-green-50 p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-green-900 mb-4">Golf Course Property Care</h3>
-              <p className="text-green-800 mb-4">
-                With TPC Sawgrass and luxury golf courses nearby, we provide cleaning methods that 
-                preserve golf course property value while maintaining premium cleanliness standards.
-              </p>
-              <ul className="space-y-2 text-green-700">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Golf course property maintenance</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Premium outdoor area care</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Luxury property preservation</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+            {localServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Home className="w-8 h-8 text-primary-blue" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
+                  <p className="text-charcoal/70 mb-4">{service.description}</p>
+                  <div className="text-3xl font-bold text-primary-blue mb-2">{service.price}</div>
+                </div>
 
-      {/* Services Section */}
-      <section id="services" className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Comprehensive Cleaning Services in Ponte Vedra Beach
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Professional cleaning solutions designed specifically for Ponte Vedra Beach luxury properties and golf course community needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ponteVedraBeachServices.map((service, index) => {
-              // Define color schemes for each service
-              const colorSchemes = [
-                { bg: 'bg-blue-500', hover: 'hover:bg-blue-600', accent: 'bg-blue-100', text: 'text-blue-600', dot: 'bg-blue-500', border: 'border-blue-500' },
-                { bg: 'bg-purple-500', hover: 'hover:bg-purple-600', accent: 'bg-purple-100', text: 'text-purple-600', dot: 'bg-purple-500', border: 'border-purple-500' },
-                { bg: 'bg-green-500', hover: 'hover:bg-green-600', accent: 'bg-green-100', text: 'text-green-600', dot: 'bg-green-500', border: 'border-green-500' },
-                { bg: 'bg-orange-500', hover: 'hover:bg-orange-600', accent: 'bg-orange-100', text: 'text-orange-600', dot: 'bg-orange-500', border: 'border-orange-500' },
-                { bg: 'bg-indigo-500', hover: 'hover:bg-indigo-600', accent: 'bg-indigo-100', text: 'text-indigo-600', dot: 'bg-indigo-500', border: 'border-indigo-500' },
-                { bg: 'bg-teal-500', hover: 'hover:bg-teal-600', accent: 'bg-teal-100', text: 'text-teal-600', dot: 'bg-teal-500', border: 'border-teal-500' },
-                { bg: 'bg-emerald-500', hover: 'hover:bg-emerald-600', accent: 'bg-emerald-100', text: 'text-emerald-600', dot: 'bg-emerald-500', border: 'border-emerald-500' },
-                { bg: 'bg-amber-500', hover: 'hover:bg-amber-600', accent: 'bg-amber-100', text: 'text-amber-600', dot: 'bg-amber-500', border: 'border-amber-500' },
-                { bg: 'bg-cyan-500', hover: 'hover:bg-cyan-600', accent: 'bg-cyan-100', text: 'text-cyan-600', dot: 'bg-cyan-500', border: 'border-cyan-500' },
-                { bg: 'bg-sky-500', hover: 'hover:bg-sky-600', accent: 'bg-sky-100', text: 'text-sky-600', dot: 'bg-sky-500', border: 'border-sky-500' },
-                { bg: 'bg-rose-500', hover: 'hover:bg-rose-600', accent: 'bg-rose-100', text: 'text-rose-600', dot: 'bg-rose-500', border: 'border-rose-500' },
-                { bg: 'bg-pink-500', hover: 'hover:bg-pink-600', accent: 'bg-pink-100', text: 'text-pink-600', dot: 'bg-pink-500', border: 'border-pink-500' },
-                { bg: 'bg-red-500', hover: 'hover:bg-red-600', accent: 'bg-red-100', text: 'text-red-600', dot: 'bg-red-500', border: 'border-red-500' },
-                { bg: 'bg-violet-500', hover: 'hover:bg-violet-600', accent: 'bg-violet-100', text: 'text-violet-600', dot: 'bg-violet-500', border: 'border-violet-500' },
-                { bg: 'bg-lime-500', hover: 'hover:bg-lime-600', accent: 'bg-lime-100', text: 'text-lime-600', dot: 'bg-lime-500', border: 'border-lime-500' },
-                { bg: 'bg-fuchsia-500', hover: 'hover:bg-fuchsia-600', accent: 'bg-fuchsia-100', text: 'text-fuchsia-600', dot: 'bg-fuchsia-500', border: 'border-fuchsia-500' },
-                { bg: 'bg-slate-500', hover: 'hover:bg-slate-600', accent: 'bg-slate-100', text: 'text-slate-600', dot: 'bg-slate-500', border: 'border-slate-500' }
-              ];
-              
-              const colorScheme = colorSchemes[index % colorSchemes.length];
-              
-              return (
-                <div key={service.id} className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className={`h-3 ${colorScheme.bg} rounded-t-xl`}></div>
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className={`w-12 h-12 ${colorScheme.accent} rounded-full flex items-center justify-center mr-4`}>
-                        <service.icon className={`w-6 h-6 ${colorScheme.text}`} />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                <div className="space-y-3 mb-6">
+                  <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-3">
+                      <CheckCircle className="w-4 h-4 text-accent-green flex-shrink-0" />
+                      <span className="text-sm text-charcoal/70">{feature}</span>
                     </div>
-                    
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                    
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center space-x-2">
-                          <div className={`w-2 h-2 ${colorScheme.dot} rounded-full`}></div>
-                          <span className="text-sm text-gray-600">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  ))}
+                </div>
 
-                    <div className="space-y-3">
-                      <Link
-                        href={`/${service.id}`}
-                        className={`w-full ${colorScheme.bg} ${colorScheme.hover} text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2`}
-                      >
-                        <span>Learn More</span>
-                      </Link>
-                      <Link
-                        href={`/contact?service=${service.id}&location=ponte-vedra-beach`}
-                        className={`w-full border ${colorScheme.border} ${colorScheme.text} py-2 px-4 rounded-lg font-medium hover:${colorScheme.bg} hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2`}
-                      >
-                        <Phone className="w-4 h-4" />
-                        <span>Get Quote</span>
-                      </Link>
-                    </div>
+                <Link
+                  href={`/contact?location=Ponte%20Vedra%20Beach&service=${encodeURIComponent(service.name)}`}
+                  className="w-full bg-accent-coral hover:bg-accent-coral/90 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
+                >
+                  Book This Service
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us for Ponte Vedra Beach */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
+              Why Ponte Vedra Beach Homeowners Choose Us
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
+              Our Jacksonville team brings luxury service standards and local expertise to every Ponte Vedra Beach home
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                icon: Award,
+                title: 'Luxury Standards',
+                description: 'Premium service quality that matches your home\'s prestige'
+              },
+              {
+                icon: Waves,
+                title: 'Beachfront Expertise',
+                description: 'Specialized care for properties near the Atlantic Ocean'
+              },
+              {
+                icon: MapPin,
+                title: 'Local Knowledge',
+                description: 'Deep understanding of Ponte Vedra Beach\'s unique characteristics'
+              },
+              {
+                icon: Clock,
+                title: 'Flexible Scheduling',
+                description: 'Work around your busy professional schedule'
+              },
+              {
+                icon: Star,
+                title: '5-Star Service',
+                description: 'Consistently exceeding Ponte Vedra Beach expectations'
+              },
+              {
+                icon: Sparkles,
+                title: 'Attention to Detail',
+                description: 'Every surface, every corner, every luxury feature cared for'
+              }
+            ].map((feature, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-6 text-center hover:bg-gray-100 transition-colors duration-200">
+                <div className="w-16 h-16 bg-primary-blue/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-primary-blue" />
+                </div>
+                <h3 className="font-semibold text-charcoal mb-2">{feature.title}</h3>
+                <p className="text-sm text-charcoal/70">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Local Testimonials */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
+              What Ponte Vedra Beach Residents Say
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                name: 'David K.',
+                location: 'Ponte Vedra Beachfront',
+                rating: 5,
+                comment: 'Exceptional service for our beachfront home. They understand the unique challenges of oceanfront properties.'
+              },
+              {
+                name: 'Lisa T.',
+                location: 'Ponte Vedra Golf Community',
+                rating: 5,
+                comment: 'Luxury service that matches our neighborhood standards. Professional, reliable, and thorough.'
+              },
+              {
+                name: 'Robert M.',
+                location: 'Historic Ponte Vedra',
+                rating: 5,
+                comment: 'Local team that knows Jacksonville. They\'ve been maintaining our home to perfection for years.'
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-charcoal/80 mb-4 italic">"{testimonial.comment}"</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold text-charcoal">{testimonial.name}</p>
+                    <p className="text-sm text-charcoal/60">{testimonial.location}</p>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
-            Ready to Experience Professional Cleaning in Ponte Vedra Beach?
+      <section className="py-12 sm:py-16 lg:py-20 bg-primary-blue">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Experience Ponte Vedra Beach's Premier Cleaning Service?
           </h2>
-          <p className="text-xl text-blue-800 mb-8 max-w-3xl mx-auto">
-            Join hundreds of satisfied Ponte Vedra Beach residents and golf course property owners who trust us with their cleaning needs. 
-            Get your free quote today and discover why we&apos;re the preferred cleaning service in Ponte Vedra Beach!
+          <p className="text-lg sm:text-xl text-white/90 mb-8">
+            Join your neighbors who trust us with their luxury homes. Get your free quote today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact?location=ponte-vedra-beach"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
+              href="/contact?location=Ponte%20Vedra%20Beach"
+              className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 flex items-center justify-center gap-3"
+            >
+              <Home className="w-5 h-5" />
+              Get Free Quote
+            </Link>
+            <a
+              href="tel:9044563851"
+              className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 flex items-center justify-center gap-3"
             >
               <Phone className="w-5 h-5" />
-              <span>Get Free Quote</span>
-            </Link>
-            <Link
-              href="tel:+19045551234"
-              className="bg-white hover:bg-gray-50 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 border-2 border-blue-600"
-            >
-              <span>Call Now</span>
-            </Link>
+              Call (904) 456-3851
+            </a>
           </div>
         </div>
       </section>

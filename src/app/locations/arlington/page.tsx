@@ -1,288 +1,168 @@
-import { MapPin, Star, Phone, Clock, Users, Shield, Building2, Home, Car, Wind, Sparkles, Truck, Hammer, PawPrint, Heart, PartyPopper, GraduationCap, Droplets, Gauge, Calendar } from 'lucide-react';
+'use client';
+
+import React from 'react';
 import Link from 'next/link';
+import { MapPin, Phone, Clock, Star, Home, Shield, Users, CheckCircle, Award, Leaf, Sparkles, Building2 } from 'lucide-react';
 
 export default function ArlingtonPage() {
-  const arlingtonServices = [
+  const localServices = [
     {
-      id: 'recurring-cleaning',
-      title: 'Recurring House Cleaning',
-      description: 'Regular maintenance cleaning to keep your Arlington Jacksonville home consistently clean',
-      icon: Home,
-      features: ['Weekly, bi-weekly, or monthly schedules', 'Dust all surfaces and furniture', 'Vacuum and mop all floors', 'Kitchen and bathroom cleaning']
+      name: 'Suburban Home Cleaning',
+      description: 'Comprehensive cleaning for Arlington\'s suburban residences',
+      price: 'Starting at $190',
+      features: ['Full interior cleaning', 'Garage and entryway care', 'Landscaping area maintenance', 'Regular maintenance schedules']
     },
     {
-      id: 'deep-cleaning',
-      title: 'Deep Cleaning',
-      description: 'Comprehensive cleaning service for thorough sanitization of Arlington properties',
-      icon: Sparkles,
-      features: ['Deep clean inside appliances', 'Clean inside cabinets and drawers', 'Detailed bathroom sanitization', 'Clean baseboards and trim']
+      name: 'Family Residence Care',
+      description: 'Family-focused cleaning for Arlington homes',
+      price: 'Starting at $170',
+      features: ['Kid and pet-safe products', 'Flexible family scheduling', 'Comprehensive room cleaning', 'Attention to detail']
     },
     {
-      id: 'move-in-out',
-      title: 'Move-In/Move-Out Cleaning',
-      description: 'Specialized cleaning for Arlington Jacksonville real estate transactions',
-      icon: Truck,
-      features: ['Pre-move out deep cleaning', 'Post-move in sanitization', 'Construction dust removal', 'Move-in ready results']
-    },
-    {
-      id: 'office-cleaning',
-      title: 'Office Cleaning',
-      description: 'Professional office cleaning for Arlington Jacksonville businesses',
-      icon: Building2,
-      features: ['Daily, weekly, or monthly schedules', 'After-hours cleaning available', 'High-traffic area focus', 'Professional appearance maintenance']
-    },
-    {
-      id: 'commercial-office-cleaning',
-      title: 'Commercial Office Cleaning',
-      description: 'Large-scale commercial cleaning for Arlington office parks',
-      icon: Building2,
-      features: ['Multi-floor cleaning', 'Common area maintenance', '24/7 availability', 'Corporate standards compliance']
-    },
-    {
-      id: 'air-duct-cleaning',
-      title: 'Air Duct & Vent Cleaning',
-      description: 'Professional air duct cleaning to improve Arlington indoor air quality',
-      icon: Sparkles,
-      features: ['Complete duct system inspection', 'Remove dust and allergens', 'Sanitize duct surfaces', 'Improve HVAC efficiency']
-    },
-    {
-      id: 'pressure-washing',
-      title: 'Pressure Washing Services',
-      description: 'Professional exterior cleaning for Arlington properties',
-      icon: Truck,
-      features: ['Building exterior cleaning', 'Driveway and sidewalk cleaning', 'Safe pressure settings', 'Eco-friendly solutions']
-    },
-    {
-      id: 'gutter-cleaning',
-      title: 'Gutter Cleaning',
-      description: 'Professional gutter maintenance for Arlington properties',
-      icon: GraduationCap,
-      features: ['Remove leaves and debris', 'Clean downspouts', 'Inspect for damage', 'Test water flow']
-    },
-    {
-      id: 'carpet-cleaning',
-      title: 'Carpet & Upholstery Cleaning',
-      description: 'Professional fabric cleaning for Arlington properties',
-      icon: Car,
-      features: ['Deep stain removal', 'Odor elimination', 'Fabric protection treatment', 'Hot water extraction method']
-    },
-    {
-      id: 'window-cleaning',
-      title: 'Window Cleaning',
-      description: 'Crystal clear views for Arlington buildings',
-      icon: Wind,
-      features: ['Interior and exterior cleaning', 'Multi-story access', 'Streak-free results', 'Safe for all window types']
-    },
-    {
-      id: 'post-construction-cleaning',
-      title: 'Post-Construction Cleaning',
-      description: 'Construction cleanup for Arlington renovation projects',
-      icon: Hammer,
-      features: ['Construction debris removal', 'Fine dust elimination', 'Detailed surface cleaning', 'Move-in ready results']
-    },
-    {
-      id: 'pet-friendly-cleaning',
-      title: 'Pet-Friendly Deep Cleaning',
-      description: 'Specialized cleaning for Arlington homes with pets',
-      icon: PawPrint,
-      features: ['Pet odor neutralization', 'Allergen reduction', 'Pet-safe cleaning products', 'HEPA filtration']
-    },
-    {
-      id: 'senior-citizen-cleaning',
-      title: 'Senior Citizen Cleaning',
-      description: 'Gentle, accessible cleaning for Arlington senior households',
-      icon: Heart,
-      features: ['Gentle cleaning products', 'Accessibility assessment', 'Companionship during cleaning', 'Health-conscious approach']
-    },
-    {
-      id: 'vacation-rental-cleaning',
-      title: 'Vacation Rental Turnover',
-      description: 'Professional turnover cleaning for Arlington short-term rentals',
-      icon: PartyPopper,
-      features: ['Hospitality-grade cleaning', 'Quick turnaround times', 'Quality assurance', 'Flexible scheduling']
-    },
-    {
-      id: 'medical-facility-cleaning',
-      title: 'Medical Facility Cleaning',
-      description: 'Specialized cleaning for Arlington medical offices and facilities',
-      icon: Shield,
-      features: ['Surface sanitization', 'Compliance documentation', 'Safety protocols', 'Regulatory standards']
-    },
-    {
-      id: 'event-venue-cleaning',
-      title: 'Event Venue Cleaning',
-      description: 'Professional cleaning for Arlington event spaces and venues',
-      icon: PartyPopper,
-      features: ['Pre-event preparation', 'Post-event cleanup', 'Hospitality standards', 'Quick turnaround']
-    },
-    {
-      id: 'apartment-cleaning',
-      title: 'Apartment Cleaning',
-      description: 'Comprehensive cleaning for Arlington apartment complexes',
-      icon: Home,
-      features: ['Complete surface cleaning', 'Kitchen deep cleaning', 'Bathroom sanitization', 'Balcony/patio cleaning']
+      name: 'Professional Home Maintenance',
+      description: 'Premium cleaning for Arlington professionals',
+      price: 'Starting at $220',
+      features: ['High-end standards', 'Flexible access options', 'Detailed reporting', 'Priority scheduling']
     }
   ];
 
-  const arlingtonHighlights = [
-    {
-      title: 'Established Suburb',
-      description: 'Mature residential community with established businesses',
-      icon: Home
-    },
-    {
-      title: 'Educational Hub',
-      description: 'Home to schools and educational institutions',
-      icon: GraduationCap
-    },
-    {
-      title: 'Business Parks',
-      description: 'Established business districts and office complexes',
-      icon: Building2
-    },
-    {
-      title: 'Family-Oriented',
-      description: 'Family-friendly neighborhoods with parks and amenities',
-      icon: Heart
-    }
+  const neighborhoodFeatures = [
+    'Family-friendly suburban community',
+    'Excellent schools and parks',
+    'Large residential lots',
+    'Mature trees and landscaping',
+    'Safe, quiet neighborhoods',
+    'Proximity to shopping and amenities'
+  ];
+
+  const localLandmarks = [
+    'Arlington Park',
+    'Arlington Expressway',
+    'Arlington High School',
+    'Arlington Community Center',
+    'Arlington Shopping Center',
+    'St. Johns River access'
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
-      {/* Minimalist Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-blue-50 via-sky-50 to-indigo-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Location Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-blue-800 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-blue-200 shadow-sm">
-            <MapPin className="w-4 h-4" />
-            Arlington • 32211, 32217, 32218
-          </div>
-          
-          {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-800">
-            Arlington
-            <br />
-            <span className="text-blue-600">Cleaning Services</span>
-          </h1>
-          
-          {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Professional cleaning services for Arlington Jacksonville homes, offices, and commercial properties. 
-            Local expertise, reliable service, exceptional results.
-          </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
-            >
-              <Phone className="w-5 h-5" />
-              Get Free Quote
-            </Link>
-            <Link 
-              href="#services" 
-              className="bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
-            >
-              View Services
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-          
-          {/* Simple Trust Indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-6 bg-white/70 rounded-2xl border border-blue-100 shadow-sm">
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Building2 className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-gray-800 mb-2">Arlington Experts</h3>
-              <p className="text-gray-600 text-sm">Local knowledge of the area</p>
+    <div className="min-h-screen">
+      {/* Hero Section - Local Business Style */}
+      <section
+        className="relative py-20 lg:py-24 overflow-hidden"
+        style={{
+          backgroundImage: 'url(/hero1.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60 sm:bg-black/75"></div>
+
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            {/* Local Business Badge */}
+            <div className="inline-flex items-center gap-2 bg-white text-gray-800 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-white shadow-lg">
+              <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-primary-blue" />
+              Serving Arlington Since 2015
             </div>
-            
-            <div className="text-center p-6 bg-white/70 rounded-2xl border border-blue-100 shadow-sm">
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-gray-800 mb-2">Flexible Scheduling</h3>
-              <p className="text-gray-600 text-sm">Weekend and evening availability</p>
+
+            {/* Main Headline */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight text-white drop-shadow-lg">
+              <span className="block">Arlington</span>
+              <span className="block text-cyan-300 sm:text-cyan-400">House Cleaning Services</span>
+              <span className="block text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white mt-2 sm:mt-3 drop-shadow-md">
+                Suburban Home Cleaning Specialists
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 drop-shadow-md">
+              Professional cleaning services designed for Arlington's suburban homes and family residences. 
+              Our Jacksonville team understands the unique needs of this welcoming community.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-10 px-4">
+              <Link
+                href="/contact?location=Arlington"
+                className="bg-accent-coral hover:bg-accent-coral/90 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 sm:gap-3"
+              >
+                <Home className="w-4 h-4 sm:w-5 sm:h-5" />
+                Get Arlington Quote
+              </Link>
+              <a
+                href="tel:9044563851"
+                className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-gray-800 px-6 sm:px-8 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
+              >
+                <Phone className="w-4 h-4 sm:w-5 sm:w-5" />
+                Call (904) 456-3851
+              </a>
             </div>
-            
-            <div className="text-center p-6 bg-white/70 rounded-2xl border border-blue-100 shadow-sm">
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-blue-600" />
+
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mt-8 sm:mt-10 px-4">
+              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-green/30 sm:bg-accent-green/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
+                  <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-accent-green" />
+                </div>
+                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Suburban Experts</h3>
+                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Large property care</p>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Licensed & Insured</h3>
-              <p className="text-gray-600 text-sm">Professional and reliable service</p>
+
+              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-blue/30 sm:bg-primary-blue/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
+                  <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary-blue" />
+                </div>
+                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Family Specialists</h3>
+                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Kid and pet safe</p>
+              </div>
+
+              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center sm:col-span-2 lg:col-span-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-coral/30 sm:bg-accent-coral/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
+                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-accent-coral" />
+                </div>
+                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Local Team</h3>
+                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Jacksonville neighbors</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Arlington Overview */}
-      <section className="py-16 bg-white">
+      {/* Neighborhood Overview */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Arlington Jacksonville
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                Arlington: Jacksonville's Welcoming Suburban Community
               </h2>
-              <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
-                <p>
-                  Arlington Jacksonville is an established suburban area known for its family-friendly 
-                  neighborhoods, excellent schools, and established business community. The area has 
-                  maintained its residential charm while developing strong commercial sectors.
-                </p>
-                <p>
-                  With its mix of established homes, business parks, and educational institutions, 
-                  Arlington Jacksonville requires cleaning services that understand the needs of both 
-                  long-term residents and growing businesses.
-                </p>
-                <p>
-                  Our local team appreciates Arlington Jacksonville&apos;s community values and established 
-                  character, providing cleaning services that respect the area's history while meeting 
-                  modern cleaning standards.
-                </p>
+              <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
+                Arlington is known for its family-friendly atmosphere, excellent schools, and beautiful suburban homes. 
+                Our cleaning services are tailored to meet the needs of families who value a clean, healthy home environment.
+              </p>
+              <div className="space-y-4">
+                {neighborhoodFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-accent-green" />
+                    <span className="text-charcoal/80">{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="bg-gray-100 rounded-2xl p-8">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">ZIP Codes</h3>
-                    <p className="text-gray-600">32211, 32217, 32225</p>
-                  </div>
+            <div className="bg-gradient-to-br from-primary-blue/20 to-accent-aqua/20 rounded-2xl p-8">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                  <MapPin className="w-10 h-10 text-white" />
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
-                    <Users className="w-6 h-6 text-pink-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Population</h3>
-                    <p className="text-gray-600">65,000+ residents</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <Home className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Property Types</h3>
-                    <p className="text-gray-600">Established homes, business parks, schools</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Service Hours</h3>
-                    <p className="text-gray-600">Flexible scheduling available</p>
-                  </div>
+                <h3 className="text-2xl font-bold text-charcoal mb-2">Local Landmarks</h3>
+                <p className="text-charcoal/70 mb-4">Discover Arlington</p>
+                <div className="space-y-2 text-sm text-charcoal/70">
+                  {localLandmarks.map((landmark, index) => (
+                    <p key={index}>• {landmark}</p>
+                  ))}
                 </div>
               </div>
             </div>
@@ -290,176 +170,183 @@ export default function ArlingtonPage() {
         </div>
       </section>
 
-      {/* Arlington Highlights */}
-      <section className="py-16 bg-gray-50">
+      {/* Specialized Services */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why Arlington Jacksonville?
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
+              Arlington Specialized Services
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Arlington Jacksonville offers unique opportunities and challenges that require specialized cleaning expertise
+            <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
+              Our Jacksonville team understands the unique needs of suburban homes and family residences in this welcoming community
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {arlingtonHighlights.map((highlight, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <highlight.icon className="w-8 h-8 text-purple-600" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+            {localServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Home className="w-8 h-8 text-primary-blue" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
+                  <p className="text-charcoal/70 mb-4">{service.description}</p>
+                  <div className="text-3xl font-bold text-primary-blue mb-2">{service.price}</div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{highlight.title}</h3>
-                <p className="text-gray-600">{highlight.description}</p>
+
+                <div className="space-y-3 mb-6">
+                  <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-3">
+                      <CheckCircle className="w-4 h-4 text-accent-green flex-shrink-0" />
+                      <span className="text-sm text-charcoal/70">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  href={`/contact?location=Arlington&service=${encodeURIComponent(service.name)}`}
+                  className="w-full bg-accent-coral hover:bg-accent-coral/90 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
+                >
+                  Book This Service
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Available Services */}
-      <section id="services" className="py-16 bg-white">
+      {/* Why Choose Us for Arlington */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Cleaning Services in Arlington Jacksonville
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
+              Why Arlington Families Choose Us
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive cleaning solutions designed specifically for Arlington Jacksonville properties
+            <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
+              Our Jacksonville team brings family-friendly service and local expertise to every Arlington home
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {arlingtonServices.map((service, index) => {
-              // Define color schemes for each service
-              const colorSchemes = [
-                { bg: 'bg-blue-500', hover: 'hover:bg-blue-600', accent: 'bg-blue-100', text: 'text-blue-600', dot: 'bg-blue-500', border: 'border-blue-500' },
-                { bg: 'bg-purple-500', hover: 'hover:bg-purple-600', accent: 'bg-purple-100', text: 'text-purple-600', dot: 'bg-purple-500', border: 'border-purple-500' },
-                { bg: 'bg-green-500', hover: 'hover:bg-green-600', accent: 'bg-green-100', text: 'text-green-600', dot: 'bg-green-500', border: 'border-green-500' },
-                { bg: 'bg-orange-500', hover: 'hover:bg-orange-600', accent: 'bg-orange-100', text: 'text-orange-600', dot: 'bg-orange-500', border: 'border-orange-500' },
-                { bg: 'bg-indigo-500', hover: 'hover:bg-indigo-600', accent: 'bg-indigo-100', text: 'text-indigo-600', dot: 'bg-indigo-500', border: 'border-indigo-500' },
-                { bg: 'bg-teal-500', hover: 'hover:bg-teal-600', accent: 'bg-teal-100', text: 'text-teal-600', dot: 'bg-teal-500', border: 'border-teal-500' },
-                { bg: 'bg-emerald-500', hover: 'hover:bg-emerald-600', accent: 'bg-emerald-100', text: 'text-emerald-600', dot: 'bg-emerald-500', border: 'border-emerald-500' },
-                { bg: 'bg-amber-500', hover: 'hover:bg-amber-600', accent: 'bg-amber-100', text: 'text-amber-600', dot: 'bg-amber-500', border: 'border-amber-500' },
-                { bg: 'bg-cyan-500', hover: 'hover:bg-cyan-600', accent: 'bg-cyan-100', text: 'text-cyan-600', dot: 'bg-cyan-500', border: 'border-cyan-500' },
-                { bg: 'bg-sky-500', hover: 'hover:bg-sky-600', accent: 'bg-sky-100', text: 'text-sky-600', dot: 'bg-sky-500', border: 'border-sky-500' },
-                { bg: 'bg-rose-500', hover: 'hover:bg-rose-600', accent: 'bg-rose-100', text: 'text-rose-600', dot: 'bg-rose-500', border: 'border-rose-500' },
-                { bg: 'bg-pink-500', hover: 'hover:bg-pink-600', accent: 'bg-pink-100', text: 'text-pink-600', dot: 'bg-pink-500', border: 'border-pink-500' },
-                { bg: 'bg-red-500', hover: 'hover:bg-red-600', accent: 'bg-red-100', text: 'text-red-600', dot: 'bg-red-500', border: 'border-red-500' },
-                { bg: 'bg-violet-500', hover: 'hover:bg-violet-600', accent: 'bg-violet-100', text: 'text-violet-600', dot: 'bg-violet-500', border: 'border-violet-500' },
-                { bg: 'bg-lime-500', hover: 'hover:bg-lime-600', accent: 'bg-lime-100', text: 'text-lime-600', dot: 'bg-lime-500', border: 'border-lime-500' },
-                { bg: 'bg-fuchsia-500', hover: 'hover:bg-fuchsia-600', accent: 'bg-fuchsia-100', text: 'text-fuchsia-600', dot: 'bg-fuchsia-500', border: 'border-fuchsia-500' },
-                { bg: 'bg-slate-500', hover: 'hover:bg-slate-600', accent: 'bg-slate-100', text: 'text-slate-600', dot: 'bg-slate-500', border: 'border-slate-500' }
-              ];
-              
-              const colorScheme = colorSchemes[index % colorSchemes.length];
-              
-              return (
-                <div key={service.id} className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className={`h-3 ${colorScheme.bg} rounded-t-xl`}></div>
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className={`w-12 h-12 ${colorScheme.accent} rounded-full flex items-center justify-center mr-4`}>
-                        <service.icon className={`w-6 h-6 ${colorScheme.text}`} />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-                    </div>
-                    
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                    
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center space-x-2">
-                          <div className={`w-2 h-2 ${colorScheme.dot} rounded-full`}></div>
-                          <span className="text-sm text-gray-600">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
 
-                    <div className="space-y-3">
-                      <Link
-                        href={`/${service.id}`}
-                        className={`w-full ${colorScheme.bg} ${colorScheme.hover} text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2`}
-                      >
-                        <span>Learn More</span>
-                      </Link>
-                      <Link
-                        href={`/contact?service=${service.id}&location=arlington`}
-                        className={`w-full border ${colorScheme.border} ${colorScheme.text} py-2 px-4 rounded-lg font-medium hover:${colorScheme.bg} hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2`}
-                      >
-                        <Phone className="w-4 h-4" />
-                        <span>Get Quote</span>
-                      </Link>
-                    </div>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                icon: Building2,
+                title: 'Suburban Expertise',
+                description: 'Understanding of large properties and outdoor maintenance'
+              },
+              {
+                icon: Users,
+                title: 'Family-Focused',
+                description: 'Safe cleaning methods for homes with children and pets'
+              },
+              {
+                icon: MapPin,
+                title: 'Local Knowledge',
+                description: 'Deep understanding of Arlington\'s unique characteristics'
+              },
+              {
+                icon: Clock,
+                title: 'Flexible Scheduling',
+                description: 'Work around your family\'s busy schedule'
+              },
+              {
+                icon: Star,
+                title: '5-Star Service',
+                description: 'Consistently exceeding Arlington family expectations'
+              },
+              {
+                icon: Sparkles,
+                title: 'Attention to Detail',
+                description: 'Every room, every surface, every family space cared for'
+              }
+            ].map((feature, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-6 text-center hover:bg-gray-100 transition-colors duration-200">
+                <div className="w-16 h-16 bg-primary-blue/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-primary-blue" />
                 </div>
-              );
-            })}
+                <h3 className="font-semibold text-charcoal mb-2">{feature.title}</h3>
+                <p className="text-sm text-charcoal/70">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Local Benefits */}
-      <section className="py-16 bg-gray-50">
+      {/* Local Testimonials */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why Choose Us for Arlington Jacksonville?
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
+              What Arlington Families Say
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local expertise that understands Arlington Jacksonville&apos;s unique cleaning needs
-            </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-purple-600" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                name: 'Sarah M.',
+                location: 'Arlington Family Home',
+                rating: 5,
+                comment: 'Perfect for our busy family! They work around our schedule and keep our home spotless.'
+              },
+              {
+                name: 'Michael R.',
+                location: 'Arlington Suburban',
+                rating: 5,
+                comment: 'Great service for our large property. They handle both indoor and outdoor cleaning perfectly.'
+              },
+              {
+                name: 'Lisa T.',
+                location: 'Arlington Community',
+                rating: 5,
+                comment: 'Local team that understands our neighborhood. They\'ve been cleaning our home for years.'
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-charcoal/80 mb-4 italic">"{testimonial.comment}"</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold text-charcoal">{testimonial.name}</p>
+                    <p className="text-sm text-charcoal/60">{testimonial.location}</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Community Knowledge</h3>
-              <p className="text-gray-600">
-                We understand Arlington Jacksonville&apos;s established character and community values
-              </p>
-            </div>
-            
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-pink-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Flexible Scheduling</h3>
-              <p className="text-gray-600">
-                After-hours cleaning for businesses, weekend availability, and emergency service when needed
-              </p>
-            </div>
-            
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Established Trust</h3>
-              <p className="text-gray-600">
-                Building long-term relationships with Arlington Jacksonville residents and businesses
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready for Arlington Jacksonville Cleaning?
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Experience Arlington's Premier Family Cleaning Service?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Get a free quote for your Arlington Jacksonville property
+          <p className="text-lg sm:text-xl text-white/90 mb-8">
+            Join your neighbors who trust us with their family homes. Get your free quote today!
           </p>
-          <Link
-            href="/contact?location=arlington"
-            className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors duration-200 inline-flex items-center space-x-2 shadow-lg hover:shadow-xl"
-          >
-            <Phone className="w-6 h-6" />
-            <span>Get Your Free Quote</span>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact?location=Arlington"
+              className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 flex items-center justify-center gap-3"
+            >
+              <Home className="w-5 h-5" />
+              Get Free Quote
+            </Link>
+            <a
+              href="tel:9044563851"
+              className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 flex items-center justify-center gap-3"
+            >
+              <Phone className="w-5 h-5" />
+              Call (904) 456-3851
+            </a>
+          </div>
         </div>
       </section>
     </div>
