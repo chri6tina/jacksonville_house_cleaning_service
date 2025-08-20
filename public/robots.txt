@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.jacksonvillehousecleaningservice.com/sitemap.xml
+
+# Prevent duplicate content from query parameters
+Disallow: /*?*
+Allow: /contact
+Allow: /services
+Allow: /pricing
+Allow: /about
+Allow: /testimonials
+Allow: /locations
+Allow: /information
+Allow: /blog
+
+# Allow specific query parameters for contact form
+Allow: /contact?service=*
+Allow: /contact?location=*
+Allow: /contact?type=*
