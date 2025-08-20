@@ -1,4 +1,7 @@
-User-agent: *
+import { NextResponse } from 'next/server';
+
+export async function GET() {
+  const robots = `User-agent: *
 Allow: /
 
 # Sitemap
@@ -18,4 +21,12 @@ Allow: /blog
 # Allow specific query parameters for contact form
 Allow: /contact?service=*
 Allow: /contact?location=*
-Allow: /contact?type=*
+Allow: /contact?type=*`;
+
+  return new NextResponse(robots, {
+    headers: {
+      'Content-Type': 'text/plain',
+      'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+    },
+  });
+}
