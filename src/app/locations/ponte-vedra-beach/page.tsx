@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Waves, Umbrella, Anchor, Store, Golf, Crown, Diamond } from 'lucide-react';
+import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Waves, Umbrella, Anchor, Store, Trophy, Crown, Diamond } from 'lucide-react';
 
 export default function PonteVedraBeachPage() {
   const ponteVedraBeachServices = [
@@ -243,7 +243,7 @@ export default function PonteVedraBeachPage() {
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <Golf className="w-6 h-6 text-purple-600" />
+                    <Trophy className="w-6 h-6 text-purple-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Golf Features</h3>
@@ -282,7 +282,7 @@ export default function PonteVedraBeachPage() {
             
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Golf className="w-8 h-8 text-green-600" />
+                <Trophy className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Golf Course Property Care</h3>
               <p className="text-gray-600">

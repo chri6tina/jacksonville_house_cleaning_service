@@ -8,7 +8,7 @@ export default function CarpetCleaningPage() {
       <section className="relative bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
-            <Carpet className="w-16 h-16 text-emerald-200" />
+            <Car className="w-16 h-16 text-emerald-200" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Professional Carpet Cleaning

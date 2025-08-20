@@ -29,7 +29,7 @@ export default function JacksonvilleBeachVacationRentalTurnoverPage() {
       step: 1,
       title: 'Beach Property Assessment',
       description: 'Evaluate your Jacksonville Beach vacation rental\'s unique turnover cleaning needs',
-      icon: Beach
+      icon: Waves
     },
     {
       step: 2,

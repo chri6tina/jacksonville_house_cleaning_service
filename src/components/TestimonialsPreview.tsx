@@ -19,9 +19,7 @@ const TestimonialsPreview: React.FC = () => {
       location: 'San Marco, Jacksonville',
       rating: 5,
       service: 'Recurring Cleaning',
-      rating: 5,
-      service: 'Recurring Cleaning',
-      review: 'We\'ve been using their weekly cleaning service for 6 months now. Consistent quality every time, and they always work around our schedule. Great value for the money.',
+      review: 'We&apos;ve been using their weekly cleaning service for 6 months now. Consistent quality every time, and they always work around our schedule. Great value for the money.',
       image: '/api/placeholder/60/60'
     },
     {
