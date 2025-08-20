@@ -200,267 +200,266 @@ export default function ContactPage() {
         </div>
       </section>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-charcoal mb-8">Book Your Cleaning Service</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Personal Information */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                      placeholder="(904) 555-0123"
-                    />
-                  </div>
-                </div>
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Contact Form */}
+          <div>
+            <h2 className="text-3xl font-bold text-charcoal mb-8">Book Your Cleaning Service</h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Personal Information */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-                    Email Address *
+                  <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
+                    Full Name *
                   </label>
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
+                    type="text"
+                    id="name"
+                    name="name"
                     required
-                    value={formData.email}
+                    value={formData.name}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    placeholder="your.email@example.com"
+                    placeholder="Your full name"
                   />
                 </div>
-
                 <div>
-                  <label htmlFor="address" className="block text-sm font-medium text-charcoal mb-2">
-                    Service Address *
+                  <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
+                    Phone Number *
                   </label>
-                  <textarea
-                    id="address"
-                    name="address"
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
                     required
-                    value={formData.address}
+                    value={formData.phone}
                     onChange={handleInputChange}
-                    rows={3}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    placeholder="Full address including city and zip code"
+                    placeholder="(904) 555-0123"
                   />
                 </div>
+              </div>
 
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="address" className="block text-sm font-medium text-charcoal mb-2">
+                  Service Address *
+                </label>
+                <textarea
+                  id="address"
+                  name="address"
+                  required
+                  value={formData.address}
+                  onChange={handleInputChange}
+                  rows={3}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  placeholder="Full address including city and zip code"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="propertyType" className="block text-sm font-medium text-charcoal mb-2">
+                  Property Type *
+                </label>
+                <select
+                  id="propertyType"
+                  name="propertyType"
+                  required
+                  value={formData.propertyType}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                >
+                  <option value="">Select property type</option>
+                  <option value="house">House</option>
+                  <option value="apartment">Apartment/Condo</option>
+                  <option value="office">Office/Commercial</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              {/* Services Selection */}
+              <div>
+                <label className="block text-sm font-medium text-charcoal mb-3">
+                  Services Needed *
+                </label>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {availableServices.map((service) => (
+                    <label key={service} className="flex items-center space-x-3">
+                      <input
+                        type="checkbox"
+                        checked={formData.services.includes(service)}
+                        onChange={() => handleServiceChange(service)}
+                        className="w-4 h-4 text-primary-blue border-gray-300 rounded focus:ring-primary-blue"
+                      />
+                      <span className="text-sm text-charcoal/80">{service}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Date and Time */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="propertyType" className="block text-sm font-medium text-charcoal mb-2">
-                    Property Type *
+                  <label htmlFor="date" className="block text-sm font-medium text-charcoal mb-2">
+                    Preferred Date *
+                  </label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                    value={formData.date}
+                    onChange={handleInputChange}
+                    min={new Date().toISOString().split('T')[0]}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="time" className="block text-sm font-medium text-charcoal mb-2">
+                    Preferred Time *
                   </label>
                   <select
-                    id="propertyType"
-                    name="propertyType"
+                    id="time"
+                    name="time"
                     required
-                    value={formData.propertyType}
+                    value={formData.time}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
                   >
-                    <option value="">Select property type</option>
-                    <option value="house">House</option>
-                    <option value="apartment">Apartment/Condo</option>
-                    <option value="office">Office/Commercial</option>
-                    <option value="other">Other</option>
+                    <option value="">Select time</option>
+                    {timeSlots.map((time) => (
+                      <option key={time} value={time}>{time}</option>
+                    ))}
                   </select>
                 </div>
+              </div>
 
-                {/* Services Selection */}
-                <div>
-                  <label className="block text-sm font-medium text-charcoal mb-3">
-                    Services Needed *
-                  </label>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {availableServices.map((service) => (
-                      <label key={service} className="flex items-center space-x-3">
-                        <input
-                          type="checkbox"
-                          checked={formData.services.includes(service)}
-                          onChange={() => handleServiceChange(service)}
-                          className="w-4 h-4 text-primary-blue border-gray-300 rounded focus:ring-primary-blue"
-                        />
-                        <span className="text-sm text-charcoal/80">{service}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
+              <div>
+                <label htmlFor="specialRequests" className="block text-sm font-medium text-charcoal mb-2">
+                  Special Requests or Notes
+                </label>
+                <textarea
+                  id="specialRequests"
+                  name="specialRequests"
+                  value={formData.specialRequests}
+                  onChange={handleInputChange}
+                  rows={4}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  placeholder="Any specific requirements, allergies, or special instructions..."
+                />
+              </div>
 
-                {/* Date and Time */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="date" className="block text-sm font-medium text-charcoal mb-2">
-                      Preferred Date *
-                    </label>
-                    <input
-                      type="date"
-                      id="date"
-                      name="date"
-                      required
-                      value={formData.date}
-                      onChange={handleInputChange}
-                      min={new Date().toISOString().split('T')[0]}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="time" className="block text-sm font-medium text-charcoal mb-2">
-                      Preferred Time *
-                    </label>
-                    <select
-                      id="time"
-                      name="time"
-                      required
-                      value={formData.time}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    >
-                      <option value="">Select time</option>
-                      {timeSlots.map((time) => (
-                        <option key={time} value={time}>{time}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+              <button
+                type="submit"
+                className="w-full bg-accent-coral text-white py-4 px-6 rounded-lg text-lg font-semibold hover:bg-accent-coral/90 transition-colors duration-200"
+              >
+                Submit Booking Request
+              </button>
+            </form>
+          </div>
 
-                <div>
-                  <label htmlFor="specialRequests" className="block text-sm font-medium text-charcoal mb-2">
-                    Special Requests or Notes
-                  </label>
-                  <textarea
-                    id="specialRequests"
-                    name="specialRequests"
-                    value={formData.specialRequests}
-                    onChange={handleInputChange}
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    placeholder="Any specific requirements, allergies, or special instructions..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-accent-coral text-white py-4 px-6 rounded-lg text-lg font-semibold hover:bg-accent-coral/90 transition-colors duration-200"
-                >
-                  Submit Booking Request
-                </button>
-              </form>
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-3xl font-bold text-charcoal mb-6">Get in Touch</h2>
+              <p className="text-lg text-charcoal/70 mb-8">
+                Have questions or need immediate assistance? We&apos;re here to help!
+              </p>
             </div>
 
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold text-charcoal mb-6">Get in Touch</h2>
-                <p className="text-lg text-charcoal/70 mb-8">
-                  Have questions or need immediate assistance? We&apos;re here to help!
-                </p>
-              </div>
-
-              {/* Contact Details */}
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary-blue/20 rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-primary-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal">Phone</h3>
-                    <p className="text-charcoal/70">(904) 456-3851</p>
-                    <p className="text-sm text-charcoal/60">Available Mon-Fri, 8AM-6PM</p>
-                  </div>
+            {/* Contact Details */}
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-primary-blue/20 rounded-full flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-primary-blue" />
                 </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-accent-aqua/20 rounded-full flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-accent-aqua" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal">Email</h3>
-                    <p className="text-charcoal/70">info@jaxcleaning.com</p>
-                    <p className="text-sm text-charcoal/60">We respond within 2 hours</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-accent-green/20 rounded-full flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-accent-green" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal">Service Area</h3>
-                    <p className="text-charcoal/70">Jacksonville, FL & Surrounding Areas</p>
-                    <p className="text-sm text-charcoal/60">Within 25 miles of downtown</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-accent-coral/20 rounded-full flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-accent-coral" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal">Business Hours</h3>
-                    <p className="text-charcoal/70">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                    <p className="text-sm text-charcoal/60">Saturday: 9:00 AM - 4:00 PM</p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold text-charcoal">Phone</h3>
+                  <p className="text-charcoal/70">(904) 456-3851</p>
+                  <p className="text-sm text-charcoal/60">Available Mon-Fri, 8AM-6PM</p>
                 </div>
               </div>
 
-              {/* Service Area Map */}
-              <div className="bg-gray-100 rounded-xl p-6">
-                <h3 className="font-semibold text-charcoal mb-4">Service Areas</h3>
-                <div className="space-y-2 text-sm text-charcoal/70">
-                  <p>• Downtown Jacksonville</p>
-                  <p>• Riverside & Avondale</p>
-                  <p>• San Marco</p>
-                  <p>• Mandarin</p>
-                  <p>• Southside</p>
-                  <p>• Arlington</p>
-                  <p>• Orange Park</p>
-                  <p>• Fleming Island</p>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-accent-aqua/20 rounded-full flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-accent-aqua" />
                 </div>
-                <p className="text-xs text-charcoal/60 mt-4">
-                  * Additional travel fees may apply for areas outside our standard service zone
-                </p>
+                <div>
+                  <h3 className="font-semibold text-charcoal">Email</h3>
+                  <p className="text-charcoal/70">info@jaxcleaning.com</p>
+                  <p className="text-sm text-charcoal/60">We respond within 2 hours</p>
+                </div>
               </div>
 
-              {/* Emergency Contact */}
-              <div className="bg-accent-coral/10 border border-accent-coral/20 rounded-xl p-6">
-                <h3 className="font-semibold text-charcoal mb-2">Emergency Cleaning?</h3>
-                <p className="text-sm text-charcoal/70 mb-3">
-                  Need immediate cleaning service? Call us for same-day availability.
-                </p>
-                <a
-                  href="tel:9044563851"
-                  className="inline-flex items-center text-accent-coral font-semibold hover:text-accent-coral/80"
-                >
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call Now: (904) 456-3851
-                </a>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-accent-green/20 rounded-full flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-accent-green" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-charcoal">Service Area</h3>
+                  <p className="text-charcoal/70">Jacksonville, FL & Surrounding Areas</p>
+                  <p className="text-sm text-charcoal/60">Within 25 miles of downtown</p>
+                </div>
               </div>
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-accent-coral/20 rounded-full flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-accent-coral" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-charcoal">Business Hours</h3>
+                  <p className="text-charcoal/70">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                  <p className="text-sm text-charcoal/60">Saturday: 9:00 AM - 4:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Service Area Map */}
+            <div className="bg-gray-100 rounded-xl p-6">
+              <h3 className="font-semibold text-charcoal mb-4">Service Areas</h3>
+              <div className="space-y-2 text-sm text-charcoal/70">
+                <p>• Downtown Jacksonville</p>
+                <p>• Riverside & Avondale</p>
+                <p>• San Marco</p>
+                <p>• Mandarin</p>
+                <p>• Southside</p>
+                <p>• Arlington</p>
+                <p>• Orange Park</p>
+                <p>• Fleming Island</p>
+              </div>
+              <p className="text-xs text-charcoal/60 mt-4">
+                * Additional travel fees may apply for areas outside our standard service zone
+              </p>
+            </div>
+
+            {/* Emergency Contact */}
+            <div className="bg-accent-coral/10 border border-accent-coral/20 rounded-xl p-6">
+              <h3 className="font-semibold text-charcoal mb-2">Emergency Cleaning?</h3>
+              <p className="text-sm text-charcoal/70 mb-3">
+                Need immediate cleaning service? Call us for same-day availability.
+              </p>
+              <a
+                href="tel:9044563851"
+                className="inline-flex items-center text-accent-coral font-semibold hover:text-accent-coral/80"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                Call Now: (904) 456-3851
+              </a>
             </div>
           </div>
         </div>
