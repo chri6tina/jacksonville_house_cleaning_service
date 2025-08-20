@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Facebook, Instagram, Youtube, Twitter, Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Twitter, Mail, Phone, MapPin, Clock, Sparkles } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -43,7 +43,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">J</span>
+                <Sparkles className="w-6 h-6 text-white" />
               </div>
               <span className="font-bold text-xl text-white">Jacksonville House Cleaning Service</span>
             </div>

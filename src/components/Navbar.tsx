@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Sparkles } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +28,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-primary-blue rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">J</span>
+                <Sparkles className="w-6 h-6 text-white" />
               </div>
               <span className="text-charcoal font-bold text-xl hidden sm:block">
                 Jacksonville House Cleaning Service
