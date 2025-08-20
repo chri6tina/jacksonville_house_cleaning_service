@@ -340,12 +340,15 @@ export default function PricingCalculatorPage() {
                       <span>+${service.price}</span>
                     </div>
                   ))}
-                  {frequencyDiscounts.find(f => f.value === frequency)?.discount > 0 && (
-                    <div className="flex justify-between text-accent-green">
-                      <span>{frequencyDiscounts.find(f => f.value === frequency)?.label} discount</span>
-                      <span>-${Math.round(estimatedPrice * (frequencyDiscounts.find(f => f.value === frequency)?.discount || 0))}</span>
-                    </div>
-                  )}
+                  {(() => {
+                    const frequencyDiscount = frequencyDiscounts.find(f => f.value === frequency);
+                    return frequencyDiscount && frequencyDiscount.discount > 0 ? (
+                      <div className="flex justify-between text-accent-green">
+                        <span>{frequencyDiscount.label} discount</span>
+                        <span>-${Math.round(estimatedPrice * frequencyDiscount.discount)}</span>
+                      </div>
+                    ) : null;
+                  })()}
                 </div>
               </div>
 
