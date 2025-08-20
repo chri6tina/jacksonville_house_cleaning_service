@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #333333;
+  
+  /* Custom color palette */
+  --primary-blue: #2daee1;
+  --primary-white: #ffffff;
+  --accent-aqua: #6dd6c7;
+  --accent-coral: #f77f00;
+  --accent-green: #7ac74f;
+  --text-charcoal: #333333;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary-blue: var(--primary-blue);
+  --color-primary-white: var(--primary-white);
+  --color-accent-aqua: var(--accent-aqua);
+  --color-accent-coral: var(--accent-coral);
+  --color-accent-green: var(--accent-green);
+  --color-text-charcoal: var(--text-charcoal);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom utility classes */
+.text-primary-blue { color: var(--primary-blue); }
+.text-accent-aqua { color: var(--accent-aqua); }
+.text-accent-coral { color: var(--accent-coral); }
+.text-accent-green { color: var(--accent-green); }
+.text-charcoal { color: var(--text-charcoal); }
+
+.bg-primary-blue { background-color: var(--primary-blue); }
+.bg-accent-aqua { background-color: var(--accent-aqua); }
+.bg-accent-coral { background-color: var(--accent-coral); }
+.bg-accent-green { background-color: var(--accent-green); }
+
+.border-primary-blue { border-color: var(--primary-blue); }
+.border-accent-aqua { border-color: var(--accent-aqua); }
+.border-accent-coral { border-color: var(--accent-coral); }
+.border-accent-green { border-color: var(--accent-green); }

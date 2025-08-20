@@ -1,0 +1,432 @@
+'use client';
+
+import { useState } from 'react';
+import { Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    address: '',
+    propertyType: '',
+    services: [] as string[],
+    date: '',
+    time: '',
+    specialRequests: ''
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleServiceChange = (service: string) => {
+    setFormData(prev => ({
+      ...prev,
+      services: prev.services.includes(service)
+        ? prev.services.filter(s => s !== service)
+        : [...prev.services, service]
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the form data to your backend
+    console.log('Form submitted:', formData);
+    setIsSubmitted(true);
+    
+    // Reset form after submission
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        address: '',
+        propertyType: '',
+        services: [],
+        date: '',
+        time: '',
+        specialRequests: ''
+      });
+    }, 5000);
+  };
+
+  const availableServices = [
+    'Recurring House Cleaning',
+    'Deep Cleaning',
+    'Move-In/Move-Out Cleaning',
+    'Office Cleaning',
+    'Carpet & Upholstery Cleaning',
+    'Window Cleaning',
+    'Post-Construction Cleaning'
+  ];
+
+  const timeSlots = [
+    '8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM',
+    '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM',
+    '4:00 PM', '5:00 PM', '6:00 PM'
+  ];
+
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10">
+        <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-md mx-4">
+          <CheckCircle className="w-20 h-20 text-accent-green mx-auto mb-6" />
+          <h2 className="text-3xl font-bold text-charcoal mb-4">Thank You!</h2>
+          <p className="text-charcoal/70 mb-6">
+            Your cleaning request has been submitted successfully. We'll contact you within 24 hours 
+            to confirm your appointment and provide a quote.
+          </p>
+          <div className="text-sm text-charcoal/60">
+            <p>Reference #: {Math.random().toString(36).substr(2, 9).toUpperCase()}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section - Local Business Style */}
+      <section 
+        className="relative py-20 lg:py-24 overflow-hidden"
+        style={{
+          backgroundImage: 'url(/hero1.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/70"></div>
+        
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            {/* Local Business Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
+              <Phone className="w-4 h-4 text-primary-blue" />
+              Call Your Jacksonville Neighbors
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+              <span className="block">Contact &</span>
+              <span className="block text-cyan-400">Booking</span>
+              <span className="block text-lg sm:text-xl lg:text-2xl font-medium text-white/90 mt-3">
+              Ready to Experience the Difference?
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
+              We're here to help with all your Jacksonville cleaning needs. Whether you need a quote, 
+              want to schedule service, or just have questions, reach out to your local cleaning team. 
+              No automated systems - just real people ready to help.
+            </p>
+
+            {/* Local Trust Indicators */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-accent-green/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                  <Clock className="w-6 h-6 text-accent-green" />
+                </div>
+                <h3 className="font-bold text-white text-base mb-2">24-Hour Response</h3>
+                <p className="text-white/80 text-xs leading-relaxed">We'll get back to you fast</p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                  <MapPin className="w-6 h-6 text-primary-blue" />
+                </div>
+                <h3 className="font-bold text-white text-base mb-2">Local Service</h3>
+                <p className="text-white/80 text-xs leading-relaxed">Jacksonville & surrounding areas</p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-accent-coral/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                  <CheckCircle className="w-6 h-6 text-accent-coral" />
+                </div>
+                <h3 className="font-bold text-white text-base mb-2">Free Estimates</h3>
+                <p className="text-white/80 text-xs leading-relaxed">No obligation, just honest quotes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Contact Form */}
+          <div>
+            <h2 className="text-3xl font-bold text-charcoal mb-8">Book Your Cleaning Service</h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Personal Information */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                    placeholder="(904) 555-0123"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="address" className="block text-sm font-medium text-charcoal mb-2">
+                  Service Address *
+                </label>
+                <textarea
+                  id="address"
+                  name="address"
+                  required
+                  value={formData.address}
+                  onChange={handleInputChange}
+                  rows={3}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  placeholder="Full address including city and zip code"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="propertyType" className="block text-sm font-medium text-charcoal mb-2">
+                  Property Type *
+                </label>
+                <select
+                  id="propertyType"
+                  name="propertyType"
+                  required
+                  value={formData.propertyType}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                >
+                  <option value="">Select property type</option>
+                  <option value="house">House</option>
+                  <option value="apartment">Apartment/Condo</option>
+                  <option value="office">Office/Commercial</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              {/* Services Selection */}
+              <div>
+                <label className="block text-sm font-medium text-charcoal mb-3">
+                  Services Needed *
+                </label>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {availableServices.map((service) => (
+                    <label key={service} className="flex items-center space-x-3">
+                      <input
+                        type="checkbox"
+                        checked={formData.services.includes(service)}
+                        onChange={() => handleServiceChange(service)}
+                        className="w-4 h-4 text-primary-blue border-gray-300 rounded focus:ring-primary-blue"
+                      />
+                      <span className="text-sm text-charcoal/80">{service}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Date and Time */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="date" className="block text-sm font-medium text-charcoal mb-2">
+                    Preferred Date *
+                  </label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                    value={formData.date}
+                    onChange={handleInputChange}
+                    min={new Date().toISOString().split('T')[0]}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="time" className="block text-sm font-medium text-charcoal mb-2">
+                    Preferred Time *
+                  </label>
+                  <select
+                    id="time"
+                    name="time"
+                    required
+                    value={formData.time}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  >
+                    <option value="">Select time</option>
+                    {timeSlots.map((time) => (
+                      <option key={time} value={time}>{time}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="specialRequests" className="block text-sm font-medium text-charcoal mb-2">
+                  Special Requests or Notes
+                </label>
+                <textarea
+                  id="specialRequests"
+                  name="specialRequests"
+                  value={formData.specialRequests}
+                  onChange={handleInputChange}
+                  rows={4}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  placeholder="Any specific requirements, allergies, or special instructions..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-accent-coral text-white py-4 px-6 rounded-lg text-lg font-semibold hover:bg-accent-coral/90 transition-colors duration-200"
+              >
+                Submit Booking Request
+              </button>
+            </form>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-3xl font-bold text-charcoal mb-6">Get in Touch</h2>
+              <p className="text-lg text-charcoal/70 mb-8">
+                Have questions or need immediate assistance? We're here to help!
+              </p>
+            </div>
+
+            {/* Contact Details */}
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-primary-blue/20 rounded-full flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-primary-blue" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-charcoal">Phone</h3>
+                  <p className="text-charcoal/70">(904) 456-3851</p>
+                  <p className="text-sm text-charcoal/60">Available Mon-Fri, 8AM-6PM</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-accent-aqua/20 rounded-full flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-accent-aqua" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-charcoal">Email</h3>
+                  <p className="text-charcoal/70">info@jaxcleaning.com</p>
+                  <p className="text-sm text-charcoal/60">We respond within 2 hours</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-accent-green/20 rounded-full flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-accent-green" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-charcoal">Service Area</h3>
+                  <p className="text-charcoal/70">Jacksonville, FL & Surrounding Areas</p>
+                  <p className="text-sm text-charcoal/60">Within 25 miles of downtown</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-accent-coral/20 rounded-full flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-accent-coral" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-charcoal">Business Hours</h3>
+                  <p className="text-charcoal/70">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                  <p className="text-sm text-charcoal/60">Saturday: 9:00 AM - 4:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Service Area Map */}
+            <div className="bg-gray-100 rounded-xl p-6">
+              <h3 className="font-semibold text-charcoal mb-4">Service Areas</h3>
+              <div className="space-y-2 text-sm text-charcoal/70">
+                <p>• Downtown Jacksonville</p>
+                <p>• Riverside & Avondale</p>
+                <p>• San Marco</p>
+                <p>• Mandarin</p>
+                <p>• Southside</p>
+                <p>• Arlington</p>
+                <p>• Orange Park</p>
+                <p>• Fleming Island</p>
+              </div>
+              <p className="text-xs text-charcoal/60 mt-4">
+                * Additional travel fees may apply for areas outside our standard service zone
+              </p>
+            </div>
+
+            {/* Emergency Contact */}
+            <div className="bg-accent-coral/10 border border-accent-coral/20 rounded-xl p-6">
+              <h3 className="font-semibold text-charcoal mb-2">Emergency Cleaning?</h3>
+              <p className="text-sm text-charcoal/70 mb-3">
+                Need immediate cleaning service? Call us for same-day availability.
+              </p>
+              <a
+                href="tel:9044563851"
+                className="inline-flex items-center text-accent-coral font-semibold hover:text-accent-coral/80"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                Call Now: (904) 456-3851
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
