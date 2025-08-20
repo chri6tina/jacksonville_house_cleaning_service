@@ -37,6 +37,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Custom breakpoint for extra small screens */
+@media (min-width: 475px) {
+  .xs\\:block { display: block; }
+  .xs\\:inline { display: inline; }
+  .xs\\:hidden { display: none; }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

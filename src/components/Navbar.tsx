@@ -30,7 +30,7 @@ const Navbar = () => {
               <div className="w-10 h-10 bg-primary-blue rounded-lg flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
-              <span className="text-charcoal font-bold text-xl hidden sm:block">
+              <span className="text-charcoal font-bold text-lg sm:text-xl hidden xs:block">
                 Jacksonville House Cleaning Service
               </span>
             </Link>

@@ -21,17 +21,17 @@ const ServiceCard = ({ title, description, icon: Icon, href, features, isPopular
         </div>
       )}
       
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         {/* Icon */}
-        <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-4">
-          <Icon className="w-8 h-8 text-primary-blue" />
+        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+          <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary-blue" />
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-charcoal mb-3">{title}</h3>
+        <h3 className="text-lg sm:text-xl font-bold text-charcoal mb-2 sm:mb-3">{title}</h3>
 
         {/* Description */}
-        <p className="text-charcoal/70 mb-4 leading-relaxed">{description}</p>
+        <p className="text-sm sm:text-base text-charcoal/70 mb-3 sm:mb-4 leading-relaxed">{description}</p>
 
         {/* Features List */}
         {features && features.length > 0 && (
