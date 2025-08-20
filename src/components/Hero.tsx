@@ -16,29 +16,29 @@ const Hero: React.FC = () => {
       }}
     >
       {/* Dark overlay for maximum text readability */}
-      <div className="absolute inset-0 bg-black/75"></div>
+      <div className="absolute inset-0 bg-black/60 sm:bg-black/75"></div>
 
       {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-white/50 shadow-lg">
+          <div className="inline-flex items-center gap-2 bg-white text-gray-800 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-white shadow-lg">
             <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500" />
             <span className="hidden xs:inline">Trusted by 500+ Jacksonville Families</span>
             <span className="xs:hidden">500+ Jacksonville Families</span>
           </div>
           
           {/* Main Headline */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight text-white">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight text-white drop-shadow-lg">
             <span className="block">Professional</span>
-            <span className="block text-cyan-400">Cleaning Services</span>
-            <span className="block text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white/90 mt-2 sm:mt-3">
+            <span className="block text-cyan-300 sm:text-cyan-400">Cleaning Services</span>
+            <span className="block text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white mt-2 sm:mt-3 drop-shadow-md">
               in Jacksonville, FL
             </span>
           </h1>
           
           {/* Subtitle */}
-          <p className="text-sm sm:text-base md:text-lg text-white/95 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
+          <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 drop-shadow-md">
             Experience the difference with our eco-friendly, thorough cleaning services. 
             We transform homes and businesses with attention to detail and guaranteed satisfaction.
           </p>
@@ -66,28 +66,28 @@ const Hero: React.FC = () => {
         
         {/* Trust Indicators */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mt-8 sm:mt-10 px-4">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-green/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
+          <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-green/30 sm:bg-accent-green/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
               <Leaf className="w-5 h-5 sm:w-6 sm:h-6 text-accent-green" />
             </div>
-            <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2">Eco-Friendly</h3>
-            <p className="text-white/80 text-xs leading-relaxed">Safe, non-toxic cleaning products</p>
+            <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Eco-Friendly</h3>
+            <p className="text-white text-xs leading-relaxed drop-shadow-sm">Safe, non-toxic cleaning products</p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
+          <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-blue/30 sm:bg-primary-blue/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
               <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary-blue" />
             </div>
-            <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2">Licensed & Insured</h3>
-            <p className="text-white/80 text-xs leading-relaxed">Fully licensed and insured</p>
+            <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Licensed & Insured</h3>
+            <p className="text-white text-xs leading-relaxed drop-shadow-sm">Fully licensed and insured</p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center sm:col-span-2 lg:col-span-1">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-coral/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
+          <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center sm:col-span-2 lg:col-span-1">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-coral/30 sm:bg-accent-coral/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
               <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-accent-coral" />
             </div>
-            <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2">100% Satisfaction</h3>
-            <p className="text-white/80 text-xs leading-relaxed">Guaranteed satisfaction</p>
+            <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">100% Satisfaction</h3>
+            <p className="text-white text-xs leading-relaxed drop-shadow-sm">Guaranteed satisfaction</p>
           </div>
         </div>
       </div>
