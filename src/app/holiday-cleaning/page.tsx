@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Calendar, Star, Phone, Clock, Users, Shield, Sparkles, Home, Tree, Gift, Snowflake, Sun, Leaf, CheckCircle } from 'lucide-react';
+import { Calendar, Star, Phone, Clock, Users, Shield, Sparkles, Home, Trees, Gift, Snowflake, Sun, Leaf, CheckCircle } from 'lucide-react';
 
 export default function HolidayCleaningPage() {
   const holidayPackages = [
@@ -68,7 +68,7 @@ export default function HolidayCleaningPage() {
       name: 'Christmas Cleanup',
       description: 'Post-Christmas tree and decoration cleanup',
       price: 'Starting at $200',
-      icon: Tree
+                    icon: Trees
     },
     {
       name: 'New Year Refresh',
