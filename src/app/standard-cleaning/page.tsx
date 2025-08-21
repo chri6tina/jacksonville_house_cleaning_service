@@ -1,71 +1,124 @@
-import React from 'react';
-import { Home, Clock, Shield, Check, Star, Phone, Calendar, Users } from 'lucide-react';
+import { Home, Sparkles, Clock, Users, Shield, Leaf, Check, Star, ArrowRight, Phone, MapPin, Award, Truck, Calendar } from 'lucide-react';
+import Link from 'next/link';
 
 export default function StandardCleaningPage() {
   const services = [
-    'Complete dusting of all surfaces and furniture',
-    'Vacuum and mop all floors',
-    'Kitchen cleaning (appliances, countertops, cabinets)',
-    'Bathroom cleaning and sanitization',
-    'Window and mirror cleaning',
-    'Baseboard and trim cleaning',
-    'Light fixture and ceiling fan cleaning',
-    'Closet and storage area cleaning',
-    'Final inspection and quality check'
+    {
+      name: 'Studio/1 Bedroom',
+      price: 'From $100',
+      description: 'Perfect for small spaces and efficiency apartments',
+      features: ['Dust all surfaces', 'Vacuum and mop floors', 'Clean bathroom', 'Kitchen surfaces', 'Empty trash', 'Make bed']
+    },
+    {
+      name: '2 Bedroom',
+      price: 'From $150',
+      description: 'Ideal for couples and small families',
+      features: ['All 1-bedroom services', 'Additional bedroom cleaning', 'Extended time allowance', 'Priority scheduling available']
+    },
+    {
+      name: '3 Bedroom',
+      price: 'From $200',
+      description: 'Comprehensive cleaning for growing families',
+      features: ['All 2-bedroom services', 'Third bedroom cleaning', 'Living areas focus', 'Kitchen deep clean']
+    },
+    {
+      name: '4+ Bedroom',
+      price: 'From $300',
+      description: 'Full-service cleaning for large homes',
+      features: ['All 3-bedroom services', 'Additional bedrooms', 'Bonus rooms included', 'Extended service time']
+    }
   ];
 
   const benefits = [
     {
-      icon: Shield,
-      title: 'Licensed & Insured',
-      description: 'Complete peace of mind with full coverage'
+      title: 'Consistent Quality',
+      description: 'Same high standard every time',
+      icon: Shield
     },
     {
-      icon: Clock,
       title: 'Flexible Scheduling',
-      description: 'Early morning, evening, and weekend appointments'
+      description: 'Weekly, bi-weekly, or monthly',
+      icon: Calendar
     },
     {
-      icon: Check,
-      title: 'Satisfaction Guaranteed',
-      description: '100% satisfaction or we\'ll make it right'
+      title: 'Eco-Friendly Products',
+      description: 'Safe for your family and pets',
+      icon: Leaf
     },
     {
-      icon: Users,
-      title: 'Experienced Team',
-      description: 'Background-checked, trained professionals'
+      title: 'Trained Professionals',
+      description: 'Background-checked, trained professionals',
+      icon: Users
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6">
-              Standard House Cleaning Services
-            </h1>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
-              Professional standard house cleaning services in Jacksonville. Keep your home consistently 
-              clean and comfortable with our reliable, thorough cleaning service.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:9044563851"
-                className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call for Quote
-              </a>
-              <a 
-                href="/contact-us"
-                className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-              >
-                <Calendar className="w-5 h-5" />
-                Schedule Service
-              </a>
+      {/* Hero Section - Local Business Style */}
+      <section className="relative py-20 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-teal-600"></div>
+        
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Local Business Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
+            <MapPin className="w-4 h-4 text-blue-600" />
+            Jacksonville Standard Cleaning Experts
+          </div>
+
+          <div className="flex justify-center mb-6">
+            <Home className="w-16 h-16 text-blue-200" />
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            Standard House Cleaning Services
+          </h1>
+          <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Professional standard house cleaning services in Jacksonville. Keep your home consistently 
+            clean and comfortable with our reliable, thorough cleaning service.
+          </p>
+          
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-blue-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Award className="w-6 h-6 text-blue-200" />
+              </div>
+              <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
+              <p className="text-white/80 text-xs">Jacksonville business since 2015</p>
             </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-blue-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Truck className="w-6 h-6 text-blue-200" />
+              </div>
+              <h3 className="font-bold text-white text-base mb-2">Same-Day Service</h3>
+              <p className="text-white/80 text-xs">Available throughout Jacksonville</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-blue-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Star className="w-6 h-6 text-blue-200" />
+              </div>
+              <h3 className="font-bold text-white text-base mb-2">100% Guarantee</h3>
+              <p className="text-white/80 text-xs">Satisfaction guaranteed</p>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:9044563851"
+              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+            >
+              <Phone className="w-5 h-5" />
+              Call for Quote
+            </a>
+            <Link 
+              href="/contact-us"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <Calendar className="w-5 h-5" />
+              Schedule Service
+            </Link>
           </div>
         </div>
       </section>
@@ -73,262 +126,100 @@ export default function StandardCleaningPage() {
       {/* Service Overview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-                Professional Standard House Cleaning
-              </h2>
-              <p className="text-xl text-charcoal/70 mb-8 leading-relaxed">
-                Our standard house cleaning service provides thorough, consistent cleaning to maintain 
-                your home&apos;s cleanliness and comfort. Perfect for regular maintenance and keeping your 
-                living space fresh and inviting.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Home className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-charcoal font-medium">All home sizes welcome</span>
-                </div>
-                <div className="flex items-center">
-                  <Shield className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-charcoal font-medium">Licensed, bonded & insured</span>
-                </div>
-                <div className="flex items-center">
-                  <Check className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-charcoal font-medium">Eco-friendly cleaning products</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Service Pricing</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">Studio/1 Bedroom</span>
-                  <span className="text-primary-blue font-bold">From $100</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">2 Bedroom</span>
-                  <span className="text-primary-blue font-bold">From $150</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">3 Bedroom</span>
-                  <span className="text-primary-blue font-bold">From $200</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">4+ Bedroom</span>
-                  <span className="text-primary-blue font-bold">From $300</span>
-                </div>
-              </div>
-              <div className="mt-6 p-4 bg-primary-blue/10 rounded-xl">
-                <p className="text-charcoal text-sm">
-                  <strong>Note:</strong> Pricing varies based on home size, condition, and specific services needed. 
-                  Contact us for a personalized quote.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Included */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              What&apos;s Included in Standard House Cleaning
+              Jacksonville Standard Cleaning Packages
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Our comprehensive standard cleaning service covers all the essential areas of your home 
-              to maintain a clean, healthy living environment.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Standard Cleaning</h3>
-              <ul className="space-y-3">
-                {services.map((service, index) => (
-                  <li key={index} className="flex items-start">
-                    <Check className="w-5 h-5 text-accent-green mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-charcoal/70">{service}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Additional Services</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-accent-coral font-bold text-sm">+</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Deep Cleaning</h4>
-                    <p className="text-charcoal/70">More thorough cleaning for neglected areas</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-accent-coral font-bold text-sm">+</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Carpet Cleaning</h4>
-                    <p className="text-charcoal/70">Professional carpet and upholstery cleaning</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-accent-coral font-bold text-sm">+</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Window Cleaning</h4>
-                    <p className="text-charcoal/70">Interior and exterior window cleaning</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-accent-coral font-bold text-sm">+</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Recurring Service</h4>
-                    <p className="text-charcoal/70">Weekly, bi-weekly, or monthly cleaning</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Why Choose Our Standard House Cleaning Service?
-            </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We provide reliable, consistent standard cleaning services that keep your home 
-              looking its best week after week.
+              Choose the perfect cleaning package for your Jacksonville home. All packages include 
+              our eco-friendly products and satisfaction guarantee.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-8 h-8 text-primary-blue" />
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg border-2 border-blue-200 p-8 hover:shadow-xl transition-all duration-300">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Home className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
+                  <p className="text-charcoal/70 text-sm">{service.description}</p>
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">{item.title}</h3>
-                <p className="text-charcoal/70">{item.description}</p>
+
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start space-x-3">
+                      <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-charcoal/80 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="/contact"
+                  className="block w-full text-center py-3 px-6 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+                >
+                  Get Started
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Perfect For */}
+      {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Perfect For Regular Home Maintenance
+              Why Choose Our Jacksonville Standard Cleaning?
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Standard house cleaning is ideal for maintaining a clean, comfortable home environment.
+              We're your local cleaning experts, providing reliable, consistent service that keeps 
+              your Jacksonville home clean and comfortable.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-accent-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-accent-green" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-charcoal mb-2">{benefit.title}</h3>
+                <p className="text-charcoal/70">{benefit.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">Busy Families</h3>
-              <p className="text-charcoal/70">
-                Keep your home clean and organized despite busy schedules and family activities.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-accent-aqua/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-accent-aqua" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">Working Professionals</h3>
-              <p className="text-charcoal/70">
-                Maintain a clean home without sacrificing your valuable time and energy.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-accent-coral/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-accent-coral" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">Seniors</h3>
-              <p className="text-charcoal/70">
-                Get help maintaining your home when physical limitations make cleaning difficult.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-primary-blue" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">Pet Owners</h3>
-              <p className="text-charcoal/70">
-                Keep your home clean despite pet hair, dander, and other pet-related messes.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-accent-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-accent-green" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">Rental Properties</h3>
-              <p className="text-charcoal/70">
-                Maintain clean rental properties to attract and retain quality tenants.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-accent-aqua/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-accent-aqua" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">Regular Maintenance</h3>
-              <p className="text-charcoal/70">
-                Establish a consistent cleaning routine to maintain your home&apos;s value and appearance.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-            Ready to Enjoy a Clean Home?
+      <section className="py-20 bg-blue-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready for Consistent, Professional Cleaning?
           </h2>
-          <p className="text-xl text-charcoal/70 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free quote and to schedule your professional standard house cleaning service.
+          <p className="text-xl text-white/90 mb-8">
+            Contact us today for standard cleaning services in Jacksonville. 
+            Free estimates and flexible scheduling available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="tel:9044563851"
-              className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
             >
               <Phone className="w-5 h-5" />
-              Call (904) 456-3851
+              <span>Call (904) 456-3851</span>
             </a>
-            <a 
-              href="/contact-us"
-              className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            <Link
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
-              <Calendar className="w-5 h-5" />
               Get Free Quote
-            </a>
+            </Link>
           </div>
         </div>
       </section>

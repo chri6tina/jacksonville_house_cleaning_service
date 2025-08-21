@@ -1,90 +1,124 @@
-import React from 'react';
+import { Scissors, Sparkles, Clock, Users, Shield, Leaf, Check, Star, ArrowRight, Phone, MapPin, Award, Truck, Calendar, Home } from 'lucide-react';
 import Link from 'next/link';
-import { Truck, Clock, Shield, Check, Star, Phone, Calendar, ArrowLeft } from 'lucide-react';
 
 export default function MoveInMoveOutPage() {
-  const moveInServices = [
-    'Complete dust removal from all surfaces',
-    'Deep cleaning of all floors and carpets',
-    'Kitchen appliance cleaning and sanitization',
-    'Bathroom deep cleaning and disinfection',
-    'Window and mirror cleaning',
-    'Cabinet and drawer cleaning',
-    'Light fixture and ceiling fan cleaning',
-    'Baseboard and trim cleaning',
-    'Air vent cleaning',
-    'Final inspection and quality check'
+  const services = [
+    {
+      name: 'Move-In Cleaning',
+      price: 'From $200',
+      description: 'Prepare your new home for a fresh start',
+      features: ['Deep cleaning of all surfaces', 'Appliance cleaning', 'Cabinet and drawer cleaning', 'Floor sanitization', 'Air duct cleaning available']
+    },
+    {
+      name: 'Move-Out Cleaning',
+      price: 'From $250',
+      description: 'Leave your old home spotless for the next tenant',
+      features: ['Complete home cleaning', 'Stain removal', 'Appliance deep cleaning', 'Floor restoration', 'Final inspection']
+    },
+    {
+      name: 'Vacation Rental Turnover',
+      price: 'From $180',
+      description: 'Professional cleaning between guests',
+      features: ['Quick turnaround', 'Linen and towel service', 'Kitchen sanitization', 'Bathroom deep clean', 'Guest-ready results']
+    },
+    {
+      name: 'Property Management',
+      price: 'From $300',
+      description: 'Comprehensive cleaning for property managers',
+      features: ['Regular scheduling', 'Quality assurance', 'Detailed reporting', 'Emergency service', 'Bulk pricing available']
+    }
   ];
 
-  const moveOutServices = [
-    'Pre-move out deep cleaning',
-    'Carpet and upholstery cleaning',
-    'Kitchen deep cleaning (appliances, cabinets, countertops)',
-    'Bathroom sanitization and deep cleaning',
-    'Window cleaning (interior and exterior)',
-    'Wall cleaning and spot treatment',
-    'Floor deep cleaning and polishing',
-    'Closet and storage area cleaning',
-    'Garage cleaning (if applicable)',
-    'Final walk-through preparation'
-  ];
-
-  const whyChooseUs = [
+  const benefits = [
     {
-      icon: Shield,
-      title: 'Licensed & Insured',
-      description: 'Complete peace of mind with full coverage for your property'
+      title: 'Fast Turnaround',
+      description: 'Same-day service available',
+      icon: Clock
     },
     {
-      icon: Clock,
-      title: 'Flexible Scheduling',
-      description: 'We work around your moving timeline, not ours'
+      title: 'Security Deposit Protection',
+      description: 'Maximize your deposit return',
+      icon: Shield
     },
     {
-      icon: Check,
-      title: 'Satisfaction Guaranteed',
-      description: '100% satisfaction or we\'ll make it right'
+      title: 'Professional Equipment',
+      description: 'Industrial-grade cleaning tools',
+      icon: Sparkles
     },
     {
-      icon: Star,
-      title: 'Experienced Team',
-      description: 'Specialized in move-in/move-out cleaning for over 13 years'
+      title: 'Jacksonville Local',
+      description: 'Your neighbors since 2015',
+      icon: MapPin
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Link href="/information" className="inline-flex items-center gap-2 text-primary-blue hover:text-primary-blue/80 mb-6 transition-colors justify-center">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Information
-            </Link>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6">
-              Move-In/Move-Out Cleaning Services
-            </h1>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
-              Professional cleaning services to ensure your new home is spotless or your old home 
-              meets landlord requirements. Trusted by Jacksonville families for over 13 years.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:9044563851"
-                className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call for Quote
-              </a>
-              <a 
-                href="/contact-us"
-                className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-              >
-                <Calendar className="w-5 h-5" />
-                Schedule Service
-              </a>
+      {/* Hero Section - Local Business Style */}
+      <section className="relative py-20 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600"></div>
+        
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Local Business Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
+            <MapPin className="w-4 h-4 text-purple-600" />
+            Jacksonville Move-In/Out Cleaning Experts
+          </div>
+
+          <div className="flex justify-center mb-6">
+            <Scissors className="w-16 h-16 text-purple-200" />
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            Move-In & Move-Out Cleaning
+          </h1>
+          <p className="text-xl sm:text-2xl text-purple-100 mb-8 max-w-3xl mx-auto">
+            Professional cleaning services for Jacksonville homes during transitions. 
+            Get your security deposit back and start fresh in your new space.
+          </p>
+          
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-purple-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Award className="w-6 h-6 text-purple-200" />
+              </div>
+              <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
+              <p className="text-white/80 text-xs">Jacksonville business since 2015</p>
             </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-purple-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Truck className="w-6 h-6 text-purple-200" />
+              </div>
+              <h3 className="font-bold text-white text-base mb-2">Same-Day Service</h3>
+              <p className="text-white/80 text-xs">Available throughout Jacksonville</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-purple-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Star className="w-6 h-6 text-purple-200" />
+              </div>
+              <h3 className="font-bold text-white text-base mb-2">100% Guarantee</h3>
+              <p className="text-white/80 text-xs">Satisfaction guaranteed</p>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:9044563851"
+              className="bg-white text-purple-600 hover:bg-purple-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+            >
+              <Phone className="w-5 h-5" />
+              Call for Quote
+            </a>
+            <Link 
+              href="/contact"
+              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <Calendar className="w-5 h-5" />
+              Schedule Service
+            </Link>
           </div>
         </div>
       </section>
@@ -92,184 +126,45 @@ export default function MoveInMoveOutPage() {
       {/* Service Overview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-                Professional Move-In/Move-Out Cleaning
-              </h2>
-              <p className="text-xl text-charcoal/70 mb-8 leading-relaxed">
-                Moving is stressful enough without worrying about cleaning. Our specialized move-in/move-out 
-                cleaning services ensure your new home is spotless and move-in ready, or your old home 
-                meets all landlord and real estate requirements.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Truck className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-charcoal font-medium">Same-day service available</span>
-                </div>
-                <div className="flex items-center">
-                  <Shield className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-charcoal font-medium">Licensed, bonded & insured</span>
-                </div>
-                <div className="flex items-center">
-                  <Check className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-charcoal font-medium">Satisfaction guaranteed</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Service Highlights</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">Move-In Cleaning</span>
-                  <span className="text-primary-blue font-bold">From $150</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">Move-Out Cleaning</span>
-                  <span className="text-primary-blue font-bold">From $200</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">Deep Carpet Cleaning</span>
-                  <span className="text-primary-blue font-bold">From $80</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">Window Cleaning</span>
-                  <span className="text-primary-blue font-bold">From $60</span>
-                </div>
-              </div>
-              <div className="mt-6 p-4 bg-primary-blue/10 rounded-xl">
-                <p className="text-charcoal text-sm">
-                  <strong>Note:</strong> Final pricing depends on property size, condition, and specific requirements. 
-                  Contact us for a detailed quote.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Move-In Services */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Move-In Cleaning Services
+              Jacksonville Move-In/Out Cleaning Services
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Start fresh in your new home with our comprehensive move-in cleaning service. 
-              We ensure every corner is spotless and ready for your family.
+              Choose the perfect cleaning package for your Jacksonville home transition. 
+              All packages include our eco-friendly products and satisfaction guarantee.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">What&apos;s Included</h3>
-              <ul className="space-y-3">
-                {moveInServices.map((service, index) => (
-                  <li key={index} className="flex items-start">
-                    <Check className="w-5 h-5 text-accent-green mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-charcoal/70">{service}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Perfect For</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-primary-blue/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-primary-blue font-bold text-sm">1</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg border-2 border-purple-200 p-8 hover:shadow-xl transition-all duration-300">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Home className="w-8 h-8 text-purple-600" />
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">New Homeowners</h4>
-                    <p className="text-charcoal/70">Ensure your new home is spotless before moving in</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-primary-blue/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-primary-blue font-bold text-sm">2</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Renters</h4>
-                    <p className="text-charcoal/70">Start fresh in your new rental property</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-primary-blue/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-primary-blue font-bold text-sm">3</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Real Estate</h4>
-                    <p className="text-charcoal/70">Prepare properties for new tenants or buyers</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+                  <h3 className="text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">{service.price}</div>
+                  <p className="text-charcoal/70 text-sm">{service.description}</p>
+                </div>
 
-      {/* Move-Out Services */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Move-Out Cleaning Services
-            </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Ensure you get your full security deposit back with our thorough move-out cleaning service. 
-              We meet all landlord and property management requirements.
-            </p>
-          </div>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start space-x-3">
+                      <Check className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-charcoal/80 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">What&apos;s Included</h3>
-              <ul className="space-y-3">
-                {moveOutServices.map((service, index) => (
-                  <li key={index} className="flex items-start">
-                    <Check className="w-5 h-5 text-accent-green mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-charcoal/70">{service}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Benefits</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-accent-coral font-bold text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Security Deposit Protection</h4>
-                    <p className="text-charcoal/70">Maximize your chances of getting full deposit back</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-accent-coral font-bold text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Landlord Satisfaction</h4>
-                    <p className="text-charcoal/70">Meet all cleaning requirements and standards</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-accent-coral font-bold text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Peace of Mind</h4>
-                    <p className="text-charcoal/70">Professional cleaning you can trust</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                <Link
+                  href="/contact"
+                  className="block w-full text-center py-3 px-6 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200"
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -279,22 +174,22 @@ export default function MoveInMoveOutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Why Choose Our Move-In/Move-Out Service?
+              Why Choose Our Jacksonville Move-In/Out Cleaning?
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We specialize in move-in/move-out cleaning and understand the unique requirements 
-              of landlords, property managers, and real estate professionals.
+              We're your local cleaning experts, providing reliable, thorough service that ensures 
+              smooth transitions for Jacksonville families.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyChooseUs.map((item, index) => (
+            {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-8 h-8 text-primary-blue" />
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">{item.title}</h3>
-                <p className="text-charcoal/70">{item.description}</p>
+                <h3 className="text-xl font-bold text-charcoal mb-2">{benefit.title}</h3>
+                <p className="text-charcoal/70">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -302,29 +197,29 @@ export default function MoveInMoveOutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-            Ready to Schedule Your Move-In/Move-Out Cleaning?
+      <section className="py-20 bg-purple-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready for a Smooth Home Transition?
           </h2>
-          <p className="text-xl text-charcoal/70 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free quote and to schedule your professional move-in or move-out cleaning service.
+          <p className="text-xl text-white/90 mb-8">
+            Contact us today for move-in/out cleaning services in Jacksonville. 
+            Free estimates and same-day service available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="tel:9044563851"
-              className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
             >
               <Phone className="w-5 h-5" />
-              Call (904) 456-3851
+              <span>Call (904) 456-3851</span>
             </a>
-            <a 
-              href="/contact-us"
-              className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            <Link
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors duration-200"
             >
-              <Calendar className="w-5 h-5" />
               Get Free Quote
-            </a>
+            </Link>
           </div>
         </div>
       </section>
