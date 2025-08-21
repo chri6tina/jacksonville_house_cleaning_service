@@ -1,5 +1,6 @@
 import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils, Building, Briefcase, Globe, Train, Bus, ShoppingBag, Heart, PawPrint, Umbrella, Sun, Anchor, Fish, Sailboat, HardHat, Wrench, Hammer, Truck, Trash2, Recycle } from 'lucide-react';
 import { Metadata } from 'next';
+import PostConstructionCalculator from '@/components/PostConstructionCalculator';
 
 export const metadata: Metadata = {
   title: 'Jacksonville Post-Construction Cleanup #1 | Construction Site Cleaning & Debris Removal FL',
@@ -470,22 +471,41 @@ export default function PostConstructionCleaningPage() {
             </div>
           </div>
           
-          {/* Three-Phase Process Note */}
-          <div className="mt-6 p-6 bg-gradient-to-r from-green-50 to-accent-green/20 rounded-2xl border border-green-200">
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-charcoal mb-3">Our Three-Phase Process (Included in Complete Service)</h3>
-              <p className="text-charcoal/70 text-sm leading-relaxed max-w-4xl mx-auto">
-                <strong>Every complete post-construction cleanup includes our proven three-phase process:</strong> 
-                <strong>Phase 1:</strong> Rough cleanup removes large debris and prepares surfaces. 
-                <strong>Phase 2:</strong> Final cleaning eliminates dust, fingerprints, and stickers. 
-                <strong>Phase 3:</strong> Touch-up service addresses settled dust and ensures perfection. 
-                This systematic approach guarantees move-in ready results. Individual phases are available for specialized needs, 
-                but most customers choose our complete service for the best value and results.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+                     {/* Three-Phase Process Note */}
+           <div className="mt-6 p-6 bg-gradient-to-r from-green-50 to-accent-green/20 rounded-2xl border border-green-200">
+             <div className="text-center">
+               <h3 className="text-xl font-bold text-charcoal mb-3">Our Three-Phase Process (Included in Complete Service)</h3>
+               <p className="text-charcoal/70 text-sm leading-relaxed max-w-4xl mx-auto">
+                 <strong>Every complete post-construction cleanup includes our proven three-phase process:</strong> 
+                 <strong>Phase 1:</strong> Rough cleanup removes large debris and prepares surfaces. 
+                 <strong>Phase 2:</strong> Final cleaning eliminates dust, fingerprints, and stickers. 
+                 <strong>Phase 3:</strong> Touch-up service addresses settled dust and ensures perfection. 
+                 This systematic approach guarantees move-in ready results. Individual phases are available for specialized needs, 
+                 but most customers choose our complete service for the best value and results.
+               </p>
+             </div>
+           </div>
+         </div>
+       </section>
+
+       {/* Calculator Section */}
+       <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
+         <div className="container mx-auto px-4">
+           <div className="text-center mb-16">
+             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+               Get Your Instant Project Estimate
+             </h2>
+             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+               Our comprehensive calculator considers all factors including project type, size, debris level, 
+               special requirements, and timeline to give you an accurate estimate in seconds.
+             </p>
+           </div>
+           
+           <div className="max-w-6xl mx-auto">
+             <PostConstructionCalculator />
+           </div>
+         </div>
+       </section>
 
       {/* Competitive Advantage Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
