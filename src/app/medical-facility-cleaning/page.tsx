@@ -1,399 +1,195 @@
-import { 
-  Shield, 
-  Check, 
-  Clock, 
-  Users, 
-  Leaf, 
-  Star,
-  ArrowRight,
-  Phone,
-  Calendar,
-  Calculator,
-  MapPin,
-  Zap,
-  Wind,
-  Thermometer,
-  Home,
-  Car,
-  AlertTriangle,
-  Droplets,
-  PawPrint,
-  Sparkles,
-  Accessibility,
-  Clock4,
-  Hotel,
-  Building2,
-  Briefcase,
-  FileText,
-  Monitor,
-  Printer,
-  PartyPopper,
-  Music,
-  Camera,
-  Stethoscope,
-  Cross,
-  Microscope
-} from 'lucide-react';
+import { Stethoscope, Sparkles, Clock, Users, Shield, Leaf, Check, Star, ArrowRight, Phone, MapPin, Award, Truck, Calendar, Zap } from 'lucide-react';
+import Link from 'next/link';
 
 export default function MedicalFacilityCleaningPage() {
   const services = [
     {
-      title: 'Daily Medical Cleaning',
-      description: 'Regular sanitization for medical facilities maintaining health standards',
-      icon: Shield,
-      price: 'Starting at $400',
-      duration: '4-8 hours',
-      includes: ['Surface sanitization', 'High-touch area cleaning', 'Restroom sanitization', 'Waiting area maintenance', 'Compliance documentation']
+      name: 'Exam Room Cleaning',
+      price: 'From $150',
+      description: 'Complete exam room sanitization',
+      features: ['Surface disinfection', 'Equipment cleaning', 'Floor sanitization', 'Waste disposal', 'Biohazard protocols']
     },
     {
-      title: 'Deep Medical Sanitization',
-      description: 'Comprehensive cleaning for medical facilities requiring thorough disinfection',
-      icon: Cross,
-      price: 'Starting at $600',
-      duration: '6-12 hours',
-      includes: ['Complete disinfection', 'Equipment sanitization', 'Air quality improvement', 'Pathogen elimination', 'Safety protocol compliance']
+      name: 'Waiting Area Cleaning',
+      price: 'From $120',
+      description: 'Public area maintenance',
+      features: ['Seating sanitization', 'Surface disinfection', 'Floor care', 'Air purification', 'Touchpoint cleaning']
     },
     {
-      title: 'Emergency Medical Cleaning',
-      description: 'Urgent cleaning services for medical facilities with immediate needs',
-      icon: Clock4,
-      price: 'Starting at $800',
-      duration: '2-6 hours',
-      includes: ['24/7 availability', 'Emergency response', 'Priority scheduling', 'Rapid sanitization', 'Immediate documentation']
+      name: 'Surgical Suite Cleaning',
+      price: 'From $300',
+      description: 'Sterile environment preparation',
+      features: ['Sterile protocols', 'Equipment sterilization', 'Surface disinfection', 'Air quality control', 'Compliance documentation']
     },
     {
-      title: 'Specialized Medical Cleaning',
-      description: 'Cleaning for specific areas like operating rooms, labs, and isolation units',
-      icon: Microscope,
-      price: 'Starting at $500',
-      duration: '3-8 hours',
-      includes: ['Specialized protocols', 'Safety compliance', 'Equipment handling', 'Contamination control', 'Regulatory standards']
+      name: '24/7 Emergency Service',
+      price: 'From $200',
+      description: 'Emergency response cleaning',
+      features: ['Immediate response', 'Biohazard cleanup', 'Emergency protocols', 'After-hours service', 'Priority scheduling']
     }
   ];
 
   const benefits = [
-    'Maintain compliance with health department and regulatory requirements',
-    'Reduce healthcare-associated infections (HAIs) and improve patient safety',
-    'Protect medical staff and patients from cross-contamination',
-    'Extend the lifespan of expensive medical equipment',
-    'Improve facility reputation and patient confidence',
-    'Meet Joint Commission and CDC cleaning standards',
-    'Reduce liability and insurance costs',
-    'Provide peace of mind knowing your facility meets health standards'
-  ];
-
-  const process = [
     {
-      step: 1,
-      title: 'Risk Assessment',
-      description: 'Evaluate facility areas and determine contamination risk levels',
+      title: 'HIPAA Compliant',
+      description: 'Full privacy protection',
       icon: Shield
     },
     {
-      step: 2,
-      title: 'Protocol Selection',
-      description: 'Choose appropriate cleaning protocols for each area type',
-      icon: FileText
+      title: 'Medical Grade Products',
+      description: 'Hospital-grade disinfectants',
+      icon: Zap
     },
     {
-      step: 3,
-      title: 'Systematic Sanitization',
-      description: 'Clean and disinfect using medical-grade products and techniques',
-      icon: Cross
+      title: 'Same-Day Service',
+      description: 'Available throughout Jacksonville',
+      icon: Clock
     },
     {
-      step: 4,
-      title: 'Quality Verification',
-      description: 'Verify cleaning effectiveness and document compliance',
-      icon: Check
-    },
-    {
-      step: 5,
-      title: 'Documentation',
-      description: 'Provide detailed cleaning reports for regulatory compliance',
-      icon: FileText
-    }
-  ];
-
-  const facilityAreas = [
-    {
-      area: 'Patient Rooms',
-      focus: ['Bed and furniture sanitization', 'Medical equipment cleaning', 'Surface disinfection', 'Air quality maintenance', 'Contamination control'],
-      icon: Home
-    },
-    {
-      area: 'Operating Rooms',
-      focus: ['Surgical equipment cleaning', 'Surface sterilization', 'Air filtration maintenance', 'Contamination prevention', 'Regulatory compliance'],
-      icon: Cross
-    },
-    {
-      area: 'Waiting Areas',
-      focus: ['High-touch surface cleaning', 'Seating area sanitization', 'Air quality improvement', 'Regular maintenance', 'Patient safety'],
-      icon: Users
-    },
-    {
-      area: 'Laboratories',
-      focus: ['Equipment sanitization', 'Surface disinfection', 'Contamination control', 'Safety protocol compliance', 'Regulatory standards'],
-      icon: Microscope
-    }
-  ];
-
-  const faqs = [
-    {
-      question: 'Are your cleaning products safe for medical facilities?',
-      answer: 'Absolutely! We use only medical-grade, EPA-registered disinfectants that are safe for medical environments. All products meet CDC and Joint Commission standards for healthcare facilities.'
-    },
-    {
-      question: 'How do you ensure compliance with medical cleaning regulations?',
-      answer: 'Our team is trained in healthcare cleaning protocols and we follow CDC, Joint Commission, and OSHA guidelines. We provide detailed documentation for all cleaning services to ensure regulatory compliance.'
-    },
-    {
-      question: 'Can you handle specialized areas like operating rooms?',
-      answer: 'Yes! We have experience cleaning all types of medical areas including operating rooms, isolation units, and laboratories. We follow specialized protocols for each area type.'
-    },
-    {
-      question: 'What if we need emergency cleaning services?',
-      answer: 'We offer 24/7 emergency cleaning services and can usually respond within 2-4 hours for urgent situations. We understand that medical facilities can have unexpected cleaning needs.'
-    },
-    {
-      question: 'Do you provide cleaning supplies and equipment?',
-      answer: 'Yes, we bring all necessary medical-grade cleaning supplies, equipment, and safety gear. We use hospital-grade equipment that provides superior results and meets medical facility standards.'
-    },
-    {
-      question: 'How do you prevent cross-contamination during cleaning?',
-      answer: 'We use color-coded cleaning materials, follow strict protocols, and use proper PPE. Our team is trained in infection control and we maintain strict separation between different facility areas.'
+      title: 'Jacksonville Local',
+      description: 'Your neighbors since 2015',
+      icon: MapPin
     }
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-red-50 to-rose-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-6">
-            <Star className="w-6 h-6 text-accent-coral" />
-            <span className="text-accent-coral font-semibold">Phase 3 Premium Service</span>
-            <Star className="w-6 h-6 text-accent-coral" />
+    <div className="min-h-screen bg-white">
+      {/* Hero Section - Local Business Style */}
+      <section className="relative py-20 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-pink-600"></div>
+        
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Local Business Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
+            <MapPin className="w-4 h-4 text-red-600" />
+            Jacksonville Medical Facility Cleaning Experts
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-6">
-            Medical Facility <span className="text-red-600">Cleaning</span>
+
+          <div className="flex justify-center mb-6">
+            <Stethoscope className="w-16 h-16 text-red-200" />
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            Medical Facility Cleaning Services
           </h1>
-          <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed mb-8">
-            Professional medical facility cleaning services that meet healthcare standards, 
-            ensure patient safety, and maintain regulatory compliance. Starting at just $400.
+          <p className="text-xl sm:text-2xl text-red-100 mb-8 max-w-3xl mx-auto">
+            Professional medical facility cleaning in Jacksonville with hospital-grade standards. 
+            We maintain sterile environments and ensure patient safety through rigorous cleaning protocols.
           </p>
           
-          {/* Quick Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact?service=medical-facility-cleaning"
-              className="bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <span>Get Free Quote</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="tel:+19045551234"
-              className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-600 hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Call Now</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Overview */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Our Medical Facility Cleaning Services</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We offer comprehensive medical cleaning solutions designed specifically for healthcare environments, 
-              ensuring your facility meets the highest standards for patient safety and regulatory compliance.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-red-200">
-                <div className="p-6">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
-                      <service.icon className="w-8 h-8 text-red-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-charcoal">{service.title}</h3>
-                      <p className="text-sm text-charcoal/60">{service.description}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-charcoal/60">Price:</span>
-                      <span className="text-sm font-medium text-accent-coral">{service.price}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-charcoal/60">Duration:</span>
-                      <span className="text-sm font-medium text-charcoal">{service.duration}</span>
-                    </div>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-charcoal mb-3">What&apos;s Included:</h4>
-                    <ul className="space-y-2">
-                      {service.includes.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start space-x-3">
-                          <Check className="w-4 h-4 text-accent-green mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-charcoal/70">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="pt-4 border-t border-gray-100">
-                    <a
-                      href={`/contact?service=medical-facility-cleaning&type=${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="w-full bg-red-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200 flex items-center justify-center space-x-2"
-                    >
-                      <span>Get Quote</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-red-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Award className="w-6 h-6 text-red-200" />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Facility Areas */}
-      <section className="py-20 bg-red-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Comprehensive Medical Area Cleaning</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We provide specialized cleaning for all areas of your medical facility, ensuring every space 
-              meets healthcare standards and maintains the highest level of patient safety.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {facilityAreas.map((area, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
-                    <area.icon className="w-6 h-6 text-red-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-charcoal">{area.area}</h3>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-charcoal mb-3">Our Focus:</h4>
-                  <ul className="space-y-2">
-                    {area.focus.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start space-x-2">
-                        <Check className="w-4 h-4 text-accent-green mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-charcoal/70">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose This Service */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-charcoal mb-6">
-                Why Choose Medical Facility Cleaning?
-              </h2>
-              <p className="text-lg text-charcoal/70 mb-8 leading-relaxed">
-                Medical facility cleaning requires specialized knowledge, protocols, and attention to detail 
-                that differs significantly from standard cleaning services. Our service is designed specifically 
-                for healthcare environments and regulatory compliance.
-              </p>
-              
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <Check className="w-6 h-6 text-accent-green mt-0.5 flex-shrink-0" />
-                    <span className="text-charcoal/80">{benefit}</span>
-                  </div>
-                ))}
-              </div>
+              <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
+              <p className="text-white/80 text-xs">Jacksonville business since 2015</p>
             </div>
             
-            <div className="bg-red-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Service Details</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Starting Price:</span>
-                  <span className="font-semibold text-accent-coral">$400 per service</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Duration:</span>
-                  <span className="font-semibold text-charcoal">2-12 hours</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Frequency:</span>
-                  <span className="font-semibold text-charcoal">Daily to monthly</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Warranty:</span>
-                  <span className="font-semibold text-charcoal">100% satisfaction</span>
-                </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-red-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Truck className="w-6 h-6 text-red-200" />
               </div>
+              <h3 className="font-bold text-white text-base mb-2">Same-Day Service</h3>
+              <p className="text-white/80 text-xs">Available throughout Jacksonville</p>
             </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-red-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Star className="w-6 h-6 text-red-200" />
+              </div>
+              <h3 className="font-bold text-white text-base mb-2">100% Guarantee</h3>
+              <p className="text-white/80 text-xs">Satisfaction guaranteed</p>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:9044563851"
+              className="bg-white text-red-600 hover:bg-red-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+            >
+              <Phone className="w-5 h-5" />
+              Call for Quote
+            </a>
+            <Link 
+              href="/contact"
+              className="border-2 border-white text-white hover:bg-white hover:text-red-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <Calendar className="w-5 h-5" />
+              Schedule Service
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Our Process */}
+      {/* Service Overview */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+              Jacksonville Medical Facility Cleaning Services
+            </h2>
+            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+              Choose the perfect medical cleaning package for your Jacksonville facility. 
+              All packages include hospital-grade products and compliance documentation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg border-2 border-red-200 p-8 hover:shadow-xl transition-all duration-300">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Stethoscope className="w-8 h-8 text-red-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
+                  <div className="text-3xl font-bold text-red-600 mb-2">{service.price}</div>
+                  <p className="text-charcoal/70 text-sm">{service.description}</p>
+                </div>
+
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start space-x-3">
+                      <Check className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-charcoal/80 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="/contact"
+                  className="block w-full text-center py-3 px-6 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200"
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Our 5-Step Medical Cleaning Process</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+              Why Choose Our Jacksonville Medical Facility Cleaning?
+            </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We follow a proven process designed specifically for medical facilities, ensuring 
-              safety, compliance, and the highest standards of cleanliness.
+              We're your local medical cleaning experts, providing reliable, professional service that 
+              maintains the highest standards of cleanliness and safety.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {process.map((step) => (
-              <div key={step.step} className="bg-white p-6 rounded-xl shadow-lg text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-red-600">{step.step}</span>
+                  <benefit.icon className="w-8 h-8 text-red-600" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">{step.title}</h3>
-                <p className="text-charcoal/70">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-charcoal/70">
-              Get answers to common questions about our medical facility cleaning service.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                <h3 className="text-lg font-semibold text-charcoal mb-3">{faq.question}</h3>
-                <p className="text-charcoal/70">{faq.answer}</p>
+                <h3 className="text-xl font-bold text-charcoal mb-2">{benefit.title}</h3>
+                <p className="text-charcoal/70">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -401,27 +197,29 @@ export default function MedicalFacilityCleaningPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-rose-600">
+      <section className="py-20 bg-red-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Keep Your Medical Facility Safe and Compliant!
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Maintain Medical Standards?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Contact us today for a free medical facility cleaning quote and ensure your facility meets the highest healthcare standards.
+            Contact us today for medical facility cleaning services in Jacksonville. 
+            Free estimates and same-day service available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact?service=medical-facility-cleaning"
-              className="bg-accent-coral text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent-coral/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              href="tel:9044563851"
+              className="bg-white text-red-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
             >
-              Get Your Free Quote
+              <Phone className="w-5 h-5" />
+              <span>Call (904) 456-3851</span>
             </a>
-            <a
-              href="tel:+19045551234"
+            <Link
+              href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-600 transition-colors duration-200"
             >
-              Call (904) 555-1234
-            </a>
+              Get Free Quote
+            </Link>
           </div>
         </div>
       </section>

@@ -1,72 +1,124 @@
-import React from 'react';
-import { Home, Clock, Shield, Check, Star, Phone, Calendar, Users } from 'lucide-react';
+import { Building, Sparkles, Clock, Users, Shield, Leaf, Check, Star, ArrowRight, Phone, MapPin, Award, Truck, Calendar, Home } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ApartmentCleaningPage() {
   const services = [
-    'Complete dusting of all surfaces and furniture',
-    'Vacuum and mop all floors',
-    'Kitchen cleaning (appliances, countertops, cabinets)',
-    'Bathroom deep cleaning and sanitization',
-    'Window and mirror cleaning',
-    'Baseboard and trim cleaning',
-    'Light fixture and ceiling fan cleaning',
-    'Closet and storage area cleaning',
-    'Balcony/patio cleaning (if applicable)',
-    'Final inspection and quality check'
+    {
+      name: 'Studio Apartment',
+      price: 'From $100',
+      description: 'Perfect for efficiency apartments',
+      features: ['Complete cleaning', 'Kitchen deep clean', 'Bathroom sanitization', 'Floor care', 'Dust removal']
+    },
+    {
+      name: '1 Bedroom',
+      price: 'From $125',
+      description: 'Ideal for singles and couples',
+      features: ['All studio services', 'Bedroom cleaning', 'Closet organization', 'Extended time', 'Priority scheduling']
+    },
+    {
+      name: '2 Bedroom',
+      price: 'From $160',
+      description: 'Great for roommates and families',
+      features: ['All 1-bedroom services', 'Second bedroom', 'Living area focus', 'Kitchen deep clean', 'Bathroom care']
+    },
+    {
+      name: '3+ Bedroom',
+      price: 'From $200',
+      description: 'Full apartment cleaning',
+      features: ['All 2-bedroom services', 'Additional bedrooms', 'Bonus rooms', 'Extended service time', 'Bulk pricing']
+    }
   ];
 
   const benefits = [
     {
-      icon: Shield,
-      title: 'Licensed & Insured',
-      description: 'Complete peace of mind with full coverage'
-    },
-    {
-      icon: Clock,
       title: 'Flexible Scheduling',
-      description: 'Early morning, evening, and weekend appointments'
+      description: 'Work around your schedule',
+      icon: Clock
     },
     {
-      icon: Check,
-      title: 'Satisfaction Guaranteed',
-      description: '100% satisfaction or we\'ll make it right'
+      title: 'Eco-Friendly Products',
+      description: 'Safe for your family and pets',
+      icon: Leaf
     },
     {
-      icon: Users,
-      title: 'Experienced Team',
-      description: 'Background-checked, trained professionals'
+      title: 'Same-Day Service',
+      description: 'Available throughout Jacksonville',
+      icon: Truck
+    },
+    {
+      title: 'Jacksonville Local',
+      description: 'Your neighbors since 2015',
+      icon: MapPin
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6">
-              Apartment Cleaning Services
-            </h1>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
-              Professional apartment cleaning services in Jacksonville. From studio apartments to luxury 
-              condos, we keep your space spotless and comfortable.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:9044563851"
-                className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call for Quote
-              </a>
-              <a 
-                href="/contact-us"
-                className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-              >
-                <Calendar className="w-5 h-5" />
-                Schedule Service
-              </a>
+      {/* Hero Section - Local Business Style */}
+      <section className="relative py-20 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600"></div>
+        
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Local Business Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
+            <MapPin className="w-4 h-4 text-indigo-600" />
+            Jacksonville Apartment Cleaning Experts
+          </div>
+
+          <div className="flex justify-center mb-6">
+            <Building className="w-16 h-16 text-indigo-200" />
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            Professional Apartment Cleaning
+          </h1>
+          <p className="text-xl sm:text-2xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+            Keep your Jacksonville apartment spotless with our professional cleaning services. 
+            From studios to multi-bedroom units, we deliver consistent quality every time.
+          </p>
+          
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-indigo-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Award className="w-6 h-6 text-indigo-200" />
+              </div>
+              <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
+              <p className="text-white/80 text-xs">Jacksonville business since 2015</p>
             </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-indigo-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Truck className="w-6 h-6 text-indigo-200" />
+              </div>
+              <h3 className="font-bold text-white text-base mb-2">Same-Day Service</h3>
+              <p className="text-white/80 text-xs">Available throughout Jacksonville</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-indigo-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Star className="w-6 h-6 text-indigo-200" />
+              </div>
+              <h3 className="font-bold text-white text-base mb-2">100% Guarantee</h3>
+              <p className="text-white/80 text-xs">Satisfaction guaranteed</p>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:9044563851"
+              className="bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+            >
+              <Phone className="w-5 h-5" />
+              Call for Quote
+            </a>
+            <Link 
+              href="/contact"
+              className="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <Calendar className="w-5 h-5" />
+              Schedule Service
+            </Link>
           </div>
         </div>
       </section>
@@ -74,262 +126,100 @@ export default function ApartmentCleaningPage() {
       {/* Service Overview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-                Professional Apartment Cleaning
-              </h2>
-              <p className="text-xl text-charcoal/70 mb-8 leading-relaxed">
-                Whether you&apos;re a busy professional, student, or just want to enjoy a clean living space, 
-                our apartment cleaning services are designed to fit your lifestyle and budget. We understand 
-                the unique challenges of apartment living and provide thorough, efficient cleaning solutions.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Home className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-charcoal font-medium">All apartment sizes welcome</span>
-                </div>
-                <div className="flex items-center">
-                  <Shield className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-charcoal font-medium">Licensed, bonded & insured</span>
-                </div>
-                <div className="flex items-center">
-                  <Check className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-charcoal font-medium">Eco-friendly cleaning products</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Service Pricing</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">Studio Apartment</span>
-                  <span className="text-primary-blue font-bold">From $100</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">1 Bedroom</span>
-                  <span className="text-primary-blue font-bold">From $125</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">2 Bedroom</span>
-                  <span className="text-primary-blue font-bold">From $160</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">3+ Bedroom</span>
-                  <span className="text-primary-blue font-bold">From $200</span>
-                </div>
-              </div>
-              <div className="mt-6 p-4 bg-primary-blue/10 rounded-xl">
-                <p className="text-charcoal text-sm">
-                  <strong>Note:</strong> Pricing varies based on apartment size, condition, and specific services needed. 
-                  Contact us for a personalized quote.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Included */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              What&apos;s Included in Our Apartment Cleaning
+              Jacksonville Apartment Cleaning Services
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Our comprehensive apartment cleaning service covers every area of your living space 
-              to ensure a spotless, healthy environment.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Standard Cleaning</h3>
-              <ul className="space-y-3">
-                {services.map((service, index) => (
-                  <li key={index} className="flex items-start">
-                    <Check className="w-5 h-5 text-accent-green mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-charcoal/70">{service}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Additional Services</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-accent-coral font-bold text-sm">+</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Deep Cleaning</h4>
-                    <p className="text-charcoal/70">More thorough cleaning for neglected areas</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-accent-coral font-bold text-sm">+</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Carpet Cleaning</h4>
-                    <p className="text-charcoal/70">Professional carpet and upholstery cleaning</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-accent-coral font-bold text-sm">+</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Window Cleaning</h4>
-                    <p className="text-charcoal/70">Interior and exterior window cleaning</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <span className="text-accent-coral font-bold text-sm">+</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Recurring Service</h4>
-                    <p className="text-charcoal/70">Weekly, bi-weekly, or monthly cleaning</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Why Choose Our Apartment Cleaning Service?
-            </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We specialize in apartment cleaning and understand the unique needs of apartment residents.
+              Choose the perfect apartment cleaning package for your Jacksonville home. 
+              All packages include our eco-friendly products and satisfaction guarantee.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-8 h-8 text-primary-blue" />
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg border-2 border-indigo-200 p-8 hover:shadow-xl transition-all duration-300">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Home className="w-8 h-8 text-indigo-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
+                  <div className="text-3xl font-bold text-indigo-600 mb-2">{service.price}</div>
+                  <p className="text-charcoal/70 text-sm">{service.description}</p>
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">{item.title}</h3>
-                <p className="text-charcoal/70">{item.description}</p>
+
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start space-x-3">
+                      <Check className="w-5 h-5 text-indigo-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-charcoal/80 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="/contact"
+                  className="block w-full text-center py-3 px-6 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-200"
+                >
+                  Get Started
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Apartment Types */}
+      {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              We Clean All Types of Apartments
+              Why Choose Our Jacksonville Apartment Cleaning?
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              From cozy studios to luxury high-rise apartments, we have the experience and expertise 
-              to clean any apartment type.
+              We're your local apartment cleaning experts, providing reliable, consistent service that 
+              keeps your Jacksonville apartment clean and comfortable.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-accent-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-accent-green" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-bold text-charcoal mb-2">{benefit.title}</h3>
+                <p className="text-charcoal/70">{benefit.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">Studio Apartments</h3>
-              <p className="text-charcoal/70">
-                Perfect for busy professionals and students who need efficient, thorough cleaning.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-accent-aqua/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-accent-aqua" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">1-2 Bedroom Apartments</h3>
-              <p className="text-charcoal/70">
-                Ideal for couples, small families, and roommates who want a clean, comfortable home.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-accent-coral/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-accent-coral" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">Luxury Apartments</h3>
-              <p className="text-charcoal/70">
-                Premium cleaning services for high-end apartments and condos with attention to detail.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-primary-blue" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">Student Apartments</h3>
-              <p className="text-charcoal/70">
-                Affordable cleaning solutions for students who need help maintaining their living space.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-accent-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-accent-green" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">Senior Apartments</h3>
-              <p className="text-charcoal/70">
-                Gentle, thorough cleaning for seniors who need assistance maintaining their homes.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-              <div className="w-16 h-16 bg-accent-aqua/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-accent-aqua" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">Pet-Friendly Apartments</h3>
-              <p className="text-charcoal/70">
-                Specialized cleaning for apartments with pets, including pet hair and odor removal.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-            Ready to Enjoy a Clean Apartment?
+      <section className="py-20 bg-indigo-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready for a Cleaner Apartment?
           </h2>
-          <p className="text-xl text-charcoal/70 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free quote and to schedule your professional apartment cleaning service.
+          <p className="text-xl text-white/90 mb-8">
+            Contact us today for apartment cleaning services in Jacksonville. 
+            Free estimates and flexible scheduling available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="tel:9044563851"
-              className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+              className="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
             >
               <Phone className="w-5 h-5" />
-              Call (904) 456-3851
+              <span>Call (904) 456-3851</span>
             </a>
-            <a 
-              href="/contact-us"
-              className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            <Link
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors duration-200"
             >
-              <Calendar className="w-5 h-5" />
               Get Free Quote
-            </a>
+            </Link>
           </div>
         </div>
       </section>
