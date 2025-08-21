@@ -1,0 +1,5 @@
+[33mb67506b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m  Fix build error: Remove 'use client' directive from riverside-avondale page to allow metadata export
+[33m53d8ea1[m[33m ([m[1;31morigin/main[m[33m)[m 🎉 Complete all 14 Jacksonville neighborhood optimizations
+[33med74362[m FIX: Remove duplicate content causing 200 duplicates without canonical tags - Delete conflicting dynamic routes for robots.txt and sitemap.xml - Keep static files in public/ folder - Resolves Google Search Console duplicate content warnings
+[33m5c40019[m Add 5 high-impact Jacksonville neighborhood landing pages for local SEO domination
+[33mdb44627[m Fix Next.js build error - wrap useSearchParams in Suspense boundary
