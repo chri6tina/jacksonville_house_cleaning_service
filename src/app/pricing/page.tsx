@@ -1,4 +1,5 @@
-import { Check, Star, Clock, Users, Home, Building2, Calculator, Phone } from 'lucide-react';
+import { Check, Star, Clock, Users, Home, Building2, Calculator, Phone, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function PricingPage() {
   const pricingPackages = [
@@ -17,7 +18,8 @@ export default function PricingPage() {
         'Up to 2 hours of cleaning'
       ],
       popular: false,
-      color: 'primary-blue'
+      color: 'primary-blue',
+      href: '/standard-cleaning'
     },
     {
       name: 'Deep Clean',
@@ -35,7 +37,8 @@ export default function PricingPage() {
         'Up to 4 hours of cleaning'
       ],
       popular: true,
-      color: 'accent-coral'
+      color: 'accent-coral',
+      href: '/extreme-deep-cleaning'
     },
     {
       name: 'Eco-Friendly Clean',
@@ -52,7 +55,8 @@ export default function PricingPage() {
         'Up to 3 hours of cleaning'
       ],
       popular: false,
-      color: 'accent-green'
+      color: 'accent-green',
+      href: '/extreme-deep-cleaning'
     }
   ];
 
@@ -68,7 +72,8 @@ export default function PricingPage() {
         'High-traffic area focus',
         'Professional appearance maintenance',
         'Customized cleaning plans'
-      ]
+      ],
+      href: '/commercial-office-cleaning'
     },
     {
       name: 'Post-Construction',
@@ -81,7 +86,8 @@ export default function PricingPage() {
         'Detailed surface cleaning',
         'Final touch-up cleaning',
         'Move-in ready results'
-      ]
+      ],
+      href: '/post-construction-cleaning'
     }
   ];
 
@@ -207,16 +213,17 @@ export default function PricingPage() {
                   ))}
                 </ul>
 
-                <a
-                  href="/contact"
-                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
-                    pkg.popular 
-                      ? 'bg-accent-coral text-white hover:bg-accent-coral/90' 
-                      : 'bg-primary-blue text-white hover:bg-primary-blue/90'
-                  }`}
-                >
-                  Get Started
-                </a>
+                <Link href={pkg.href}>
+                  <a
+                    className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
+                      pkg.popular 
+                        ? 'bg-accent-coral text-white hover:bg-accent-coral/90' 
+                        : 'bg-primary-blue text-white hover:bg-primary-blue/90'
+                    }`}
+                  >
+                    Get Started
+                  </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -250,12 +257,18 @@ export default function PricingPage() {
                   ))}
                 </ul>
 
-                <a
-                  href="/contact"
-                  className="block w-full text-center py-3 px-6 bg-accent-aqua text-white rounded-lg font-semibold hover:bg-accent-aqua/90 transition-colors duration-200"
-                >
-                  Get Quote
-                </a>
+                <div className="space-y-3">
+                  <Link href={service.href}>
+                    <a className="block w-full text-center py-2 px-6 border border-accent-aqua text-accent-aqua rounded-lg font-medium hover:bg-accent-aqua hover:text-white transition-colors duration-200">
+                      Learn More
+                    </a>
+                  </Link>
+                  <Link href={service.href}>
+                    <a className="block w-full text-center py-3 px-6 bg-accent-aqua text-white rounded-lg font-semibold hover:bg-accent-aqua/90 transition-colors duration-200">
+                      Get Quote
+                    </a>
+                  </Link>
+                </div>
               </div>
             ))}
           </div>

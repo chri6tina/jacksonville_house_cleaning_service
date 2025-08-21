@@ -8,6 +8,7 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
+      { name: 'Post-Construction Cleaning', href: '/post-construction-cleaning' },
       { name: 'Recurring Cleaning', href: '/recurring-cleaning' },
       { name: 'Deep Cleaning', href: '/extreme-deep-cleaning' },
       { name: 'Move-In/Out Cleaning', href: '/move-in-move-out' },

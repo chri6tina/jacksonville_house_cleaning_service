@@ -10,11 +10,19 @@ import {
   Wind, 
   Scissors, 
   Droplets, 
-  Shield 
+  Shield,
+  HardHat
 } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
   const services = [
+    {
+      title: "Post-Construction Cleaning",
+      description: "Professional cleanup after construction projects. Debris removal, dust elimination, and move-in ready results.",
+      icon: HardHat,
+      href: "/post-construction-cleaning",
+      isPopular: true
+    },
     {
       title: "Residential Cleaning",
       description: "Regular house cleaning, deep cleaning, and move-in/move-out services for homes and apartments.",
@@ -34,7 +42,7 @@ const ServicesSection: React.FC = () => {
       description: "Thorough cleaning of all surfaces, appliances, and hard-to-reach areas for a spotless home.",
       icon: Sparkles,
       href: "/extreme-deep-cleaning",
-      isPopular: true
+      isPopular: false
     },
     {
       title: "Carpet Cleaning",

@@ -1,24 +1,53 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone, Sparkles } from 'lucide-react';
+import { Menu, X, Phone, Sparkles, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Locations', href: '/locations' },
     { name: 'About', href: '/about' },
+    { name: 'Locations', href: '/locations' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Testimonials', href: '/testimonials' },
+  ];
+
+  const serviceLinks = [
+    { name: 'Post-Construction Cleaning', href: '/post-construction-cleaning' },
+    { name: 'Residential Cleaning', href: '/services' },
+    { name: 'Commercial Cleaning', href: '/office-cleaning' },
+    { name: 'Deep Cleaning', href: '/extreme-deep-cleaning' },
+    { name: 'Move-In/Out', href: '/move-in-move-out' },
+    { name: 'Carpet Cleaning', href: '/carpet-cleaning' },
+    { name: 'Window Cleaning', href: '/window-cleaning' },
   ];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const toggleServices = () => {
+    setIsServicesOpen(!isServicesOpen);
+  };
+
+  // Close services dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -48,6 +77,32 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
+              
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleServices}
+                  className="text-charcoal hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center space-x-1"
+                >
+                  <span>Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50" ref={servicesRef}>
+                    {serviceLinks.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block px-4 py-2 text-sm text-charcoal hover:bg-primary-blue hover:text-white transition-colors duration-200"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
@@ -89,6 +144,24 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            
+            {/* Mobile Services Section */}
+            <div className="border-t border-gray-200 pt-4 mt-4">
+              <div className="px-3 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                Services
+              </div>
+              {serviceLinks.map((service) => (
+                <Link
+                  key={service.name}
+                  href={service.href}
+                  className="text-charcoal hover:text-primary-blue block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {service.name}
+                </Link>
+              ))}
+            </div>
+            
             <div className="pt-4">
               <Link
                 href="/contact"
