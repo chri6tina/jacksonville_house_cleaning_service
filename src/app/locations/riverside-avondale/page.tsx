@@ -1,6 +1,3 @@
-'use client';
-
-import Link from 'next/link';
 import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee } from 'lucide-react';
 import { Metadata } from 'next';
 
@@ -219,18 +216,18 @@ export default function RiversideAvondalePage() {
               Experience meticulous care that preserves your home's architectural beauty.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/contact?service=historic-home-care&location=riverside-avondale"
                 className="bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Free Quote
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/contact?service=recurring-maintenance&location=riverside-avondale"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors"
               >
                 Schedule Service
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -264,12 +261,12 @@ export default function RiversideAvondalePage() {
                       </li>
                     ))}
                   </ul>
-                  <Link 
+                  <a 
                     href={`/contact?service=${service.id}&location=riverside-avondale`}
                     className="inline-block mt-6 bg-primary-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors"
                   >
                     Book Service
-                  </Link>
+                  </a>
                 </div>
               ))}
             </div>
@@ -368,12 +365,12 @@ export default function RiversideAvondalePage() {
                     <span className="font-semibold text-charcoal">From $110</span>
                   </div>
                 </div>
-                <Link 
+                <a 
                   href="/pricing-calculator?location=riverside-avondale"
                   className="block w-full bg-primary-blue text-white text-center py-3 rounded-lg font-semibold mt-6 hover:bg-primary-blue/90 transition-colors"
                 >
                   Get Detailed Pricing
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -426,18 +423,18 @@ export default function RiversideAvondalePage() {
               Get your free quote today and see why we're the preferred choice for historic homes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/contact?service=historic-home-care&location=riverside-avondale"
                 className="bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Free Quote
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/contact?service=recurring-maintenance&location=riverside-avondale"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors"
               >
                 Schedule Consultation
-              </Link>
+              </a>
             </div>
             <div className="mt-8 flex items-center justify-center">
               <Phone className="h-5 w-5 mr-2" />
