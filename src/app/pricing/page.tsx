@@ -72,7 +72,7 @@ export default function PricingPage() {
     },
     {
       name: 'Post-Construction',
-      price: 'From $300',
+      price: 'From $600',
       description: 'Comprehensive cleaning after construction or renovation projects.',
       icon: Clock,
       features: [

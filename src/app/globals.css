@@ -37,12 +37,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom breakpoint for extra small screens */
-@media (min-width: 475px) {
-  .xs\\:block { display: block; }
-  .xs\\:inline { display: inline; }
-  .xs\\:hidden { display: none; }
-}
+/* Custom breakpoint for extra small screens is handled in tailwind.config.js */
 
 body {
   background: var(--background);

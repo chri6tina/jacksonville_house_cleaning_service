@@ -303,7 +303,7 @@ export default function ServicesPage() {
         'Professional finish',
         'Ready for immediate occupancy'
       ],
-      pricing: 'Starting at $300 per project',
+      pricing: 'Starting at $600 per project',
       duration: '4-12 hours',
       frequency: 'One-time service',
       popular: false,

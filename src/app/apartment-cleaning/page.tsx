@@ -106,19 +106,19 @@ export default function ApartmentCleaningPage() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-charcoal">Studio Apartment</span>
-                  <span className="text-primary-blue font-bold">From $80</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal">1 Bedroom</span>
                   <span className="text-primary-blue font-bold">From $100</span>
                 </div>
                 <div className="flex items-center justify-between">
+                  <span className="text-charcoal">1 Bedroom</span>
+                  <span className="text-primary-blue font-bold">From $125</span>
+                </div>
+                <div className="flex items-center justify-between">
                   <span className="text-charcoal">2 Bedroom</span>
-                  <span className="text-primary-blue font-bold">From $130</span>
+                  <span className="text-primary-blue font-bold">From $160</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-charcoal">3+ Bedroom</span>
-                  <span className="text-primary-blue font-bold">From $160</span>
+                  <span className="text-primary-blue font-bold">From $200</span>
                 </div>
               </div>
               <div className="mt-6 p-4 bg-primary-blue/10 rounded-xl">

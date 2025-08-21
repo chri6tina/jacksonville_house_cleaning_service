@@ -35,7 +35,7 @@ export default function CommercialOfficeCleaningPage() {
       title: 'Daily Office Cleaning',
       description: 'Regular maintenance cleaning for high-traffic office environments',
       icon: Briefcase,
-      price: 'Starting at $200',
+      price: 'Starting at $250',
       duration: '2-4 hours',
       includes: ['Trash removal', 'Surface sanitization', 'Restroom cleaning', 'Kitchen maintenance', 'Floor care']
     },
@@ -43,7 +43,7 @@ export default function CommercialOfficeCleaningPage() {
       title: 'Deep Office Cleaning',
       description: 'Comprehensive cleaning for offices requiring thorough sanitization',
       icon: Sparkles,
-      price: 'Starting at $350',
+      price: 'Starting at $400',
       duration: '4-8 hours',
       includes: ['Complete sanitization', 'Equipment cleaning', 'Window cleaning', 'Carpet deep cleaning', 'Air duct cleaning']
     },
@@ -51,7 +51,7 @@ export default function CommercialOfficeCleaningPage() {
       title: 'After-Hours Cleaning',
       description: 'Cleaning services performed outside business hours for minimal disruption',
       icon: Clock4,
-      price: 'Starting at $250',
+      price: 'Starting at $300',
       duration: '3-6 hours',
       includes: ['Uninterrupted service', 'Extended cleaning time', 'Security coordination', 'Quality assurance', 'Detailed reporting']
     },

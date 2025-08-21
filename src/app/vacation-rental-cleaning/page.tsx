@@ -32,7 +32,7 @@ export default function VacationRentalCleaningPage() {
       title: 'Standard Turnover Cleaning',
       description: 'Complete cleaning between guest stays for vacation rentals',
       icon: Home,
-      price: 'Starting at $120',
+      price: 'Starting at $150',
       duration: '2-3 hours',
       includes: ['Full home cleaning', 'Linen replacement', 'Bathroom sanitization', 'Kitchen deep clean']
     },
@@ -40,7 +40,7 @@ export default function VacationRentalCleaningPage() {
       title: 'Express Turnover Cleaning',
       description: 'Quick cleaning for same-day turnovers and urgent bookings',
       icon: Clock4,
-      price: 'Starting at $150',
+      price: 'Starting at $200',
       duration: '1-2 hours',
       includes: ['Priority scheduling', 'Rush service', 'Essential cleaning', 'Quick turnaround']
     },
@@ -48,7 +48,7 @@ export default function VacationRentalCleaningPage() {
       title: 'Deep Turnover Cleaning',
       description: 'Comprehensive cleaning for extended stays and high-end properties',
       icon: Sparkles,
-      price: 'Starting at $200',
+      price: 'Starting at $300',
       duration: '3-5 hours',
       includes: ['Deep sanitization', 'Appliance cleaning', 'Window cleaning', 'Detailed inspection']
     },
@@ -56,7 +56,7 @@ export default function VacationRentalCleaningPage() {
       title: 'Property Management Cleaning',
       description: 'Ongoing cleaning services for property management companies',
       icon: Building2,
-      price: 'Starting at $180',
+      price: 'Starting at $250',
       duration: '2-4 hours',
       includes: ['Regular maintenance', 'Quality assurance', 'Reporting system', 'Flexible scheduling']
     }

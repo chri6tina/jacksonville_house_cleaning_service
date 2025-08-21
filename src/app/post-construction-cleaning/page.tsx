@@ -31,7 +31,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Complete post-construction cleaning from debris removal to final detailing',
       icon: HardHat,
       features: ['Heavy debris removal', 'Construction dust elimination', 'Surface restoration', 'Final inspection', 'Move-in ready results'],
-      price: 'From $0.35/sq ft'
+      price: 'From $0.85/sq ft'
     },
     {
       id: 'debris-removal-hauling',
@@ -39,7 +39,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Professional construction debris removal and disposal services',
       icon: Truck,
       features: ['Lumber and drywall removal', 'Fixture and material hauling', 'Proper disposal compliance', 'Recycling when possible', 'Same-day service'],
-      price: 'From $150'
+      price: 'From $350'
     },
     {
       id: 'three-phase-cleaning',
@@ -47,7 +47,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Systematic approach: rough cleanup, final cleaning, and touch-up',
       icon: Target,
       features: ['Phase 1: Rough cleanup', 'Phase 2: Final detailing', 'Phase 3: Touch-up service', 'Quality assurance', 'Client sign-off'],
-      price: 'From $0.45/sq ft'
+      price: 'From $1.15/sq ft'
     },
     {
       id: 'commercial-construction',
@@ -55,7 +55,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Large-scale post-construction cleaning for commercial properties',
       icon: Building2,
       features: ['Warehouse cleaning', 'Retail space preparation', 'Office building cleanup', 'Medical facility compliance', 'Industrial standards'],
-      price: 'From $0.30/sq ft'
+      price: 'From $0.75/sq ft'
     },
     {
       id: 'residential-renovation',
@@ -63,7 +63,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Home renovation cleanup and restoration services',
       icon: Home,
       features: ['Kitchen renovation cleanup', 'Bathroom remodeling cleanup', 'Whole house renovation', 'Interior painting prep', 'Floor restoration'],
-      price: 'From $200'
+      price: 'From $450'
     },
     {
       id: 'hvac-duct-cleaning',
@@ -71,7 +71,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Post-construction HVAC system cleaning and air quality improvement',
       icon: Zap,
       features: ['Duct system cleaning', 'Air quality testing', 'Filter replacement', 'System sanitization', 'Energy efficiency'],
-      price: 'From $180'
+      price: 'From $400'
     },
     {
       id: 'floor-restoration',
@@ -79,7 +79,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Professional floor cleaning, polishing, and sealing services',
       icon: Target,
       features: ['Hardwood floor restoration', 'Tile and grout cleaning', 'Carpet deep cleaning', 'Floor sealing', 'Wax application'],
-      price: 'From $0.25/sq ft'
+      price: 'From $0.65/sq ft'
     },
     {
       id: 'pressure-washing',
@@ -87,7 +87,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Exterior construction cleanup and pressure washing services',
       icon: Droplets,
       features: ['Building exterior cleaning', 'Driveway and walkway cleaning', 'Deck and patio restoration', 'Graffiti removal', 'Surface preparation'],
-      price: 'From $120'
+      price: 'From $250'
     },
     {
       id: 'hazardous-material-removal',
@@ -95,7 +95,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Safe removal of construction hazards and safety compliance',
       icon: Shield,
       features: ['Nail and screw removal', 'Broken glass cleanup', 'Chemical spill cleanup', 'OSHA compliance', 'Safety documentation'],
-      price: 'From $250'
+      price: 'From $600'
     },
     {
       id: 'eco-friendly-cleaning',
@@ -103,7 +103,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Green cleaning products and sustainable construction waste management',
       icon: Leaf,
       features: ['Green Seal certified products', 'Low-VOC cleaners', 'Construction waste recycling', 'Sustainable practices', 'Environmental compliance'],
-      price: 'From $0.40/sq ft'
+      price: 'From $0.95/sq ft'
     },
     {
       id: 'emergency-cleanup',

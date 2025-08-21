@@ -39,7 +39,7 @@ export default function EventVenueCleaningPage() {
       title: 'Pre-Event Cleaning',
       description: 'Comprehensive cleaning to prepare your venue for upcoming events',
       icon: Calendar,
-      price: 'Starting at $300',
+      price: 'Starting at $400',
       duration: '4-8 hours',
       includes: ['Deep sanitization', 'Floor preparation', 'Restroom readiness', 'Kitchen cleaning', 'Final inspection']
     },
@@ -47,7 +47,7 @@ export default function EventVenueCleaningPage() {
       title: 'Post-Event Cleanup',
       description: 'Complete cleanup after events to restore venue to pristine condition',
       icon: PartyPopper,
-      price: 'Starting at $400',
+      price: 'Starting at $500',
       duration: '3-6 hours',
       includes: ['Debris removal', 'Surface cleaning', 'Trash disposal', 'Equipment cleaning', 'Quick turnaround']
     },

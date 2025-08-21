@@ -65,7 +65,7 @@ export default function RiversidePage() {
     {
       name: 'Post-Construction Cleaning',
       description: 'Cleanup after renovations in Riverside homes',
-      price: 'Starting at $250',
+      price: 'Starting at $500',
       icon: Hammer
     },
     {

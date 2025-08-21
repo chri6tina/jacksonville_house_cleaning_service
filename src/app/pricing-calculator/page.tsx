@@ -13,19 +13,19 @@ export default function PricingCalculatorPage() {
   const [frequency, setFrequency] = useState('one-time');
 
   const propertySizes = [
-    { value: '500-1000', label: '500-1,000 sq ft', basePrice: 120 },
-    { value: '1000-1500', label: '1,000-1,500 sq ft', basePrice: 150 },
-    { value: '1500-2000', label: '1,500-2,000 sq ft', basePrice: 180 },
-    { value: '2000-2500', label: '2,000-2,500 sq ft', basePrice: 220 },
-    { value: '2500-3000', label: '2,500-3,000 sq ft', basePrice: 260 },
-    { value: '3000+', label: '3,000+ sq ft', basePrice: 300 }
+    { value: '500-1000', label: '500-1,000 sq ft', basePrice: 150 },
+    { value: '1000-1500', label: '1,000-1,500 sq ft', basePrice: 200 },
+    { value: '1500-2000', label: '1,500-2,000 sq ft', basePrice: 250 },
+    { value: '2000-2500', label: '2,000-2,500 sq ft', basePrice: 300 },
+    { value: '2500-3000', label: '2,500-3,000 sq ft', basePrice: 350 },
+    { value: '3000+', label: '3,000+ sq ft', basePrice: 400 }
   ];
 
   const cleaningTypes = [
     { value: 'regular', label: 'Regular Cleaning', multiplier: 1.0 },
     { value: 'deep', label: 'Deep Cleaning', multiplier: 1.5 },
     { value: 'move-in-out', label: 'Move-In/Out', multiplier: 1.8 },
-    { value: 'post-construction', label: 'Post-Construction', multiplier: 2.0 }
+    { value: 'post-construction', label: 'Post-Construction', multiplier: 2.5 }
   ];
 
   const frequencyDiscounts = [
@@ -36,12 +36,12 @@ export default function PricingCalculatorPage() {
   ];
 
   const additionalServices = [
-    { name: 'Carpet Cleaning', price: 50, selected: false },
-    { name: 'Window Cleaning', price: 40, selected: false },
-    { name: 'Oven Cleaning', price: 35, selected: false },
-    { name: 'Refrigerator Cleaning', price: 30, selected: false },
-    { name: 'Cabinet Cleaning', price: 45, selected: false },
-    { name: 'Baseboard Cleaning', price: 25, selected: false }
+    { name: 'Carpet Cleaning', price: 75, selected: false },
+    { name: 'Window Cleaning', price: 60, selected: false },
+    { name: 'Oven Cleaning', price: 50, selected: false },
+    { name: 'Refrigerator Cleaning', price: 45, selected: false },
+    { name: 'Cabinet Cleaning', price: 65, selected: false },
+    { name: 'Baseboard Cleaning', price: 40, selected: false }
   ];
 
   const [selectedServices, setSelectedServices] = useState(additionalServices);
