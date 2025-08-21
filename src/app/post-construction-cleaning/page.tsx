@@ -66,22 +66,6 @@ export default function PostConstructionCleaningPage() {
       price: 'From $250'
     },
     {
-      id: 'commercial-construction',
-      title: 'Commercial Construction Cleanup',
-      description: 'Large-scale post-construction cleaning for commercial properties',
-      icon: Building2,
-      features: ['Warehouse cleaning', 'Retail space preparation', 'Office building cleanup', 'Medical facility compliance', 'Industrial standards'],
-      price: 'From $0.85/sq ft'
-    },
-    {
-      id: 'residential-renovation',
-      title: 'Residential Renovation Cleanup',
-      description: 'Home renovation cleanup and restoration services',
-      icon: Home,
-      features: ['Kitchen renovation cleanup', 'Bathroom remodeling cleanup', 'Whole house renovation', 'Interior painting prep', 'Floor restoration'],
-      price: 'From $400'
-    },
-    {
       id: 'hvac-duct-cleaning',
       title: 'HVAC & Duct Cleaning',
       description: 'Post-construction HVAC system cleaning and air quality improvement',

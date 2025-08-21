@@ -63,30 +63,6 @@ const fallbackServices = [
     addOns: ['Recycling', 'Same-day service']
   },
   {
-    id: 'commercial-construction',
-    title: 'Commercial Construction Cleanup',
-    description: 'Large-scale post-construction cleaning for commercial properties',
-    features: ['Warehouse cleaning', 'Retail space preparation', 'Office building cleanup', 'Medical facility compliance', 'Industrial standards'],
-    price: 'From $0.85/sq ft',
-    icon: 'Building2',
-    category: 'commercial' as const,
-    estimatedTime: '8-24 hours',
-    includes: ['Commercial cleaning', 'Compliance standards', 'Quality assurance'],
-    addOns: ['Extended hours', 'Weekend service', 'Emergency response']
-  },
-  {
-    id: 'residential-renovation',
-    title: 'Residential Renovation Cleanup',
-    description: 'Home renovation cleanup and restoration services',
-    features: ['Kitchen renovation cleanup', 'Bathroom remodeling cleanup', 'Whole house renovation', 'Interior painting prep', 'Floor restoration'],
-    price: 'From $400',
-    icon: 'Home',
-    category: 'residential' as const,
-    estimatedTime: '4-12 hours',
-    includes: ['Renovation cleanup', 'Surface restoration', 'Final preparation'],
-    addOns: ['Deep cleaning', 'Odor removal', 'Air quality testing']
-  },
-  {
     id: 'hvac-duct-cleaning',
     title: 'HVAC & Duct Cleaning',
     description: 'Post-construction HVAC system cleaning and air quality improvement',
