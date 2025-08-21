@@ -1,7 +1,57 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Calendar, Home, Building2 } from 'lucide-react';
 
 export default function ContactUsPage() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      
+      // Add Formspree hidden fields
+      formData.append('_subject', 'New Contact Form Submission - Contact Us Page');
+      formData.append('_next', typeof window !== 'undefined' ? window.location.href : '');
+      formData.append('_captcha', 'false');
+      
+      const response = await fetch('https://formspree.io/f/myzpryey', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        e.currentTarget.reset();
+        
+        // Track form submission for analytics
+        if (typeof window !== 'undefined' && (window as any).dataLayer) {
+          (window as any).dataLayer.push({
+            event: 'form_submit',
+            form_type: 'contact_us_page',
+            page: 'contact-us'
+          });
+        }
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setError('There was an error submitting your form. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -98,7 +148,7 @@ export default function ContactUsPage() {
             <div className="bg-gray-50 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-charcoal mb-6">Request a Quote</h3>
               
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-charcoal mb-2">
@@ -265,10 +315,23 @@ export default function ContactUsPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-accent-coral hover:bg-accent-coral/90 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="w-full bg-accent-coral hover:bg-accent-coral/90 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={isSubmitting}
                 >
-                  Get Free Quote
+                  {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
                 </button>
+                
+                {error && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                    {error}
+                  </div>
+                )}
+                
+                {isSubmitted && (
+                  <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg text-sm text-center">
+                    Thank you for your submission! We will get back to you shortly.
+                  </div>
+                )}
               </form>
             </div>
           </div>
@@ -287,7 +350,7 @@ export default function ContactUsPage() {
               Give us a call - we may still be able to help!
             </p>
           </div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white rounded-2xl p-6 shadow-sm">
               <h3 className="text-xl font-bold text-charcoal mb-4">Beaches</h3>
@@ -298,7 +361,7 @@ export default function ContactUsPage() {
                 <li>Ponte Vedra Beach</li>
               </ul>
             </div>
-
+            
             <div className="bg-white rounded-2xl p-6 shadow-sm">
               <h3 className="text-xl font-bold text-charcoal mb-4">Southside</h3>
               <ul className="space-y-2 text-charcoal/70">
@@ -308,7 +371,7 @@ export default function ContactUsPage() {
                 <li>San Marco</li>
               </ul>
             </div>
-
+            
             <div className="bg-white rounded-2xl p-6 shadow-sm">
               <h3 className="text-xl font-bold text-charcoal mb-4">Northside</h3>
               <ul className="space-y-2 text-charcoal/70">
@@ -318,7 +381,7 @@ export default function ContactUsPage() {
                 <li>Dinsmore</li>
               </ul>
             </div>
-
+            
             <div className="bg-white rounded-2xl p-6 shadow-sm">
               <h3 className="text-xl font-bold text-charcoal mb-4">Westside</h3>
               <ul className="space-y-2 text-charcoal/70">
@@ -343,7 +406,7 @@ export default function ContactUsPage() {
               Have questions? We&apos;re here to help! Here are answers to some common questions.
             </p>
           </div>
-
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div>
@@ -368,7 +431,7 @@ export default function ContactUsPage() {
                 </p>
               </div>
             </div>
-
+            
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-bold text-charcoal mb-3">What if I&apos;m not satisfied with the cleaning?</h3>
@@ -391,6 +454,35 @@ export default function ContactUsPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-primary-blue to-accent-coral">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Don&apos;t wait to experience the difference professional cleaning makes. 
+            Contact us today for a free quote and let us handle the rest.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:9044563851"
+              className="bg-white text-primary-blue hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+            >
+              <Phone className="w-5 h-5" />
+              Call Now
+            </a>
+            <a 
+              href="#contact-form"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <MessageSquare className="w-5 h-5" />
+              Get Quote
+            </a>
           </div>
         </div>
       </section>
