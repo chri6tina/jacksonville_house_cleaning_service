@@ -26,36 +26,36 @@ export const metadata: Metadata = {
 export default function PostConstructionCleaningPage() {
   const postConstructionServices = [
     {
-      id: 'rough-cleanup',
-      title: 'Rough Cleanup Phase',
-      description: 'Removes large debris and bulk dust; sweeps and vacuums floors; clears surfaces to prepare for finishing work',
-      icon: HardHat,
-      features: ['Large debris removal', 'Bulk dust elimination', 'Surface preparation', 'Floor sweeping/vacuuming', 'Window frame cleaning'],
-      price: 'From $0.25/sq ft'
-    },
-    {
-      id: 'final-cleaning',
-      title: 'Final Cleaning Phase',
-      description: 'After construction is complete and rough cleaning is done; removes final layer of dust, fingerprints and stickers',
-      icon: Target,
-      features: ['Final dust removal', 'Fingerprint elimination', 'Sticker removal', 'Complete surface cleaning', 'Move-in ready preparation'],
-      price: 'From $0.45/sq ft'
-    },
-    {
-      id: 'touch-up-cleaning',
-      title: 'Touch-Up Cleaning Phase',
-      description: 'Performed a few days/weeks after final clean; wipes down countertops, window sills, vents and high-traffic areas',
-      icon: CheckCircle,
-      features: ['High-traffic area cleaning', 'Dust settlement removal', 'Surface touch-ups', 'Vent cleaning', 'Final inspection'],
-      price: 'From $0.35/sq ft'
-    },
-    {
       id: 'full-service-cleanup',
-      title: 'Full-Service Construction Cleanup',
-      description: 'Complete post-construction cleaning including all three phases with comprehensive detailing',
+      title: 'Complete Post-Construction Cleanup',
+      description: 'Our most popular service - includes all three phases: rough cleanup, final cleaning, and touch-up service',
       icon: HardHat,
-      features: ['All three phases included', 'Construction dust elimination', 'Surface restoration', 'Final inspection', 'Move-in ready results'],
+      features: ['All three phases included', 'Construction debris removal', 'Complete dust elimination', 'Surface restoration', 'Move-in ready results', 'Final inspection & guarantee'],
       price: 'From $0.85/sq ft'
+    },
+    {
+      id: 'commercial-construction',
+      title: 'Commercial Construction Cleanup',
+      description: 'Large-scale post-construction cleaning for warehouses, offices, retail spaces, and industrial facilities',
+      icon: Building2,
+      features: ['Commercial-grade cleaning', 'OSHA compliance standards', 'Industrial equipment cleaning', 'Extended hours available', 'Project management coordination', 'Quality assurance'],
+      price: 'From $0.85/sq ft'
+    },
+    {
+      id: 'residential-renovation',
+      title: 'Residential Renovation Cleanup',
+      description: 'Complete cleanup after home renovations, kitchen remodels, bathroom updates, and whole-house projects',
+      icon: Home,
+      features: ['Renovation debris removal', 'Kitchen & bathroom deep cleaning', 'Floor restoration', 'Interior painting prep', 'Air quality improvement', 'Move-in ready guarantee'],
+      price: 'From $400 per project'
+    },
+    {
+      id: 'new-construction-cleanup',
+      title: 'New Construction Cleanup',
+      description: 'Comprehensive cleaning for newly built homes and commercial properties',
+      icon: Building2,
+      features: ['Construction debris removal', 'Final detailing', 'Window cleaning', 'Floor finishing', 'HVAC system cleaning', 'Quality inspection'],
+      price: 'From $0.75/sq ft'
     },
     {
       id: 'debris-removal-hauling',
@@ -482,6 +482,21 @@ export default function PostConstructionCleaningPage() {
                 post-construction cleanup services. Our rates are competitive with regional averages while maintaining the premium quality and 
                 comprehensive service that sets us apart. Pricing varies based on project size, complexity, and specific services required. 
                 Contact us for personalized quotes tailored to your specific project needs.
+              </p>
+            </div>
+          </div>
+          
+          {/* Three-Phase Process Note */}
+          <div className="mt-6 p-6 bg-gradient-to-r from-green-50 to-accent-green/20 rounded-2xl border border-green-200">
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-charcoal mb-3">Our Three-Phase Process (Included in Complete Service)</h3>
+              <p className="text-charcoal/70 text-sm leading-relaxed max-w-4xl mx-auto">
+                <strong>Every complete post-construction cleanup includes our proven three-phase process:</strong> 
+                <strong>Phase 1:</strong> Rough cleanup removes large debris and prepares surfaces. 
+                <strong>Phase 2:</strong> Final cleaning eliminates dust, fingerprints, and stickers. 
+                <strong>Phase 3:</strong> Touch-up service addresses settled dust and ensures perfection. 
+                This systematic approach guarantees move-in ready results. Individual phases are available for specialized needs, 
+                but most customers choose our complete service for the best value and results.
               </p>
             </div>
           </div>

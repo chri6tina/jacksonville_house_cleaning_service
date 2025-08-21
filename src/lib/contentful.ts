@@ -3,51 +3,51 @@ import { createClient } from 'contentful';
 // Fallback data for when Contentful is not configured
 const fallbackServices = [
   {
-    id: 'rough-cleanup',
-    title: 'Rough Cleanup Phase',
-    description: 'Removes large debris and bulk dust; sweeps and vacuums floors; clears surfaces to prepare for finishing work',
-    features: ['Large debris removal', 'Bulk dust elimination', 'Surface preparation', 'Floor sweeping/vacuuming', 'Window frame cleaning'],
-    price: 'From $0.25/sq ft',
-    icon: 'HardHat',
-    category: 'specialized' as const,
-    estimatedTime: '2-4 hours',
-    includes: ['Debris removal', 'Surface preparation', 'Floor cleaning'],
-    addOns: ['Extended cleanup', 'Hazardous material removal']
-  },
-  {
-    id: 'final-cleaning',
-    title: 'Final Cleaning Phase',
-    description: 'After construction is complete and rough cleaning is done; removes final layer of dust, fingerprints and stickers',
-    features: ['Final dust removal', 'Fingerprint elimination', 'Sticker removal', 'Complete surface cleaning', 'Move-in ready preparation'],
-    price: 'From $0.45/sq ft',
-    icon: 'Target',
-    category: 'specialized' as const,
-    estimatedTime: '3-6 hours',
-    includes: ['Complete cleaning', 'Surface restoration', 'Final preparation'],
-    addOns: ['Window cleaning', 'Carpet cleaning', 'HVAC duct cleaning']
-  },
-  {
-    id: 'touch-up-cleaning',
-    title: 'Touch-Up Cleaning Phase',
-    description: 'Performed a few days/weeks after final clean; wipes down countertops, window sills, vents and high-traffic areas',
-    features: ['High-traffic area cleaning', 'Dust settlement removal', 'Surface touch-ups', 'Vent cleaning', 'Final inspection'],
-    price: 'From $0.35/sq ft',
-    icon: 'CheckCircle',
-    category: 'specialized' as const,
-    estimatedTime: '1-3 hours',
-    includes: ['Touch-up cleaning', 'Final inspection', 'Quality assurance'],
-    addOns: ['Extended warranty', 'Follow-up service']
-  },
-  {
     id: 'full-service-cleanup',
-    title: 'Full-Service Construction Cleanup',
-    description: 'Complete post-construction cleaning including all three phases with comprehensive detailing',
-    features: ['All three phases included', 'Construction dust elimination', 'Surface restoration', 'Final inspection', 'Move-in ready results'],
+    title: 'Complete Post-Construction Cleanup',
+    description: 'Our most popular service - includes all three phases: rough cleanup, final cleaning, and touch-up service',
+    features: ['All three phases included', 'Construction debris removal', 'Complete dust elimination', 'Surface restoration', 'Move-in ready results', 'Final inspection & guarantee'],
     price: 'From $0.85/sq ft',
     icon: 'HardHat',
     category: 'specialized' as const,
     estimatedTime: '6-16 hours',
     includes: ['All phases', 'Comprehensive cleaning', 'Final inspection'],
+    addOns: ['Window cleaning', 'Carpet cleaning', 'HVAC duct cleaning']
+  },
+  {
+    id: 'commercial-construction',
+    title: 'Commercial Construction Cleanup',
+    description: 'Large-scale post-construction cleaning for warehouses, offices, retail spaces, and industrial facilities',
+    features: ['Commercial-grade cleaning', 'OSHA compliance standards', 'Industrial equipment cleaning', 'Extended hours available', 'Project management coordination', 'Quality assurance'],
+    price: 'From $0.85/sq ft',
+    icon: 'Building2',
+    category: 'commercial' as const,
+    estimatedTime: '8-24 hours',
+    includes: ['Commercial cleaning', 'Compliance standards', 'Quality assurance'],
+    addOns: ['Extended hours', 'Weekend service', 'Emergency response']
+  },
+  {
+    id: 'residential-renovation',
+    title: 'Residential Renovation Cleanup',
+    description: 'Complete cleanup after home renovations, kitchen remodels, bathroom updates, and whole-house projects',
+    features: ['Renovation debris removal', 'Kitchen & bathroom deep cleaning', 'Floor restoration', 'Interior painting prep', 'Air quality improvement', 'Move-in ready guarantee'],
+    price: 'From $400 per project',
+    icon: 'Home',
+    category: 'residential' as const,
+    estimatedTime: '4-12 hours',
+    includes: ['Renovation cleanup', 'Surface restoration', 'Final preparation'],
+    addOns: ['Deep cleaning', 'Odor removal', 'Air quality testing']
+  },
+  {
+    id: 'new-construction-cleanup',
+    title: 'New Construction Cleanup',
+    description: 'Comprehensive cleaning for newly built homes and commercial properties',
+    features: ['Construction debris removal', 'Final detailing', 'Window cleaning', 'Floor finishing', 'HVAC system cleaning', 'Quality inspection'],
+    price: 'From $0.75/sq ft',
+    icon: 'Building2',
+    category: 'specialized' as const,
+    estimatedTime: '6-16 hours',
+    includes: ['New construction cleaning', 'Final detailing', 'Quality inspection'],
     addOns: ['Window cleaning', 'Carpet cleaning', 'HVAC duct cleaning']
   },
   {
