@@ -1,6 +1,7 @@
 import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils, Building, Briefcase, Globe, Train, Bus, ShoppingBag, Heart, PawPrint, Umbrella, Sun, Anchor, Fish, Sailboat, HardHat, Wrench, Hammer, Truck, Trash2, Recycle } from 'lucide-react';
 import { Metadata } from 'next';
 import PostConstructionCalculator from '@/components/PostConstructionCalculator';
+import PostConstructionHero from '@/components/PostConstructionHero';
 
 export const metadata: Metadata = {
   title: 'Jacksonville Post-Construction Cleanup #1 | Construction Site Cleaning & Debris Removal FL',
@@ -287,71 +288,7 @@ export default function PostConstructionCleaningPage() {
       />
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10 min-h-[70vh] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-aqua/20"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-          <div className="max-w-5xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary-blue mb-6">
-              <HardHat className="w-4 h-4" />
-              <span>Jacksonville's #1 Post-Construction Cleanup</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-charcoal mb-6">
-              Jacksonville's Post-Construction
-              <span className="text-primary-blue block">Cleanup Powerhouse</span>
-            </h1>
-            
-            <p className="text-xl text-charcoal/80 mb-8 max-w-4xl mx-auto">
-              The only local provider that combines debris removal with detailed cleaning. From heavy construction cleanup 
-              to final detailing - we handle everything. Licensed, insured, eco-friendly, and guaranteed.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <a
-                href="tel:9044563851"
-                className="inline-flex items-center gap-2 bg-primary-blue text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                Call (904) 456-3851
-              </a>
-              <a
-                href="/contact?service=full-service-cleanup&type=post-construction"
-                className="inline-flex items-center gap-2 bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold border-2 border-primary-blue hover:bg-primary-blue/10 transition-colors"
-              >
-                Get Instant Quote
-              </a>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Shield className="w-8 h-8 text-primary-blue" />
-                </div>
-                <p className="text-sm font-medium text-charcoal">Licensed & Insured</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-accent-aqua/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Leaf className="w-8 h-8 text-accent-aqua" />
-                </div>
-                <p className="text-sm font-medium text-charcoal">Eco-Friendly</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-accent-green/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <CheckCircle className="w-8 h-8 text-accent-green" />
-                </div>
-                <p className="text-sm font-medium text-charcoal">100% Guaranteed</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Clock className="w-8 h-8 text-yellow-600" />
-                </div>
-                <p className="text-sm font-medium text-charcoal">Same-Day Service</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <PostConstructionHero />
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-white">

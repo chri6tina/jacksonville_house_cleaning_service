@@ -65,27 +65,61 @@ function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
     
-    // Reset form after submission
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        address: '',
-        propertyType: '',
-        services: [],
-        date: '',
-        time: '',
-        specialRequests: ''
+    try {
+      // Create FormData for Formspree
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('address', formData.address);
+      formDataToSend.append('propertyType', formData.propertyType);
+      formDataToSend.append('services', formData.services.join(', '));
+      formDataToSend.append('date', formData.date);
+      formDataToSend.append('time', formData.time);
+      formDataToSend.append('specialRequests', formData.specialRequests);
+      
+      // Add Formspree hidden fields
+      formDataToSend.append('_subject', 'New Contact Form Submission - Jacksonville Cleaning Service');
+      formDataToSend.append('_next', typeof window !== 'undefined' ? window.location.href : '');
+      formDataToSend.append('_captcha', 'false');
+      
+             // Submit to Formspree
+       const response = await fetch('https://formspree.io/f/myzpryey', {
+        method: 'POST',
+        body: formDataToSend,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
-    }, 5000);
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        
+        // Reset form after submission
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            name: '',
+            phone: '',
+            email: '',
+            address: '',
+            propertyType: '',
+            services: [],
+            date: '',
+            time: '',
+            specialRequests: ''
+          });
+        }, 5000);
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting your form. Please try again or call us directly.');
+    }
   };
 
   const availableServices = [

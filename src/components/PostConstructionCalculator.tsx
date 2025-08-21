@@ -207,12 +207,38 @@ export default function PostConstructionCalculator() {
         }
       };
       
-      const response = await fetch('/api/project-submission', {
+      // Create FormData for Formspree
+      const formDataToSend = new FormData();
+      formDataToSend.append('projectType', formData.projectType);
+      formDataToSend.append('squareFootage', formData.squareFootage.toString());
+      formDataToSend.append('constructionPhase', formData.constructionPhase);
+      formDataToSend.append('debrisAmount', formData.debrisAmount);
+      formDataToSend.append('specialRequirements', formData.specialRequirements.join(', '));
+      formDataToSend.append('timeline', formData.timeline);
+      formDataToSend.append('name', formData.contactInfo.name);
+      formDataToSend.append('email', formData.contactInfo.email);
+      formDataToSend.append('phone', formData.contactInfo.phone);
+      formDataToSend.append('company', formData.contactInfo.company);
+      formDataToSend.append('address', formData.contactInfo.address);
+      formDataToSend.append('city', formData.contactInfo.city);
+      formDataToSend.append('zipCode', formData.contactInfo.zipCode);
+      formDataToSend.append('description', formData.projectDetails.description);
+      formDataToSend.append('startDate', formData.projectDetails.startDate);
+      formDataToSend.append('completionDate', formData.projectDetails.completionDate);
+      formDataToSend.append('totalPrice', pricing.totalPrice.toString());
+      formDataToSend.append('estimatedHours', pricing.estimatedHours.toString());
+      
+      // Add Formspree hidden fields
+      formDataToSend.append('_subject', 'New Post-Construction Calculator Quote Request');
+      formDataToSend.append('_next', typeof window !== 'undefined' ? window.location.href : '');
+      formDataToSend.append('_captcha', 'false');
+      
+      const response = await fetch('https://formspree.io/f/xrblngeo', {
         method: 'POST',
+        body: formDataToSend,
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(submissionData),
+          'Accept': 'application/json'
+        }
       });
       
       if (response.ok) {
