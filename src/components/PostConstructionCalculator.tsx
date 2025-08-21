@@ -181,7 +181,7 @@ export default function PostConstructionCalculator() {
       setFormData(prev => ({
         ...prev,
         [parent]: {
-          ...prev[parent as keyof CalculatorForm],
+          ...(prev[parent as keyof CalculatorForm] as any),
           [child]: value
         }
       }));
