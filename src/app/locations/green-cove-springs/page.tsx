@@ -1,37 +1,30 @@
-import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils, Building, Briefcase, Globe, Train, Bus, ShoppingBag, Heart, PawPrint, Umbrella, Sun, Anchor, Fish, Sailboat } from 'lucide-react';
+import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Neptune Beach House Cleaning Service | Beach Community & Family Cleaning FL',
-  description: 'Professional cleaning services in Neptune Beach, FL. Beach community cleaning, family-friendly service, and coastal home maintenance. Call (904) 456-3851 for trusted cleaning.',
-  keywords: 'Neptune Beach cleaning service, beach community cleaning, family cleaning service, coastal home cleaning, Neptune Beach FL cleaning, beach house maintenance',
+  title: 'Green Cove Springs House Cleaning Service | Family-Friendly Cleaning Jacksonville FL',
+  description: 'Professional cleaning services in Green Cove Springs, Jacksonville FL. Family-friendly cleaning, eco-friendly products, and reliable service for busy families. Call (904) 456-3851 for trusted cleaning.',
+  keywords: 'Green Cove Springs cleaning service, Jacksonville family cleaning, Green Cove Springs house cleaning, family-friendly cleaning Jacksonville, eco-friendly cleaning Green Cove Springs, reliable cleaning service',
   openGraph: {
-    title: 'Neptune Beach House Cleaning Service | Beach Community & Family Cleaning FL',
-    description: 'Professional cleaning services in Neptune Beach, FL. Beach community cleaning, family-friendly service, and coastal home maintenance. Call (904) 456-3851 for trusted cleaning.',
-    url: 'https://www.jacksonvillehousecleaningservice.com/locations/neptune-beach',
+    title: 'Green Cove Springs House Cleaning Service | Family-Friendly Cleaning Jacksonville FL',
+    description: 'Professional cleaning services in Green Cove Springs, Jacksonville FL. Family-friendly cleaning, eco-friendly products, and reliable service for busy families. Call (904) 456-3851 for trusted cleaning.',
+    url: 'https://www.jacksonvillehousecleaningservice.com/locations/green-cove-springs',
     type: 'website',
     locale: 'en_US',
     siteName: 'Jacksonville House Cleaning Service',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Neptune Beach House Cleaning Service | Beach Community & Family Cleaning FL',
-    description: 'Professional cleaning services in Neptune Beach, FL. Beach community cleaning, family-friendly service, and coastal home maintenance.',
+    title: 'Green Cove Springs House Cleaning Service | Family-Friendly Cleaning Jacksonville FL',
+    description: 'Professional cleaning services in Green Cove Springs, Jacksonville FL. Family-friendly cleaning, eco-friendly products, and reliable service for busy families.',
   },
   alternates: {
-    canonical: 'https://www.jacksonvillehousecleaningservice.com/locations/neptune-beach',
+    canonical: 'https://www.jacksonvillehousecleaningservice.com/locations/green-cove-springs',
   },
 };
 
-export default function NeptuneBeachPage() {
-  const neptuneBeachServices = [
-    {
-      id: 'beach-community-cleaning',
-      title: 'Beach Community Cleaning',
-      description: 'Specialized cleaning for Neptune Beach homes with coastal elements and community standards',
-      icon: Waves,
-      features: ['Sand and salt management', 'Coastal environment cleaning', 'Community standards', 'Outdoor area maintenance', 'Beach-specific challenges']
-    },
+export default function GreenCoveSpringsPage() {
+  const greenCoveSpringsServices = [
     {
       id: 'family-friendly-cleaning',
       title: 'Family-Friendly Cleaning',
@@ -40,11 +33,18 @@ export default function NeptuneBeachPage() {
       features: ['Kid and pet-safe products', 'Family scheduling flexibility', 'Child-proof cleaning methods', 'Pet odor elimination', 'Safe for all ages']
     },
     {
-      id: 'coastal-home-maintenance',
-      title: 'Coastal Home Maintenance',
-      description: 'Regular cleaning to protect beach homes from coastal elements',
-      icon: Umbrella,
-      features: ['Salt air protection', 'Humidity control', 'Outdoor furniture care', 'Deck and patio cleaning', 'Coastal wear prevention']
+      id: 'eco-friendly-cleaning',
+      title: 'Eco-Friendly Cleaning',
+      description: 'Green cleaning solutions that protect your family and the environment',
+      icon: Leaf,
+      features: ['Non-toxic cleaning products', 'Environmentally responsible', 'Safe for sensitive individuals', 'Green certification', 'Sustainable practices']
+    },
+    {
+      id: 'recurring-maintenance',
+      title: 'Recurring Maintenance',
+      description: 'Consistent cleaning to maintain your home\'s cleanliness and comfort',
+      icon: Calendar,
+      features: ['Weekly, bi-weekly, or monthly options', 'Flexible scheduling', 'Priority booking', 'Custom service plans', 'Consistent quality']
     },
     {
       id: 'deep-cleaning',
@@ -61,13 +61,6 @@ export default function NeptuneBeachPage() {
       features: ['Pre-move preparation', 'Post-move cleanup', 'Real estate ready', 'Final inspection', 'Move-in ready results']
     },
     {
-      id: 'post-construction',
-      title: 'Post-Construction Cleanup',
-      description: 'Professional cleanup after home renovations and projects',
-      icon: Target,
-      features: ['Construction debris removal', 'Dust and particle cleanup', 'Surface restoration', 'Final inspection', 'Move-in ready']
-    },
-    {
       id: 'carpet-care',
       title: 'Carpet & Upholstery Care',
       description: 'Professional fabric cleaning and stain removal',
@@ -77,7 +70,7 @@ export default function NeptuneBeachPage() {
     {
       id: 'window-cleaning',
       title: 'Window Cleaning',
-      description: 'Crystal clear windows for ocean views and natural light',
+      description: 'Crystal clear windows for better natural light and views',
       icon: Building2,
       features: ['Interior and exterior cleaning', 'Screen cleaning', 'Streak-free results', 'Safety equipment used', 'Frame cleaning']
     },
@@ -98,55 +91,62 @@ export default function NeptuneBeachPage() {
     {
       id: 'outdoor-living-areas',
       title: 'Outdoor Living Areas',
-      description: 'Exterior cleaning for your beach outdoor spaces',
+      description: 'Exterior cleaning for your outdoor spaces',
       icon: Trees,
-      features: ['Deck and patio cleaning', 'Outdoor furniture care', 'Entryway cleaning', 'Curb appeal enhancement', 'Beach area maintenance']
+      features: ['Porch and deck cleaning', 'Patio maintenance', 'Outdoor furniture care', 'Entryway cleaning', 'Curb appeal enhancement']
     },
     {
-      id: 'commercial-cleaning',
-      title: 'Commercial Property Cleaning',
-      description: 'Professional cleaning for Neptune Beach businesses and commercial properties',
+      id: 'post-construction',
+      title: 'Post-Construction Cleanup',
+      description: 'Professional cleanup after home renovations and projects',
+      icon: Target,
+      features: ['Construction debris removal', 'Dust and particle cleanup', 'Surface restoration', 'Final inspection', 'Move-in ready']
+    },
+    {
+      id: 'vacation-rental',
+      title: 'Vacation Rental Turnover',
+      description: 'Professional cleaning for short-term rental properties',
       icon: Building2,
-      features: ['Business standards', 'Flexible scheduling', 'Professional appearance', 'Customer satisfaction', 'Commercial expertise']
+      features: ['Guest-ready standards', 'Quick turnaround service', 'Quality assurance', 'Guest satisfaction focus', 'Property protection']
     }
   ];
 
-  const neptuneBeachFeatures = [
-    'Family-oriented beach community',
+  const greenCoveSpringsFeatures = [
+    'Family-oriented community',
     'Excellent schools and parks',
-    'Coastal lifestyle',
-    'Outdoor recreation',
-    'Safe residential areas',
+    'Safe, quiet neighborhoods',
+    'Close to shopping and amenities',
+    'Natural springs and outdoor activities',
     'Strong community values'
   ];
 
-  const neptuneBeachLandmarks = [
-    'Neptune Beach Elementary',
-    'Neptune Beach City Hall',
-    'Neptune Beach Park',
-    'Beach Boulevard',
-    'Oceanfront Access Points',
-    'Community Center'
+  const greenCoveSpringsLandmarks = [
+    'Spring Park',
+    'Green Cove Springs Elementary',
+    'Clay County Fairgrounds',
+    'Magnolia Point Golf & Country Club',
+    'St. Johns River access',
+    'Spring Park Pool'
   ];
 
-  const neptuneBeachTestimonials = [
+  const greenCoveSpringsTestimonials = [
     {
-      name: 'Jennifer R.',
-      location: 'Neptune Beach',
+      name: 'Sarah M.',
+      location: 'Green Cove Springs',
       rating: 5,
-      comment: 'Perfect for our beach community home! They understand the unique needs of coastal living.'
+      comment: 'Perfect for our busy family! The eco-friendly products give me peace of mind with our kids and pets.'
     },
     {
-      name: 'Robert M.',
-      location: 'Neptune Beach',
+      name: 'Michael R.',
+      location: 'Green Cove Springs',
       rating: 5,
-      comment: 'Family-friendly service that keeps our home clean and safe for our kids and pets.'
+      comment: 'Reliable service that fits our family schedule. Our home always looks amazing after their visits.'
     },
-    {
-      name: 'Amanda T.',
-      location: 'Neptune Beach',
+      {
+      name: 'Lisa T.',
+      location: 'Green Cove Springs',
       rating: 5,
-      comment: 'Professional, reliable, and perfect for our Neptune Beach lifestyle. Highly recommend!'
+      comment: 'Professional, trustworthy, and family-friendly. Exactly what we needed for our Green Cove Springs home.'
     }
   ];
 
@@ -160,8 +160,8 @@ export default function NeptuneBeachPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Jacksonville House Cleaning Service",
-            "description": "Professional cleaning services in Neptune Beach, FL. Beach community cleaning, family-friendly service, and coastal home maintenance.",
-            "url": "https://www.jacksonvillehousecleaningservice.com/locations/neptune-beach",
+            "description": "Professional cleaning services in Green Cove Springs, Jacksonville FL. Family-friendly cleaning, eco-friendly products, and reliable service for busy families.",
+            "url": "https://www.jacksonvillehousecleaningservice.com/locations/green-cove-springs",
             "telephone": "+19044563851",
             "address": {
               "@type": "PostalAddress",
@@ -171,12 +171,12 @@ export default function NeptuneBeachPage() {
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "30.3119",
-              "longitude": "-81.4034"
+              "latitude": "29.9919",
+              "longitude": "-81.6784"
             },
             "areaServed": {
               "@type": "City",
-              "name": "Neptune Beach"
+              "name": "Green Cove Springs"
             },
             "serviceArea": {
               "@type": "City",
@@ -184,8 +184,8 @@ export default function NeptuneBeachPage() {
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Neptune Beach Cleaning Services",
-              "itemListElement": neptuneBeachServices.map(service => ({
+              "name": "Green Cove Springs Cleaning Services",
+              "itemListElement": greenCoveSpringsServices.map(service => ({
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
@@ -197,7 +197,7 @@ export default function NeptuneBeachPage() {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "5.0",
-              "reviewCount": "105"
+              "reviewCount": "95"
             }
           })
         }}
@@ -210,17 +210,17 @@ export default function NeptuneBeachPage() {
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary-blue mb-6">
               <MapPin className="w-4 h-4" />
-              <span>Neptune Beach, FL</span>
+              <span>Green Cove Springs, Jacksonville FL</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-charcoal mb-6">
               Professional Cleaning Services in
-              <span className="text-primary-blue block">Neptune Beach</span>
+              <span className="text-primary-blue block">Green Cove Springs</span>
             </h1>
             
             <p className="text-xl text-charcoal/80 mb-8 max-w-3xl mx-auto">
-              Beach community cleaning with family-friendly service. Serving Neptune Beach with specialized cleaning services 
-              for coastal homes and families.
+              Family-friendly cleaning solutions with eco-friendly products. Serving Green Cove Springs families with reliable, 
+              professional cleaning services that keep your home safe and beautiful.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -247,16 +247,16 @@ export default function NeptuneBeachPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-              Neptune Beach Cleaning Services
+              Green Cove Springs Cleaning Services
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Comprehensive cleaning solutions designed for Neptune Beach properties. From beach community cleaning 
-              to family-friendly service, we provide the services you need to maintain your coastal home.
+              Comprehensive cleaning solutions designed for Green Cove Springs families. From regular maintenance 
+              to deep cleaning, we provide the services you need to maintain a healthy, beautiful home.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {neptuneBeachServices.map((service) => (
+            {greenCoveSpringsServices.map((service) => (
               <div key={service.id} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-all duration-300">
                 <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-primary-blue" />
@@ -282,42 +282,42 @@ export default function NeptuneBeachPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-              Why Neptune Beach Chooses Us
+              Why Green Cove Springs Families Choose Us
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We understand the unique needs of Neptune Beach families and coastal properties, providing cleaning services 
-              that fit your beach community lifestyle.
+              We understand the unique needs of Green Cove Springs families and provide cleaning services 
+              that fit your lifestyle and values.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Waves className="w-10 h-10 text-primary-blue" />
+                <Shield className="w-10 h-10 text-primary-blue" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Beach Community Expertise</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Family-Safe Products</h3>
               <p className="text-charcoal/70">
-                Specialized knowledge for cleaning beach homes with sand, salt, and coastal challenges.
+                Eco-friendly cleaning solutions that are safe for children, pets, and sensitive individuals.
               </p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-accent-aqua/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-10 h-10 text-accent-aqua" />
+                <Clock className="w-10 h-10 text-accent-aqua" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Family-Friendly Service</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Flexible Scheduling</h3>
               <p className="text-charcoal/70">
-                Safe cleaning solutions that are perfect for families with children and pets.
+                Work around your family's busy schedule with convenient appointment times and recurring options.
               </p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-accent-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Umbrella className="w-10 h-10 text-accent-green" />
+                <Star className="w-10 h-10 text-accent-green" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Coastal Protection</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Trusted Service</h3>
               <p className="text-charcoal/70">
-                Cleaning methods that protect your home from salt air, humidity, and coastal elements.
+                Reliable, professional cleaning that you can count on week after week, month after month.
               </p>
             </div>
           </div>
@@ -330,16 +330,16 @@ export default function NeptuneBeachPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
-                Why We Love Neptune Beach
+                Why We Love Green Cove Springs
               </h2>
               <p className="text-lg text-charcoal/70 mb-8">
-                Neptune Beach is a wonderful family-oriented beach community known for its excellent schools, 
-                safe residential areas, and strong community values. We're proud to serve this area with cleaning services 
-                that match the quality and care this community deserves.
+                Green Cove Springs is a wonderful family community known for its natural springs, excellent schools, 
+                and strong community values. We're proud to serve this area with cleaning services that match 
+                the quality and care this community deserves.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {neptuneBeachFeatures.map((feature, index) => (
+                {greenCoveSpringsFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-accent-green flex-shrink-0" />
                     <span className="text-charcoal/80">{feature}</span>
@@ -349,16 +349,16 @@ export default function NeptuneBeachPage() {
             </div>
             
             <div className="grid grid-cols-2 gap-4">
-              {neptuneBeachLandmarks.map((landmark, index) => (
+              {greenCoveSpringsLandmarks.map((landmark, index) => (
                 <div key={index} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-6 rounded-xl text-center">
-                  <div className="w-12 h-12 bg-primary-blue/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    {index === 0 && <School className="w-6 h-6 text-primary-blue" />}
-                    {index === 1 && <Building className="w-6 h-6 text-primary-blue" />}
-                    {index === 2 && <Trees className="w-6 h-6 text-primary-blue" />}
-                    {index === 3 && <Store className="w-6 h-6 text-primary-blue" />}
-                    {index === 4 && <Waves className="w-6 h-6 text-primary-blue" />}
-                    {index === 5 && <Building2 className="w-6 h-6 text-primary-blue" />}
-                  </div>
+                                     <div className="w-12 h-12 bg-primary-blue/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                     {index === 0 && <Trees className="w-6 h-6 text-primary-blue" />}
+                     {index === 1 && <School className="w-6 h-6 text-primary-blue" />}
+                     {index === 2 && <Building2 className="w-6 h-6 text-primary-blue" />}
+                     {index === 3 && <Trophy className="w-6 h-6 text-primary-blue" />}
+                     {index === 4 && <Waves className="w-6 h-6 text-primary-blue" />}
+                     {index === 5 && <Droplets className="w-6 h-6 text-primary-blue" />}
+                   </div>
                   <p className="text-sm font-medium text-charcoal">{landmark}</p>
                 </div>
               ))}
@@ -372,16 +372,16 @@ export default function NeptuneBeachPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-              What Neptune Beach Residents Say
+              What Green Cove Springs Families Say
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what families in Neptune Beach are saying 
+              Don't just take our word for it. Here's what families in Green Cove Springs are saying 
               about our cleaning services.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {neptuneBeachTestimonials.map((testimonial, index) => (
+            {greenCoveSpringsTestimonials.map((testimonial, index) => (
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -408,11 +408,11 @@ export default function NeptuneBeachPage() {
       <section className="py-20 bg-primary-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready for Professional Beach Community Cleaning?
+            Ready for a Cleaner Green Cove Springs Home?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Join the many Neptune Beach families who trust us with their home cleaning needs. 
-            Get started today with a free quote and experience the difference professional beach cleaning makes.
+            Join the many Green Cove Springs families who trust us with their home cleaning needs. 
+            Get started today with a free quote and experience the difference professional cleaning makes.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -438,11 +438,11 @@ export default function NeptuneBeachPage() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5" />
-              <span>Beach Community Expertise</span>
+              <span>Family-Safe Products</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5" />
-              <span>Family-Friendly Service</span>
+              <span>Satisfaction Guaranteed</span>
             </div>
           </div>
         </div>
@@ -450,4 +450,3 @@ export default function NeptuneBeachPage() {
     </>
   );
 }
-

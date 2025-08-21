@@ -1,50 +1,64 @@
-import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils, Building, Briefcase, Globe, Train, Bus, ShoppingBag, Heart, PawPrint, Umbrella, Sun, Anchor, Fish, Sailboat } from 'lucide-react';
+import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils, Castle, Flag, Anchor, Compass } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Neptune Beach House Cleaning Service | Beach Community & Family Cleaning FL',
-  description: 'Professional cleaning services in Neptune Beach, FL. Beach community cleaning, family-friendly service, and coastal home maintenance. Call (904) 456-3851 for trusted cleaning.',
-  keywords: 'Neptune Beach cleaning service, beach community cleaning, family cleaning service, coastal home cleaning, Neptune Beach FL cleaning, beach house maintenance',
+  title: 'St. Augustine House Cleaning Service | Historic City Cleaning Jacksonville FL',
+  description: 'Professional cleaning services in St. Augustine, Jacksonville FL. Historic city cleaning, tourist area maintenance, and luxury home care. Call (904) 456-3851 for exceptional service.',
+  keywords: 'St. Augustine cleaning service, Jacksonville historic cleaning, St. Augustine house cleaning, tourist area cleaning Jacksonville, luxury home cleaning St. Augustine, historic city maintenance',
   openGraph: {
-    title: 'Neptune Beach House Cleaning Service | Beach Community & Family Cleaning FL',
-    description: 'Professional cleaning services in Neptune Beach, FL. Beach community cleaning, family-friendly service, and coastal home maintenance. Call (904) 456-3851 for trusted cleaning.',
-    url: 'https://www.jacksonvillehousecleaningservice.com/locations/neptune-beach',
+    title: 'St. Augustine House Cleaning Service | Historic City Cleaning Jacksonville FL',
+    description: 'Professional cleaning services in St. Augustine, Jacksonville FL. Historic city cleaning, tourist area maintenance, and luxury home care. Call (904) 456-3851 for exceptional service.',
+    url: 'https://www.jacksonvillehousecleaningservice.com/locations/st-augustine',
     type: 'website',
     locale: 'en_US',
     siteName: 'Jacksonville House Cleaning Service',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Neptune Beach House Cleaning Service | Beach Community & Family Cleaning FL',
-    description: 'Professional cleaning services in Neptune Beach, FL. Beach community cleaning, family-friendly service, and coastal home maintenance.',
+    title: 'St. Augustine House Cleaning Service | Historic City Cleaning Jacksonville FL',
+    description: 'Professional cleaning services in St. Augustine, Jacksonville FL. Historic city cleaning, tourist area maintenance, and luxury home care.',
   },
   alternates: {
-    canonical: 'https://www.jacksonvillehousecleaningservice.com/locations/neptune-beach',
+    canonical: 'https://www.jacksonvillehousecleaningservice.com/locations/st-augustine',
   },
 };
 
-export default function NeptuneBeachPage() {
-  const neptuneBeachServices = [
+export default function StAugustinePage() {
+  const stAugustineServices = [
     {
-      id: 'beach-community-cleaning',
-      title: 'Beach Community Cleaning',
-      description: 'Specialized cleaning for Neptune Beach homes with coastal elements and community standards',
+      id: 'historic-home-care',
+      title: 'Historic Home Care',
+      description: 'Specialized cleaning for St. Augustine historic properties and architectural details',
+      icon: Castle,
+      features: ['Gentle cleaning methods', 'Historic preservation', 'Architectural detail care', 'Period-appropriate techniques', 'Heritage home expertise']
+    },
+    {
+      id: 'luxury-home-cleaning',
+      title: 'Luxury Home Cleaning',
+      description: 'Premium cleaning services for St. Augustine luxury properties and estates',
+      icon: Crown,
+      features: ['Premium cleaning products', 'Attention to detail', 'Luxury standards', 'White glove service', 'Estate maintenance']
+    },
+    {
+      id: 'tourist-area-maintenance',
+      title: 'Tourist Area Maintenance',
+      description: 'Professional cleaning for vacation rentals and tourist accommodations',
+      icon: Flag,
+      features: ['Guest-ready standards', 'Quick turnaround service', 'Tourist satisfaction focus', 'Property protection', 'Consistent quality']
+    },
+    {
+      id: 'beach-property-care',
+      title: 'Beach Property Care',
+      description: 'Specialized cleaning for coastal properties and beachfront homes',
       icon: Waves,
-      features: ['Sand and salt management', 'Coastal environment cleaning', 'Community standards', 'Outdoor area maintenance', 'Beach-specific challenges']
+      features: ['Salt air protection', 'Sand removal', 'Coastal maintenance', 'Weather-resistant cleaning', 'Beach area expertise']
     },
     {
-      id: 'family-friendly-cleaning',
-      title: 'Family-Friendly Cleaning',
-      description: 'Safe, thorough cleaning designed for families with children and pets',
-      icon: Users,
-      features: ['Kid and pet-safe products', 'Family scheduling flexibility', 'Child-proof cleaning methods', 'Pet odor elimination', 'Safe for all ages']
-    },
-    {
-      id: 'coastal-home-maintenance',
-      title: 'Coastal Home Maintenance',
-      description: 'Regular cleaning to protect beach homes from coastal elements',
-      icon: Umbrella,
-      features: ['Salt air protection', 'Humidity control', 'Outdoor furniture care', 'Deck and patio cleaning', 'Coastal wear prevention']
+      id: 'vacation-rental-turnover',
+      title: 'Vacation Rental Turnover',
+      description: 'Professional cleaning for short-term rental properties',
+      icon: Building2,
+      features: ['Guest-ready standards', 'Quick turnaround service', 'Quality assurance', 'Guest satisfaction focus', 'Property protection']
     },
     {
       id: 'deep-cleaning',
@@ -77,76 +91,62 @@ export default function NeptuneBeachPage() {
     {
       id: 'window-cleaning',
       title: 'Window Cleaning',
-      description: 'Crystal clear windows for ocean views and natural light',
+      description: 'Crystal clear windows for better natural light and views',
       icon: Building2,
       features: ['Interior and exterior cleaning', 'Screen cleaning', 'Streak-free results', 'Safety equipment used', 'Frame cleaning']
     },
     {
-      id: 'kitchen-deep-clean',
-      title: 'Kitchen Deep Clean',
-      description: 'Thorough kitchen cleaning for food safety and hygiene',
-      icon: Home,
-      features: ['Appliance cleaning', 'Cabinet and drawer cleaning', 'Countertop sanitization', 'Sink and faucet cleaning', 'Floor care']
-    },
-    {
-      id: 'bathroom-sanitization',
-      title: 'Bathroom Sanitization',
-      description: 'Complete bathroom cleaning and sanitization',
-      icon: Droplets,
-      features: ['Toilet sanitization', 'Shower and tub cleaning', 'Tile and grout care', 'Fixture polishing', 'Fresh scent']
-    },
-    {
       id: 'outdoor-living-areas',
       title: 'Outdoor Living Areas',
-      description: 'Exterior cleaning for your beach outdoor spaces',
+      description: 'Exterior cleaning for your outdoor spaces',
       icon: Trees,
-      features: ['Deck and patio cleaning', 'Outdoor furniture care', 'Entryway cleaning', 'Curb appeal enhancement', 'Beach area maintenance']
+      features: ['Porch and deck cleaning', 'Patio maintenance', 'Outdoor furniture care', 'Entryway cleaning', 'Curb appeal enhancement']
     },
     {
       id: 'commercial-cleaning',
       title: 'Commercial Property Cleaning',
-      description: 'Professional cleaning for Neptune Beach businesses and commercial properties',
+      description: 'Professional cleaning for St. Augustine businesses and commercial properties',
       icon: Building2,
       features: ['Business standards', 'Flexible scheduling', 'Professional appearance', 'Customer satisfaction', 'Commercial expertise']
     }
   ];
 
-  const neptuneBeachFeatures = [
-    'Family-oriented beach community',
-    'Excellent schools and parks',
-    'Coastal lifestyle',
-    'Outdoor recreation',
-    'Safe residential areas',
-    'Strong community values'
+  const stAugustineFeatures = [
+    'Historic Spanish architecture',
+    'Tourist destination and attractions',
+    'Beachfront and coastal properties',
+    'Luxury homes and estates',
+    'Cultural heritage sites',
+    'Year-round tourism'
   ];
 
-  const neptuneBeachLandmarks = [
-    'Neptune Beach Elementary',
-    'Neptune Beach City Hall',
-    'Neptune Beach Park',
-    'Beach Boulevard',
-    'Oceanfront Access Points',
-    'Community Center'
+  const stAugustineLandmarks = [
+    'Castillo de San Marcos',
+    'St. George Street',
+    'Flagler College',
+    'Lightner Museum',
+    'St. Augustine Beach',
+    'Fountain of Youth'
   ];
 
-  const neptuneBeachTestimonials = [
+  const stAugustineTestimonials = [
     {
-      name: 'Jennifer R.',
-      location: 'Neptune Beach',
+      name: 'Elizabeth R.',
+      location: 'St. Augustine',
       rating: 5,
-      comment: 'Perfect for our beach community home! They understand the unique needs of coastal living.'
+      comment: 'Exceptional service for our historic St. Augustine home. They understand the care these properties need.'
     },
     {
-      name: 'Robert M.',
-      location: 'Neptune Beach',
+      name: 'Thomas W.',
+      location: 'St. Augustine',
       rating: 5,
-      comment: 'Family-friendly service that keeps our home clean and safe for our kids and pets.'
+      comment: 'Perfect for our vacation rental. Quick turnaround and guest-ready results every time.'
     },
     {
-      name: 'Amanda T.',
-      location: 'Neptune Beach',
+      name: 'Maria S.',
+      location: 'St. Augustine',
       rating: 5,
-      comment: 'Professional, reliable, and perfect for our Neptune Beach lifestyle. Highly recommend!'
+      comment: 'Luxury home cleaning at its finest. Our St. Augustine estate has never looked better.'
     }
   ];
 
@@ -160,8 +160,8 @@ export default function NeptuneBeachPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Jacksonville House Cleaning Service",
-            "description": "Professional cleaning services in Neptune Beach, FL. Beach community cleaning, family-friendly service, and coastal home maintenance.",
-            "url": "https://www.jacksonvillehousecleaningservice.com/locations/neptune-beach",
+            "description": "Professional cleaning services in St. Augustine, Jacksonville FL. Historic city cleaning, tourist area maintenance, and luxury home care.",
+            "url": "https://www.jacksonvillehousecleaningservice.com/locations/st-augustine",
             "telephone": "+19044563851",
             "address": {
               "@type": "PostalAddress",
@@ -171,12 +171,12 @@ export default function NeptuneBeachPage() {
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "30.3119",
-              "longitude": "-81.4034"
+              "latitude": "29.9012",
+              "longitude": "-81.3124"
             },
             "areaServed": {
               "@type": "City",
-              "name": "Neptune Beach"
+              "name": "St. Augustine"
             },
             "serviceArea": {
               "@type": "City",
@@ -184,8 +184,8 @@ export default function NeptuneBeachPage() {
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Neptune Beach Cleaning Services",
-              "itemListElement": neptuneBeachServices.map(service => ({
+              "name": "St. Augustine Cleaning Services",
+              "itemListElement": stAugustineServices.map(service => ({
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
@@ -197,7 +197,7 @@ export default function NeptuneBeachPage() {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "5.0",
-              "reviewCount": "105"
+              "reviewCount": "110"
             }
           })
         }}
@@ -210,17 +210,17 @@ export default function NeptuneBeachPage() {
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary-blue mb-6">
               <MapPin className="w-4 h-4" />
-              <span>Neptune Beach, FL</span>
+              <span>St. Augustine, Jacksonville FL</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-charcoal mb-6">
               Professional Cleaning Services in
-              <span className="text-primary-blue block">Neptune Beach</span>
+              <span className="text-primary-blue block">St. Augustine</span>
             </h1>
             
             <p className="text-xl text-charcoal/80 mb-8 max-w-3xl mx-auto">
-              Beach community cleaning with family-friendly service. Serving Neptune Beach with specialized cleaning services 
-              for coastal homes and families.
+              Historic city cleaning with luxury standards. Serving St. Augustine with professional cleaning services 
+              that preserve the beauty of America's oldest city while maintaining modern cleanliness standards.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -247,16 +247,16 @@ export default function NeptuneBeachPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-              Neptune Beach Cleaning Services
+              St. Augustine Cleaning Services
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Comprehensive cleaning solutions designed for Neptune Beach properties. From beach community cleaning 
-              to family-friendly service, we provide the services you need to maintain your coastal home.
+              Comprehensive cleaning solutions designed for St. Augustine's unique needs. From historic preservation 
+              to luxury home care, we provide the services that maintain the beauty of America's oldest city.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {neptuneBeachServices.map((service) => (
+            {stAugustineServices.map((service) => (
               <div key={service.id} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-all duration-300">
                 <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-primary-blue" />
@@ -282,42 +282,42 @@ export default function NeptuneBeachPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-              Why Neptune Beach Chooses Us
+              Why St. Augustine Property Owners Choose Us
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We understand the unique needs of Neptune Beach families and coastal properties, providing cleaning services 
-              that fit your beach community lifestyle.
+              We understand the unique challenges and requirements of St. Augustine properties, from historic 
+              preservation to luxury standards and tourist area maintenance.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Waves className="w-10 h-10 text-primary-blue" />
+                <Castle className="w-10 h-10 text-primary-blue" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Beach Community Expertise</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Historic Preservation</h3>
               <p className="text-charcoal/70">
-                Specialized knowledge for cleaning beach homes with sand, salt, and coastal challenges.
+                Specialized cleaning methods that protect and preserve St. Augustine's historic architecture.
               </p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-accent-aqua/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-10 h-10 text-accent-aqua" />
+                <Crown className="w-10 h-10 text-accent-aqua" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Family-Friendly Service</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Luxury Standards</h3>
               <p className="text-charcoal/70">
-                Safe cleaning solutions that are perfect for families with children and pets.
+                Premium cleaning services that meet the high standards of St. Augustine luxury properties.
               </p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-accent-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Umbrella className="w-10 h-10 text-accent-green" />
+                <Flag className="w-10 h-10 text-accent-green" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Coastal Protection</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Tourist Area Expertise</h3>
               <p className="text-charcoal/70">
-                Cleaning methods that protect your home from salt air, humidity, and coastal elements.
+                Professional cleaning for vacation rentals and tourist accommodations with quick turnaround.
               </p>
             </div>
           </div>
@@ -330,16 +330,16 @@ export default function NeptuneBeachPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
-                Why We Love Neptune Beach
+                Why We Love St. Augustine
               </h2>
               <p className="text-lg text-charcoal/70 mb-8">
-                Neptune Beach is a wonderful family-oriented beach community known for its excellent schools, 
-                safe residential areas, and strong community values. We're proud to serve this area with cleaning services 
-                that match the quality and care this community deserves.
+                St. Augustine is America's oldest city, known for its rich history, Spanish architecture, 
+                and beautiful coastal location. We're proud to serve this historic area with cleaning services 
+                that respect its heritage while maintaining modern standards.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {neptuneBeachFeatures.map((feature, index) => (
+                {stAugustineFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-accent-green flex-shrink-0" />
                     <span className="text-charcoal/80">{feature}</span>
@@ -349,15 +349,15 @@ export default function NeptuneBeachPage() {
             </div>
             
             <div className="grid grid-cols-2 gap-4">
-              {neptuneBeachLandmarks.map((landmark, index) => (
+              {stAugustineLandmarks.map((landmark, index) => (
                 <div key={index} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-6 rounded-xl text-center">
                   <div className="w-12 h-12 bg-primary-blue/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    {index === 0 && <School className="w-6 h-6 text-primary-blue" />}
-                    {index === 1 && <Building className="w-6 h-6 text-primary-blue" />}
-                    {index === 2 && <Trees className="w-6 h-6 text-primary-blue" />}
-                    {index === 3 && <Store className="w-6 h-6 text-primary-blue" />}
+                    {index === 0 && <Castle className="w-6 h-6 text-primary-blue" />}
+                    {index === 1 && <Flag className="w-6 h-6 text-primary-blue" />}
+                    {index === 2 && <School className="w-6 h-6 text-primary-blue" />}
+                    {index === 3 && <Building2 className="w-6 h-6 text-primary-blue" />}
                     {index === 4 && <Waves className="w-6 h-6 text-primary-blue" />}
-                    {index === 5 && <Building2 className="w-6 h-6 text-primary-blue" />}
+                    {index === 5 && <Anchor className="w-6 h-6 text-primary-blue" />}
                   </div>
                   <p className="text-sm font-medium text-charcoal">{landmark}</p>
                 </div>
@@ -372,16 +372,16 @@ export default function NeptuneBeachPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-              What Neptune Beach Residents Say
+              What St. Augustine Property Owners Say
             </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what families in Neptune Beach are saying 
+              Don't just take our word for it. Here's what property owners in St. Augustine are saying 
               about our cleaning services.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {neptuneBeachTestimonials.map((testimonial, index) => (
+            {stAugustineTestimonials.map((testimonial, index) => (
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -408,11 +408,11 @@ export default function NeptuneBeachPage() {
       <section className="py-20 bg-primary-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready for Professional Beach Community Cleaning?
+            Ready for Exceptional St. Augustine Cleaning?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Join the many Neptune Beach families who trust us with their home cleaning needs. 
-            Get started today with a free quote and experience the difference professional beach cleaning makes.
+            Join the many St. Augustine property owners who trust us with their cleaning needs. 
+            Get started today with a free quote and experience the difference professional cleaning makes.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -438,11 +438,11 @@ export default function NeptuneBeachPage() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5" />
-              <span>Beach Community Expertise</span>
+              <span>Historic Preservation</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5" />
-              <span>Family-Friendly Service</span>
+              <span>Luxury Standards</span>
             </div>
           </div>
         </div>
@@ -450,4 +450,3 @@ export default function NeptuneBeachPage() {
     </>
   );
 }
-

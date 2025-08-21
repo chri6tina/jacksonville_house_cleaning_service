@@ -1,355 +1,451 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
-import { MapPin, Phone, Clock, Star, Home, Shield, Users, CheckCircle, Award, Leaf, Sparkles } from 'lucide-react';
+import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Riverside House Cleaning Service | Historic Home Cleaning Jacksonville FL',
+  description: 'Professional cleaning services in Riverside & Avondale, Jacksonville FL. Historic home care, architectural detail cleaning, preservation-focused service. Call (904) 456-3851 for meticulous care.',
+  keywords: 'Riverside cleaning service, Jacksonville historic home cleaning, Riverside house cleaning, historic home care Jacksonville, architectural cleaning Riverside, preservation cleaning Jacksonville',
+  openGraph: {
+    title: 'Riverside House Cleaning Service | Historic Home Cleaning Jacksonville FL',
+    description: 'Professional cleaning services in Riverside & Avondale, Jacksonville FL. Historic home care, architectural detail cleaning, preservation-focused service. Call (904) 456-3851 for meticulous care.',
+    url: 'https://www.jacksonvillehousecleaningservice.com/locations/riverside-avondale',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Jacksonville House Cleaning Service',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Riverside House Cleaning Service | Historic Home Cleaning Jacksonville FL',
+    description: 'Professional cleaning services in Riverside & Avondale, Jacksonville FL. Historic home care, architectural detail cleaning, preservation-focused service.',
+  },
+  alternates: {
+    canonical: 'https://www.jacksonvillehousecleaningservice.com/locations/riverside-avondale',
+  },
+};
 
 export default function RiversideAvondalePage() {
-  const localServices = [
+  const riversideServices = [
     {
-      name: 'Historic Home Cleaning',
-      description: 'Specialized cleaning for Riverside & Avondale\'s historic homes',
-      price: 'Starting at $180',
-      features: ['Period-appropriate cleaning methods', 'Gentle on vintage materials', 'Attention to architectural details']
+      id: 'historic-home-care',
+      title: 'Historic Home Care',
+      description: 'Specialized cleaning for Riverside historic homes and architectural details',
+      icon: BookOpen,
+      features: ['Gentle cleaning methods', 'Architectural detail preservation', 'Historic finish care', 'Period-appropriate techniques', 'Heritage home expertise']
     },
     {
-      name: 'Luxury Home Maintenance',
-      description: 'Premium cleaning for upscale Riverside residences',
-      price: 'Starting at $250',
-      features: ['High-end finish care', 'Premium cleaning products', 'White-glove service']
+      id: 'architectural-cleaning',
+      title: 'Architectural Detail Cleaning',
+      description: 'Meticulous care for Riverside homes with unique architectural features',
+      icon: Building2,
+      features: ['Crown molding cleaning', 'Wainscoting care', 'Stained glass attention', 'Hardwood floor preservation', 'Vintage fixture care']
     },
     {
-      name: 'Garden District Care',
-      description: 'Comprehensive cleaning including outdoor spaces',
-      price: 'Starting at $220',
-      features: ['Porch and patio cleaning', 'Window and screen care', 'Entryway maintenance']
+      id: 'preservation-cleaning',
+      title: 'Preservation-Focused Service',
+      description: 'Cleaning that protects and maintains Riverside historic home integrity',
+      icon: Shield,
+      features: ['Gentle product selection', 'Surface protection methods', 'Long-term preservation', 'Expert consultation', 'Heritage maintenance']
+    },
+    {
+      id: 'family-friendly',
+      title: 'Family-Friendly Cleaning',
+      description: 'Safe, thorough cleaning for Riverside families with children and pets',
+      icon: Users,
+      features: ['Kid and pet-safe products', 'Family scheduling flexibility', 'Child-proof cleaning methods', 'Pet odor elimination', 'Safe for all ages']
+    },
+    {
+      id: 'recurring-maintenance',
+      title: 'Recurring Maintenance',
+      description: 'Consistent care to maintain Riverside historic home beauty',
+      icon: Calendar,
+      features: ['Weekly, bi-weekly, or monthly options', 'Historic standards maintained', 'Priority scheduling', 'Custom service plans', 'Preservation focus']
+    },
+    {
+      id: 'move-in-move-out',
+      title: 'Historic Home Move-In/Move-Out',
+      description: 'Specialized cleaning for Riverside real estate transactions',
+      icon: Car,
+      features: ['Pre-move historic preparation', 'Post-move restoration', 'Heritage home preparation', 'Final preservation inspection', 'Move-in ready results']
+    },
+    {
+      id: 'deep-cleaning',
+      title: 'Historic Deep Cleaning',
+      description: 'Comprehensive cleaning for Riverside homes needing thorough attention',
+      icon: Target,
+      features: ['Complete historic home cleaning', 'Architectural detail focus', 'Preservation methods', 'Gentle but thorough', 'Heritage standards']
+    },
+    {
+      id: 'carpet-care',
+      title: 'Historic Carpet & Upholstery',
+      description: 'Gentle fabric care for Riverside vintage furnishings',
+      icon: Droplets,
+      features: ['Gentle stain removal', 'Vintage fabric protection', 'Odor elimination', 'Professional restoration', 'Preservation focus']
+    },
+    {
+      id: 'window-cleaning',
+      title: 'Historic Window Cleaning',
+      description: 'Careful cleaning for Riverside vintage windows and frames',
+      icon: Building2,
+      features: ['Interior and exterior cleaning', 'Vintage window care', 'Streak-free results', 'Safety equipment used', 'Frame preservation']
+    },
+    {
+      id: 'outdoor-maintenance',
+      title: 'Outdoor Living Area Care',
+      description: 'Exterior cleaning for Riverside historic home outdoor spaces',
+      icon: Trees,
+      features: ['Porch and deck cleaning', 'Garden area maintenance', 'Exterior surface care', 'Landscaping support', 'Curb appeal enhancement']
+    },
+    {
+      id: 'post-construction',
+      title: 'Post-Renovation Cleaning',
+      description: 'Cleanup after Riverside historic home renovations',
+      icon: Target,
+      features: ['Construction debris removal', 'Historic finish restoration', 'Detailed surface cleaning', 'Final preservation inspection', 'Heritage ready results']
+    },
+    {
+      id: 'vacation-rental',
+      title: 'Vacation Rental Turnover',
+      description: 'Professional cleaning for Riverside short-term rental properties',
+      icon: Building2,
+      features: ['Guest-ready standards', 'Quick turnaround service', 'Historic property care', 'Guest satisfaction focus', 'Preservation maintained']
     }
   ];
 
-  const neighborhoodFeatures = [
-    'Historic district with unique architectural styles',
-    'Tree-lined streets and mature landscaping',
-    'Proximity to downtown Jacksonville',
-    'High-end residential properties',
-    'Active community association',
-    'Walking distance to shops and restaurants'
+  const riversideFeatures = [
+    'Historic architecture and charm',
+    'Tree-lined streets and parks',
+    'Vibrant arts and culture scene',
+    'Excellent restaurants and cafes',
+    'Strong community involvement',
+    'Walkable neighborhood design'
   ];
 
-  const localLandmarks = [
+  const riversideLandmarks = [
     'Riverside Arts Market',
     'Memorial Park',
     'Cummer Museum of Art & Gardens',
+    'Riverside Baptist Church',
     'Five Points District',
-    'Riverside Park',
-    'Avondale Historic District'
+    'St. Johns River access'
+  ];
+
+  const riversideTestimonials = [
+    {
+      name: 'Jennifer L.',
+      location: 'Riverside',
+      rating: 5,
+      comment: 'They understand historic homes! Our Riverside Victorian has never looked better while preserving all its character.'
+    },
+    {
+      name: 'Robert M.',
+      location: 'Riverside',
+      rating: 5,
+      comment: 'Professional service that respects the architectural details of our historic Riverside home. Highly recommend!'
+    },
+    {
+      name: 'Amanda T.',
+      location: 'Riverside',
+      rating: 5,
+      comment: 'Perfect for our busy family in Riverside. The recurring cleaning keeps our historic home immaculate.'
+    }
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section - Local Business Style */}
-      <section
-        className="relative py-20 lg:py-24 overflow-hidden"
-        style={{
-          backgroundImage: 'url(/hero1.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+    <>
+      {/* Structured Data for Local Business */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Jacksonville House Cleaning Service",
+            "description": "Professional cleaning services in Riverside & Avondale, Jacksonville FL. Historic home care, architectural detail cleaning, preservation-focused service.",
+            "url": "https://www.jacksonvillehousecleaningservice.com/locations/riverside-avondale",
+            "telephone": "+19044563851",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Jacksonville",
+              "addressRegion": "FL",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "30.3187",
+              "longitude": "-81.6920"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Riverside & Avondale"
+            },
+            "serviceArea": {
+              "@type": "City",
+              "name": "Jacksonville"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Riverside & Avondale Cleaning Services",
+              "itemListElement": riversideServices.map(service => ({
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": service.title,
+                  "description": service.description
+                }
+              }))
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "120"
+            }
+          })
         }}
-      >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/60 sm:bg-black/75"></div>
+      />
 
-        {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {/* Local Business Badge */}
-            <div className="inline-flex items-center gap-2 bg-white text-gray-800 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-white shadow-lg">
-              <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-primary-blue" />
-              Serving Riverside & Avondale Since 2015
+      <div className="min-h-screen bg-gradient-to-br from-primary-blue/5 to-accent-aqua/5">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-r from-primary-blue to-accent-aqua text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <div className="flex items-center justify-center mb-6">
+              <MapPin className="h-8 w-8 mr-3" />
+              <h1 className="text-4xl md:text-6xl font-bold">Riverside & Avondale</h1>
             </div>
-
-            {/* Main Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight text-white drop-shadow-lg">
-              <span className="block">Riverside & Avondale</span>
-              <span className="block text-cyan-300 sm:text-cyan-400">House Cleaning Services</span>
-              <span className="block text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white mt-2 sm:mt-3 drop-shadow-md">
-                Historic District Cleaning Specialists
-              </span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 drop-shadow-md">
-              Professional cleaning services tailored for Riverside & Avondale's historic homes and luxury residences. 
-              Our Jacksonville team understands the unique needs of this prestigious neighborhood.
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Professional cleaning services for Riverside & Avondale historic homes. 
+              Experience meticulous care that preserves your home's architectural beauty.
             </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-10 px-4">
-              <Link
-                href="/contact?location=Riverside%20%26%20Avondale"
-                className="bg-accent-coral hover:bg-accent-coral/90 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 sm:gap-3"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact?service=historic-home-care&location=riverside-avondale"
+                className="bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                <Home className="w-4 h-4 sm:w-5 sm:h-5" />
-                Get Riverside Quote
+                Get Free Quote
               </Link>
-              <a
-                href="tel:9044563851"
-                className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-gray-800 px-6 sm:px-8 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
+              <Link 
+                href="/contact?service=recurring-maintenance&location=riverside-avondale"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors"
               >
-                <Phone className="w-4 h-4 sm:w-5 sm:w-5" />
-                Call (904) 456-3851
-              </a>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mt-8 sm:mt-10 px-4">
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-green/30 sm:bg-accent-green/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-accent-green" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Historic Home Experts</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Riverside specialists</p>
-              </div>
-
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-blue/30 sm:bg-primary-blue/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Award className="w-5 h-5 sm:w-6 sm:h-6 text-primary-blue" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Luxury Service</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Premium standards</p>
-              </div>
-
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center sm:col-span-2 lg:col-span-1">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-coral/30 sm:bg-accent-coral/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Users className="w-5 h-5 sm:w-6 sm:h-6 text-accent-coral" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Local Team</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Jacksonville neighbors</p>
-              </div>
+                Schedule Service
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Neighborhood Overview */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal mb-6">
-                Riverside & Avondale: Jacksonville's Historic Gem
+        {/* Services Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+                Historic Home Cleaning Services in Riverside & Avondale
               </h2>
-              <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
-                Riverside & Avondale represents the heart of Jacksonville's historic charm. This prestigious neighborhood 
-                features stunning historic homes, tree-lined streets, and a vibrant community atmosphere that requires 
-                specialized cleaning care.
+              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+                Specialized cleaning services designed for Riverside & Avondale's historic homes and architectural treasures. 
+                Experience the difference of preservation-focused care.
               </p>
-              <div className="space-y-4">
-                {neighborhoodFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-accent-green" />
-                    <span className="text-charcoal/80">{feature}</span>
-                  </div>
-                ))}
-              </div>
             </div>
-            <div className="bg-gradient-to-br from-primary-blue/20 to-accent-aqua/20 rounded-2xl p-8">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                  <MapPin className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-charcoal mb-2">Local Landmarks</h3>
-                <p className="text-charcoal/70 mb-4">Discover Riverside & Avondale</p>
-                <div className="space-y-2 text-sm text-charcoal/70">
-                  {localLandmarks.map((landmark, index) => (
-                    <p key={index}>• {landmark}</p>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Specialized Services */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
-              Riverside & Avondale Specialized Services
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
-              Our Jacksonville team understands the unique needs of historic homes and luxury residences in this prestigious neighborhood
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-            {localServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Home className="w-8 h-8 text-primary-blue" />
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {riversideServices.map((service) => (
+                <div key={service.id} className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-4">
+                    <service.icon className="h-8 w-8 text-primary-blue mr-3" />
+                    <h3 className="text-xl font-semibold text-charcoal">{service.title}</h3>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
                   <p className="text-charcoal/70 mb-4">{service.description}</p>
-                  <div className="text-3xl font-bold text-primary-blue mb-2">{service.price}</div>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-accent-green mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-charcoal/80 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link 
+                    href={`/contact?service=${service.id}&location=riverside-avondale`}
+                    className="inline-block mt-6 bg-primary-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors"
+                  >
+                    Book Service
+                  </Link>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-                <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-accent-green flex-shrink-0" />
-                      <span className="text-sm text-charcoal/70">{feature}</span>
-                    </div>
-                  ))}
+        {/* Why Choose Us Section */}
+        <section className="py-20 bg-blue-100">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+                Why Riverside & Avondale Chooses Our Historic Home Service
+              </h2>
+              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+                We understand the unique needs of historic homes and provide service that preserves architectural integrity.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="text-center">
+                <BookOpen className="h-16 w-16 text-primary-blue mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-charcoal mb-2">Historic Expertise</h3>
+                <p className="text-charcoal/70">Specialized knowledge for preserving Riverside historic home beauty and character.</p>
+              </div>
+              <div className="text-center">
+                <Shield className="h-16 w-16 text-primary-blue mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-charcoal mb-2">Preservation Focus</h3>
+                <p className="text-charcoal/70">Cleaning methods that protect and maintain your home's architectural integrity.</p>
+              </div>
+              <div className="text-center">
+                <Users className="h-16 w-16 text-primary-blue mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-charcoal mb-2">Family Friendly</h3>
+                <p className="text-charcoal/70">Safe, thorough cleaning that works for Riverside families with children and pets.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Riverside Features */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                  Riverside & Avondale: Historic Charm in the Heart of Jacksonville
+                </h2>
+                <p className="text-lg text-charcoal/70 mb-8">
+                  Riverside & Avondale is one of Jacksonville's most historic communities, known for its beautiful architecture, 
+                  tree-lined streets, and vibrant arts scene. Our specialized cleaning services are designed to 
+                  maintain the architectural beauty that Riverside residents cherish.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-xl font-semibold text-charcoal mb-4">Community Features</h3>
+                    <ul className="space-y-2">
+                      {riversideFeatures.map((feature, index) => (
+                        <li key={index} className="flex items-center">
+                          <CheckCircle className="h-5 w-5 text-accent-green mr-2" />
+                          <span className="text-charcoal/80">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-charcoal mb-4">Local Landmarks</h3>
+                    <ul className="space-y-2">
+                      {riversideLandmarks.map((landmark, index) => (
+                        <li key={index} className="flex items-center">
+                          <MapPin className="h-4 w-4 text-primary-blue mr-2" />
+                          <span className="text-charcoal/80">{landmark}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-
-                <Link
-                  href={`/contact?location=Riverside%20%26%20Avondale&service=${encodeURIComponent(service.name)}`}
-                  className="w-full bg-accent-coral hover:bg-accent-coral/90 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
+              </div>
+              
+              <div className="bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-charcoal mb-6">Riverside Service Area</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-charcoal/80">Standard Cleaning</span>
+                    <span className="font-semibold text-charcoal">From $140</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-charcoal/80">Historic Deep Cleaning</span>
+                    <span className="font-semibold text-charcoal">From $280</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-charcoal/80">Architectural Care</span>
+                    <span className="font-semibold text-charcoal">From $350</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-charcoal/80">Recurring Service</span>
+                    <span className="font-semibold text-charcoal">From $110</span>
+                  </div>
+                </div>
+                <Link 
+                  href="/pricing-calculator?location=riverside-avondale"
+                  className="block w-full bg-primary-blue text-white text-center py-3 rounded-lg font-semibold mt-6 hover:bg-primary-blue/90 transition-colors"
                 >
-                  Book This Service
+                  Get Detailed Pricing
                 </Link>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Why Choose Us for Riverside & Avondale */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
-              Why Riverside & Avondale Homeowners Choose Us
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
-              Our Jacksonville team brings local expertise and specialized knowledge to every Riverside & Avondale home
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {[
-              {
-                icon: Leaf,
-                title: 'Historic Home Expertise',
-                description: 'Specialized cleaning methods for vintage materials and architectural details'
-              },
-              {
-                icon: Shield,
-                title: 'Premium Standards',
-                description: 'Luxury service quality that matches your home\'s prestige'
-              },
-              {
-                icon: MapPin,
-                title: 'Local Knowledge',
-                description: 'Deep understanding of Riverside & Avondale\'s unique characteristics'
-              },
-              {
-                icon: Clock,
-                title: 'Flexible Scheduling',
-                description: 'Work around your schedule and neighborhood events'
-              },
-              {
-                icon: Star,
-                title: '5-Star Service',
-                description: 'Consistently exceeding Riverside & Avondale expectations'
-              },
-              {
-                icon: Sparkles,
-                title: 'Attention to Detail',
-                description: 'Every corner, every surface, every historic feature cared for'
-              }
-            ].map((feature, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 text-center hover:bg-gray-100 transition-colors duration-200">
-                <div className="w-16 h-16 bg-primary-blue/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-primary-blue" />
-                </div>
-                <h3 className="font-semibold text-charcoal mb-2">{feature.title}</h3>
-                <p className="text-sm text-charcoal/70">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Local Testimonials */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
-              What Riverside & Avondale Residents Say
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {[
-              {
-                name: 'Sarah M.',
-                location: 'Riverside Historic District',
-                rating: 5,
-                comment: 'They understand historic homes! Gentle on our vintage fixtures while delivering spotless results.'
-              },
-              {
-                name: 'Michael R.',
-                location: 'Avondale',
-                rating: 5,
-                comment: 'Professional service that matches our neighborhood\'s standards. Highly recommend!'
-              },
-              {
-                name: 'Jennifer L.',
-                location: 'Riverside',
-                rating: 5,
-                comment: 'Local team that knows Jacksonville. They\'ve been cleaning our home for years.'
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-charcoal/80 mb-4 italic">"{testimonial.comment}"</p>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-semibold text-charcoal">{testimonial.name}</p>
-                    <p className="text-sm text-charcoal/60">{testimonial.location}</p>
+        {/* Testimonials Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+                What Riverside & Avondale Residents Say
+              </h2>
+              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+                Don't just take our word for it. Here's what our Riverside & Avondale customers have to say about our historic home service.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {riversideTestimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-charcoal/80 mb-4 italic">"{testimonial.comment}"</p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                      {testimonial.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="font-semibold text-charcoal">{testimonial.name}</p>
+                      <p className="text-charcoal/60 text-sm">{testimonial.location}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-primary-blue">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Experience Riverside & Avondale's Premier Cleaning Service?
-          </h2>
-          <p className="text-lg sm:text-xl text-white/90 mb-8">
-            Join your neighbors who trust us with their historic homes. Get your free quote today!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact?location=Riverside%20%26%20Avondale"
-              className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 flex items-center justify-center gap-3"
-            >
-              <Home className="w-5 h-5" />
-              Get Free Quote
-            </Link>
-            <a
-              href="tel:9044563851"
-              className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 flex items-center justify-center gap-3"
-            >
-              <Phone className="w-5 h-5" />
-              Call (904) 456-3851
-            </a>
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-primary-blue to-accent-aqua text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready for Historic Home Care in Riverside & Avondale?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Experience the difference of specialized cleaning that preserves your Riverside historic home's architectural beauty. 
+              Get your free quote today and see why we're the preferred choice for historic homes.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact?service=historic-home-care&location=riverside-avondale"
+                className="bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Free Quote
+              </Link>
+              <Link 
+                href="/contact?service=recurring-maintenance&location=riverside-avondale"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors"
+              >
+                Schedule Consultation
+              </Link>
+            </div>
+            <div className="mt-8 flex items-center justify-center">
+              <Phone className="h-5 w-5 mr-2" />
+              <span className="text-lg">Call (904) 456-3851 for immediate assistance</span>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }

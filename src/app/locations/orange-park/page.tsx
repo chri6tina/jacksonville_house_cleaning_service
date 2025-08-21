@@ -1,563 +1,453 @@
-import Link from 'next/link';
-import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, MapPinIcon, UsersIcon, BuildingIcon, CarIcon } from 'lucide-react';
+import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils, Building, Briefcase, Globe, Train, Bus, ShoppingBag, Heart, PawPrint, Truck, Hammer, Wind } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Orange Park Jacksonville House Cleaning Service | Family & Pet-Friendly Cleaning FL',
+  description: 'Professional cleaning services in Orange Park, Jacksonville FL. Family-friendly cleaning, pet-safe solutions, and reliable service for busy families. Call (904) 456-3851 for trusted cleaning.',
+  keywords: 'Orange Park Jacksonville cleaning service, Jacksonville family cleaning, Orange Park house cleaning, pet-friendly cleaning Jacksonville, family cleaning service, reliable cleaning Orange Park',
+  openGraph: {
+    title: 'Orange Park Jacksonville House Cleaning Service | Family & Pet-Friendly Cleaning FL',
+    description: 'Professional cleaning services in Orange Park, Jacksonville FL. Family-friendly cleaning, pet-safe solutions, and reliable service for busy families. Call (904) 456-3851 for trusted cleaning.',
+    url: 'https://www.jacksonvillehousecleaningservice.com/locations/orange-park',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Jacksonville House Cleaning Service',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Orange Park Jacksonville House Cleaning Service | Family & Pet-Friendly Cleaning FL',
+    description: 'Professional cleaning services in Orange Park, Jacksonville FL. Family-friendly cleaning, pet-safe solutions, and reliable service for busy families.',
+  },
+  alternates: {
+    canonical: 'https://www.jacksonvillehousecleaningservice.com/locations/orange-park',
+  },
+};
 
 export default function OrangeParkPage() {
   const orangeParkServices = [
     {
-      id: 'standard-cleaning',
-      title: 'Standard Cleaning',
-      description: 'Regular maintenance cleaning tailored for Orange Park homes and families',
-      icon: Home,
-      features: ['Dusting and wiping surfaces', 'Vacuuming and mopping floors', 'Bathroom sanitization', 'Kitchen deep cleaning', 'Trash removal']
-    },
-    {
-      id: 'deep-cleaning',
-      title: 'Deep Cleaning',
-      description: 'Comprehensive cleaning service for thorough Orange Park home refreshment',
-      icon: Sparkles,
-      features: ['Detailed surface cleaning', 'Inside appliance cleaning', 'Baseboard and corner cleaning', 'Window and blind cleaning', 'Cabinet organization']
-    },
-    {
-      id: 'move-in-move-out',
-      title: 'Move In/Out Cleaning',
-      description: 'Complete cleaning service for smooth transitions in Orange Park',
-      icon: Car,
-      features: ['Pre-move deep cleaning', 'Post-move restoration', 'Appliance deep cleaning', 'Cabinet and drawer cleaning', 'Final inspection']
-    },
-    {
-      id: 'recurring-cleaning',
-      title: 'Recurring Cleaning',
-      description: 'Consistent cleaning schedule to maintain your Orange Park home',
-      icon: Calendar,
-      features: ['Weekly, bi-weekly, or monthly options', 'Customizable service plans', 'Consistent quality standards', 'Flexible scheduling', 'Priority booking']
-    },
-    {
-      id: 'vacation-rental-cleaning',
-      title: 'Vacation Rental Turnover',
-      description: 'Professional cleaning for Orange Park vacation rental properties',
-      icon: Building2,
-      features: ['Quick turnaround cleaning', 'Linen and towel replacement', 'Kitchen deep sanitization', 'Bathroom refresh', 'Guest-ready standards']
-    },
-    {
-      id: 'post-construction-cleaning',
-      title: 'Post-Construction Cleaning',
-      description: 'Comprehensive cleanup after construction or renovation projects',
-      icon: Target,
-      features: ['Construction debris removal', 'Dust and particle cleanup', 'Surface restoration', 'Final detail cleaning', 'Quality inspection']
-    },
-    {
-      id: 'carpet-cleaning',
-      title: 'Carpet Cleaning',
-      description: 'Professional carpet cleaning and stain removal services',
-      icon: Droplets,
-      features: ['Deep carpet extraction', 'Stain and spot treatment', 'Odor elimination', 'Protective treatment', 'Fast drying technology']
-    },
-    {
-      id: 'window-cleaning',
-      title: 'Window Cleaning',
-      description: 'Crystal clear windows for your Orange Park home',
-      icon: Building2,
-      features: ['Interior and exterior cleaning', 'Screen cleaning', 'Track and sill cleaning', 'Streak-free results', 'Safety equipment used']
-    },
-    {
-      id: 'pressure-washing',
-      title: 'Pressure Washing',
-      description: 'Exterior surface cleaning for your home and driveway',
-      icon: Zap,
-      features: ['Driveway and walkway cleaning', 'House siding cleaning', 'Deck and patio cleaning', 'Safe pressure settings', 'Eco-friendly solutions']
-    },
-    {
-      id: 'gutter-cleaning',
-      title: 'Gutter Cleaning',
-      description: 'Maintain proper drainage with professional gutter cleaning',
-      icon: Droplets,
-      features: ['Debris removal', 'Downspout clearing', 'Gutter inspection', 'Preventive maintenance', 'Safety protocols']
-    },
-    {
-      id: 'air-duct-cleaning',
-      title: 'Air Duct Cleaning',
-      description: 'Improve indoor air quality with professional duct cleaning',
-      icon: Gauge,
-      features: ['Duct system cleaning', 'Vent cleaning', 'Filter replacement', 'Air quality testing', 'Energy efficiency improvement']
-    },
-    {
-      id: 'apartment-cleaning',
-      title: 'Apartment Cleaning',
-      description: 'Specialized cleaning for Orange Park apartment residents',
-      icon: Building2,
-      features: ['Compact space optimization', 'Efficient cleaning methods', 'Flexible scheduling', 'Move-in/out services', 'Regular maintenance']
-    },
-    {
-      id: 'commercial-office-cleaning',
-      title: 'Commercial Office Cleaning',
-      description: 'Professional cleaning for Orange Park businesses and offices',
-      icon: Building2,
-      features: ['Daily maintenance cleaning', 'Sanitization protocols', 'Common area cleaning', 'Restroom maintenance', 'Flexible scheduling']
-    },
-    {
-      id: 'medical-facility-cleaning',
-      title: 'Medical Facility Cleaning',
-      description: 'Specialized cleaning for healthcare environments',
-      icon: Shield,
-      features: ['Medical-grade sanitization', 'Infection control protocols', 'HIPAA compliance', 'Specialized equipment', 'Certified technicians']
-    },
-    {
-      id: 'event-venue-cleaning',
-      title: 'Event Venue Cleaning',
-      description: 'Pre and post-event cleaning for venues and special occasions',
+      id: 'family-friendly-cleaning',
+      title: 'Family-Friendly Cleaning',
+      description: 'Safe, thorough cleaning designed for families with children and pets',
       icon: Users,
-      features: ['Pre-event preparation', 'Post-event cleanup', 'Large space handling', 'Quick turnaround', 'Specialized equipment']
-    },
-    {
-      id: 'senior-citizen-cleaning',
-      title: 'Senior Citizen Cleaning',
-      description: 'Compassionate cleaning services for seniors in Orange Park',
-      icon: Users,
-      features: ['Gentle cleaning methods', 'Accessibility considerations', 'Regular maintenance', 'Companionship during service', 'Flexible scheduling']
+      features: ['Kid and pet-safe products', 'Family scheduling flexibility', 'Child-proof cleaning methods', 'Pet odor elimination', 'Safe for all ages']
     },
     {
       id: 'pet-friendly-cleaning',
       title: 'Pet-Friendly Cleaning',
-      description: 'Safe cleaning solutions for homes with pets',
-      icon: Leaf,
-      features: ['Pet-safe cleaning products', 'Odor elimination', 'Hair removal', 'Stain treatment', 'Non-toxic solutions']
+      description: 'Specialized cleaning solutions safe for pets and pet owners',
+      icon: PawPrint,
+      features: ['Pet-safe cleaning products', 'Pet odor elimination', 'Allergen reduction', 'Pet hair removal', 'Safe for sensitive pets']
+    },
+    {
+      id: 'recurring-maintenance',
+      title: 'Recurring Maintenance',
+      description: 'Consistent cleaning to maintain your home\'s cleanliness and comfort',
+      icon: Calendar,
+      features: ['Weekly, bi-weekly, or monthly options', 'Flexible scheduling', 'Priority booking', 'Custom service plans', 'Consistent quality']
+    },
+    {
+      id: 'deep-cleaning',
+      title: 'Deep Cleaning',
+      description: 'Comprehensive cleaning for homes needing thorough attention',
+      icon: Target,
+      features: ['Complete home cleaning', 'Hard-to-reach areas', 'Detailed attention', 'Thorough sanitization', 'Fresh start feeling']
+    },
+    {
+      id: 'move-in-move-out',
+      title: 'Move-In/Move-Out Cleaning',
+      description: 'Professional cleaning for real estate transactions and relocations',
+      icon: Car,
+      features: ['Pre-move preparation', 'Post-move cleanup', 'Real estate ready', 'Final inspection', 'Move-in ready results']
+    },
+    {
+      id: 'post-construction',
+      title: 'Post-Construction Cleanup',
+      description: 'Professional cleanup after home renovations and projects',
+      icon: Target,
+      features: ['Construction debris removal', 'Dust and particle cleanup', 'Surface restoration', 'Final inspection', 'Move-in ready']
+    },
+    {
+      id: 'carpet-care',
+      title: 'Carpet & Upholstery Care',
+      description: 'Professional fabric cleaning and stain removal',
+      icon: Droplets,
+      features: ['Deep stain removal', 'Odor elimination', 'Fabric protection', 'Professional equipment', 'Extended freshness']
+    },
+    {
+      id: 'window-cleaning',
+      title: 'Window Cleaning',
+      description: 'Crystal clear windows for better natural light and views',
+      icon: Building2,
+      features: ['Interior and exterior cleaning', 'Screen cleaning', 'Streak-free results', 'Safety equipment used', 'Frame cleaning']
+    },
+    {
+      id: 'kitchen-deep-clean',
+      title: 'Kitchen Deep Clean',
+      description: 'Thorough kitchen cleaning for food safety and hygiene',
+      icon: Home,
+      features: ['Appliance cleaning', 'Cabinet and drawer cleaning', 'Countertop sanitization', 'Sink and faucet cleaning', 'Floor care']
+    },
+    {
+      id: 'bathroom-sanitization',
+      title: 'Bathroom Sanitization',
+      description: 'Complete bathroom cleaning and sanitization',
+      icon: Droplets,
+      features: ['Toilet sanitization', 'Shower and tub cleaning', 'Tile and grout care', 'Fixture polishing', 'Fresh scent']
+    },
+    {
+      id: 'outdoor-living-areas',
+      title: 'Outdoor Living Areas',
+      description: 'Exterior cleaning for your outdoor spaces',
+      icon: Trees,
+      features: ['Porch and deck cleaning', 'Patio maintenance', 'Outdoor furniture care', 'Entryway cleaning', 'Curb appeal enhancement']
+    },
+    {
+      id: 'commercial-cleaning',
+      title: 'Commercial Property Cleaning',
+      description: 'Professional cleaning for Orange Park businesses and commercial properties',
+      icon: Building2,
+      features: ['Business standards', 'Flexible scheduling', 'Professional appearance', 'Customer satisfaction', 'Commercial expertise']
+    }
+  ];
+
+  const orangeParkFeatures = [
+    'Family-oriented community',
+    'Excellent schools and parks',
+    'Shopping and entertainment',
+    'Pet-friendly neighborhoods',
+    'Safe, quiet residential areas',
+    'Strong community values'
+  ];
+
+  const orangeParkLandmarks = [
+    'Orange Park Mall',
+    'Orange Park Regional Library',
+    'Orange Park Medical Center',
+    'Orange Park Town Hall',
+    'Orange Park Country Club',
+    'Orange Park Shopping Center'
+  ];
+
+  const orangeParkTestimonials = [
+    {
+      name: 'Amanda R.',
+      location: 'Orange Park',
+      rating: 5,
+      comment: 'Perfect for our busy family! The pet-friendly products give me peace of mind with our dogs.'
+    },
+    {
+      name: 'James T.',
+      location: 'Orange Park',
+      rating: 5,
+      comment: 'Reliable service that fits our family schedule. Our home always looks amazing after their visits.'
+    },
+    {
+      name: 'Michelle K.',
+      location: 'Orange Park',
+      rating: 5,
+      comment: 'Professional, trustworthy, and family-friendly. Exactly what we needed for our Orange Park home.'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {/* Structured Data for Local Business */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Jacksonville House Cleaning Service",
+            "description": "Professional cleaning services in Orange Park, Jacksonville FL. Family-friendly cleaning, pet-safe solutions, and reliable service for busy families.",
+            "url": "https://www.jacksonvillehousecleaningservice.com/locations/orange-park",
+            "telephone": "+19044563851",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Jacksonville",
+              "addressRegion": "FL",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "30.1669",
+              "longitude": "-81.7065"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Orange Park"
+            },
+            "serviceArea": {
+              "@type": "City",
+              "name": "Jacksonville"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Orange Park Jacksonville Cleaning Services",
+              "itemListElement": orangeParkServices.map(service => ({
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": service.title,
+                  "description": service.description
+                }
+              }))
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "95"
+            }
+          })
+        }}
+      />
+
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 py-20">
-        <div className="absolute inset-0 bg-white/30"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6">
-            Professional Cleaning Services in Orange Park
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-800 mb-8 max-w-4xl mx-auto">
-            Trusted cleaning solutions for homes and businesses in Orange Park, Florida. 
-            Serving ZIP codes 32073 and 32065 with excellence and reliability.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/contact?location=orange-park"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 flex items-center space-x-2"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Get Free Quote</span>
-            </Link>
-            <Link
-              href="#services"
-              className="bg-white/80 hover:bg-white text-blue-700 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 border-2 border-blue-600"
-            >
-              View Services
-            </Link>
-          </div>
-          
-          {/* Trust Indicators */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Star className="w-8 h-8 text-blue-600" />
-              </div>
-              <p className="text-blue-800 font-semibold">5-Star Rated</p>
+      <div className="relative bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10 min-h-[60vh] flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-aqua/20"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20 text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary-blue mb-6">
+              <MapPin className="w-4 h-4" />
+              <span>Orange Park, Jacksonville FL</span>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Shield className="w-8 h-8 text-blue-600" />
-              </div>
-              <p className="text-blue-800 font-semibold">Fully Insured</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Clock className="w-8 h-8 text-blue-600" />
-              </div>
-              <p className="text-blue-800 font-semibold">On-Time Service</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <CheckCircle className="w-8 h-8 text-blue-600" />
-              </div>
-              <p className="text-blue-800 font-semibold">Satisfaction Guaranteed</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Orange Park Overview Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Orange Park: A Family-Friendly Community with Unique Cleaning Needs
-              </h2>
-              <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
-                <p>
-                  Orange Park, located in Clay County just south of Jacksonville, is a vibrant suburban community 
-                  known for its family-friendly atmosphere, excellent schools, and growing business district. 
-                  With a population of over 8,500 residents and growing, Orange Park offers a unique blend of 
-                  suburban comfort and urban convenience.
-                </p>
-                <p>
-                  The area&apos;s proximity to NAS Jacksonville, the Orange Park Medical Center, and major shopping 
-                  centers like the Orange Park Mall creates diverse cleaning needs that require specialized expertise. 
-                  From military families who need flexible scheduling to medical professionals who require 
-                  sanitization-focused services, Orange Park residents have unique cleaning requirements.
-                </p>
-                <p>
-                  Our local team understands Orange Park&apos;s distinctive character, from the historic homes in 
-                  the Town Center area to the modern developments near the St. Johns Town Center. We've built 
-                  strong relationships with local businesses, schools, and community organizations to provide 
-                  cleaning services that truly serve the Orange Park community.
-                </p>
-              </div>
-            </div>
-            <div className="bg-gray-100 rounded-2xl p-8">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <MapPinIcon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">ZIP Codes</h3>
-                    <p className="text-gray-600">32073, 32065</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <UsersIcon className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Population</h3>
-                    <p className="text-gray-600">8,500+ residents</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                    <BuildingIcon className="w-6 h-6 text-orange-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Property Types</h3>
-                    <p className="text-gray-600">Suburban homes, townhouses, apartments, businesses</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <CarIcon className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Service Hours</h3>
-                    <p className="text-gray-600">Flexible scheduling available</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Local Expertise Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why Choose Us for Orange Park Cleaning?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local expertise that understands Orange Park&apos;s unique cleaning challenges and community needs
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-charcoal mb-6">
+              Professional Cleaning Services in
+              <span className="text-primary-blue block">Orange Park</span>
+            </h1>
+            
+            <p className="text-xl text-charcoal/80 mb-8 max-w-3xl mx-auto">
+              Family-friendly cleaning with pet-safe solutions. Serving Orange Park families with reliable, 
+              professional cleaning services that keep your home safe and beautiful for everyone.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BuildingIcon className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Military Family Support</h3>
-              <p className="text-gray-600">
-                We understand the unique needs of military families stationed at NAS Jacksonville, 
-                offering flexible scheduling, emergency services, and special rates for service members.
-              </p>
-            </div>
             
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Medical Facility Expertise</h3>
-              <p className="text-gray-600">
-                With the Orange Park Medical Center nearby, we provide specialized medical facility 
-                cleaning with proper protocols, HIPAA compliance, and infection control standards.
-              </p>
-            </div>
-            
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Community Partnership</h3>
-              <p className="text-gray-600">
-                We&apos;re proud partners with Orange Park schools, local businesses, and community 
-                organizations, demonstrating our commitment to the area's growth and prosperity.
-              </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="tel:9044563851"
+                className="inline-flex items-center gap-2 bg-primary-blue text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                Call (904) 456-3851
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold border-2 border-primary-blue hover:bg-primary-blue/10 transition-colors"
+              >
+                Get Free Quote
+              </a>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Local Challenges & Solutions */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Orange Park-Specific Cleaning Challenges & Solutions
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Understanding and addressing the unique cleaning needs of Orange Park properties
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-blue-50 p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-blue-900 mb-4">Suburban Family Homes</h3>
-              <p className="text-blue-800 mb-4">
-                Orange Park&apos;s suburban setting means larger homes with more square footage, 
-                multiple bathrooms, and family-focused living spaces that require efficient, 
-                thorough cleaning approaches.
-              </p>
-              <ul className="space-y-2 text-blue-700">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-600" />
-                  <span>Efficient cleaning methods for larger spaces</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-600" />
-                  <span>Family-friendly cleaning products</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-600" />
-                  <span>Flexible scheduling for busy families</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-green-50 p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-green-900 mb-4">Business District Support</h3>
-              <p className="text-green-800 mb-4">
-                With the Orange Park Mall, medical facilities, and growing business corridors, 
-                we provide commercial cleaning services that support local economic development.
-              </p>
-              <ul className="space-y-2 text-green-700">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>After-hours commercial cleaning</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Medical facility compliance</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Retail space maintenance</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Comprehensive Cleaning Services in Orange Park
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              Orange Park Cleaning Services
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Professional cleaning solutions designed specifically for Orange Park properties and community needs
+            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+              Comprehensive cleaning solutions designed for Orange Park families. From regular maintenance 
+              to deep cleaning, we provide the services you need to maintain a healthy, beautiful home.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {orangeParkServices.map((service, index) => {
-              // Define color schemes for each service
-              const colorSchemes = [
-                { bg: 'bg-blue-500', hover: 'hover:bg-blue-600', accent: 'bg-blue-100', text: 'text-blue-600', dot: 'bg-blue-500', border: 'border-blue-500' },
-                { bg: 'bg-purple-500', hover: 'hover:bg-purple-600', accent: 'bg-purple-100', text: 'text-purple-600', dot: 'bg-purple-500', border: 'border-purple-500' },
-                { bg: 'bg-green-500', hover: 'hover:bg-green-600', accent: 'bg-green-100', text: 'text-green-600', dot: 'bg-green-500', border: 'border-green-500' },
-                { bg: 'bg-orange-500', hover: 'hover:bg-orange-600', accent: 'bg-orange-100', text: 'text-orange-600', dot: 'bg-orange-500', border: 'border-orange-500' },
-                { bg: 'bg-indigo-500', hover: 'hover:bg-indigo-600', accent: 'bg-indigo-100', text: 'text-indigo-600', dot: 'bg-indigo-500', border: 'border-indigo-500' },
-                { bg: 'bg-teal-500', hover: 'hover:bg-teal-600', accent: 'bg-teal-100', text: 'text-teal-600', dot: 'bg-teal-500', border: 'border-teal-500' },
-                { bg: 'bg-emerald-500', hover: 'hover:bg-emerald-600', accent: 'bg-emerald-100', text: 'text-emerald-600', dot: 'bg-emerald-500', border: 'border-emerald-500' },
-                { bg: 'bg-amber-500', hover: 'hover:bg-amber-600', accent: 'bg-amber-100', text: 'text-amber-600', dot: 'bg-amber-500', border: 'border-amber-500' },
-                { bg: 'bg-cyan-500', hover: 'hover:bg-cyan-600', accent: 'bg-cyan-100', text: 'text-cyan-600', dot: 'bg-cyan-500', border: 'border-cyan-500' },
-                { bg: 'bg-sky-500', hover: 'hover:bg-sky-600', accent: 'bg-sky-100', text: 'text-sky-600', dot: 'bg-sky-500', border: 'border-sky-500' },
-                { bg: 'bg-rose-500', hover: 'hover:bg-rose-600', accent: 'bg-rose-100', text: 'text-rose-600', dot: 'bg-rose-500', border: 'border-rose-500' },
-                { bg: 'bg-pink-500', hover: 'hover:bg-pink-600', accent: 'bg-pink-100', text: 'text-pink-600', dot: 'bg-pink-500', border: 'border-pink-500' },
-                { bg: 'bg-red-500', hover: 'hover:bg-red-600', accent: 'bg-red-100', text: 'text-red-600', dot: 'bg-red-500', border: 'border-red-500' },
-                { bg: 'bg-violet-500', hover: 'hover:bg-violet-600', accent: 'bg-violet-100', text: 'text-violet-600', dot: 'bg-violet-500', border: 'border-violet-500' },
-                { bg: 'bg-lime-500', hover: 'hover:bg-lime-600', accent: 'bg-lime-100', text: 'text-lime-600', dot: 'bg-lime-500', border: 'border-lime-500' },
-                { bg: 'bg-fuchsia-500', hover: 'hover:bg-fuchsia-600', accent: 'bg-fuchsia-100', text: 'text-fuchsia-600', dot: 'bg-fuchsia-500', border: 'border-fuchsia-500' },
-                { bg: 'bg-slate-500', hover: 'hover:bg-slate-600', accent: 'bg-slate-100', text: 'text-slate-600', dot: 'bg-slate-500', border: 'border-slate-500' }
-              ];
-              
-              const colorScheme = colorSchemes[index % colorSchemes.length];
-              
-              return (
-                <div key={service.id} className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className={`h-3 ${colorScheme.bg} rounded-t-xl`}></div>
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className={`w-12 h-12 ${colorScheme.accent} rounded-full flex items-center justify-center mr-4`}>
-                        <service.icon className={`w-6 h-6 ${colorScheme.text}`} />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-                    </div>
-                    
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                    
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center space-x-2">
-                          <div className={`w-2 h-2 ${colorScheme.dot} rounded-full`}></div>
-                          <span className="text-sm text-gray-600">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="space-y-3">
-                      <Link
-                        href={`/${service.id}`}
-                        className={`w-full ${colorScheme.bg} ${colorScheme.hover} text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2`}
-                      >
-                        <span>Learn More</span>
-                      </Link>
-                      <Link
-                        href={`/contact?service=${service.id}&location=orange-park`}
-                        className={`w-full border ${colorScheme.border} ${colorScheme.text} py-2 px-4 rounded-lg font-medium hover:${colorScheme.bg} hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2`}
-                      >
-                        <Phone className="w-4 h-4" />
-                        <span>Get Quote</span>
-                      </Link>
-                    </div>
-                  </div>
+            {orangeParkServices.map((service) => (
+              <div key={service.id} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-primary-blue" />
                 </div>
-              );
-            })}
+                <h3 className="text-xl font-bold text-charcoal mb-4">{service.title}</h3>
+                <p className="text-charcoal/70 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center gap-2 text-sm text-charcoal/80">
+                      <CheckCircle className="w-4 h-4 text-accent-green" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Local Benefits & Process */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Orange Park-Specific Benefits & Service Process
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              Why Orange Park Families Choose Us
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              How our local expertise delivers exceptional results for Orange Park residents and businesses
+            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+              We understand the unique needs of Orange Park families and provide cleaning services 
+              that fit your lifestyle and values.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Local Service Benefits</h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-blue-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Military Family Support</h4>
-                    <p className="text-gray-600">Special scheduling flexibility and rates for NAS Jacksonville families</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Community Partnership</h4>
-                    <p className="text-gray-600">Strong relationships with local schools, businesses, and organizations</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-orange-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Local Emergency Response</h4>
-                    <p className="text-gray-600">Quick response times for urgent cleaning needs in Orange Park</p>
-                  </div>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-10 h-10 text-primary-blue" />
               </div>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Family-Safe Products</h3>
+              <p className="text-charcoal/70">
+                Eco-friendly cleaning solutions that are safe for children, pets, and sensitive individuals.
+              </p>
             </div>
             
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Service Process</h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
-                    1
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Local Assessment</h4>
-                    <p className="text-gray-600">We evaluate your Orange Park property&apos;s specific cleaning needs</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
-                    2
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Customized Plan</h4>
-                    <p className="text-gray-600">Develop a cleaning plan tailored to your property and schedule</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
-                    3
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Professional Service</h4>
-                    <p className="text-gray-600">Our local team delivers exceptional results with attention to detail</p>
-                  </div>
-                </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-accent-aqua/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <PawPrint className="w-10 h-10 text-accent-aqua" />
               </div>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Pet-Friendly Cleaning</h3>
+              <p className="text-charcoal/70">
+                Specialized cleaning solutions that are safe for pets and eliminate pet odors and allergens.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-accent-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="w-10 h-10 text-accent-green" />
+              </div>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Flexible Scheduling</h3>
+              <p className="text-charcoal/70">
+                Work around your family's busy schedule with convenient appointment times and recurring options.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
-            Ready to Experience Professional Cleaning in Orange Park?
-          </h2>
-          <p className="text-xl text-blue-800 mb-8 max-w-3xl mx-auto">
-            Join hundreds of satisfied Orange Park residents and businesses who trust us with their cleaning needs. 
-            Get your free quote today and discover why we&apos;re the preferred cleaning service in Orange Park!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact?location=orange-park"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Get Free Quote</span>
-            </Link>
-            <Link
-              href="tel:+19045551234"
-              className="bg-white hover:bg-gray-50 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 border-2 border-blue-600"
-            >
-              <span>Call Now</span>
-            </Link>
+      {/* Community Features Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                Why We Love Orange Park
+              </h2>
+              <p className="text-lg text-charcoal/70 mb-8">
+                Orange Park is a wonderful family community known for its excellent schools, shopping 
+                centers, and family-friendly atmosphere. We're proud to serve this area with cleaning services 
+                that match the quality and care this community deserves.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {orangeParkFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-accent-green flex-shrink-0" />
+                    <span className="text-charcoal/80">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4">
+              {orangeParkLandmarks.map((landmark, index) => (
+                <div key={index} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-6 rounded-xl text-center">
+                  <div className="w-12 h-12 bg-primary-blue/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    {index === 0 && <ShoppingBag className="w-6 h-6 text-primary-blue" />}
+                    {index === 1 && <BookOpen className="w-6 h-6 text-primary-blue" />}
+                    {index === 2 && <Building2 className="w-6 h-6 text-primary-blue" />}
+                    {index === 3 && <Building className="w-6 h-6 text-primary-blue" />}
+                    {index === 4 && <Trophy className="w-6 h-6 text-primary-blue" />}
+                    {index === 5 && <Store className="w-6 h-6 text-primary-blue" />}
+                  </div>
+                  <p className="text-sm font-medium text-charcoal">{landmark}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
-    </div>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              What Orange Park Families Say
+            </h2>
+            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+              Don't just take our word for it. Here's what families in Orange Park are saying 
+              about our cleaning services.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {orangeParkTestimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-charcoal/80 mb-6 italic">"{testimonial.comment}"</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold text-charcoal">{testimonial.name}</p>
+                    <p className="text-sm text-charcoal/60">{testimonial.location}</p>
+                  </div>
+                  <div className="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center">
+                    <Users className="w-6 h-6 text-primary-blue" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Local CTA Section */}
+      <section className="py-20 bg-primary-blue">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready for a Cleaner Orange Park Home?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Join the many Orange Park families who trust us with their home cleaning needs. 
+            Get started today with a free quote and experience the difference professional cleaning makes.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:9044563851"
+              className="inline-flex items-center gap-2 bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              <Phone className="w-5 h-5" />
+              Call (904) 456-3851
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-transparent text-white px-8 py-4 rounded-lg font-semibold border-2 border-white hover:bg-white/10 transition-colors"
+            >
+              Get Free Quote
+            </a>
+          </div>
+          
+          <div className="mt-8 flex items-center justify-center gap-6 text-white/80">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5" />
+              <span>Free Estimates</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5" />
+              <span>Family-Safe Products</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5" />
+              <span>Pet-Friendly Cleaning</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 

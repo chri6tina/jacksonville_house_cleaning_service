@@ -1,468 +1,453 @@
-import { MapPin, Star, Phone, Clock, Users, Shield, Building2, Home, Car, Wind, Sparkles, Truck, Hammer, PawPrint, Heart, PartyPopper, ShoppingBag, Droplets, Gauge, Calendar } from 'lucide-react';
-import Link from 'next/link';
+import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils, Building, Briefcase, Globe, Train, Bus, ShoppingBag, Heart, PawPrint } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Southside Jacksonville House Cleaning Service | Family & Pet-Friendly Cleaning FL',
+  description: 'Professional cleaning services in Southside Jacksonville, FL. Family-friendly cleaning, pet-safe solutions, and reliable service for busy families. Call (904) 456-3851 for trusted cleaning.',
+  keywords: 'Southside Jacksonville cleaning service, Jacksonville family cleaning, Southside house cleaning, pet-friendly cleaning Jacksonville, family cleaning service, reliable cleaning Southside',
+  openGraph: {
+    title: 'Southside Jacksonville House Cleaning Service | Family & Pet-Friendly Cleaning FL',
+    description: 'Professional cleaning services in Southside Jacksonville, FL. Family-friendly cleaning, pet-safe solutions, and reliable service for busy families. Call (904) 456-3851 for trusted cleaning.',
+    url: 'https://www.jacksonvillehousecleaningservice.com/locations/southside',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Jacksonville House Cleaning Service',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Southside Jacksonville House Cleaning Service | Family & Pet-Friendly Cleaning FL',
+    description: 'Professional cleaning services in Southside Jacksonville, FL. Family-friendly cleaning, pet-safe solutions, and reliable service for busy families.',
+  },
+  alternates: {
+    canonical: 'https://www.jacksonvillehousecleaningservice.com/locations/southside',
+  },
+};
 
 export default function SouthsidePage() {
   const southsideServices = [
     {
-      id: 'recurring-cleaning',
-      title: 'Recurring House Cleaning',
-      description: 'Regular maintenance cleaning to keep your Southside Jacksonville home consistently clean',
-      icon: Home,
-      features: ['Weekly, bi-weekly, or monthly schedules', 'Dust all surfaces and furniture', 'Vacuum and mop all floors', 'Kitchen and bathroom cleaning']
+      id: 'family-friendly-cleaning',
+      title: 'Family-Friendly Cleaning',
+      description: 'Safe, thorough cleaning designed for families with children and pets',
+      icon: Users,
+      features: ['Kid and pet-safe products', 'Family scheduling flexibility', 'Child-proof cleaning methods', 'Pet odor elimination', 'Safe for all ages']
+    },
+    {
+      id: 'pet-friendly-cleaning',
+      title: 'Pet-Friendly Cleaning',
+      description: 'Specialized cleaning solutions safe for pets and pet owners',
+      icon: PawPrint,
+      features: ['Pet-safe cleaning products', 'Pet odor elimination', 'Allergen reduction', 'Pet hair removal', 'Safe for sensitive pets']
+    },
+    {
+      id: 'recurring-maintenance',
+      title: 'Recurring Maintenance',
+      description: 'Consistent cleaning to maintain your home\'s cleanliness and comfort',
+      icon: Calendar,
+      features: ['Weekly, bi-weekly, or monthly options', 'Flexible scheduling', 'Priority booking', 'Custom service plans', 'Consistent quality']
     },
     {
       id: 'deep-cleaning',
       title: 'Deep Cleaning',
-      description: 'Comprehensive cleaning service for thorough sanitization of Southside properties',
-      icon: Sparkles,
-      features: ['Deep clean inside appliances', 'Clean inside cabinets and drawers', 'Detailed bathroom sanitization', 'Clean baseboards and trim']
+      description: 'Comprehensive cleaning for homes needing thorough attention',
+      icon: Target,
+      features: ['Complete home cleaning', 'Hard-to-reach areas', 'Detailed attention', 'Thorough sanitization', 'Fresh start feeling']
     },
     {
-      id: 'move-in-out',
+      id: 'move-in-move-out',
       title: 'Move-In/Move-Out Cleaning',
-      description: 'Specialized cleaning for Southside Jacksonville real estate transactions',
-      icon: Truck,
-      features: ['Pre-move out deep cleaning', 'Post-move in sanitization', 'Construction dust removal', 'Move-in ready results']
-    },
-    {
-      id: 'office-cleaning',
-      title: 'Office Cleaning',
-      description: 'Professional office cleaning for Southside Jacksonville businesses',
-      icon: Building2,
-      features: ['Daily, weekly, or monthly schedules', 'After-hours cleaning available', 'High-traffic area focus', 'Professional appearance maintenance']
-    },
-    {
-      id: 'commercial-office-cleaning',
-      title: 'Commercial Office Cleaning',
-      description: 'Large-scale commercial cleaning for Southside office parks',
-      icon: Building2,
-      features: ['Multi-floor cleaning', 'Common area maintenance', '24/7 availability', 'Corporate standards compliance']
-    },
-    {
-      id: 'air-duct-cleaning',
-      title: 'Air Duct & Vent Cleaning',
-      description: 'Professional air duct cleaning to improve Southside indoor air quality',
-      icon: Sparkles,
-      features: ['Complete duct system inspection', 'Remove dust and allergens', 'Sanitize duct surfaces', 'Improve HVAC efficiency']
-    },
-    {
-      id: 'pressure-washing',
-      title: 'Pressure Washing Services',
-      description: 'Professional exterior cleaning for Southside properties',
-      icon: Truck,
-      features: ['Building exterior cleaning', 'Driveway and sidewalk cleaning', 'Safe pressure settings', 'Eco-friendly solutions']
-    },
-    {
-      id: 'gutter-cleaning',
-      title: 'Gutter Cleaning',
-      description: 'Professional gutter maintenance for Southside properties',
-      icon: ShoppingBag,
-      features: ['Remove leaves and debris', 'Clean downspouts', 'Inspect for damage', 'Test water flow']
-    },
-    {
-      id: 'carpet-cleaning',
-      title: 'Carpet & Upholstery Cleaning',
-      description: 'Professional fabric cleaning for Southside properties',
+      description: 'Professional cleaning for real estate transactions and relocations',
       icon: Car,
-      features: ['Deep stain removal', 'Odor elimination', 'Fabric protection treatment', 'Hot water extraction method']
+      features: ['Pre-move preparation', 'Post-move cleanup', 'Real estate ready', 'Final inspection', 'Move-in ready results']
+    },
+    {
+      id: 'post-construction',
+      title: 'Post-Construction Cleanup',
+      description: 'Professional cleanup after home renovations and projects',
+      icon: Target,
+      features: ['Construction debris removal', 'Dust and particle cleanup', 'Surface restoration', 'Final inspection', 'Move-in ready']
+    },
+    {
+      id: 'carpet-care',
+      title: 'Carpet & Upholstery Care',
+      description: 'Professional fabric cleaning and stain removal',
+      icon: Droplets,
+      features: ['Deep stain removal', 'Odor elimination', 'Fabric protection', 'Professional equipment', 'Extended freshness']
     },
     {
       id: 'window-cleaning',
       title: 'Window Cleaning',
-      description: 'Crystal clear views for Southside buildings',
-      icon: Wind,
-      features: ['Interior and exterior cleaning', 'Multi-story access', 'Streak-free results', 'Safe for all window types']
+      description: 'Crystal clear windows for better natural light and views',
+      icon: Building2,
+      features: ['Interior and exterior cleaning', 'Screen cleaning', 'Streak-free results', 'Safety equipment used', 'Frame cleaning']
     },
     {
-      id: 'post-construction-cleaning',
-      title: 'Post-Construction Cleaning',
-      description: 'Construction cleanup for Southside renovation projects',
-      icon: Hammer,
-      features: ['Construction debris removal', 'Fine dust elimination', 'Detailed surface cleaning', 'Move-in ready results']
-    },
-    {
-      id: 'pet-friendly-cleaning',
-      title: 'Pet-Friendly Deep Cleaning',
-      description: 'Specialized cleaning for Southside homes with pets',
-      icon: PawPrint,
-      features: ['Pet odor neutralization', 'Allergen reduction', 'Pet-safe cleaning products', 'HEPA filtration']
-    },
-    {
-      id: 'senior-citizen-cleaning',
-      title: 'Senior Citizen Cleaning',
-      description: 'Gentle, accessible cleaning for Southside senior households',
-      icon: Heart,
-      features: ['Gentle cleaning products', 'Accessibility assessment', 'Companionship during cleaning', 'Health-conscious approach']
-    },
-    {
-      id: 'vacation-rental-cleaning',
-      title: 'Vacation Rental Turnover',
-      description: 'Professional turnover cleaning for Southside short-term rentals',
-      icon: PartyPopper,
-      features: ['Hospitality-grade cleaning', 'Quick turnaround times', 'Quality assurance', 'Flexible scheduling']
-    },
-    {
-      id: 'medical-facility-cleaning',
-      title: 'Medical Facility Cleaning',
-      description: 'Specialized cleaning for Southside medical offices and facilities',
-      icon: Shield,
-      features: ['Surface sanitization', 'Compliance documentation', 'Safety protocols', 'Regulatory standards']
-    },
-    {
-      id: 'event-venue-cleaning',
-      title: 'Event Venue Cleaning',
-      description: 'Professional cleaning for Southside event spaces and venues',
-      icon: PartyPopper,
-      features: ['Pre-event preparation', 'Post-event cleanup', 'Hospitality standards', 'Quick turnaround']
-    },
-    {
-      id: 'apartment-cleaning',
-      title: 'Apartment Cleaning',
-      description: 'Comprehensive cleaning for Southside apartment complexes',
+      id: 'kitchen-deep-clean',
+      title: 'Kitchen Deep Clean',
+      description: 'Thorough kitchen cleaning for food safety and hygiene',
       icon: Home,
-      features: ['Complete surface cleaning', 'Kitchen deep cleaning', 'Bathroom sanitization', 'Balcony/patio cleaning']
+      features: ['Appliance cleaning', 'Cabinet and drawer cleaning', 'Countertop sanitization', 'Sink and faucet cleaning', 'Floor care']
+    },
+    {
+      id: 'bathroom-sanitization',
+      title: 'Bathroom Sanitization',
+      description: 'Complete bathroom cleaning and sanitization',
+      icon: Droplets,
+      features: ['Toilet sanitization', 'Shower and tub cleaning', 'Tile and grout care', 'Fixture polishing', 'Fresh scent']
+    },
+    {
+      id: 'outdoor-living-areas',
+      title: 'Outdoor Living Areas',
+      description: 'Exterior cleaning for your outdoor spaces',
+      icon: Trees,
+      features: ['Porch and deck cleaning', 'Patio maintenance', 'Outdoor furniture care', 'Entryway cleaning', 'Curb appeal enhancement']
+    },
+    {
+      id: 'commercial-cleaning',
+      title: 'Commercial Property Cleaning',
+      description: 'Professional cleaning for Southside businesses and commercial properties',
+      icon: Building2,
+      features: ['Business standards', 'Flexible scheduling', 'Professional appearance', 'Customer satisfaction', 'Commercial expertise']
     }
   ];
 
-  const southsideHighlights = [
+  const southsideFeatures = [
+    'Family-oriented community',
+    'Excellent schools and parks',
+    'Shopping and entertainment',
+    'Pet-friendly neighborhoods',
+    'Safe, quiet residential areas',
+    'Strong community values'
+  ];
+
+  const southsideLandmarks = [
+    'Avenues Mall',
+    'Southside Regional Library',
+    'Deerwood Country Club',
+    'Southside Baptist Church',
+    'Southside Park',
+    'Southside Shopping Center'
+  ];
+
+  const southsideTestimonials = [
     {
-      title: 'Growing Suburban Area',
-      description: 'Rapidly expanding residential and commercial development',
-      icon: Building2
+      name: 'Jennifer M.',
+      location: 'Southside Jacksonville',
+      rating: 5,
+      comment: 'Perfect for our busy family! The pet-friendly products give me peace of mind with our dogs.'
     },
     {
-      title: 'Shopping Centers',
-      description: 'Major retail hubs and shopping destinations',
-      icon: ShoppingBag
+      name: 'Robert T.',
+      location: 'Southside Jacksonville',
+      rating: 5,
+      comment: 'Reliable service that fits our family schedule. Our home always looks amazing after their visits.'
     },
     {
-      title: 'Office Parks',
-      description: 'Business districts with corporate headquarters',
-      icon: Building2
-    },
-    {
-      title: 'Family Communities',
-      description: 'Family-friendly neighborhoods with excellent schools',
-      icon: Home
+      name: 'Lisa K.',
+      location: 'Southside Jacksonville',
+      rating: 5,
+      comment: 'Professional, trustworthy, and family-friendly. Exactly what we needed for our Southside home.'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50">
-      {/* Minimalist Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-blue-50 via-sky-50 to-indigo-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Location Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-blue-800 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-blue-200 shadow-sm">
-            <MapPin className="w-4 h-4" />
-            Southside • 32216, 32256, 32258
-          </div>
-          
-          {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-800">
-            Southside
-            <br />
-            <span className="text-blue-600">Cleaning Services</span>
-          </h1>
-          
-          {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Professional cleaning services for Southside Jacksonville homes, offices, and commercial properties. 
-            Local expertise, reliable service, exceptional results.
-          </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
-            >
-              <Phone className="w-5 h-5" />
-              Get Free Quote
-            </Link>
-            <Link 
-              href="#services" 
-              className="bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
-            >
-              View Services
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-          
-          {/* Simple Trust Indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-6 bg-white/70 rounded-2xl border border-blue-100 shadow-sm">
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Building2 className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-gray-800 mb-2">Southside Experts</h3>
-              <p className="text-gray-600 text-sm">Local knowledge of the area</p>
+    <>
+      {/* Structured Data for Local Business */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Jacksonville House Cleaning Service",
+            "description": "Professional cleaning services in Southside Jacksonville, FL. Family-friendly cleaning, pet-safe solutions, and reliable service for busy families.",
+            "url": "https://www.jacksonvillehousecleaningservice.com/locations/southside",
+            "telephone": "+19044563851",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Jacksonville",
+              "addressRegion": "FL",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "30.2405",
+              "longitude": "-81.5712"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Southside Jacksonville"
+            },
+            "serviceArea": {
+              "@type": "City",
+              "name": "Jacksonville"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Southside Jacksonville Cleaning Services",
+              "itemListElement": southsideServices.map(service => ({
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": service.title,
+                  "description": service.description
+                }
+              }))
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "100"
+            }
+          })
+        }}
+      />
+
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10 min-h-[60vh] flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-aqua/20"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20 text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary-blue mb-6">
+              <MapPin className="w-4 h-4" />
+              <span>Southside Jacksonville, FL</span>
             </div>
             
-            <div className="text-center p-6 bg-white/70 rounded-2xl border border-blue-100 shadow-sm">
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-gray-800 mb-2">Flexible Scheduling</h3>
-              <p className="text-gray-600 text-sm">Weekend and evening availability</p>
-            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-charcoal mb-6">
+              Professional Cleaning Services in
+              <span className="text-primary-blue block">Southside Jacksonville</span>
+            </h1>
             
-            <div className="text-center p-6 bg-white/70 rounded-2xl border border-blue-100 shadow-sm">
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-gray-800 mb-2">Licensed & Insured</h3>
-              <p className="text-gray-600 text-sm">Professional and reliable service</p>
+            <p className="text-xl text-charcoal/80 mb-8 max-w-3xl mx-auto">
+              Family-friendly cleaning with pet-safe solutions. Serving Southside Jacksonville families with reliable, 
+              professional cleaning services that keep your home safe and beautiful for everyone.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="tel:9044563851"
+                className="inline-flex items-center gap-2 bg-primary-blue text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                Call (904) 456-3851
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold border-2 border-primary-blue hover:bg-primary-blue/10 transition-colors"
+              >
+                Get Free Quote
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Southside Overview */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Southside Jacksonville
-              </h2>
-              <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
-                <p>
-                  Southside Jacksonville is one of the fastest-growing areas of the city, known for its 
-                  modern developments, shopping centers, and family-friendly communities. The area has 
-                  experienced significant growth in recent years.
-                </p>
-                <p>
-                  With its mix of residential neighborhoods, office parks, and retail centers, Southside 
-                  Jacksonville requires cleaning services that can handle both residential and commercial 
-                  properties efficiently.
-                </p>
-                <p>
-                  Our local team understands Southside Jacksonville&apos;s unique characteristics, from the 
-                  busy shopping districts to the quiet residential communities, providing tailored 
-                  cleaning solutions for every property type.
-                </p>
-              </div>
-            </div>
-            <div className="bg-gray-100 rounded-2xl p-8">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-indigo-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">ZIP Codes</h3>
-                    <p className="text-gray-600">32216, 32256, 32258</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Users className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Population</h3>
-                    <p className="text-gray-600">85,000+ residents</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <Building2 className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Property Types</h3>
-                    <p className="text-gray-600">Suburban homes, office parks, shopping centers</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Service Hours</h3>
-                    <p className="text-gray-600">Flexible scheduling available</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Southside Highlights */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Services Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why Southside Jacksonville?
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              Southside Jacksonville Cleaning Services
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Southside Jacksonville offers unique opportunities and challenges that require specialized cleaning expertise
+            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+              Comprehensive cleaning solutions designed for Southside Jacksonville families. From regular maintenance 
+              to deep cleaning, we provide the services you need to maintain a healthy, beautiful home.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {southsideHighlights.map((highlight, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <highlight.icon className="w-8 h-8 text-indigo-600" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {southsideServices.map((service) => (
+              <div key={service.id} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-primary-blue" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{highlight.title}</h3>
-                <p className="text-gray-600">{highlight.description}</p>
+                <h3 className="text-xl font-bold text-charcoal mb-4">{service.title}</h3>
+                <p className="text-charcoal/70 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center gap-2 text-sm text-charcoal/80">
+                      <CheckCircle className="w-4 h-4 text-accent-green" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Available Services */}
-      <section id="services" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Cleaning Services in Southside Jacksonville
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              Why Southside Jacksonville Families Choose Us
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive cleaning solutions designed specifically for Southside Jacksonville properties
+            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+              We understand the unique needs of Southside Jacksonville families and provide cleaning services 
+              that fit your lifestyle and values.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {southsideServices.map((service, index) => {
-              // Define color schemes for each service
-              const colorSchemes = [
-                { bg: 'bg-blue-500', hover: 'hover:bg-blue-600', accent: 'bg-blue-100', text: 'text-blue-600', dot: 'bg-blue-500', border: 'border-blue-500' },
-                { bg: 'bg-purple-500', hover: 'hover:bg-purple-600', accent: 'bg-purple-100', text: 'text-purple-600', dot: 'bg-purple-500', border: 'border-purple-500' },
-                { bg: 'bg-green-500', hover: 'hover:bg-green-600', accent: 'bg-green-100', text: 'text-green-600', dot: 'bg-green-500', border: 'border-green-500' },
-                { bg: 'bg-orange-500', hover: 'hover:bg-orange-600', accent: 'bg-orange-100', text: 'text-orange-600', dot: 'bg-orange-500', border: 'border-orange-500' },
-                { bg: 'bg-indigo-500', hover: 'hover:bg-indigo-600', accent: 'bg-indigo-100', text: 'text-indigo-600', dot: 'bg-indigo-500', border: 'border-indigo-500' },
-                { bg: 'bg-teal-500', hover: 'hover:bg-teal-600', accent: 'bg-teal-100', text: 'text-teal-600', dot: 'bg-teal-500', border: 'border-teal-500' },
-                { bg: 'bg-emerald-500', hover: 'hover:bg-emerald-600', accent: 'bg-emerald-100', text: 'text-emerald-600', dot: 'bg-emerald-500', border: 'border-emerald-500' },
-                { bg: 'bg-amber-500', hover: 'hover:bg-amber-600', accent: 'bg-amber-100', text: 'text-amber-600', dot: 'bg-amber-500', border: 'border-amber-500' },
-                { bg: 'bg-cyan-500', hover: 'hover:bg-cyan-600', accent: 'bg-cyan-100', text: 'text-cyan-600', dot: 'bg-cyan-500', border: 'border-cyan-500' },
-                { bg: 'bg-sky-500', hover: 'hover:bg-sky-600', accent: 'bg-sky-100', text: 'text-sky-600', dot: 'bg-sky-500', border: 'border-sky-500' },
-                { bg: 'bg-rose-500', hover: 'hover:bg-rose-600', accent: 'bg-rose-100', text: 'text-rose-600', dot: 'bg-rose-500', border: 'border-rose-500' },
-                { bg: 'bg-pink-500', hover: 'hover:bg-pink-600', accent: 'bg-pink-100', text: 'text-pink-600', dot: 'bg-pink-500', border: 'border-pink-500' },
-                { bg: 'bg-red-500', hover: 'hover:bg-red-600', accent: 'bg-red-100', text: 'text-red-600', dot: 'bg-red-500', border: 'border-red-500' },
-                { bg: 'bg-violet-500', hover: 'hover:bg-violet-600', accent: 'bg-violet-100', text: 'text-violet-600', dot: 'bg-violet-500', border: 'border-violet-500' },
-                { bg: 'bg-lime-500', hover: 'hover:bg-lime-600', accent: 'bg-lime-100', text: 'text-lime-600', dot: 'bg-lime-500', border: 'border-lime-500' },
-                { bg: 'bg-fuchsia-500', hover: 'hover:bg-fuchsia-600', accent: 'bg-fuchsia-100', text: 'text-fuchsia-600', dot: 'bg-fuchsia-500', border: 'border-fuchsia-500' },
-                { bg: 'bg-slate-500', hover: 'hover:bg-slate-600', accent: 'bg-slate-100', text: 'text-slate-600', dot: 'bg-slate-500', border: 'border-slate-500' }
-              ];
-              
-              const colorScheme = colorSchemes[index % colorSchemes.length];
-              
-              return (
-                <div key={service.id} className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className={`h-3 ${colorScheme.bg} rounded-t-xl`}></div>
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className={`w-12 h-12 ${colorScheme.accent} rounded-full flex items-center justify-center mr-4`}>
-                        <service.icon className={`w-6 h-6 ${colorScheme.text}`} />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-                    </div>
-                    
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                    
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center space-x-2">
-                          <div className={`w-2 h-2 ${colorScheme.dot} rounded-full`}></div>
-                          <span className="text-sm text-gray-600">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="space-y-3">
-                      <Link
-                        href={`/${service.id}`}
-                        className={`w-full ${colorScheme.bg} ${colorScheme.hover} text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2`}
-                      >
-                        <span>Learn More</span>
-                      </Link>
-                      <Link
-                        href={`/contact?service=${service.id}&location=southside`}
-                        className={`w-full border ${colorScheme.border} ${colorScheme.text} py-2 px-4 rounded-lg font-medium hover:${colorScheme.bg} hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2`}
-                      >
-                        <Phone className="w-4 h-4" />
-                        <span>Get Quote</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+            <div className="text-center">
+              <div className="w-20 h-20 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-10 h-10 text-primary-blue" />
+              </div>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Family-Safe Products</h3>
+              <p className="text-charcoal/70">
+                Eco-friendly cleaning solutions that are safe for children, pets, and sensitive individuals.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-accent-aqua/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <PawPrint className="w-10 h-10 text-accent-aqua" />
+              </div>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Pet-Friendly Cleaning</h3>
+              <p className="text-charcoal/70">
+                Specialized cleaning solutions that are safe for pets and eliminate pet odors and allergens.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-accent-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="w-10 h-10 text-accent-green" />
+              </div>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Flexible Scheduling</h3>
+              <p className="text-charcoal/70">
+                Work around your family's busy schedule with convenient appointment times and recurring options.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Local Benefits */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Community Features Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                Why We Love Southside Jacksonville
+              </h2>
+              <p className="text-lg text-charcoal/70 mb-8">
+                Southside Jacksonville is a wonderful family community known for its excellent schools, shopping 
+                centers, and family-friendly atmosphere. We're proud to serve this area with cleaning services 
+                that match the quality and care this community deserves.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {southsideFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-accent-green flex-shrink-0" />
+                    <span className="text-charcoal/80">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4">
+              {southsideLandmarks.map((landmark, index) => (
+                <div key={index} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-6 rounded-xl text-center">
+                  <div className="w-12 h-12 bg-primary-blue/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    {index === 0 && <ShoppingBag className="w-6 h-6 text-primary-blue" />}
+                    {index === 1 && <BookOpen className="w-6 h-6 text-primary-blue" />}
+                    {index === 2 && <Trophy className="w-6 h-6 text-primary-blue" />}
+                    {index === 3 && <Church className="w-6 h-6 text-primary-blue" />}
+                    {index === 4 && <Trees className="w-6 h-6 text-primary-blue" />}
+                    {index === 5 && <Store className="w-6 h-6 text-primary-blue" />}
+                  </div>
+                  <p className="text-sm font-medium text-charcoal">{landmark}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why Choose Us for Southside Jacksonville?
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              What Southside Jacksonville Families Say
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Local expertise that understands Southside Jacksonville&apos;s unique cleaning needs
+            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+              Don't just take our word for it. Here's what families in Southside Jacksonville are saying 
+              about our cleaning services.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-indigo-600" />
+            {southsideTestimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-charcoal/80 mb-6 italic">"{testimonial.comment}"</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold text-charcoal">{testimonial.name}</p>
+                    <p className="text-sm text-charcoal/60">{testimonial.location}</p>
+                  </div>
+                  <div className="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center">
+                    <Users className="w-6 h-6 text-primary-blue" />
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Knowledge</h3>
-              <p className="text-gray-600">
-                We understand Southside Jacksonville&apos;s growth patterns, traffic flow, and local business needs
-              </p>
-            </div>
-            
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Flexible Scheduling</h3>
-              <p className="text-gray-600">
-                After-hours cleaning for businesses, weekend availability, and emergency service when needed
-              </p>
-            </div>
-            
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Growth-Ready</h3>
-              <p className="text-gray-600">
-                Our services scale with Southside Jacksonville&apos;s continued development and expansion
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready for Southside Jacksonville Cleaning?
+      {/* Local CTA Section */}
+      <section className="py-20 bg-primary-blue">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready for a Cleaner Southside Jacksonville Home?
           </h2>
-          <p className="text-xl text-indigo-100 mb-8">
-            Get a free quote for your Southside Jacksonville property
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Join the many Southside Jacksonville families who trust us with their home cleaning needs. 
+            Get started today with a free quote and experience the difference professional cleaning makes.
           </p>
-          <Link
-            href="/contact?location=southside"
-            className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-50 transition-colors duration-200 inline-flex items-center space-x-2 shadow-lg hover:shadow-xl"
-          >
-            <Phone className="w-6 h-6" />
-            <span>Get Your Free Quote</span>
-          </Link>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:9044563851"
+              className="inline-flex items-center gap-2 bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              <Phone className="w-5 h-5" />
+              Call (904) 456-3851
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-transparent text-white px-8 py-4 rounded-lg font-semibold border-2 border-white hover:bg-white/10 transition-colors"
+            >
+              Get Free Quote
+            </a>
+          </div>
+          
+          <div className="mt-8 flex items-center justify-center gap-6 text-white/80">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5" />
+              <span>Free Estimates</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5" />
+              <span>Family-Safe Products</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5" />
+              <span>Pet-Friendly Cleaning</span>
+            </div>
+          </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 
