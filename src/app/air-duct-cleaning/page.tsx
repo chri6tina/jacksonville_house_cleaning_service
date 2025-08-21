@@ -1,256 +1,195 @@
-import { 
-  Fan, 
-  Check, 
-  Clock, 
-  Users, 
-  Shield, 
-  Leaf, 
-  Star,
-  ArrowRight,
-  Phone,
-  Calendar,
-  Calculator,
-  MapPin,
-  Zap,
-  Droplets,
-  Wind,
-  Thermometer
-} from 'lucide-react';
+import { Fan, Sparkles, Clock, Users, Shield, Leaf, Check, Star, ArrowRight, Phone, MapPin, Award, Truck, Calendar, Zap } from 'lucide-react';
+import Link from 'next/link';
 
 export default function AirDuctCleaningPage() {
-  const features = [
-    'Complete duct system inspection and assessment',
-    'Remove accumulated dust, debris, and allergens',
-    'Clean supply and return air vents thoroughly',
-    'Sanitize duct surfaces to eliminate bacteria',
-    'Clean air handler components and coils',
-    'Remove mold, mildew, and harmful contaminants',
-    'Improve airflow efficiency and system performance',
-    'Reduce energy costs and extend HVAC lifespan'
-  ];
-
-  const benefits = [
-    'Significantly improve indoor air quality',
-    'Reduce allergy symptoms and respiratory issues',
-    'Increase HVAC system efficiency by 15-25%',
-    'Lower monthly energy bills',
-    'Extend the life of your HVAC equipment',
-    'Create a healthier living environment',
-    'Remove unpleasant odors from ductwork',
-    'Prevent costly HVAC repairs and replacements'
-  ];
-
-  const process = [
+  const services = [
     {
-      step: 1,
-      title: 'Initial Inspection',
-      description: 'Thorough assessment of your duct system using specialized cameras and tools',
-      icon: Shield
+      name: 'Residential Ducts',
+      price: 'From $250',
+      description: 'Complete home air duct cleaning',
+      features: ['Main ducts cleaning', 'Vent cleaning', 'Filter replacement', 'Sanitization', 'Air quality test']
     },
     {
-      step: 2,
-      title: 'Protection Setup',
-      description: 'Protect your home with drop cloths and seal off work areas',
-      icon: Shield
+      name: 'Commercial Ducts',
+      price: 'From $400',
+      description: 'Office and retail cleaning',
+      features: ['Large system cleaning', 'After-hours service', 'Bulk pricing', 'Regular maintenance', 'Emergency service']
     },
     {
-      step: 3,
-      title: 'Debris Removal',
-      description: 'Use powerful vacuums and specialized tools to remove all debris',
-      icon: Droplets
+      name: 'Dryer Vent Cleaning',
+      price: 'From $120',
+      description: 'Prevent fire hazards',
+      features: ['Lint removal', 'Fire safety check', 'Efficiency improvement', 'Warranty coverage', 'Quick service']
     },
     {
-      step: 4,
-      title: 'Deep Cleaning',
-      description: 'Clean and sanitize all duct surfaces and components',
-      icon: Wind
-    },
-    {
-      step: 5,
-      title: 'Final Inspection',
-      description: 'Verify cleaning quality and test system performance',
-      icon: Check
+      name: 'HVAC Maintenance',
+      price: 'From $180',
+      description: 'Complete system care',
+      features: ['Coil cleaning', 'Filter replacement', 'System inspection', 'Performance testing', 'Maintenance plans']
     }
   ];
 
-  const faqs = [
+  const benefits = [
     {
-      question: 'How often should I have my air ducts cleaned?',
-      answer: 'The National Air Duct Cleaners Association (NADCA) recommends cleaning every 3-5 years, or more frequently if you have pets, allergies, or recent renovations.'
+      title: 'Improved Air Quality',
+      description: 'Breathe cleaner, healthier air',
+      icon: Fan
     },
     {
-      question: 'How long does the cleaning process take?',
-      answer: 'Most residential duct cleaning takes 2-4 hours depending on the size of your home and complexity of your duct system.'
+      title: 'Professional Equipment',
+      description: 'Commercial-grade cleaning tools',
+      icon: Zap
     },
     {
-      question: 'Will duct cleaning improve my allergies?',
-      answer: 'Yes! Removing dust, pet dander, and other allergens from your ducts can significantly reduce allergy symptoms and improve indoor air quality.'
+      title: 'Same-Day Service',
+      description: 'Available throughout Jacksonville',
+      icon: Clock
     },
     {
-      question: 'Is duct cleaning messy?',
-      answer: 'No, we use professional equipment and take extensive precautions to keep your home clean during the process.'
-    },
-    {
-      question: 'How much does air duct cleaning cost?',
-      answer: 'Our pricing starts at $150 per system and varies based on the size of your home and complexity of your ductwork. Contact us for a free quote!'
+      title: 'Jacksonville Local',
+      description: 'Your neighbors since 2015',
+      icon: MapPin
     }
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-50 to-blue-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-6">
-            <Star className="w-6 h-6 text-accent-coral" />
-            <span className="text-accent-coral font-semibold">Phase 1 New Service</span>
-            <Star className="w-6 h-6 text-accent-coral" />
+    <div className="min-h-screen bg-white">
+      {/* Hero Section - Local Business Style */}
+      <section className="relative py-20 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600"></div>
+        
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Local Business Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
+            <MapPin className="w-4 h-4 text-green-600" />
+            Jacksonville Air Duct Cleaning Experts
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-6">
-            Air Duct & <span className="text-indigo-600">Vent Cleaning</span>
+
+          <div className="flex justify-center mb-6">
+            <Fan className="w-16 h-16 text-green-200" />
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            Professional Air Duct Cleaning
           </h1>
-          <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed mb-8">
-            Breathe easier with professional air duct cleaning that removes allergens, improves air quality, 
-            and boosts your HVAC system&apos;s efficiency. Starting at just $150 per system.
+          <p className="text-xl sm:text-2xl text-green-100 mb-8 max-w-3xl mx-auto">
+            Improve your Jacksonville home's air quality with our professional air duct cleaning services. 
+            Breathe easier with cleaner, healthier indoor air.
           </p>
           
-          {/* Quick Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact?service=air-duct"
-              className="bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <span>Get Free Quote</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="tel:+19045551234"
-              className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-600 hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Call Now</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose This Service */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-charcoal mb-6">
-                Why Choose Professional Air Duct Cleaning?
-              </h2>
-              <p className="text-lg text-charcoal/70 mb-8 leading-relaxed">
-                Over time, your air ducts accumulate dust, pet dander, mold spores, and other contaminants 
-                that circulate through your home every time your HVAC system runs. Professional cleaning 
-                removes these pollutants, creating a healthier environment for your family.
-              </p>
-              
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <Check className="w-6 h-6 text-accent-green mt-0.5 flex-shrink-0" />
-                    <span className="text-charcoal/80">{benefit}</span>
-                  </div>
-                ))}
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-green-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Award className="w-6 h-6 text-green-200" />
               </div>
+              <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
+              <p className="text-white/80 text-xs">Jacksonville business since 2015</p>
             </div>
             
-            <div className="bg-indigo-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Service Details</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Starting Price:</span>
-                  <span className="font-semibold text-accent-coral">$150 per system</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Duration:</span>
-                  <span className="font-semibold text-charcoal">2-4 hours</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Frequency:</span>
-                  <span className="font-semibold text-charcoal">Every 3-5 years</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Warranty:</span>
-                  <span className="font-semibold text-charcoal">100% satisfaction</span>
-                </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-green-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Truck className="w-6 h-6 text-green-200" />
               </div>
+              <h3 className="font-bold text-white text-base mb-2">Same-Day Service</h3>
+              <p className="text-white/80 text-xs">Available throughout Jacksonville</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="w-12 h-12 bg-green-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                <Star className="w-6 h-6 text-green-200" />
+              </div>
+              <h3 className="font-bold text-white text-base mb-2">100% Guarantee</h3>
+              <p className="text-white/80 text-xs">Satisfaction guaranteed</p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* What&apos;s Included */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">What&apos;s Included in Our Service</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Our comprehensive air duct cleaning service covers every aspect of your HVAC system 
-              to ensure maximum cleanliness and efficiency.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Check className="w-6 h-6 text-indigo-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal mb-2">{feature}</h3>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:9044563851"
+              className="bg-white text-green-600 hover:bg-green-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+            >
+              <Phone className="w-5 h-5" />
+              Call for Quote
+            </a>
+            <Link 
+              href="/contact"
+              className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <Calendar className="w-5 h-5" />
+              Schedule Service
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Our Process */}
+      {/* Service Overview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Our 5-Step Cleaning Process</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+              Jacksonville Air Duct Cleaning Services
+            </h2>
             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We follow a proven, systematic approach to ensure your air ducts are thoroughly cleaned 
-              and your home is protected throughout the process.
+              Choose the perfect air duct cleaning package for your Jacksonville home. 
+              All packages include our professional service and satisfaction guarantee.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {process.map((step) => (
-              <div key={step.step} className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-indigo-600">{step.step}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg border-2 border-green-200 p-8 hover:shadow-xl transition-all duration-300">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Fan className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
+                  <div className="text-3xl font-bold text-green-600 mb-2">{service.price}</div>
+                  <p className="text-charcoal/70 text-sm">{service.description}</p>
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">{step.title}</h3>
-                <p className="text-charcoal/70">{step.description}</p>
+
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start space-x-3">
+                      <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-charcoal/80 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="/contact"
+                  className="block w-full text-center py-3 px-6 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
+                >
+                  Get Started
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-charcoal/70">
-              Get answers to common questions about our air duct cleaning service.
+            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+              Why Choose Our Jacksonville Air Duct Cleaning?
+            </h2>
+            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+              We're your local air duct cleaning experts, providing reliable, professional service that 
+              improves your Jacksonville home's indoor air quality.
             </p>
           </div>
 
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                <h3 className="text-lg font-semibold text-charcoal mb-3">{faq.question}</h3>
-                <p className="text-charcoal/70">{faq.answer}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold text-charcoal mb-2">{benefit.title}</h3>
+                <p className="text-charcoal/70">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -258,27 +197,29 @@ export default function AirDuctCleaningPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600">
+      <section className="py-20 bg-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Breathe Easier?
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Breathe Cleaner Air?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Contact us today for a free air duct cleaning quote and improve your home&apos;s air quality.
+            Contact us today for air duct cleaning services in Jacksonville. 
+            Free estimates and same-day service available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact?service=air-duct"
-              className="bg-accent-coral text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent-coral/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              href="tel:9044563851"
+              className="bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
             >
-              Get Your Free Quote
+              <Phone className="w-5 h-5" />
+              <span>Call (904) 456-3851</span>
             </a>
-            <a
-              href="tel:+19045551234"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors duration-200"
+            <Link
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-600 transition-colors duration-200"
             >
-              Call (904) 555-1234
-            </a>
+              Get Free Quote
+            </Link>
           </div>
         </div>
       </section>
