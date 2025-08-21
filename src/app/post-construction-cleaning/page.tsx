@@ -26,11 +26,35 @@ export const metadata: Metadata = {
 export default function PostConstructionCleaningPage() {
   const postConstructionServices = [
     {
+      id: 'rough-cleanup',
+      title: 'Rough Cleanup Phase',
+      description: 'Removes large debris and bulk dust; sweeps and vacuums floors; clears surfaces to prepare for finishing work',
+      icon: HardHat,
+      features: ['Large debris removal', 'Bulk dust elimination', 'Surface preparation', 'Floor sweeping/vacuuming', 'Window frame cleaning'],
+      price: 'From $0.25/sq ft'
+    },
+    {
+      id: 'final-cleaning',
+      title: 'Final Cleaning Phase',
+      description: 'After construction is complete and rough cleaning is done; removes final layer of dust, fingerprints and stickers',
+      icon: Target,
+      features: ['Final dust removal', 'Fingerprint elimination', 'Sticker removal', 'Complete surface cleaning', 'Move-in ready preparation'],
+      price: 'From $0.45/sq ft'
+    },
+    {
+      id: 'touch-up-cleaning',
+      title: 'Touch-Up Cleaning Phase',
+      description: 'Performed a few days/weeks after final clean; wipes down countertops, window sills, vents and high-traffic areas',
+      icon: CheckCircle,
+      features: ['High-traffic area cleaning', 'Dust settlement removal', 'Surface touch-ups', 'Vent cleaning', 'Final inspection'],
+      price: 'From $0.35/sq ft'
+    },
+    {
       id: 'full-service-cleanup',
       title: 'Full-Service Construction Cleanup',
-      description: 'Complete post-construction cleaning from debris removal to final detailing',
+      description: 'Complete post-construction cleaning including all three phases with comprehensive detailing',
       icon: HardHat,
-      features: ['Heavy debris removal', 'Construction dust elimination', 'Surface restoration', 'Final inspection', 'Move-in ready results'],
+      features: ['All three phases included', 'Construction dust elimination', 'Surface restoration', 'Final inspection', 'Move-in ready results'],
       price: 'From $0.85/sq ft'
     },
     {
@@ -39,15 +63,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Professional construction debris removal and disposal services',
       icon: Truck,
       features: ['Lumber and drywall removal', 'Fixture and material hauling', 'Proper disposal compliance', 'Recycling when possible', 'Same-day service'],
-      price: 'From $350'
-    },
-    {
-      id: 'three-phase-cleaning',
-      title: 'Three-Phase Cleaning Process',
-      description: 'Systematic approach: rough cleanup, final cleaning, and touch-up',
-      icon: Target,
-      features: ['Phase 1: Rough cleanup', 'Phase 2: Final detailing', 'Phase 3: Touch-up service', 'Quality assurance', 'Client sign-off'],
-      price: 'From $1.15/sq ft'
+      price: 'From $250'
     },
     {
       id: 'commercial-construction',
@@ -55,7 +71,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Large-scale post-construction cleaning for commercial properties',
       icon: Building2,
       features: ['Warehouse cleaning', 'Retail space preparation', 'Office building cleanup', 'Medical facility compliance', 'Industrial standards'],
-      price: 'From $0.75/sq ft'
+      price: 'From $0.85/sq ft'
     },
     {
       id: 'residential-renovation',
@@ -63,7 +79,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Home renovation cleanup and restoration services',
       icon: Home,
       features: ['Kitchen renovation cleanup', 'Bathroom remodeling cleanup', 'Whole house renovation', 'Interior painting prep', 'Floor restoration'],
-      price: 'From $450'
+      price: 'From $400'
     },
     {
       id: 'hvac-duct-cleaning',
@@ -71,7 +87,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Post-construction HVAC system cleaning and air quality improvement',
       icon: Zap,
       features: ['Duct system cleaning', 'Air quality testing', 'Filter replacement', 'System sanitization', 'Energy efficiency'],
-      price: 'From $400'
+      price: 'From $350'
     },
     {
       id: 'floor-restoration',
@@ -79,7 +95,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Professional floor cleaning, polishing, and sealing services',
       icon: Target,
       features: ['Hardwood floor restoration', 'Tile and grout cleaning', 'Carpet deep cleaning', 'Floor sealing', 'Wax application'],
-      price: 'From $0.65/sq ft'
+      price: 'From $1.25/sq ft'
     },
     {
       id: 'pressure-washing',
@@ -87,7 +103,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Exterior construction cleanup and pressure washing services',
       icon: Droplets,
       features: ['Building exterior cleaning', 'Driveway and walkway cleaning', 'Deck and patio restoration', 'Graffiti removal', 'Surface preparation'],
-      price: 'From $250'
+      price: 'From $300'
     },
     {
       id: 'hazardous-material-removal',
@@ -95,7 +111,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Safe removal of construction hazards and safety compliance',
       icon: Shield,
       features: ['Nail and screw removal', 'Broken glass cleanup', 'Chemical spill cleanup', 'OSHA compliance', 'Safety documentation'],
-      price: 'From $600'
+      price: 'From $500'
     },
     {
       id: 'eco-friendly-cleaning',
@@ -103,7 +119,7 @@ export default function PostConstructionCleaningPage() {
       description: 'Green cleaning products and sustainable construction waste management',
       icon: Leaf,
       features: ['Green Seal certified products', 'Low-VOC cleaners', 'Construction waste recycling', 'Sustainable practices', 'Environmental compliance'],
-      price: 'From $0.95/sq ft'
+      price: 'From $0.75/sq ft'
     },
     {
       id: 'emergency-cleanup',
@@ -111,7 +127,23 @@ export default function PostConstructionCleaningPage() {
       description: '24/7 emergency post-construction cleanup services',
       icon: Clock,
       features: ['Same-day response', 'Emergency debris removal', 'Rush job handling', 'Weekend availability', 'Holiday service'],
-      price: 'From $350'
+      price: 'From $400'
+    },
+    {
+      id: 'window-cleaning',
+      title: 'Window Cleaning (Add-On)',
+      description: 'Washing interior and exterior windows; removing labels and paint splatter',
+      icon: Droplets,
+      features: ['Interior window cleaning', 'Exterior window cleaning', 'Label removal', 'Paint splatter removal', 'Frame cleaning'],
+      price: 'From $200'
+    },
+    {
+      id: 'carpet-cleaning',
+      title: 'Carpet Cleaning (Add-On)',
+      description: 'Professional cleaning of carpets as part of final cleanup',
+      icon: Sparkles,
+      features: ['Deep carpet cleaning', 'Stain removal', 'Odor elimination', 'Carpet protection', 'Quick drying'],
+      price: 'From $180'
     },
     {
       id: 'final-inspection',
@@ -438,6 +470,20 @@ export default function PostConstructionCleaningPage() {
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* Pricing Accuracy Note */}
+          <div className="mt-12 p-6 bg-gradient-to-r from-blue-50 to-accent-aqua/20 rounded-2xl border border-blue-200">
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-charcoal mb-3">Pricing Accuracy & Market Research</h3>
+              <p className="text-charcoal/70 text-sm leading-relaxed max-w-4xl mx-auto">
+                <strong>Our pricing is based on comprehensive market research from industry leaders including Fixr.com and Angi.com.</strong> 
+                We've analyzed Jacksonville market conditions and competitive rates to ensure our pricing reflects the true value of professional 
+                post-construction cleanup services. Our rates are competitive with regional averages while maintaining the premium quality and 
+                comprehensive service that sets us apart. Pricing varies based on project size, complexity, and specific services required. 
+                Contact us for personalized quotes tailored to your specific project needs.
+              </p>
+            </div>
           </div>
         </div>
       </section>
