@@ -155,10 +155,10 @@ export default function PricingCalculatorPage() {
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               Jacksonville Cleaning Service Calculator
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto px-4">
               Get an instant estimate for your cleaning service. Adjust the options below to see 
               how different factors affect your Jacksonville cleaning price.
             </p>
@@ -167,11 +167,11 @@ export default function PricingCalculatorPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Calculator Form */}
             <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-charcoal mb-6">Service Details</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Service Details</h3>
 
               {/* Property Type */}
               <div className="mb-6">
-                <label className="block text-sm font-semibold text-charcoal mb-3">Property Type</label>
+                <label className="block text-sm font-semibold text-gray-900 mb-3">Property Type</label>
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() => setPropertyType('residential')}
@@ -200,7 +200,7 @@ export default function PricingCalculatorPage() {
 
               {/* Property Size */}
               <div className="mb-6">
-                <label className="block text-sm font-semibold text-charcoal mb-3">Property Size</label>
+                <label className="block text-sm font-semibold text-gray-900 mb-3">Property Size</label>
                 <select
                   value={propertySize}
                   onChange={(e) => setPropertySize(e.target.value)}
@@ -216,7 +216,7 @@ export default function PricingCalculatorPage() {
 
               {/* Cleaning Type */}
               <div className="mb-6">
-                <label className="block text-sm font-semibold text-charcoal mb-3">Cleaning Type</label>
+                <label className="block text-sm font-semibold text-gray-900 mb-3">Cleaning Type</label>
                 <select
                   value={cleaningType}
                   onChange={(e) => setCleaningType(e.target.value)}
@@ -234,7 +234,7 @@ export default function PricingCalculatorPage() {
               {propertyType === 'residential' && (
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div>
-                    <label className="block text-sm font-semibold text-charcoal mb-2">Bedrooms</label>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">Bedrooms</label>
                     <select
                       value={bedrooms}
                       onChange={(e) => setBedrooms(e.target.value)}
@@ -248,7 +248,7 @@ export default function PricingCalculatorPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-charcoal mb-2">Bathrooms</label>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">Bathrooms</label>
                     <select
                       value={bathrooms}
                       onChange={(e) => setBathrooms(e.target.value)}
@@ -266,7 +266,7 @@ export default function PricingCalculatorPage() {
 
               {/* Frequency */}
               <div className="mb-6">
-                <label className="block text-sm font-semibold text-charcoal mb-3">Service Frequency</label>
+                <label className="block text-sm font-semibold text-gray-900 mb-3">Service Frequency</label>
                 <select
                   value={frequency}
                   onChange={(e) => setFrequency(e.target.value)}
@@ -282,7 +282,7 @@ export default function PricingCalculatorPage() {
 
               {/* Additional Services */}
               <div className="mb-6">
-                <label className="block text-sm font-semibold text-charcoal mb-3">Additional Services</label>
+                <label className="block text-sm font-semibold text-gray-900 mb-3">Additional Services</label>
                 <div className="space-y-2">
                   {selectedServices.map((service, index) => (
                     <label key={index} className="flex items-center gap-3 cursor-pointer">
@@ -292,7 +292,7 @@ export default function PricingCalculatorPage() {
                         onChange={() => toggleService(index)}
                         className="w-4 h-4 text-primary-blue border-gray-300 rounded focus:ring-primary-blue"
                       />
-                      <span className="text-sm text-charcoal/80">{service.name}</span>
+                      <span className="text-sm text-gray-800">{service.name}</span>
                       <span className="text-sm font-medium text-primary-blue">+${service.price}</span>
                     </label>
                   ))}
@@ -303,16 +303,16 @@ export default function PricingCalculatorPage() {
             {/* Price Display */}
             <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
               <div className="text-center mb-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-charcoal mb-4">Your Estimated Price</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Your Estimated Price</h3>
                 <div className="text-4xl sm:text-5xl font-bold text-primary-blue mb-2">
                   ${estimatedPrice}
                 </div>
-                <p className="text-charcoal/70">One-time cleaning service</p>
+                <p className="text-gray-700">One-time cleaning service</p>
               </div>
 
               {/* Price Breakdown */}
               <div className="space-y-4 mb-8">
-                <h4 className="font-semibold text-charcoal">Price Breakdown</h4>
+                <h4 className="font-semibold text-gray-900">Price Breakdown</h4>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span>Base cleaning</span>
@@ -369,7 +369,7 @@ export default function PricingCalculatorPage() {
               </div>
 
               {/* Disclaimer */}
-              <p className="text-xs text-charcoal/60 mt-4 text-center">
+              <p className="text-xs text-gray-600 mt-4 text-center">
                 * This is an estimate. Final price may vary based on specific requirements and property condition.
               </p>
             </div>
@@ -381,11 +381,12 @@ export default function PricingCalculatorPage() {
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
-              Why Use Our Jacksonville Pricing Calculator?
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+              Why Choose Our Pricing Calculator?
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
-              Get instant, transparent pricing without the hassle of waiting for quotes
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto px-4">
+              Our calculator is designed to give you the most accurate pricing possible, 
+              considering all the factors that affect cleaning costs.
             </p>
           </div>
 
@@ -426,8 +427,8 @@ export default function PricingCalculatorPage() {
                 <div className="w-16 h-16 bg-primary-blue/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-primary-blue" />
                 </div>
-                <h3 className="font-semibold text-charcoal mb-2">{feature.title}</h3>
-                <p className="text-sm text-charcoal/70">{feature.description}</p>
+                <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-700">{feature.description}</p>
               </div>
             ))}
           </div>

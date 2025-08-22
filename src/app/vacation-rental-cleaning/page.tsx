@@ -166,12 +166,12 @@ export default function VacationRentalCleaningPage() {
             <span className="text-accent-coral font-semibold">Phase 2 New Service</span>
             <Star className="w-6 h-6 text-accent-coral" />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-6">
-            Vacation Rental <span className="text-blue-600">Turnover Cleaning</span>
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            Vacation Rental Turnover Cleaning
           </h1>
-          <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed mb-8">
-            Professional turnover cleaning services that meet hospitality industry standards, ensuring 
-            your vacation rental is always guest-ready. Starting at just $120.
+          <p className="text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed mb-8">
+            Professional cleaning services that keep your vacation rental spotless between guests. 
+            Fast, thorough, and guaranteed to impress.
           </p>
           
           {/* Quick Actions */}
@@ -198,10 +198,10 @@ export default function VacationRentalCleaningPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Our Vacation Rental Cleaning Services</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We offer comprehensive turnover cleaning services designed specifically for vacation rentals, 
-              ensuring your property meets hospitality industry standards and exceeds guest expectations.
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Vacation Rental Cleaning Services</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Comprehensive cleaning packages designed specifically for vacation rental properties. 
+              We handle everything from basic turnover to deep sanitization.
             </p>
           </div>
 
@@ -214,29 +214,29 @@ export default function VacationRentalCleaningPage() {
                       <service.icon className="w-8 h-8 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-charcoal">{service.title}</h3>
-                      <p className="text-sm text-charcoal/60">{service.description}</p>
+                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                      <p className="text-sm text-gray-600">{service.description}</p>
                     </div>
                   </div>
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-charcoal/60">Price:</span>
-                      <span className="text-sm font-medium text-accent-coral">{service.price}</span>
+                      <span className="text-sm text-gray-600">Price:</span>
+                      <span className="text-sm font-medium text-gray-900">{service.price}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-charcoal/60">Duration:</span>
-                      <span className="text-sm font-medium text-charcoal">{service.duration}</span>
+                      <span className="text-sm text-gray-600">Duration:</span>
+                      <span className="text-sm font-medium text-gray-900">{service.duration}</span>
                     </div>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-charcoal mb-3">What&apos;s Included:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-3">What&apos;s Included:</h4>
                     <ul className="space-y-2">
                       {service.includes.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start space-x-3">
                           <Check className="w-4 h-4 text-accent-green mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-charcoal/70">{item}</span>
+                          <span className="text-sm text-gray-700">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -262,10 +262,10 @@ export default function VacationRentalCleaningPage() {
       <section className="py-20 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Comprehensive Cleaning Checklist</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We follow a detailed checklist to ensure every area of your vacation rental meets 
-              hospitality industry standards and is ready for your next guest.
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Comprehensive Cleaning Checklist</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Our detailed cleaning process ensures every area of your vacation rental is thoroughly cleaned 
+              and sanitized for the next guest.
             </p>
           </div>
 
@@ -276,16 +276,16 @@ export default function VacationRentalCleaningPage() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                     <area.icon className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-charcoal">{area.area}</h3>
+                  <h3 className="text-xl font-bold text-gray-900">{area.area}</h3>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-charcoal mb-3">Cleaning Tasks:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">Cleaning Tasks:</h4>
                   <ul className="space-y-2">
                     {area.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start space-x-2">
                         <Check className="w-4 h-4 text-accent-green mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-charcoal/70">{item}</span>
+                        <span className="text-sm text-gray-700">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -301,43 +301,42 @@ export default function VacationRentalCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-charcoal mb-6">
-                Why Choose Vacation Rental Turnover Cleaning?
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Why Vacation Rental Owners Choose Us
               </h2>
-              <p className="text-lg text-charcoal/70 mb-8 leading-relaxed">
-                Vacation rental turnover cleaning requires a different approach than regular house cleaning. 
-                Our service is designed specifically for the hospitality industry, ensuring your property 
-                meets guest expectations and maintains high ratings.
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                We understand the unique challenges of vacation rental management and provide solutions 
+                that keep your property competitive and your guests happy.
               </p>
               
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <Check className="w-6 h-6 text-accent-green mt-0.5 flex-shrink-0" />
-                    <span className="text-charcoal/80">{benefit}</span>
+                    <span className="text-gray-800">{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
             
             <div className="bg-blue-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Service Details</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Details</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Starting Price:</span>
-                  <span className="font-semibold text-accent-coral">$120 per turnover</span>
+                  <span className="text-gray-600">Starting Price:</span>
+                  <span className="font-semibold text-gray-900">$120 per turnover</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Duration:</span>
-                  <span className="font-semibold text-charcoal">1-5 hours</span>
+                  <span className="text-gray-600">Duration:</span>
+                  <span className="font-semibold text-gray-900">1-5 hours</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Frequency:</span>
-                  <span className="font-semibold text-charcoal">Per guest turnover</span>
+                  <span className="text-gray-600">Frequency:</span>
+                  <span className="font-semibold text-gray-900">Per guest turnover</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Warranty:</span>
-                  <span className="font-semibold text-charcoal">100% satisfaction</span>
+                  <span className="text-gray-600">Warranty:</span>
+                  <span className="font-semibold text-gray-900">100% satisfaction</span>
                 </div>
               </div>
             </div>
@@ -349,10 +348,9 @@ export default function VacationRentalCleaningPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Our 5-Step Turnover Process</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We follow a proven process designed specifically for vacation rental turnovers, ensuring 
-              efficiency, quality, and guest satisfaction every time.
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our 5-Step Turnover Process</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Systematic approach that ensures consistency and quality with every turnover cleaning.
             </p>
           </div>
 
@@ -362,8 +360,8 @@ export default function VacationRentalCleaningPage() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-blue-600">{step.step}</span>
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">{step.title}</h3>
-                <p className="text-charcoal/70">{step.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+                <p className="text-gray-700">{step.description}</p>
               </div>
             ))}
           </div>
@@ -374,17 +372,17 @@ export default function VacationRentalCleaningPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-charcoal/70">
-              Get answers to common questions about our vacation rental turnover cleaning service.
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-700">
+              Common questions about our vacation rental cleaning services.
             </p>
           </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                <h3 className="text-lg font-semibold text-charcoal mb-3">{faq.question}</h3>
-                <p className="text-charcoal/70">{faq.answer}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                <p className="text-gray-700">{faq.answer}</p>
               </div>
             ))}
           </div>

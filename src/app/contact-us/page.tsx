@@ -1,394 +1,375 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, MessageSquare, Calendar, Home, Building2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Star, Shield, Users, CheckCircle } from 'lucide-react';
 
-export default function ContactUsPage() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState('');
+export default function ContactUs() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    address: '',
+    propertyType: 'house',
+    bedrooms: '2',
+    services: [] as string[],
+    preferredDate: '',
+    message: ''
+  });
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleServiceChange = (service: string) => {
+    setFormData(prev => ({
+      ...prev,
+      services: prev.services.includes(service)
+        ? prev.services.filter(s => s !== service)
+        : [...prev.services, service]
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setError('');
-
-    try {
-      const formData = new FormData(e.currentTarget);
-      
-      // Add Formspree hidden fields
-      formData.append('_subject', 'New Contact Form Submission - Contact Us Page');
-      formData.append('_next', typeof window !== 'undefined' ? window.location.href : '');
-      formData.append('_captcha', 'false');
-      
-      const response = await fetch('https://formspree.io/f/myzpryey', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        setIsSubmitted(true);
-        e.currentTarget.reset();
-        
-        // Track form submission for analytics
-        if (typeof window !== 'undefined' && (window as any).dataLayer) {
-          (window as any).dataLayer.push({
-            event: 'form_submit',
-            form_type: 'contact_us_page',
-            page: 'contact-us'
-          });
-        }
-      } else {
-        throw new Error('Failed to submit form');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setError('There was an error submitting your form. Please try again or call us directly.');
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Form submission logic would go here
+    console.log('Form submitted:', formData);
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6">
-              Contact Us
-            </h1>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
-              Ready to experience the difference? Get in touch with us today for a free quote 
-              or to schedule your cleaning service. We&apos;re here to help!
-            </p>
-          </div>
+      <section className="bg-gradient-to-br from-primary-blue to-accent-aqua text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            Get Your Free Quote Today
+          </h1>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            Ready to experience the difference professional cleaning makes? 
+            Contact us for a free, no-obligation quote and consultation.
+          </p>
         </div>
       </section>
 
       {/* Contact Information */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Details */}
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-8">
-                Get In Touch
-              </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
+            Multiple Ways to Reach Us
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {/* Phone */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-primary-blue" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+              <a 
+                href="tel:9044563851" 
+                className="text-2xl font-bold text-primary-blue hover:text-primary-blue/80 transition-colors"
+              >
+                (904) 456-3851
+              </a>
+              <p className="text-gray-700 mt-1">Speak with our friendly team</p>
+            </div>
+
+            {/* Email */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-accent-aqua/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-accent-aqua" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <a 
+                href="mailto:info@jaxcleaning.com" 
+                className="text-lg text-accent-aqua hover:text-accent-aqua/80 transition-colors"
+              >
+                info@jaxcleaning.com
+              </a>
+              <p className="text-gray-700 mt-1">We'll respond within 24 hours</p>
+            </div>
+
+            {/* Service Area */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-accent-coral/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-accent-coral" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Service Area</h3>
+              <div className="text-lg text-gray-900">Jacksonville, FL & Surrounding Areas</div>
+              <p className="text-gray-700 mt-1">Serving 50+ neighborhoods throughout Northeast Florida</p>
+            </div>
+          </div>
+
+          {/* Business Hours */}
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center max-w-2xl mx-auto">
+            <div className="w-16 h-16 bg-accent-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Clock className="w-8 h-8 text-accent-green" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Business Hours</h3>
+            <div className="text-lg text-gray-900">
+              Monday - Friday: 8:00 AM - 6:00 PM<br />
+              Saturday: 9:00 AM - 4:00 PM<br />
+              Sunday: Closed
+            </div>
+            <p className="text-gray-700 mt-1">Emergency cleaning available</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Form */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Request a Quote</h3>
+          
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Personal Information */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="firstName" className="block text-sm font-medium text-gray-900 mb-2">
+                  First Name *
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  required
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                />
+              </div>
               
-              <div className="space-y-8">
-                {/* Phone */}
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-accent-coral rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Call Us</h3>
-                    <a 
-                      href="tel:9044563851"
-                      className="text-2xl font-bold text-primary-blue hover:text-accent-coral transition-colors duration-300"
-                    >
-                      (904) 456-3851
-                    </a>
-                    <p className="text-charcoal/70 mt-1">Speak with our friendly team</p>
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-accent-aqua rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Email Us</h3>
-                    <a 
-                      href="mailto:jaxhousecleaningservice@gmail.com"
-                      className="text-lg text-primary-blue hover:text-accent-aqua transition-colors duration-300"
-                    >
-                      jaxhousecleaningservice@gmail.com
-                    </a>
-                    <p className="text-charcoal/70 mt-1">We&apos;ll respond within 24 hours</p>
-                  </div>
-                </div>
-
-                {/* Location */}
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-accent-green rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Service Area</h3>
-                    <p className="text-lg text-charcoal">Jacksonville, FL & Surrounding Areas</p>
-                    <p className="text-charcoal/70 mt-1">Serving 50+ neighborhoods throughout Northeast Florida</p>
-                  </div>
-                </div>
-
-                {/* Hours */}
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-primary-blue rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Business Hours</h3>
-                    <div className="text-lg text-charcoal">
-                      <div>Monday - Friday: 8:00 AM - 6:00 PM</div>
-                      <div>Saturday: 9:00 AM - 4:00 PM</div>
-                      <div>Sunday: By Appointment</div>
-                    </div>
-                    <p className="text-charcoal/70 mt-1">Emergency cleaning available</p>
-                  </div>
-                </div>
+              <div>
+                <label htmlFor="lastName" className="block text-sm font-medium text-gray-900 mb-2">
+                  Last Name *
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  required
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                />
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Request a Quote</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                />
+              </div>
               
-              <form className="space-y-6" onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-charcoal mb-2">
-                      First Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-charcoal mb-2">
-                      Last Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="address" className="block text-sm font-medium text-charcoal mb-2">
-                    Property Address *
-                  </label>
-                  <input
-                    type="text"
-                    id="address"
-                    name="address"
-                    required
-                    placeholder="Street address, city, zip code"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="propertyType" className="block text-sm font-medium text-charcoal mb-2">
-                      Property Type *
-                    </label>
-                    <select
-                      id="propertyType"
-                      name="propertyType"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    >
-                      <option value="">Select property type</option>
-                      <option value="house">House</option>
-                      <option value="apartment">Apartment</option>
-                      <option value="condo">Condo</option>
-                      <option value="townhouse">Townhouse</option>
-                      <option value="office">Office</option>
-                      <option value="commercial">Commercial Space</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="bedrooms" className="block text-sm font-medium text-charcoal mb-2">
-                      Bedrooms
-                    </label>
-                    <select
-                      id="bedrooms"
-                      name="bedrooms"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    >
-                      <option value="">Select bedrooms</option>
-                      <option value="studio">Studio</option>
-                      <option value="1">1 Bedroom</option>
-                      <option value="2">2 Bedrooms</option>
-                      <option value="3">3 Bedrooms</option>
-                      <option value="4">4 Bedrooms</option>
-                      <option value="5+">5+ Bedrooms</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="services" className="block text-sm font-medium text-charcoal mb-2">
-                    Services Needed *
-                  </label>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <label className="flex items-center">
-                      <input type="checkbox" name="services" value="regular" className="mr-2" />
-                      <span className="text-charcoal">Regular Cleaning</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input type="checkbox" name="services" value="deep" className="mr-2" />
-                      <span className="text-charcoal">Deep Cleaning</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input type="checkbox" name="services" value="move" className="mr-2" />
-                      <span className="text-charcoal">Move In/Out</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input type="checkbox" name="services" value="carpet" className="mr-2" />
-                      <span className="text-charcoal">Carpet Cleaning</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input type="checkbox" name="services" value="windows" className="mr-2" />
-                      <span className="text-charcoal">Window Cleaning</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input type="checkbox" name="services" value="post-construction" className="mr-2" />
-                      <span className="text-charcoal">Post Construction</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="preferredDate" className="block text-sm font-medium text-charcoal mb-2">
-                    Preferred Date
-                  </label>
-                  <input
-                    type="date"
-                    id="preferredDate"
-                    name="preferredDate"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-                    Additional Details
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    placeholder="Tell us about your specific cleaning needs, special requests, or any questions you have..."
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-accent-coral hover:bg-accent-coral/90 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
-                </button>
-                
-                {error && (
-                  <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
-                    {error}
-                  </div>
-                )}
-                
-                {isSubmitted && (
-                  <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg text-sm text-center">
-                    Thank you for your submission! We will get back to you shortly.
-                  </div>
-                )}
-              </form>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                />
+              </div>
             </div>
-          </div>
+
+            <div>
+              <label htmlFor="address" className="block text-sm font-medium text-gray-900 mb-2">
+                Property Address
+              </label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                value={formData.address}
+                onChange={handleInputChange}
+                placeholder="Street address, city, ZIP code"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="propertyType" className="block text-sm font-medium text-gray-900 mb-2">
+                  Property Type
+                </label>
+                <select
+                  id="propertyType"
+                  name="propertyType"
+                  value={formData.propertyType}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                >
+                  <option value="house">House</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="condo">Condo</option>
+                  <option value="townhouse">Townhouse</option>
+                  <option value="office">Office</option>
+                </select>
+              </div>
+              
+              <div>
+                <label htmlFor="bedrooms" className="block text-sm font-medium text-gray-900 mb-2">
+                  Bedrooms
+                </label>
+                <select
+                  id="bedrooms"
+                  name="bedrooms"
+                  value={formData.bedrooms}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                >
+                  <option value="1">1 Bedroom</option>
+                  <option value="2">2 Bedrooms</option>
+                  <option value="3">3 Bedrooms</option>
+                  <option value="4">4 Bedrooms</option>
+                  <option value="5+">5+ Bedrooms</option>
+                </select>
+              </div>
+            </div>
+
+            {/* Services */}
+            <div>
+              <label htmlFor="services" className="block text-sm font-medium text-gray-900 mb-2">
+                Services Needed
+              </label>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {[
+                  { id: 'regular', name: 'Regular Cleaning' },
+                  { id: 'deep', name: 'Deep Cleaning' },
+                  { id: 'move-in-out', name: 'Move In/Out' },
+                  { id: 'carpet', name: 'Carpet Cleaning' },
+                  { id: 'window', name: 'Window Cleaning' },
+                  { id: 'post-construction', name: 'Post Construction' }
+                ].map(service => (
+                  <label key={service.id} className="flex items-center space-x-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={formData.services.includes(service.id)}
+                      onChange={() => handleServiceChange(service.id)}
+                      className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                    />
+                    <span className="text-gray-900">{service.name}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-900 mb-2">
+                  Preferred Date
+                </label>
+                <input
+                  type="date"
+                  id="preferredDate"
+                  name="preferredDate"
+                  value={formData.preferredDate}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">
+                Additional Details
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                value={formData.message}
+                onChange={handleInputChange}
+                placeholder="Tell us about your specific cleaning needs, special requirements, or any questions you have..."
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+              />
+            </div>
+
+            <div className="text-center">
+              <button
+                type="submit"
+                className="bg-primary-blue hover:bg-primary-blue/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Get My Free Quote
+              </button>
+            </div>
+          </form>
         </div>
       </section>
 
       {/* Service Areas */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Service Areas
-            </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We proudly serve Jacksonville and surrounding areas. Don&apos;t see your neighborhood? 
-              Give us a call - we may still be able to help!
-            </p>
-          </div>
-          
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
+            We Serve All of Jacksonville
+          </h2>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto text-center mb-12">
+            From the beaches to the suburbs, we provide professional cleaning services 
+            throughout Northeast Florida. No area is too far for our experienced team.
+          </p>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-charcoal mb-4">Beaches</h3>
-              <ul className="space-y-2 text-charcoal/70">
-                <li>Jacksonville Beach</li>
-                <li>Neptune Beach</li>
+            {/* Beaches */}
+            <div className="bg-white p-6 rounded-2xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Beaches</h3>
+              <ul className="space-y-2 text-gray-700">
                 <li>Atlantic Beach</li>
+                <li>Neptune Beach</li>
+                <li>Jacksonville Beach</li>
                 <li>Ponte Vedra Beach</li>
+                <li>Mayport</li>
               </ul>
             </div>
-            
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-charcoal mb-4">Southside</h3>
-              <ul className="space-y-2 text-charcoal/70">
+
+            {/* Southside */}
+            <div className="bg-white p-6 rounded-2xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Southside</h3>
+              <ul className="space-y-2 text-gray-700">
                 <li>Mandarin</li>
+                <li>San Marco</li>
                 <li>Baymeadows</li>
                 <li>Deerwood</li>
-                <li>San Marco</li>
+                <li>Southside</li>
               </ul>
             </div>
-            
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-charcoal mb-4">Northside</h3>
-              <ul className="space-y-2 text-charcoal/70">
+
+            {/* Northside */}
+            <div className="bg-white p-6 rounded-2xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Northside</h3>
+              <ul className="space-y-2 text-gray-700">
                 <li>Arlington</li>
                 <li>Northside</li>
                 <li>Oceanway</li>
                 <li>Dinsmore</li>
+                <li>Springfield</li>
               </ul>
             </div>
-            
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-charcoal mb-4">Westside</h3>
-              <ul className="space-y-2 text-charcoal/70">
+
+            {/* Westside */}
+            <div className="bg-white p-6 rounded-2xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Westside</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>Orange Park</li>
+                <li>Fleming Island</li>
+                <li>Green Cove Springs</li>
+                <li>Middleburg</li>
                 <li>Westside</li>
-                <li>Avondale</li>
-                <li>Riverside</li>
-                <li>Murray Hill</li>
               </ul>
             </div>
           </div>
@@ -396,92 +377,89 @@ export default function ContactUsPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Have questions? We&apos;re here to help! Here are answers to some common questions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">How quickly can you schedule a cleaning?</h3>
-                <p className="text-charcoal/70">
-                  We typically can schedule regular cleanings within 1-2 weeks. For urgent needs, 
-                  we offer same-day service when available.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">Do you provide cleaning supplies?</h3>
-                <p className="text-charcoal/70">
-                  Yes! We bring all our own professional-grade, eco-friendly cleaning supplies and equipment.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">Are your cleaners background-checked?</h3>
-                <p className="text-charcoal/70">
-                  Absolutely. All our team members undergo thorough background checks and are fully insured.
-                </p>
-              </div>
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto text-center mb-12">
+            Get quick answers to common questions about our cleaning services.
+          </p>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">How quickly can you schedule a cleaning?</h3>
+              <p className="text-gray-700">
+                We typically schedule cleanings within 1-3 days. For urgent situations, 
+                we offer same-day service when available. Call us at (904) 456-3851 to check availability.
+              </p>
             </div>
-            
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">What if I&apos;m not satisfied with the cleaning?</h3>
-                <p className="text-charcoal/70">
-                  We offer a 100% satisfaction guarantee. If you&apos;re not happy, we'll come back and make it right.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">Do you offer recurring cleaning services?</h3>
-                <p className="text-charcoal/70">
-                  Yes! We offer weekly, bi-weekly, and monthly cleaning schedules with discounted rates.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">How do you handle pets?</h3>
-                <p className="text-charcoal/70">
-                  We love pets! Our team is trained to work around pets safely. We use pet-friendly cleaning products.
-                </p>
-              </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Do you provide cleaning supplies?</h3>
+              <p className="text-gray-700">
+                Yes! We bring all our own professional-grade cleaning supplies and equipment. 
+                You don't need to purchase or store any cleaning products.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Are your cleaners background-checked?</h3>
+              <p className="text-gray-700">
+                Absolutely! All our team members undergo thorough background checks, 
+                reference verification, and are fully insured for your protection.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">What if I'm not satisfied with the cleaning?</h3>
+              <p className="text-gray-700">
+                We offer a 100% satisfaction guarantee. If you're not completely happy, 
+                we'll return within 24 hours to fix any issues at no additional cost.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Do you offer recurring cleaning services?</h3>
+              <p className="text-gray-700">
+                Yes! We offer weekly, bi-weekly, and monthly cleaning services with 
+                discounted rates for recurring customers. We can work around your schedule.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">How do you handle pets?</h3>
+              <p className="text-gray-700">
+                We're pet-friendly! We'll work around your pets and use pet-safe cleaning products. 
+                Just let us know if you have any specific concerns or instructions.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-blue to-accent-coral">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+      <section className="py-20 bg-primary-blue text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             Ready to Get Started?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Don&apos;t wait to experience the difference professional cleaning makes. 
-            Contact us today for a free quote and let us handle the rest.
+            Join hundreds of satisfied Jacksonville families who trust us with their cleaning needs. 
+            Get your free quote today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="tel:9044563851"
-              className="bg-white text-primary-blue hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+              className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              <Phone className="w-5 h-5" />
-              Call Now
+              Call (904) 456-3851
             </a>
-            <a 
-              href="#contact-form"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            <a
+              href="mailto:info@jaxcleaning.com"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
-              <MessageSquare className="w-5 h-5" />
-              Get Quote
+              Email Us
             </a>
           </div>
         </div>

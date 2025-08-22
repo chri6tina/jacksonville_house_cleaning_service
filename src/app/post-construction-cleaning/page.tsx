@@ -294,10 +294,10 @@ export default function PostConstructionCleaningPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why We're Jacksonville's #1 Post-Construction Cleanup Service
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We're the only local provider that offers the complete solution: debris removal + detailed cleaning + 
               eco-friendly practices + transparent pricing. No need to hire multiple vendors.
             </p>
@@ -309,8 +309,8 @@ export default function PostConstructionCleaningPage() {
                 <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mb-6">
                   <item.icon className="w-8 h-8 text-primary-blue" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-4">{item.title}</h3>
-                <p className="text-charcoal/70">{item.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                <p className="text-gray-700">{item.description}</p>
               </div>
             ))}
           </div>
@@ -321,10 +321,10 @@ export default function PostConstructionCleaningPage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Proven Three-Phase Construction Cleanup Process
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Systematic approach that ensures nothing is missed. From heavy debris removal to final detailing, 
               we follow a proven process that delivers results.
             </p>
@@ -336,13 +336,13 @@ export default function PostConstructionCleaningPage() {
                 <div className="w-20 h-20 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <phase.icon className="w-10 h-10 text-primary-blue" />
                 </div>
-                <h3 className="text-2xl font-bold text-charcoal mb-4 text-center">{phase.phase}</h3>
-                <p className="text-charcoal/70 mb-6 text-center">{phase.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{phase.phase}</h3>
+                <p className="text-gray-700 mb-6 text-center">{phase.description}</p>
                 <ul className="space-y-3">
                   {phase.tasks.map((task, taskIndex) => (
                     <li key={taskIndex} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-accent-green flex-shrink-0 mt-0.5" />
-                      <span className="text-charcoal/80 text-sm">{task}</span>
+                      <span className="text-gray-800 text-sm">{task}</span>
                     </li>
                   ))}
                 </ul>
@@ -356,10 +356,10 @@ export default function PostConstructionCleaningPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Complete Post-Construction Cleaning Services
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               From heavy debris removal to fine detailing, we offer comprehensive post-construction cleanup 
               that makes your space move-in ready.
             </p>
@@ -371,11 +371,11 @@ export default function PostConstructionCleaningPage() {
                 <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-primary-blue" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-4">{service.title}</h3>
-                <p className="text-charcoal/70 mb-4">{service.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-700 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-2 text-sm text-charcoal/80">
+                    <li key={index} className="flex items-center gap-2 text-sm text-gray-800">
                       <CheckCircle className="w-4 h-4 text-accent-green" />
                       {feature}
                     </li>
@@ -397,8 +397,8 @@ export default function PostConstructionCleaningPage() {
           {/* Pricing Accuracy Note */}
           <div className="mt-12 p-6 bg-gradient-to-r from-blue-50 to-accent-aqua/20 rounded-2xl border border-blue-200">
             <div className="text-center">
-              <h3 className="text-xl font-bold text-charcoal mb-3">Pricing Accuracy & Market Research</h3>
-              <p className="text-charcoal/70 text-sm leading-relaxed max-w-4xl mx-auto">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Pricing Accuracy & Market Research</h3>
+              <p className="text-gray-700 text-sm leading-relaxed max-w-4xl mx-auto">
                 <strong>Our pricing is based on comprehensive market research from industry leaders including Fixr.com and Angi.com.</strong> 
                 We've analyzed Jacksonville market conditions and competitive rates to ensure our pricing reflects the true value of professional 
                 post-construction cleanup services. Our rates are competitive with regional averages while maintaining the premium quality and 
@@ -411,8 +411,8 @@ export default function PostConstructionCleaningPage() {
                      {/* Three-Phase Process Note */}
            <div className="mt-6 p-6 bg-gradient-to-r from-green-50 to-accent-green/20 rounded-2xl border border-green-200">
              <div className="text-center">
-               <h3 className="text-xl font-bold text-charcoal mb-3">Our Three-Phase Process (Included in Complete Service)</h3>
-               <p className="text-charcoal/70 text-sm leading-relaxed max-w-4xl mx-auto">
+               <h3 className="text-xl font-bold text-gray-900 mb-3">Our Three-Phase Process (Included in Complete Service)</h3>
+               <p className="text-gray-700 text-sm leading-relaxed max-w-4xl mx-auto">
                  <strong>Every complete post-construction cleanup includes our proven three-phase process:</strong> 
                  <strong>Phase 1:</strong> Rough cleanup removes large debris and prepares surfaces. 
                  <strong>Phase 2:</strong> Final cleaning eliminates dust, fingerprints, and stickers. 
@@ -429,10 +429,10 @@ export default function PostConstructionCleaningPage() {
        <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
          <div className="container mx-auto px-4">
            <div className="text-center mb-16">
-             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                Get Your Instant Project Estimate
              </h2>
-             <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                Our comprehensive calculator considers all factors including project type, size, debris level, 
                special requirements, and timeline to give you an accurate estimate in seconds.
              </p>
@@ -448,10 +448,10 @@ export default function PostConstructionCleaningPage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               How We Dominate the Jacksonville Post-Construction Market
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               While competitors offer piecemeal services, we provide the complete solution that construction 
               professionals and property owners actually need.
             </p>
@@ -459,15 +459,15 @@ export default function PostConstructionCleaningPage() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-charcoal mb-6">The Competition Gap We Fill</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">The Competition Gap We Fill</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-red-600 font-bold text-sm">✗</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-charcoal mb-2">Other Companies</h4>
-                    <p className="text-charcoal/70 text-sm">Only offer cleaning OR debris removal, forcing you to hire multiple vendors</p>
+                    <h4 className="font-semibold text-gray-900 mb-2">Other Companies</h4>
+                    <p className="text-gray-700 text-sm">Only offer cleaning OR debris removal, forcing you to hire multiple vendors</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -475,8 +475,8 @@ export default function PostConstructionCleaningPage() {
                     <span className="text-green-600 font-bold text-sm">✓</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-charcoal mb-2">Jacksonville House Cleaning Service</h4>
-                    <p className="text-charcoal/70 text-sm">Complete solution: debris removal + cleaning + hauling in one call</p>
+                    <h4 className="font-semibold text-gray-900 mb-2">Jacksonville House Cleaning Service</h4>
+                    <p className="text-gray-700 text-sm">Complete solution: debris removal + cleaning + hauling in one call</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -484,8 +484,8 @@ export default function PostConstructionCleaningPage() {
                     <span className="text-red-600 font-bold text-sm">✗</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-charcoal mb-2">Hidden Pricing</h4>
-                    <p className="text-charcoal/70 text-sm">Most competitors require quotes and consultations, delaying your project</p>
+                    <h4 className="font-semibold text-gray-900 mb-2">Hidden Pricing</h4>
+                    <p className="text-gray-700 text-sm">Most competitors require quotes and consultations, delaying your project</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -493,39 +493,39 @@ export default function PostConstructionCleaningPage() {
                     <span className="text-green-600 font-bold text-sm">✓</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-charcoal mb-2">Transparent Pricing</h4>
-                    <p className="text-charcoal/70 text-sm">Clear package pricing with instant online quotes and booking</p>
+                    <h4 className="font-semibold text-gray-900 mb-2">Transparent Pricing</h4>
+                    <p className="text-gray-700 text-sm">Clear package pricing with instant online quotes and booking</p>
                   </div>
                 </div>
               </div>
             </div>
             
             <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Our Unique Advantages</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Unique Advantages</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <HardHat className="w-6 h-6 text-primary-blue" />
-                  <span className="text-charcoal/80">Single-source solution</span>
+                  <span className="text-gray-800">Single-source solution</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Truck className="w-6 h-6 text-primary-blue" />
-                  <span className="text-charcoal/80">Debris removal + cleaning</span>
+                  <span className="text-gray-800">Debris removal + cleaning</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Leaf className="w-6 h-6 text-primary-blue" />
-                  <span className="text-charcoal/80">Eco-friendly practices</span>
+                  <span className="text-gray-800">Eco-friendly practices</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Shield className="w-6 h-6 text-primary-blue" />
-                  <span className="text-charcoal/80">OSHA/EPA compliance</span>
+                  <span className="text-gray-800">OSHA/EPA compliance</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="w-6 h-6 text-primary-blue" />
-                  <span className="text-charcoal/80">Same-day service</span>
+                  <span className="text-gray-800">Same-day service</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-6 h-6 text-primary-blue" />
-                  <span className="text-charcoal/80">100% satisfaction guarantee</span>
+                  <span className="text-gray-800">100% satisfaction guarantee</span>
                 </div>
               </div>
             </div>
@@ -537,10 +537,10 @@ export default function PostConstructionCleaningPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Serving All of Northeast Florida
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               From Jacksonville to St. Augustine, we're your trusted partner for post-construction cleanup 
               across the entire region.
             </p>
@@ -550,7 +550,7 @@ export default function PostConstructionCleaningPage() {
             {serviceAreas.map((area, index) => (
               <div key={index} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-4 rounded-xl text-center">
                 <MapPin className="w-6 h-6 text-primary-blue mx-auto mb-2" />
-                <p className="text-sm font-medium text-charcoal">{area}</p>
+                <p className="text-sm font-medium text-gray-900">{area}</p>
               </div>
             ))}
           </div>
@@ -561,10 +561,10 @@ export default function PostConstructionCleaningPage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What Construction Professionals Say
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what builders, contractors, and property managers 
               are saying about our post-construction cleanup services.
             </p>
@@ -578,11 +578,11 @@ export default function PostConstructionCleaningPage() {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-charcoal/80 mb-6 italic">"{testimonial.comment}"</p>
+                <p className="text-gray-800 mb-6 italic">"{testimonial.comment}"</p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-semibold text-charcoal">{testimonial.name}</p>
-                    <p className="text-sm text-charcoal/60">{testimonial.company}</p>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.company}</p>
                   </div>
                   <div className="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center">
                     <Building2 className="w-6 h-6 text-primary-blue" />
