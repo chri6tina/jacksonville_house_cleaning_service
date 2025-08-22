@@ -169,7 +169,7 @@ export default function InformationPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Browse by Category
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -186,7 +186,7 @@ export default function InformationPage() {
                       <category.icon className="w-8 h-8" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-charcoal">{category.title}</h3>
+                      <h3 className="text-2xl font-bold text-gray-900">{category.title}</h3>
                       <p className="text-gray-600 mt-2">{category.description}</p>
                     </div>
                   </div>
@@ -215,7 +215,7 @@ export default function InformationPage() {
                           </div>
                         </div>
                         
-                        <h4 className="font-semibold text-charcoal mb-3 group-hover:text-primary-blue transition-colors">
+                        <h4 className="font-semibold text-gray-900 mb-3 group-hover:text-primary-blue transition-colors">
                           {article.title}
                         </h4>
                         
@@ -241,7 +241,7 @@ export default function InformationPage() {
       <div className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-charcoal mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
               Quick Access to Key Information
             </h2>
             
@@ -251,7 +251,7 @@ export default function InformationPage() {
                 className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
               >
                 <FileText className="w-12 h-12 text-primary-blue mx-auto mb-4" />
-                <h3 className="font-semibold text-charcoal mb-2">All Services</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">All Services</h3>
                 <p className="text-gray-600 text-sm">Complete service overview</p>
               </Link>
               
@@ -260,7 +260,7 @@ export default function InformationPage() {
                 className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
               >
                 <BookOpen className="w-12 h-12 text-accent-green mx-auto mb-4" />
-                <h3 className="font-semibold text-charcoal mb-2">Pricing</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">Pricing</h3>
                 <p className="text-gray-600 text-sm">Transparent pricing information</p>
               </Link>
               
@@ -269,7 +269,7 @@ export default function InformationPage() {
                 className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
               >
                 <User className="w-12 h-12 text-accent-coral mx-auto mb-4" />
-                <h3 className="font-semibold text-charcoal mb-2">About Us</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">About Us</h3>
                 <p className="text-gray-600 text-sm">Company story and values</p>
               </Link>
               
@@ -278,7 +278,7 @@ export default function InformationPage() {
                 className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
               >
                 <Building2 className="w-12 h-12 text-primary-blue mx-auto mb-4" />
-                <h3 className="font-semibold text-charcoal mb-2">Contact</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">Contact</h3>
                 <p className="text-gray-600 text-sm">Get in touch with us</p>
               </Link>
             </div>
@@ -290,7 +290,7 @@ export default function InformationPage() {
       <div className="bg-blue-100 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-charcoal mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Need More Specific Information?
             </h2>
             <p className="text-gray-700 text-lg mb-8">

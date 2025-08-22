@@ -138,7 +138,7 @@ export default function BlogPage() {
                     <span className="text-sm text-gray-500">{post.category}</span>
                   </div>
                   
-                  <h2 className="text-xl font-bold text-charcoal mb-3 line-clamp-2">
+                  <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                     {post.title}
                   </h2>
                   
@@ -175,7 +175,7 @@ export default function BlogPage() {
       <div className="bg-blue-100 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-charcoal mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Need Professional Cleaning Services?
             </h2>
             <p className="text-gray-700 text-lg mb-8">

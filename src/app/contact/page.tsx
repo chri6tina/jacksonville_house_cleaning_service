@@ -152,12 +152,12 @@ function ContactForm() {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10">
         <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-md mx-4">
           <CheckCircle className="w-20 h-20 text-accent-green mx-auto mb-6" />
-          <h2 className="text-3xl font-bold text-charcoal mb-4">Thank You!</h2>
-          <p className="text-charcoal/70 mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
+          <p className="text-gray-700 mb-6">
             Your cleaning request has been submitted successfully. We&apos;ll contact you within 24 hours 
             to confirm your appointment and provide a quote.
           </p>
-          <div className="text-sm text-charcoal/60">
+          <div className="text-sm text-gray-600">
             <p>Reference #: {Math.random().toString(36).substr(2, 9).toUpperCase()}</p>
           </div>
         </div>
@@ -238,12 +238,12 @@ function ContactForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div>
-            <h2 className="text-3xl font-bold text-charcoal mb-8">Book Your Cleaning Service</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Book Your Cleaning Service</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Personal Information */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -258,7 +258,7 @@ function ContactForm() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
                     Phone Number *
                   </label>
                   <input
@@ -275,7 +275,7 @@ function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
                   Email Address *
                 </label>
                 <input
@@ -291,7 +291,7 @@ function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="address" className="block text-sm font-medium text-charcoal mb-2">
+                <label htmlFor="address" className="block text-sm font-medium text-gray-900 mb-2">
                   Service Address *
                 </label>
                 <textarea
@@ -307,7 +307,7 @@ function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="propertyType" className="block text-sm font-medium text-charcoal mb-2">
+                <label htmlFor="propertyType" className="block text-sm font-medium text-gray-900 mb-2">
                   Property Type *
                 </label>
                 <select
@@ -328,7 +328,7 @@ function ContactForm() {
 
               {/* Services Selection */}
               <div>
-                <label className="block text-sm font-medium text-charcoal mb-3">
+                <label className="block text-sm font-medium text-gray-900 mb-3">
                   Services Needed *
                 </label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -340,7 +340,7 @@ function ContactForm() {
                         onChange={() => handleServiceChange(service)}
                         className="w-4 h-4 text-primary-blue border-gray-300 rounded focus:ring-primary-blue"
                       />
-                      <span className="text-sm text-charcoal/80">{service}</span>
+                      <span className="text-sm text-gray-700">{service}</span>
                     </label>
                   ))}
                 </div>
@@ -349,7 +349,7 @@ function ContactForm() {
               {/* Date and Time */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="date" className="block text-sm font-medium text-charcoal mb-2">
+                  <label htmlFor="date" className="block text-sm font-medium text-gray-900 mb-2">
                     Preferred Date *
                   </label>
                   <input
@@ -364,7 +364,7 @@ function ContactForm() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="time" className="block text-sm font-medium text-charcoal mb-2">
+                  <label htmlFor="time" className="block text-sm font-medium text-gray-900 mb-2">
                     Preferred Time *
                   </label>
                   <select
@@ -384,7 +384,7 @@ function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="specialRequests" className="block text-sm font-medium text-charcoal mb-2">
+                <label htmlFor="specialRequests" className="block text-sm font-medium text-gray-900 mb-2">
                   Special Requests or Notes
                 </label>
                 <textarea
@@ -410,8 +410,8 @@ function ContactForm() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl font-bold text-charcoal mb-6">Get in Touch</h2>
-              <p className="text-lg text-charcoal/70 mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+              <p className="text-lg text-gray-700 mb-8">
                 Have questions or need immediate assistance? We&apos;re here to help!
               </p>
             </div>
@@ -423,9 +423,9 @@ function ContactForm() {
                   <Phone className="w-6 h-6 text-primary-blue" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-charcoal">Phone</h3>
-                  <p className="text-charcoal/70">(904) 456-3851</p>
-                  <p className="text-sm text-charcoal/60">Available Mon-Fri, 8AM-6PM</p>
+                  <h3 className="font-semibold text-gray-900">Phone</h3>
+                  <p className="text-gray-700">(904) 456-3851</p>
+                  <p className="text-sm text-gray-600">Available Mon-Fri, 8AM-6PM</p>
                 </div>
               </div>
 
@@ -434,9 +434,9 @@ function ContactForm() {
                   <Mail className="w-6 h-6 text-accent-aqua" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-charcoal">Email</h3>
-                  <p className="text-charcoal/70">info@jaxcleaning.com</p>
-                  <p className="text-sm text-charcoal/60">We respond within 2 hours</p>
+                  <h3 className="font-semibold text-gray-900">Email</h3>
+                  <p className="text-gray-700">info@jaxcleaning.com</p>
+                  <p className="text-sm text-gray-600">We respond within 2 hours</p>
                 </div>
               </div>
 
@@ -445,9 +445,9 @@ function ContactForm() {
                   <MapPin className="w-6 h-6 text-accent-green" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-charcoal">Service Area</h3>
-                  <p className="text-charcoal/70">Jacksonville, FL & Surrounding Areas</p>
-                  <p className="text-sm text-charcoal/60">Within 25 miles of downtown</p>
+                  <h3 className="font-semibold text-gray-900">Service Area</h3>
+                  <p className="text-gray-700">Jacksonville, FL & Surrounding Areas</p>
+                  <p className="text-sm text-gray-600">Within 25 miles of downtown</p>
                 </div>
               </div>
 
@@ -456,17 +456,17 @@ function ContactForm() {
                   <Clock className="w-6 h-6 text-accent-coral" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-charcoal">Business Hours</h3>
-                  <p className="text-charcoal/70">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                  <p className="text-sm text-charcoal/60">Saturday: 9:00 AM - 4:00 PM</p>
+                  <h3 className="font-semibold text-gray-900">Business Hours</h3>
+                  <p className="text-gray-700">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                  <p className="text-sm text-gray-600">Saturday: 9:00 AM - 4:00 PM</p>
                 </div>
               </div>
             </div>
 
             {/* Service Area Map */}
             <div className="bg-gray-100 rounded-xl p-6">
-              <h3 className="font-semibold text-charcoal mb-4">Service Areas</h3>
-              <div className="space-y-2 text-sm text-charcoal/70">
+              <h3 className="font-semibold text-gray-900 mb-4">Service Areas</h3>
+              <div className="space-y-2 text-sm text-gray-700">
                 <p>• Downtown Jacksonville</p>
                 <p>• Riverside & Avondale</p>
                 <p>• San Marco</p>
@@ -476,15 +476,15 @@ function ContactForm() {
                 <p>• Orange Park</p>
                 <p>• Fleming Island</p>
               </div>
-              <p className="text-xs text-charcoal/60 mt-4">
+              <p className="text-xs text-gray-600 mt-4">
                 * Additional travel fees may apply for areas outside our standard service zone
               </p>
             </div>
 
             {/* Emergency Contact */}
             <div className="bg-accent-coral/10 border border-accent-coral/20 rounded-xl p-6">
-              <h3 className="font-semibold text-charcoal mb-2">Emergency Cleaning?</h3>
-              <p className="text-sm text-charcoal/70 mb-3">
+              <h3 className="font-semibold text-gray-900 mb-2">Emergency Cleaning?</h3>
+              <p className="text-sm text-gray-700 mb-3">
                 Need immediate cleaning service? Call us for same-day availability.
               </p>
               <a
@@ -508,8 +508,8 @@ export default function ContactPage() {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10">
         <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-md mx-4">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-blue mx-auto mb-4"></div>
-          <h2 className="text-2xl font-bold text-charcoal mb-4">Loading...</h2>
-          <p className="text-charcoal/70">Preparing your contact form</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Loading...</h2>
+          <p className="text-gray-700">Preparing your contact form</p>
         </div>
       </div>
     }>

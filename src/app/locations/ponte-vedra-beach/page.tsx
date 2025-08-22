@@ -237,10 +237,10 @@ export default function PonteVedraBeachPage() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Beach Luxury Cleaning Services in Ponte Vedra Beach
               </h2>
-              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                 Premium cleaning services designed for Ponte Vedra Beach's luxury homes and coastal properties. 
                 Experience the difference of beach-focused care that preserves your oceanfront lifestyle.
               </p>
@@ -251,14 +251,14 @@ export default function PonteVedraBeachPage() {
                 <div key={service.id} className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <service.icon className="h-8 w-8 text-primary-blue mr-3" />
-                    <h3 className="text-xl font-semibold text-charcoal">{service.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
                   </div>
-                  <p className="text-charcoal/70 mb-4">{service.description}</p>
+                  <p className="text-gray-700 mb-4">{service.description}</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
                         <CheckCircle className="h-5 w-5 text-accent-green mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-charcoal/80 text-sm">{feature}</span>
+                        <span className="text-gray-700 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -278,10 +278,10 @@ export default function PonteVedraBeachPage() {
         <section className="py-20 bg-blue-100">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Ponte Vedra Beach Chooses Our Beach Luxury Service
               </h2>
-              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                 We understand the unique needs of beach homes and provide premium service that exceeds coastal expectations.
               </p>
             </div>
@@ -289,18 +289,18 @@ export default function PonteVedraBeachPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <Crown className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Beach Luxury Standards</h3>
-                <p className="text-charcoal/70">Premium service quality that matches your Ponte Vedra Beach lifestyle and expectations.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Beach Luxury Standards</h3>
+                <p className="text-gray-700">Premium service quality that matches your Ponte Vedra Beach lifestyle and expectations.</p>
               </div>
               <div className="text-center">
                 <Building2 className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Coastal Expertise</h3>
-                <p className="text-charcoal/70">Specialized knowledge for oceanfront properties and coastal home maintenance.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Coastal Expertise</h3>
+                <p className="text-gray-700">Specialized knowledge for oceanfront properties and coastal home maintenance.</p>
               </div>
               <div className="text-center">
                 <Award className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-charcoal mb-2">White-Glove Service</h3>
-                <p className="text-charcoal/70">Exceptional attention to detail and care for your beach home and furnishings.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">White-Glove Service</h3>
+                <p className="text-gray-700">Exceptional attention to detail and care for your beach home and furnishings.</p>
               </div>
             </div>
           </div>
@@ -311,10 +311,10 @@ export default function PonteVedraBeachPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                   Ponte Vedra Beach: Luxury Living on the Atlantic Coast
                 </h2>
-                <p className="text-lg text-charcoal/70 mb-8">
+                <p className="text-lg text-gray-700 mb-8">
                   Ponte Vedra Beach is one of Jacksonville's most prestigious coastal communities, known for its luxury homes, 
                   world-class golf courses, and pristine Atlantic beaches. Our premium cleaning services are designed to 
                   maintain the luxury standards that Ponte Vedra Beach residents expect.
@@ -322,23 +322,23 @@ export default function PonteVedraBeachPage() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-xl font-semibold text-charcoal mb-4">Community Features</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Community Features</h3>
                     <ul className="space-y-2">
                       {ponteVedraFeatures.map((feature, index) => (
                         <li key={index} className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-accent-green mr-2" />
-                          <span className="text-charcoal/80">{feature}</span>
+                          <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-charcoal mb-4">Local Landmarks</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Local Landmarks</h3>
                     <ul className="space-y-2">
                       {ponteVedraLandmarks.map((landmark, index) => (
                         <li key={index} className="flex items-center">
                           <MapPin className="h-4 w-4 text-primary-blue mr-2" />
-                          <span className="text-charcoal/80">{landmark}</span>
+                          <span className="text-gray-700">{landmark}</span>
                         </li>
                       ))}
                     </ul>
@@ -347,23 +347,23 @@ export default function PonteVedraBeachPage() {
               </div>
               
               <div className="bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-charcoal mb-6">Ponte Vedra Beach Service Pricing</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Ponte Vedra Beach Service Pricing</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Beach Luxury Cleaning</span>
-                    <span className="font-semibold text-charcoal">From $200</span>
+                    <span className="text-gray-700">Beach Luxury Cleaning</span>
+                    <span className="font-semibold text-gray-900">From $200</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Coastal Deep Cleaning</span>
-                    <span className="font-semibold text-charcoal">From $380</span>
+                    <span className="text-gray-700">Coastal Deep Cleaning</span>
+                    <span className="font-semibold text-gray-900">From $380</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Beach Property Care</span>
-                    <span className="font-semibold text-charcoal">From $450</span>
+                    <span className="text-gray-700">Beach Property Care</span>
+                    <span className="font-semibold text-gray-900">From $450</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Luxury Maintenance</span>
-                    <span className="font-semibold text-charcoal">From $160</span>
+                    <span className="text-gray-700">Luxury Maintenance</span>
+                    <span className="font-semibold text-gray-900">From $160</span>
                   </div>
                 </div>
                 <Link 
@@ -381,10 +381,10 @@ export default function PonteVedraBeachPage() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 What Ponte Vedra Beach Residents Say
               </h2>
-              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                 Don't just take our word for it. Here's what our Ponte Vedra Beach customers have to say about our beach luxury service.
               </p>
             </div>
@@ -397,14 +397,14 @@ export default function PonteVedraBeachPage() {
                       <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-charcoal/80 mb-4 italic">"{testimonial.comment}"</p>
+                  <p className="text-gray-700 mb-4 italic">"{testimonial.comment}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center text-white font-semibold mr-3">
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-semibold text-charcoal">{testimonial.name}</p>
-                      <p className="text-charcoal/60 text-sm">{testimonial.location}</p>
+                      <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                      <p className="text-gray-600 text-sm">{testimonial.location}</p>
                     </div>
                   </div>
                 </div>

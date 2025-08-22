@@ -213,12 +213,12 @@ export default function SouthsidePage() {
               <span>Southside Jacksonville, FL</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-charcoal mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Professional Cleaning Services in
               <span className="text-primary-blue block">Southside Jacksonville</span>
             </h1>
             
-            <p className="text-xl text-charcoal/80 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
               Family-friendly cleaning with pet-safe solutions. Serving Southside Jacksonville families with reliable, 
               professional cleaning services that keep your home safe and beautiful for everyone.
             </p>
@@ -246,10 +246,10 @@ export default function SouthsidePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Southside Jacksonville Cleaning Services
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Comprehensive cleaning solutions designed for Southside Jacksonville families. From regular maintenance 
               to deep cleaning, we provide the services you need to maintain a healthy, beautiful home.
             </p>
@@ -261,11 +261,11 @@ export default function SouthsidePage() {
                 <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-primary-blue" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-4">{service.title}</h3>
-                <p className="text-charcoal/70 mb-6">{service.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-700 mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-2 text-sm text-charcoal/80">
+                    <li key={index} className="flex items-center gap-2 text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-accent-green" />
                       {feature}
                     </li>
@@ -281,10 +281,10 @@ export default function SouthsidePage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Southside Jacksonville Families Choose Us
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We understand the unique needs of Southside Jacksonville families and provide cleaning services 
               that fit your lifestyle and values.
             </p>
@@ -295,8 +295,8 @@ export default function SouthsidePage() {
               <div className="w-20 h-20 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-10 h-10 text-primary-blue" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Family-Safe Products</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Family-Safe Products</h3>
+              <p className="text-gray-700">
                 Eco-friendly cleaning solutions that are safe for children, pets, and sensitive individuals.
               </p>
             </div>
@@ -305,8 +305,8 @@ export default function SouthsidePage() {
               <div className="w-20 h-20 bg-accent-aqua/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <PawPrint className="w-10 h-10 text-accent-aqua" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Pet-Friendly Cleaning</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Pet-Friendly Cleaning</h3>
+              <p className="text-gray-700">
                 Specialized cleaning solutions that are safe for pets and eliminate pet odors and allergens.
               </p>
             </div>
@@ -315,8 +315,8 @@ export default function SouthsidePage() {
               <div className="w-20 h-20 bg-accent-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="w-10 h-10 text-accent-green" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Flexible Scheduling</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Flexible Scheduling</h3>
+              <p className="text-gray-700">
                 Work around your family's busy schedule with convenient appointment times and recurring options.
               </p>
             </div>
@@ -329,10 +329,10 @@ export default function SouthsidePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Why We Love Southside Jacksonville
               </h2>
-              <p className="text-lg text-charcoal/70 mb-8">
+              <p className="text-lg text-gray-700 mb-8">
                 Southside Jacksonville is a wonderful family community known for its excellent schools, shopping 
                 centers, and family-friendly atmosphere. We're proud to serve this area with cleaning services 
                 that match the quality and care this community deserves.
@@ -342,7 +342,7 @@ export default function SouthsidePage() {
                 {southsideFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-accent-green flex-shrink-0" />
-                    <span className="text-charcoal/80">{feature}</span>
+                    <span className="text-gray-700">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -359,7 +359,7 @@ export default function SouthsidePage() {
                     {index === 4 && <Trees className="w-6 h-6 text-primary-blue" />}
                     {index === 5 && <Store className="w-6 h-6 text-primary-blue" />}
                   </div>
-                  <p className="text-sm font-medium text-charcoal">{landmark}</p>
+                  <p className="text-sm font-medium text-gray-900">{landmark}</p>
                 </div>
               ))}
             </div>
@@ -371,10 +371,10 @@ export default function SouthsidePage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What Southside Jacksonville Families Say
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what families in Southside Jacksonville are saying 
               about our cleaning services.
             </p>
@@ -388,11 +388,11 @@ export default function SouthsidePage() {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-charcoal/80 mb-6 italic">"{testimonial.comment}"</p>
+                <p className="text-gray-700 mb-6 italic">"{testimonial.comment}"</p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-semibold text-charcoal">{testimonial.name}</p>
-                    <p className="text-sm text-charcoal/60">{testimonial.location}</p>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.location}</p>
                   </div>
                   <div className="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center">
                     <Users className="w-6 h-6 text-primary-blue" />

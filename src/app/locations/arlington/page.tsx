@@ -237,10 +237,10 @@ export default function ArlingtonPage() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Suburban Cleaning Services in Arlington
               </h2>
-              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                 Professional cleaning services designed for Arlington's suburban homes and families. 
                 Experience the difference of reliable, family-friendly care that keeps your home clean and comfortable.
               </p>
@@ -251,14 +251,14 @@ export default function ArlingtonPage() {
                 <div key={service.id} className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <service.icon className="h-8 w-8 text-primary-blue mr-3" />
-                    <h3 className="text-xl font-semibold text-charcoal">{service.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
                   </div>
-                  <p className="text-charcoal/70 mb-4">{service.description}</p>
+                  <p className="text-gray-700 mb-4">{service.description}</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
                         <CheckCircle className="h-5 w-5 text-accent-green mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-charcoal/80 text-sm">{feature}</span>
+                        <span className="text-gray-700 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -278,10 +278,10 @@ export default function ArlingtonPage() {
         <section className="py-20 bg-blue-100">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Arlington Chooses Our Suburban Service
               </h2>
-              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                 We understand the unique needs of suburban homes and provide reliable service that works for families.
               </p>
             </div>
@@ -289,18 +289,18 @@ export default function ArlingtonPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <Home className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Suburban Expertise</h3>
-                <p className="text-charcoal/70">Specialized knowledge for Arlington suburban homes and family needs.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Suburban Expertise</h3>
+                <p className="text-gray-700">Specialized knowledge for Arlington suburban homes and family needs.</p>
               </div>
               <div className="text-center">
                 <Shield className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Family Safe</h3>
-                <p className="text-charcoal/70">Safe cleaning products and methods that protect your children and pets.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Family Safe</h3>
+                <p className="text-gray-700">Safe cleaning products and methods that protect your children and pets.</p>
               </div>
               <div className="text-center">
                 <Calendar className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Reliable Service</h3>
-                <p className="text-charcoal/70">Consistent, dependable cleaning that works around your family schedule.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Reliable Service</h3>
+                <p className="text-gray-700">Consistent, dependable cleaning that works around your family schedule.</p>
               </div>
             </div>
           </div>
@@ -311,10 +311,10 @@ export default function ArlingtonPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                   Arlington: Suburban Living in the Heart of Jacksonville
                 </h2>
-                <p className="text-lg text-charcoal/70 mb-8">
+                <p className="text-lg text-gray-700 mb-8">
                   Arlington is one of Jacksonville's most family-friendly suburban communities, known for its excellent schools, 
                   safe environment, and strong community spirit. Our suburban cleaning services are designed to 
                   support the comfortable lifestyle that Arlington families enjoy.
@@ -322,23 +322,23 @@ export default function ArlingtonPage() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-xl font-semibold text-charcoal mb-4">Community Features</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Community Features</h3>
                     <ul className="space-y-2">
                       {arlingtonFeatures.map((feature, index) => (
                         <li key={index} className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-accent-green mr-2" />
-                          <span className="text-charcoal/80">{feature}</span>
+                          <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-charcoal mb-4">Local Landmarks</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Local Landmarks</h3>
                     <ul className="space-y-2">
                       {arlingtonLandmarks.map((landmark, index) => (
                         <li key={index} className="flex items-center">
                           <MapPin className="h-4 w-4 text-primary-blue mr-2" />
-                          <span className="text-charcoal/80">{landmark}</span>
+                          <span className="text-gray-700">{landmark}</span>
                         </li>
                       ))}
                     </ul>
@@ -347,23 +347,23 @@ export default function ArlingtonPage() {
               </div>
               
               <div className="bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-charcoal mb-6">Arlington Service Pricing</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Arlington Service Pricing</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Suburban Standard Cleaning</span>
-                    <span className="font-semibold text-charcoal">From $130</span>
+                    <span className="text-gray-700">Suburban Standard Cleaning</span>
+                    <span className="font-semibold text-gray-900">From $130</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Suburban Deep Cleaning</span>
-                    <span className="font-semibold text-charcoal">From $240</span>
+                    <span className="text-gray-700">Suburban Deep Cleaning</span>
+                    <span className="font-semibold text-gray-900">From $240</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Family Move-In/Out</span>
-                    <span className="font-semibold text-charcoal">From $280</span>
+                    <span className="text-gray-700">Family Move-In/Out</span>
+                    <span className="font-semibold text-gray-900">From $280</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Recurring Care</span>
-                    <span className="font-semibold text-charcoal">From $100</span>
+                    <span className="text-gray-700">Recurring Care</span>
+                    <span className="font-semibold text-gray-900">From $100</span>
                   </div>
                 </div>
                 <Link 
@@ -381,10 +381,10 @@ export default function ArlingtonPage() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 What Arlington Residents Say
               </h2>
-              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                 Don't just take our word for it. Here's what our Arlington customers have to say about our suburban service.
               </p>
             </div>
@@ -397,14 +397,14 @@ export default function ArlingtonPage() {
                       <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-charcoal/80 mb-4 italic">"{testimonial.comment}"</p>
+                  <p className="text-gray-700 mb-4 italic">"{testimonial.comment}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center text-white font-semibold mr-3">
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-semibold text-charcoal">{testimonial.name}</p>
-                      <p className="text-charcoal/60 text-sm">{testimonial.location}</p>
+                      <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                      <p className="text-gray-600 text-sm">{testimonial.location}</p>
                     </div>
                   </div>
                 </div>

@@ -236,10 +236,10 @@ export default function RiversideAvondalePage() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Historic Home Cleaning Services in Riverside & Avondale
               </h2>
-              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                 Specialized cleaning services designed for Riverside & Avondale's historic homes and architectural treasures. 
                 Experience the difference of preservation-focused care.
               </p>
@@ -250,14 +250,14 @@ export default function RiversideAvondalePage() {
                 <div key={service.id} className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <service.icon className="h-8 w-8 text-primary-blue mr-3" />
-                    <h3 className="text-xl font-semibold text-charcoal">{service.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
                   </div>
-                  <p className="text-charcoal/70 mb-4">{service.description}</p>
+                  <p className="text-gray-700 mb-4">{service.description}</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
                         <CheckCircle className="h-5 w-5 text-accent-green mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-charcoal/80 text-sm">{feature}</span>
+                        <span className="text-gray-700 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -277,10 +277,10 @@ export default function RiversideAvondalePage() {
         <section className="py-20 bg-blue-100">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Riverside & Avondale Chooses Our Historic Home Service
               </h2>
-              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                 We understand the unique needs of historic homes and provide service that preserves architectural integrity.
               </p>
             </div>
@@ -288,18 +288,18 @@ export default function RiversideAvondalePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <BookOpen className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Historic Expertise</h3>
-                <p className="text-charcoal/70">Specialized knowledge for preserving Riverside historic home beauty and character.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Historic Expertise</h3>
+                <p className="text-gray-700">Specialized knowledge for preserving Riverside historic home beauty and character.</p>
               </div>
               <div className="text-center">
                 <Shield className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Preservation Focus</h3>
-                <p className="text-charcoal/70">Cleaning methods that protect and maintain your home's architectural integrity.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Preservation Focus</h3>
+                <p className="text-gray-700">Cleaning methods that protect and maintain your home's architectural integrity.</p>
               </div>
               <div className="text-center">
                 <Users className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Family Friendly</h3>
-                <p className="text-charcoal/70">Safe, thorough cleaning that works for Riverside families with children and pets.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Family Friendly</h3>
+                <p className="text-gray-700">Safe, thorough cleaning that works for Riverside families with children and pets.</p>
               </div>
             </div>
           </div>
@@ -310,10 +310,10 @@ export default function RiversideAvondalePage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                   Riverside & Avondale: Historic Charm in the Heart of Jacksonville
                 </h2>
-                <p className="text-lg text-charcoal/70 mb-8">
+                <p className="text-lg text-gray-700 mb-8">
                   Riverside & Avondale is one of Jacksonville's most historic communities, known for its beautiful architecture, 
                   tree-lined streets, and vibrant arts scene. Our specialized cleaning services are designed to 
                   maintain the architectural beauty that Riverside residents cherish.
@@ -321,23 +321,23 @@ export default function RiversideAvondalePage() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-xl font-semibold text-charcoal mb-4">Community Features</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Community Features</h3>
                     <ul className="space-y-2">
                       {riversideFeatures.map((feature, index) => (
                         <li key={index} className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-accent-green mr-2" />
-                          <span className="text-charcoal/80">{feature}</span>
+                          <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-charcoal mb-4">Local Landmarks</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Local Landmarks</h3>
                     <ul className="space-y-2">
                       {riversideLandmarks.map((landmark, index) => (
                         <li key={index} className="flex items-center">
                           <MapPin className="h-4 w-4 text-primary-blue mr-2" />
-                          <span className="text-charcoal/80">{landmark}</span>
+                          <span className="text-gray-700">{landmark}</span>
                         </li>
                       ))}
                     </ul>
@@ -346,23 +346,23 @@ export default function RiversideAvondalePage() {
               </div>
               
               <div className="bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-charcoal mb-6">Riverside Service Area</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Riverside Service Area</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Standard Cleaning</span>
-                    <span className="font-semibold text-charcoal">From $140</span>
+                    <span className="text-gray-700">Standard Cleaning</span>
+                    <span className="font-semibold text-gray-900">From $140</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Historic Deep Cleaning</span>
-                    <span className="font-semibold text-charcoal">From $280</span>
+                    <span className="text-gray-700">Historic Deep Cleaning</span>
+                    <span className="font-semibold text-gray-900">From $280</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Architectural Care</span>
-                    <span className="font-semibold text-charcoal">From $350</span>
+                    <span className="text-gray-700">Architectural Care</span>
+                    <span className="font-semibold text-gray-900">From $350</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-charcoal/80">Recurring Service</span>
-                    <span className="font-semibold text-charcoal">From $110</span>
+                    <span className="text-gray-700">Recurring Service</span>
+                    <span className="font-semibold text-gray-900">From $110</span>
                   </div>
                 </div>
                 <a 
@@ -380,10 +380,10 @@ export default function RiversideAvondalePage() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 What Riverside & Avondale Residents Say
               </h2>
-              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                 Don't just take our word for it. Here's what our Riverside & Avondale customers have to say about our historic home service.
               </p>
             </div>
@@ -396,14 +396,14 @@ export default function RiversideAvondalePage() {
                       <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-charcoal/80 mb-4 italic">"{testimonial.comment}"</p>
+                  <p className="text-gray-700 mb-4 italic">"{testimonial.comment}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center text-white font-semibold mr-3">
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-semibold text-charcoal">{testimonial.name}</p>
-                      <p className="text-charcoal/60 text-sm">{testimonial.location}</p>
+                      <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                      <p className="text-gray-600 text-sm">{testimonial.location}</p>
                     </div>
                   </div>
                 </div>

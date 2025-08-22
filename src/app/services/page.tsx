@@ -602,10 +602,10 @@ export default function ServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Our Jacksonville Cleaning Services
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               From regular maintenance to specialized deep cleaning, we offer comprehensive solutions 
               tailored to Jacksonville&apos;s unique climate and your specific needs.
             </p>
@@ -629,37 +629,37 @@ export default function ServicesPage() {
                       <service.icon className={`w-8 h-8 text-${service.color}`} />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-charcoal">{service.title}</h3>
-                      <p className="text-sm text-charcoal/60">{service.shortDescription}</p>
+                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                      <p className="text-sm text-gray-600">{service.shortDescription}</p>
                     </div>
                   </div>
                   
-                  <p className="text-charcoal/70 mb-6 leading-relaxed">
+                  <p className="text-gray-700 mb-6 leading-relaxed">
                     {service.description}
                   </p>
 
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-charcoal/60">Duration:</span>
-                      <span className="text-sm font-medium text-charcoal">{service.duration}</span>
+                      <span className="text-sm text-gray-600">Duration:</span>
+                      <span className="text-sm font-medium text-gray-900">{service.duration}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-charcoal/60">Frequency:</span>
-                      <span className="text-sm font-medium text-charcoal">{service.frequency}</span>
+                      <span className="text-sm text-gray-600">Frequency:</span>
+                      <span className="text-sm font-medium text-gray-900">{service.frequency}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-charcoal/60">Starting Price:</span>
+                      <span className="text-sm text-gray-600">Starting Price:</span>
                       <span className="text-sm font-medium text-accent-coral">{service.pricing}</span>
                     </div>
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-semibold text-charcoal text-sm">Key Features:</h4>
+                    <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start space-x-3">
                           <Check className="w-4 h-4 text-accent-green mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-charcoal/70">{feature}</span>
+                          <span className="text-sm text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -707,8 +707,8 @@ export default function ServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Service Comparison</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Service Comparison</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Compare our services to find the perfect match for your cleaning needs.
             </p>
           </div>
@@ -750,7 +750,7 @@ export default function ServicesPage() {
                                     service.id === 'commercial-office' ? 'commercial-office-cleaning' :
                                     service.id === 'event-venue' ? 'event-venue-cleaning' :
                                     service.id === 'medical-facility' ? 'medical-facility-cleaning' : 'contact'}`}
-                            className="font-medium text-charcoal hover:text-primary-blue transition-colors duration-200"
+                            className="font-medium text-gray-900 hover:text-primary-blue transition-colors duration-200"
                           >
                             {service.title}
                           </Link>
@@ -759,10 +759,10 @@ export default function ServicesPage() {
                           )}
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-center text-charcoal/70">{service.duration}</td>
-                      <td className="px-6 py-4 text-center text-charcoal/70">{service.frequency}</td>
+                      <td className="px-6 py-4 text-center text-gray-700">{service.duration}</td>
+                      <td className="px-6 py-4 text-center text-gray-700">{service.frequency}</td>
                       <td className="px-6 py-4 text-center font-medium text-accent-coral">{service.pricing}</td>
-                      <td className="px-6 py-4 text-center text-charcoal/70">
+                      <td className="px-6 py-4 text-center text-gray-700">
                         {service.id === 'recurring' && 'Regular maintenance'}
                         {service.id === 'deep-cleaning' && 'Seasonal refresh'}
                         {service.id === 'move-in-out' && 'Real estate'}
@@ -793,8 +793,8 @@ export default function ServicesPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Why Choose Jacksonville House Cleaning Service?</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Jacksonville House Cleaning Service?</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We&apos;re committed to delivering exceptional cleaning services that exceed your expectations.
             </p>
           </div>
@@ -804,8 +804,8 @@ export default function ServicesPage() {
               <div className="w-16 h-16 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-primary-blue" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Licensed & Insured</h3>
-              <p className="text-charcoal/70 text-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Licensed & Insured</h3>
+              <p className="text-gray-700 text-sm">
                 Fully licensed, bonded, and insured for your peace of mind
               </p>
             </div>
@@ -814,8 +814,8 @@ export default function ServicesPage() {
               <div className="w-16 h-16 bg-accent-aqua/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Leaf className="w-8 h-8 text-accent-aqua" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Eco-Friendly</h3>
-              <p className="text-charcoal/70 text-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Eco-Friendly</h3>
+              <p className="text-gray-700 text-sm">
                 Safe, non-toxic cleaning products for your family and pets
               </p>
             </div>
@@ -824,8 +824,8 @@ export default function ServicesPage() {
               <div className="w-16 h-16 bg-accent-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-accent-green" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Experienced Team</h3>
-              <p className="text-charcoal/70 text-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Experienced Team</h3>
+              <p className="text-gray-700 text-sm">
                 Trained professionals with years of cleaning experience
               </p>
             </div>
@@ -834,8 +834,8 @@ export default function ServicesPage() {
               <div className="w-16 h-16 bg-accent-coral/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Check className="w-8 h-8 text-accent-coral" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Satisfaction Guaranteed</h3>
-              <p className="text-charcoal/70 text-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Satisfaction Guaranteed</h3>
+              <p className="text-gray-700 text-sm">
                 100% satisfaction guarantee on all our services
               </p>
             </div>

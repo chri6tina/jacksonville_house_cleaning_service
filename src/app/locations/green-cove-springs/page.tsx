@@ -213,12 +213,12 @@ export default function GreenCoveSpringsPage() {
               <span>Green Cove Springs, Jacksonville FL</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-charcoal mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Professional Cleaning Services in
               <span className="text-primary-blue block">Green Cove Springs</span>
             </h1>
             
-            <p className="text-xl text-charcoal/80 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
               Family-friendly cleaning solutions with eco-friendly products. Serving Green Cove Springs families with reliable, 
               professional cleaning services that keep your home safe and beautiful.
             </p>
@@ -246,10 +246,10 @@ export default function GreenCoveSpringsPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Green Cove Springs Cleaning Services
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Comprehensive cleaning solutions designed for Green Cove Springs families. From regular maintenance 
               to deep cleaning, we provide the services you need to maintain a healthy, beautiful home.
             </p>
@@ -261,11 +261,11 @@ export default function GreenCoveSpringsPage() {
                 <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-primary-blue" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-4">{service.title}</h3>
-                <p className="text-charcoal/70 mb-6">{service.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-700 mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-2 text-sm text-charcoal/80">
+                    <li key={index} className="flex items-center gap-2 text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-accent-green" />
                       {feature}
                     </li>
@@ -281,10 +281,10 @@ export default function GreenCoveSpringsPage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Green Cove Springs Families Choose Us
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We understand the unique needs of Green Cove Springs families and provide cleaning services 
               that fit your lifestyle and values.
             </p>
@@ -295,8 +295,8 @@ export default function GreenCoveSpringsPage() {
               <div className="w-20 h-20 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-primary-blue" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Family-Safe Products</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Family-Safe Products</h3>
+              <p className="text-gray-700">
                 Eco-friendly cleaning solutions that are safe for children, pets, and sensitive individuals.
               </p>
             </div>
@@ -305,8 +305,8 @@ export default function GreenCoveSpringsPage() {
               <div className="w-20 h-20 bg-accent-aqua/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="w-10 h-10 text-accent-aqua" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Flexible Scheduling</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Flexible Scheduling</h3>
+              <p className="text-gray-700">
                 Work around your family's busy schedule with convenient appointment times and recurring options.
               </p>
             </div>
@@ -315,8 +315,8 @@ export default function GreenCoveSpringsPage() {
               <div className="w-20 h-20 bg-accent-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Star className="w-10 h-10 text-accent-green" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Trusted Service</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Trusted Service</h3>
+              <p className="text-gray-700">
                 Reliable, professional cleaning that you can count on week after week, month after month.
               </p>
             </div>
@@ -329,10 +329,10 @@ export default function GreenCoveSpringsPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Why We Love Green Cove Springs
               </h2>
-              <p className="text-lg text-charcoal/70 mb-8">
+              <p className="text-lg text-gray-700 mb-8">
                 Green Cove Springs is a wonderful family community known for its natural springs, excellent schools, 
                 and strong community values. We're proud to serve this area with cleaning services that match 
                 the quality and care this community deserves.
@@ -342,7 +342,7 @@ export default function GreenCoveSpringsPage() {
                 {greenCoveSpringsFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-accent-green flex-shrink-0" />
-                    <span className="text-charcoal/80">{feature}</span>
+                    <span className="text-gray-700">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -359,7 +359,7 @@ export default function GreenCoveSpringsPage() {
                      {index === 4 && <Waves className="w-6 h-6 text-primary-blue" />}
                      {index === 5 && <Droplets className="w-6 h-6 text-primary-blue" />}
                    </div>
-                  <p className="text-sm font-medium text-charcoal">{landmark}</p>
+                  <p className="text-sm font-medium text-gray-900">{landmark}</p>
                 </div>
               ))}
             </div>
@@ -371,13 +371,13 @@ export default function GreenCoveSpringsPage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-              What Green Cove Springs Families Say
-            </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what families in Green Cove Springs are saying 
-              about our cleaning services.
-            </p>
+                          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                What Green Cove Springs Families Say
+              </h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Don't just take our word for it. Here's what families in Green Cove Springs are saying 
+                about our cleaning services.
+              </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -388,11 +388,11 @@ export default function GreenCoveSpringsPage() {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-charcoal/80 mb-6 italic">"{testimonial.comment}"</p>
+                <p className="text-gray-700 mb-6 italic">"{testimonial.comment}"</p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-semibold text-charcoal">{testimonial.name}</p>
-                    <p className="text-sm text-charcoal/60">{testimonial.location}</p>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.location}</p>
                   </div>
                   <div className="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center">
                     <Users className="w-6 h-6 text-primary-blue" />

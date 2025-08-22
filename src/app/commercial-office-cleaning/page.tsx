@@ -169,10 +169,10 @@ export default function CommercialOfficeCleaningPage() {
             <span className="text-accent-coral font-semibold">Phase 3 Premium Service</span>
             <Star className="w-6 h-6 text-accent-coral" />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Commercial <span className="text-slate-600">Office Cleaning</span>
           </h1>
-          <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
             Professional office cleaning services that maintain your business&apos;s professional image, 
             improve workplace health, and boost employee productivity. Starting at just $200.
           </p>
@@ -201,8 +201,8 @@ export default function CommercialOfficeCleaningPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Our Commercial Office Cleaning Services</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Commercial Office Cleaning Services</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We offer comprehensive office cleaning solutions designed specifically for commercial environments, 
               ensuring your business maintains a professional appearance and healthy work environment.
             </p>
@@ -217,29 +217,29 @@ export default function CommercialOfficeCleaningPage() {
                       <service.icon className="w-8 h-8 text-slate-600" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-charcoal">{service.title}</h3>
-                      <p className="text-sm text-charcoal/60">{service.description}</p>
+                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                      <p className="text-sm text-gray-600">{service.description}</p>
                     </div>
                   </div>
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-charcoal/60">Price:</span>
+                      <span className="text-sm text-gray-600">Price:</span>
                       <span className="text-sm font-medium text-accent-coral">{service.price}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-charcoal/60">Duration:</span>
-                      <span className="text-sm font-medium text-charcoal">{service.duration}</span>
+                      <span className="text-sm text-gray-600">Duration:</span>
+                      <span className="text-sm font-medium text-gray-900">{service.duration}</span>
                     </div>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-charcoal mb-3">What&apos;s Included:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-3">What&apos;s Included:</h4>
                     <ul className="space-y-2">
                       {service.includes.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start space-x-3">
                           <Check className="w-4 h-4 text-accent-green mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-charcoal/70">{item}</span>
+                          <span className="text-sm text-gray-700">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -265,8 +265,8 @@ export default function CommercialOfficeCleaningPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Comprehensive Office Area Cleaning</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Comprehensive Office Area Cleaning</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We provide detailed cleaning for all areas of your office, ensuring every space 
               meets commercial cleaning standards and maintains a professional appearance.
             </p>
@@ -279,16 +279,16 @@ export default function CommercialOfficeCleaningPage() {
                   <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
                     <area.icon className="w-6 h-6 text-slate-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-charcoal">{area.area}</h3>
+                  <h3 className="text-xl font-bold text-gray-900">{area.area}</h3>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-charcoal mb-3">Our Focus:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">Our Focus:</h4>
                   <ul className="space-y-2">
                     {area.focus.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start space-x-2">
                         <Check className="w-4 h-4 text-accent-green mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-charcoal/70">{item}</span>
+                        <span className="text-sm text-gray-700">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -304,10 +304,10 @@ export default function CommercialOfficeCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-charcoal mb-6">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Why Choose Commercial Office Cleaning?
               </h2>
-              <p className="text-lg text-charcoal/70 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                 Commercial office cleaning requires specialized knowledge, equipment, and processes 
                 that differ significantly from residential cleaning. Our service is designed specifically 
                 for business environments and professional standards.
@@ -317,30 +317,30 @@ export default function CommercialOfficeCleaningPage() {
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <Check className="w-6 h-6 text-accent-green mt-0.5 flex-shrink-0" />
-                    <span className="text-charcoal/80">{benefit}</span>
+                    <span className="text-gray-700">{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
             
             <div className="bg-slate-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Service Details</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Details</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Starting Price:</span>
+                  <span className="text-gray-600">Starting Price:</span>
                   <span className="font-semibold text-accent-coral">$200 per visit</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Duration:</span>
-                  <span className="font-semibold text-charcoal">2-8 hours</span>
+                  <span className="text-gray-600">Duration:</span>
+                  <span className="font-semibold text-gray-900">2-8 hours</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Frequency:</span>
-                  <span className="font-semibold text-charcoal">Daily to monthly</span>
+                  <span className="text-gray-600">Frequency:</span>
+                  <span className="font-semibold text-gray-900">Daily to monthly</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-charcoal/60">Warranty:</span>
-                  <span className="font-semibold text-charcoal">100% satisfaction</span>
+                  <span className="text-gray-600">Warranty:</span>
+                  <span className="font-semibold text-gray-900">100% satisfaction</span>
                 </div>
               </div>
             </div>
@@ -352,8 +352,8 @@ export default function CommercialOfficeCleaningPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Our 5-Step Commercial Cleaning Process</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our 5-Step Commercial Cleaning Process</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We follow a proven process designed specifically for commercial environments, ensuring 
               efficiency, quality, and minimal disruption to your business operations.
             </p>
@@ -365,8 +365,8 @@ export default function CommercialOfficeCleaningPage() {
                 <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-slate-600">{step.step}</span>
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">{step.title}</h3>
-                <p className="text-charcoal/70">{step.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+                <p className="text-gray-700">{step.description}</p>
               </div>
             ))}
           </div>
@@ -377,8 +377,8 @@ export default function CommercialOfficeCleaningPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-charcoal/70">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-700">
               Get answers to common questions about our commercial office cleaning service.
             </p>
           </div>
@@ -386,8 +386,8 @@ export default function CommercialOfficeCleaningPage() {
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                <h3 className="text-lg font-semibold text-charcoal mb-3">{faq.question}</h3>
-                <p className="text-charcoal/70">{faq.answer}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                <p className="text-gray-700">{faq.answer}</p>
               </div>
             ))}
           </div>

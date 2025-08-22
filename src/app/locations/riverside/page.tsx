@@ -169,15 +169,15 @@ export default function RiversidePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Why Riverside Chooses Our Cleaning Services
               </h2>
-              <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Riverside is one of Jacksonville&apos;s most beautiful and historic neighborhoods, known for its 
                 tree-lined streets, charming homes, and vibrant community. We understand the unique cleaning 
                 needs of this special area.
               </p>
-              <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Our team is familiar with Riverside&apos;s historic homes, local businesses, and the specific 
                 challenges that come with maintaining properties in this area. We provide personalized 
                 cleaning solutions that respect the character of your Riverside home.
@@ -185,19 +185,19 @@ export default function RiversidePage() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Check className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Historic home expertise</span>
+                  <span className="text-gray-700">Historic home expertise</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Check className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Local neighborhood knowledge</span>
+                  <span className="text-gray-700">Local neighborhood knowledge</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Check className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Flexible scheduling for busy professionals</span>
+                  <span className="text-gray-700">Flexible scheduling for busy professionals</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Check className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Eco-friendly cleaning products</span>
+                  <span className="text-gray-700">Eco-friendly cleaning products</span>
                 </div>
               </div>
             </div>
@@ -206,9 +206,9 @@ export default function RiversidePage() {
                 <div className="w-20 h-20 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
                   <MapPin className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-charcoal mb-2">Riverside Service Area</h3>
-                <p className="text-charcoal/70 mb-4">Covering all of Riverside and surrounding areas</p>
-                <div className="space-y-2 text-sm text-charcoal/70">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Riverside Service Area</h3>
+                <p className="text-gray-700 mb-4">Covering all of Riverside and surrounding areas</p>
+                <div className="space-y-2 text-sm text-gray-700">
                   <p>• Riverside Historic District</p>
                   <p>• Five Points</p>
                   <p>• Avondale</p>
@@ -225,10 +225,10 @@ export default function RiversidePage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
               Riverside Cleaning Services & Pricing
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Comprehensive cleaning solutions tailored specifically for Riverside homes and businesses. 
               Competitive pricing with no hidden fees.
             </p>
@@ -242,7 +242,7 @@ export default function RiversidePage() {
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                   selectedService === 'residential'
                     ? 'bg-primary-blue text-white shadow-md'
-                    : 'text-charcoal hover:text-primary-blue'
+                    : 'text-gray-900 hover:text-primary-blue'
                 }`}
               >
                 <Home className="w-5 h-5 inline mr-2" />
@@ -253,7 +253,7 @@ export default function RiversidePage() {
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                   selectedService === 'commercial'
                     ? 'bg-primary-blue text-white shadow-md'
-                    : 'text-charcoal hover:text-primary-blue'
+                    : 'text-gray-900 hover:text-primary-blue'
                 }`}
               >
                 <Building2 className="w-5 h-5 inline mr-2" />
@@ -267,18 +267,18 @@ export default function RiversidePage() {
             {services[selectedService as keyof typeof services].map((service, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-charcoal mb-3">{service.name}</h3>
-                  <p className="text-charcoal/70 mb-4">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.name}</h3>
+                  <p className="text-gray-700 mb-4">{service.description}</p>
                   <div className="text-3xl font-bold text-primary-blue mb-2">{service.price}</div>
-                  <div className="text-sm text-charcoal/60 mb-4">Duration: {service.duration}</div>
+                  <div className="text-sm text-gray-600 mb-4">Duration: {service.duration}</div>
                 </div>
                 
                 <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-charcoal mb-3">What&apos;s Included:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">What&apos;s Included:</h4>
                   {service.includes.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex items-center gap-3">
                       <Check className="w-4 h-4 text-accent-green flex-shrink-0" />
-                      <span className="text-sm text-charcoal/70">{item}</span>
+                      <span className="text-sm text-gray-700">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -299,10 +299,10 @@ export default function RiversidePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
               Specialized Cleaning Services in Riverside
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Additional services to keep your Riverside home or business in perfect condition
             </p>
           </div>
@@ -313,8 +313,8 @@ export default function RiversidePage() {
                 <div className="w-16 h-16 bg-primary-blue/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-primary-blue" />
                 </div>
-                <h3 className="font-semibold text-charcoal mb-2">{service.name}</h3>
-                <p className="text-sm text-charcoal/70 mb-3">{service.description}</p>
+                <h3 className="font-semibold text-gray-900 mb-2">{service.name}</h3>
+                <p className="text-sm text-gray-700 mb-3">{service.description}</p>
                 <div className="text-lg font-bold text-primary-blue mb-3">{service.price}</div>
                 <a
                   href="/contact"

@@ -127,10 +127,10 @@ export default function StandardCleaningPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
               Jacksonville Standard Cleaning Packages
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Choose the perfect cleaning package for your Jacksonville home. All packages include 
               our eco-friendly products and satisfaction guarantee.
             </p>
@@ -143,16 +143,16 @@ export default function StandardCleaningPage() {
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Home className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
                   <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
-                  <p className="text-charcoal/70 text-sm">{service.description}</p>
+                  <p className="text-gray-700 text-sm">{service.description}</p>
                 </div>
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-charcoal/80 text-sm">{feature}</span>
+                      <span className="text-gray-700 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -173,10 +173,10 @@ export default function StandardCleaningPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
               Why Choose Our Jacksonville Standard Cleaning?
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We're your local cleaning experts, providing reliable, consistent service that keeps 
               your Jacksonville home clean and comfortable.
             </p>
@@ -188,8 +188,8 @@ export default function StandardCleaningPage() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-2">{benefit.title}</h3>
-                <p className="text-charcoal/70">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-700">{benefit.description}</p>
               </div>
             ))}
           </div>

@@ -174,10 +174,10 @@ export default function PricingPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
               Jacksonville Cleaning Packages
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Choose the perfect cleaning package for your Jacksonville home. All packages include 
               our eco-friendly products and satisfaction guarantee.
             </p>
@@ -199,16 +199,16 @@ export default function PricingPage() {
                   <div className={`w-16 h-16 ${pkg.color === 'primary-blue' ? 'bg-primary-blue/20' : pkg.color === 'accent-coral' ? 'bg-accent-coral/20' : 'bg-accent-green/20'} rounded-full flex items-center justify-center mx-auto mb-4`}>
                     <pkg.icon className={`w-8 h-8 ${pkg.color === 'primary-blue' ? 'text-primary-blue' : pkg.color === 'accent-coral' ? 'text-accent-coral' : 'text-accent-green'}`} />
                   </div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-2">{pkg.name}</h3>
-                  <div className="text-4xl font-bold text-charcoal mb-2">{pkg.price}</div>
-                  <p className="text-charcoal/70">{pkg.description}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
+                  <div className="text-4xl font-bold text-gray-900 mb-2">{pkg.price}</div>
+                  <p className="text-gray-700">{pkg.description}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   {pkg.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-accent-green mt-0.5 flex-shrink-0" />
-                      <span className="text-charcoal/80 text-sm">{feature}</span>
+                      <span className="text-gray-700 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -230,8 +230,8 @@ export default function PricingPage() {
 
           {/* Commercial Services */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Commercial Cleaning Services</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Commercial Cleaning Services</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Professional cleaning solutions for businesses, offices, and commercial properties.
             </p>
           </div>
@@ -243,16 +243,16 @@ export default function PricingPage() {
                   <div className="w-16 h-16 bg-accent-aqua/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <service.icon className="w-8 h-8 text-accent-aqua" />
                   </div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
-                  <div className="text-3xl font-bold text-charcoal mb-2">{service.price}</div>
-                  <p className="text-charcoal/70">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
+                  <div className="text-3xl font-bold text-gray-900 mb-2">{service.price}</div>
+                  <p className="text-gray-700">{service.description}</p>
                 </div>
 
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-accent-green mt-0.5 flex-shrink-0" />
-                      <span className="text-charcoal/80 text-sm">{feature}</span>
+                      <span className="text-gray-700 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -279,8 +279,8 @@ export default function PricingPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">What Affects Pricing?</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">What Affects Pricing?</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Our pricing is transparent and based on several factors to ensure 
               you get the best value for your specific needs.
             </p>
@@ -291,8 +291,8 @@ export default function PricingPage() {
               <div className="w-16 h-16 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Home className="w-8 h-8 text-primary-blue" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Home Size</h3>
-              <p className="text-charcoal/70 text-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Home Size</h3>
+              <p className="text-gray-700 text-sm">
                 Square footage and number of rooms
               </p>
             </div>
@@ -301,8 +301,8 @@ export default function PricingPage() {
               <div className="w-16 h-16 bg-accent-aqua/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-accent-aqua" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Frequency</h3>
-              <p className="text-charcoal/70 text-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Frequency</h3>
+              <p className="text-gray-700 text-sm">
                 One-time vs. recurring service
               </p>
             </div>
@@ -311,8 +311,8 @@ export default function PricingPage() {
               <div className="w-16 h-16 bg-accent-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-accent-green" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Service Level</h3>
-              <p className="text-charcoal/70 text-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Service Level</h3>
+              <p className="text-gray-700 text-sm">
                 Standard, deep, or eco-friendly
               </p>
             </div>
@@ -321,8 +321,8 @@ export default function PricingPage() {
               <div className="w-16 h-16 bg-accent-coral/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-accent-coral" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Additional Services</h3>
-              <p className="text-charcoal/70 text-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Additional Services</h3>
+              <p className="text-gray-700 text-sm">
                 Carpet, window, or appliance cleaning
               </p>
             </div>
@@ -377,10 +377,10 @@ export default function PricingPage() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-charcoal mb-6">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-charcoal/70 mb-8">
+          <p className="text-xl text-gray-700 mb-8">
             Contact us today for a free, no-obligation quote tailored to your specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
