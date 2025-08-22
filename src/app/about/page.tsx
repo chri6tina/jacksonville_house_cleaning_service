@@ -77,19 +77,19 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Our Jacksonville Story
               </h2>
-              <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Founded in 2015, Jacksonville House Cleaning Service began with a simple mission: 
                 to provide our neighbors with the same level of care and attention we&apos;d want for our own homes.
               </p>
-              <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 What started as a small family operation has grown into one of Jacksonville&apos;s most trusted 
                 cleaning services, but we've never lost sight of what makes us special - our commitment to 
                 treating every home like it's our own.
               </p>
-              <p className="text-lg text-charcoal/70 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 We&apos;re proud to call Jacksonville home and even prouder to serve this amazing community 
                 with reliable, eco-friendly cleaning services that families can depend on.
               </p>
@@ -100,8 +100,8 @@ export default function AboutPage() {
                   <div className="w-20 h-20 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-white text-3xl font-bold">9</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-2">Years of Service</h3>
-                  <p className="text-charcoal/70">Serving Jacksonville since 2015</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Years of Service</h3>
+                  <p className="text-gray-700">Serving Jacksonville since 2015</p>
                 </div>
               </div>
             </div>
@@ -113,9 +113,10 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Our Growth Journey</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              From humble beginnings to Jacksonville&apos;s most trusted cleaning company
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Growth Journey</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              From humble beginnings to becoming Jacksonville&apos;s preferred cleaning service, 
+              our journey has been marked by steady growth and unwavering commitment to excellence.
             </p>
           </div>
 
@@ -124,32 +125,32 @@ export default function AboutPage() {
               <div className="w-20 h-20 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl font-bold text-primary-blue">2018</span>
               </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Company Founded</h3>
-              <p className="text-charcoal/70 text-sm">Started with basic house cleaning services</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Company Founded</h3>
+              <p className="text-gray-700 text-sm">Started with basic house cleaning services</p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-accent-aqua/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl font-bold text-accent-aqua">2020</span>
               </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Service Expansion</h3>
-              <p className="text-charcoal/70 text-sm">Added deep cleaning and move-in/out services</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Service Expansion</h3>
+              <p className="text-gray-700 text-sm">Added deep cleaning and move-in/out services</p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-accent-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl font-bold text-accent-green">2022</span>
               </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Commercial Growth</h3>
-              <p className="text-charcoal/70 text-sm">Expanded into office and commercial cleaning</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Commercial Growth</h3>
+              <p className="text-gray-700 text-sm">Expanded into office and commercial cleaning</p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-accent-coral/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl font-bold text-accent-coral">2024</span>
               </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Full-Service Company</h3>
-              <p className="text-charcoal/70 text-sm">16+ specialized services, serving all of Jacksonville</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Full-Service Company</h3>
+              <p className="text-gray-700 text-sm">16+ specialized services, serving all of Jacksonville</p>
             </div>
           </div>
         </div>
@@ -159,8 +160,8 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Our Comprehensive Service Portfolio</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Comprehensive Service Portfolio</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               From residential to commercial, we offer specialized cleaning solutions for every need
             </p>
           </div>
@@ -172,32 +173,32 @@ export default function AboutPage() {
                 <div className="w-12 h-12 bg-primary-blue/20 rounded-full flex items-center justify-center mr-4">
                   <Home className="w-6 h-6 text-primary-blue" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal">Residential Cleaning</h3>
+                <h3 className="text-xl font-bold text-gray-900">Residential Cleaning</h3>
               </div>
               <ul className="space-y-3">
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Recurring House Cleaning</span>
+                  <span className="text-gray-800">Recurring House Cleaning</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Deep Cleaning</span>
+                  <span className="text-gray-800">Deep Cleaning</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Move-In/Move-Out</span>
+                  <span className="text-gray-800">Move-In/Move-Out</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Post-Construction</span>
+                  <span className="text-gray-800">Post-Construction</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Pet-Friendly Cleaning</span>
+                  <span className="text-gray-800">Pet-Friendly Cleaning</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Senior Citizen Cleaning</span>
+                  <span className="text-gray-800">Senior Citizen Cleaning</span>
                 </li>
               </ul>
             </div>
@@ -208,32 +209,32 @@ export default function AboutPage() {
                 <div className="w-12 h-12 bg-accent-aqua/20 rounded-full flex items-center justify-center mr-4">
                   <Sparkles className="w-6 h-6 text-accent-aqua" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal">Specialized Services</h3>
+                <h3 className="text-xl font-bold text-gray-900">Specialized Services</h3>
               </div>
               <ul className="space-y-3">
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Carpet Cleaning</span>
+                  <span className="text-gray-800">Carpet Cleaning</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Window Cleaning</span>
+                  <span className="text-gray-800">Window Cleaning</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Air Duct Cleaning</span>
+                  <span className="text-gray-800">Air Duct Cleaning</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Pressure Washing</span>
+                  <span className="text-gray-800">Pressure Washing</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Gutter Cleaning</span>
+                  <span className="text-gray-800">Gutter Cleaning</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Vacation Rental Turnover</span>
+                  <span className="text-gray-800">Vacation Rental Turnover</span>
                 </li>
               </ul>
             </div>
@@ -244,32 +245,32 @@ export default function AboutPage() {
                 <div className="w-12 h-12 bg-accent-coral/20 rounded-full flex items-center justify-center mr-4">
                   <Building2 className="w-6 h-6 text-accent-coral" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal">Commercial Cleaning</h3>
+                <h3 className="text-xl font-bold text-gray-900">Commercial Cleaning</h3>
               </div>
               <ul className="space-y-3">
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Office Cleaning</span>
+                  <span className="text-gray-800">Office Cleaning</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Commercial Office</span>
+                  <span className="text-gray-800">Commercial Office</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Event Venue Cleaning</span>
+                  <span className="text-gray-800">Event Venue Cleaning</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Medical Facility</span>
+                  <span className="text-gray-800">Medical Facility</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Post-Construction</span>
+                  <span className="text-gray-800">Post-Construction</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Custom Solutions</span>
+                  <span className="text-gray-800">Custom Solutions</span>
                 </li>
               </ul>
             </div>
@@ -291,8 +292,8 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Our Core Values</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Core Values</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               These fundamental principles guide everything we do and ensure we deliver 
               the highest quality service to our customers.
             </p>
@@ -303,8 +304,8 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-8 h-8 text-primary-blue" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Reliability</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Reliability</h3>
+              <p className="text-gray-700">
                 We show up on time, every time, and complete every job to the highest standards.
               </p>
             </div>
@@ -313,8 +314,8 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-accent-aqua/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Leaf className="w-8 h-8 text-accent-aqua" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Eco-Friendly</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Eco-Friendly</h3>
+              <p className="text-gray-700">
                 We use only safe, non-toxic cleaning products that protect your family and the environment.
               </p>
             </div>
@@ -323,8 +324,8 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-accent-green/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="w-8 h-8 text-accent-green" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Excellence</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Excellence</h3>
+              <p className="text-gray-700">
                 We never settle for "good enough" - every detail matters in creating a truly clean space.
               </p>
             </div>
@@ -333,8 +334,8 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-accent-coral/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="w-8 h-8 text-accent-coral" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Community</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Community</h3>
+              <p className="text-gray-700">
                 We&apos;re proud to serve Jacksonville and give back to the community that supports us.
               </p>
             </div>
@@ -346,8 +347,8 @@ export default function AboutPage() {
       <section className="py-20" id="team">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Meet Our Expert Team</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Meet Our Expert Team</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Our experienced cleaning professionals are carefully selected, thoroughly trained, 
               and committed to delivering exceptional results across all our services.
             </p>
@@ -358,9 +359,9 @@ export default function AboutPage() {
               <div className="w-24 h-24 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-12 h-12 text-primary-blue" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Sarah Johnson</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Sarah Johnson</h3>
               <p className="text-accent-aqua font-semibold mb-2">Lead Cleaner & Trainer</p>
-              <p className="text-charcoal/70 text-sm">
+              <p className="text-gray-700 text-sm">
                 6+ years experience, specializes in deep cleaning, eco-friendly methods, and team training
               </p>
             </div>
@@ -369,9 +370,9 @@ export default function AboutPage() {
               <div className="w-24 h-24 bg-accent-aqua/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-12 h-12 text-accent-aqua" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Mike Rodriguez</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Mike Rodriguez</h3>
               <p className="text-primary-blue font-semibold mb-2">Commercial Specialist</p>
-              <p className="text-charcoal/70 text-sm">
+              <p className="text-gray-700 text-sm">
                 8+ years experience, expert in office cleaning, post-construction, and medical facilities
               </p>
             </div>
@@ -380,9 +381,9 @@ export default function AboutPage() {
               <div className="w-24 h-24 bg-accent-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-12 h-12 text-accent-green" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Lisa Chen</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Lisa Chen</h3>
               <p className="text-accent-coral font-semibold mb-2">Quality Inspector</p>
-              <p className="text-charcoal/70 text-sm">
+              <p className="text-gray-700 text-sm">
                 7+ years experience, ensures every job meets our high standards across all services
               </p>
             </div>
@@ -391,9 +392,9 @@ export default function AboutPage() {
               <div className="w-24 h-24 bg-accent-coral/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-12 h-12 text-accent-coral" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">David Thompson</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">David Thompson</h3>
               <p className="text-primary-blue font-semibold mb-2">Specialized Services Lead</p>
-              <p className="text-charcoal/70 text-sm">
+              <p className="text-gray-700 text-sm">
                 5+ years experience, expert in carpet cleaning, pressure washing, and air duct cleaning
               </p>
             </div>
@@ -402,9 +403,9 @@ export default function AboutPage() {
               <div className="w-24 h-24 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-12 h-12 text-primary-blue" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Maria Garcia</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Maria Garcia</h3>
               <p className="text-accent-aqua font-semibold mb-2">Customer Relations</p>
-              <p className="text-charcoal/70 text-sm">
+              <p className="text-gray-700 text-sm">
                 4+ years experience, ensures exceptional customer service and satisfaction
               </p>
             </div>
@@ -413,9 +414,9 @@ export default function AboutPage() {
               <div className="w-24 h-24 bg-accent-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-12 h-12 text-accent-green" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">James Wilson</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">James Wilson</h3>
               <p className="text-accent-coral font-semibold mb-2">Operations Manager</p>
-              <p className="text-charcoal/70 text-sm">
+              <p className="text-gray-700 text-sm">
                 10+ years experience, oversees all operations and ensures quality standards
               </p>
             </div>
@@ -427,8 +428,8 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">Licensed, Bonded & Insured</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Licensed, Bonded & Insured</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Your peace of mind is our priority. We maintain all necessary licenses, 
               insurance, and certifications to protect you and your property.
             </p>
@@ -439,8 +440,8 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-8 h-8 text-primary-blue" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Fully Licensed</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Fully Licensed</h3>
+              <p className="text-gray-700">
                 Licensed by the State of Florida, registered with the City of Jacksonville, and certified for specialized services
               </p>
             </div>
@@ -449,8 +450,8 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-accent-aqua/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-8 h-8 text-accent-aqua" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Bonded & Insured</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Bonded & Insured</h3>
+              <p className="text-gray-700">
                 $2 million general liability insurance, $500,000 property damage coverage, and full bonding for your protection
               </p>
             </div>
@@ -459,8 +460,8 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-accent-green/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="w-8 h-8 text-accent-green" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Background Checked</h3>
-              <p className="text-charcoal/70">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Background Checked</h3>
+              <p className="text-gray-700">
                 All team members undergo thorough background checks, drug testing, and continuous training
               </p>
             </div>

@@ -127,12 +127,12 @@ export default function ApartmentCleaningPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Jacksonville Apartment Cleaning Services
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              What&apos;s Included in Apartment Cleaning?
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Choose the perfect apartment cleaning package for your Jacksonville home. 
-              All packages include our eco-friendly products and satisfaction guarantee.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Our apartment cleaning services are designed specifically for smaller spaces, 
+              ensuring every corner gets the attention it deserves.
             </p>
           </div>
 
@@ -143,16 +143,16 @@ export default function ApartmentCleaningPage() {
                   <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Home className="w-8 h-8 text-indigo-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
+                  <div className="text-sm text-gray-700 mb-4">{service.description}</div>
                   <div className="text-3xl font-bold text-indigo-600 mb-2">{service.price}</div>
-                  <p className="text-charcoal/70 text-sm">{service.description}</p>
                 </div>
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-indigo-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-charcoal/80 text-sm">{feature}</span>
+                      <span className="text-gray-800 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -173,12 +173,12 @@ export default function ApartmentCleaningPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Why Choose Our Jacksonville Apartment Cleaning?
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              Why Choose Apartment Cleaning?
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We're your local apartment cleaning experts, providing reliable, consistent service that 
-              keeps your Jacksonville apartment clean and comfortable.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Apartment living requires specialized cleaning approaches that we&apos;ve perfected 
+              through years of experience.
             </p>
           </div>
 
@@ -188,8 +188,8 @@ export default function ApartmentCleaningPage() {
                 <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-indigo-600" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-2">{benefit.title}</h3>
-                <p className="text-charcoal/70">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-700">{benefit.description}</p>
               </div>
             ))}
           </div>

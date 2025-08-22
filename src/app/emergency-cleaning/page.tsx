@@ -183,10 +183,10 @@ export default function EmergencyCleaningPage() {
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               Jacksonville Emergency Cleaning Services
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto px-4">
               When you need cleaning fast, our emergency response team is ready to help. 
               Available 7 days a week across all of Jacksonville.
             </p>
@@ -205,18 +205,18 @@ export default function EmergencyCleaningPage() {
                   <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <service.icon className="w-8 h-8 text-red-500" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
-                  <p className="text-charcoal/70 mb-4">{service.description}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
+                  <p className="text-gray-700 mb-4">{service.description}</p>
                   <div className="text-3xl font-bold text-red-500 mb-2">{service.price}</div>
-                  <div className="text-sm text-charcoal/60 mb-4">Response: {service.response}</div>
+                  <div className="text-sm text-gray-600 mb-4">Response: {service.response}</div>
                 </div>
 
                 <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">What's Included:</h4>
                   {service.includes.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-4 h-4 text-accent-green flex-shrink-0" />
-                      <span className="text-sm text-charcoal/70">{item}</span>
+                      <span className="text-sm text-gray-700">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -237,10 +237,10 @@ export default function EmergencyCleaningPage() {
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               Common Emergency Cleaning Scenarios
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto px-4">
               These are the most common situations where Jacksonville residents need emergency cleaning services
             </p>
           </div>
@@ -253,7 +253,7 @@ export default function EmergencyCleaningPage() {
                     <scenario.icon className="w-6 h-6 text-primary-blue" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-charcoal">{scenario.name}</h3>
+                    <h3 className="font-semibold text-gray-900">{scenario.name}</h3>
                     <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
                       scenario.urgency === 'Critical' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800'
                     }`}>
@@ -261,7 +261,7 @@ export default function EmergencyCleaningPage() {
                     </span>
                   </div>
                 </div>
-                <p className="text-sm text-charcoal/70 mb-4">{scenario.description}</p>
+                <p className="text-sm text-gray-700 mb-4">{scenario.description}</p>
                 <Link
                   href="/contact"
                   className="text-primary-blue hover:text-primary-blue/80 font-medium text-sm hover:underline"
@@ -279,29 +279,29 @@ export default function EmergencyCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Why Jacksonville Chooses Us for Emergency Cleaning
               </h2>
-              <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 When you need cleaning fast, you need a team you can trust. Our emergency response 
                 service is designed for Jacksonville's urgent cleaning needs.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Local Jacksonville team - we know the area</span>
+                  <span className="text-gray-800">Local Jacksonville team - we know the area</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Licensed, insured, and background-checked staff</span>
+                  <span className="text-gray-800">Licensed, insured, and background-checked staff</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Available 7 days a week, including holidays</span>
+                  <span className="text-gray-800">Available 7 days a week, including holidays</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-accent-green" />
-                  <span className="text-charcoal/80">Quality guarantee - we stand by our work</span>
+                  <span className="text-gray-800">Quality guarantee - we stand by our work</span>
                 </div>
               </div>
             </div>
@@ -310,9 +310,9 @@ export default function EmergencyCleaningPage() {
                 <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <AlertTriangle className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-charcoal mb-2">Emergency Response</h3>
-                <p className="text-charcoal/70 mb-4">We're here when you need us most</p>
-                <div className="space-y-2 text-sm text-charcoal/70">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Emergency Response</h3>
+                <p className="text-gray-700 mb-4">We're here when you need us most</p>
+                <div className="space-y-2 text-sm text-gray-700">
                   <p>• 2-4 Hour Response Time</p>
                   <p>• 7 Days a Week</p>
                   <p>• All Jacksonville Areas</p>
@@ -328,10 +328,10 @@ export default function EmergencyCleaningPage() {
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               Emergency Cleaning Service Areas
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto px-4">
               We provide emergency cleaning services across all of Jacksonville and surrounding areas
             </p>
           </div>
@@ -347,8 +347,8 @@ export default function EmergencyCleaningPage() {
                 <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mx-auto mb-3">
                   <MapPin className="w-6 h-6 text-primary-blue" />
                 </div>
-                <h3 className="font-semibold text-charcoal">{area}</h3>
-                <p className="text-xs text-charcoal/70 mt-1">2-4 Hour Response</p>
+                <h3 className="font-semibold text-gray-900">{area}</h3>
+                <p className="text-xs text-gray-700 mt-1">2-4 Hour Response</p>
               </div>
             ))}
           </div>

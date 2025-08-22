@@ -127,12 +127,12 @@ export default function ExtremeDeepCleaningPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Jacksonville Extreme Deep Cleaning Services
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              What&apos;s Included in Extreme Deep Cleaning?
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Choose the perfect deep cleaning package for your Jacksonville home. 
-              All packages include our professional service and satisfaction guarantee.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Our extreme deep cleaning goes far beyond regular cleaning to tackle years of built-up grime, 
+              stains, and neglected areas.
             </p>
           </div>
 
@@ -143,16 +143,15 @@ export default function ExtremeDeepCleaningPage() {
                   <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Home className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
-                  <div className="text-3xl font-bold text-purple-600 mb-2">{service.price}</div>
-                  <p className="text-charcoal/70 text-sm">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
+                  <div className="text-sm text-gray-700 mb-4">{service.description}</div>
                 </div>
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-charcoal/80 text-sm">{feature}</span>
+                      <span className="text-gray-800 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -173,12 +172,12 @@ export default function ExtremeDeepCleaningPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Why Choose Our Jacksonville Extreme Deep Cleaning?
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              Why Choose Extreme Deep Cleaning?
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We're your local extreme deep cleaning experts, providing reliable, professional service that 
-              transforms your Jacksonville home completely.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              When regular cleaning isn&apos;t enough, extreme deep cleaning provides the thorough 
+              restoration your home needs.
             </p>
           </div>
 
@@ -188,8 +187,8 @@ export default function ExtremeDeepCleaningPage() {
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-2">{benefit.title}</h3>
-                <p className="text-charcoal/70">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-700">{benefit.description}</p>
               </div>
             ))}
           </div>
