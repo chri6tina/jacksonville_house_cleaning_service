@@ -1,5 +1,6 @@
 import React from 'react';
-import { Calendar, Clock, Shield, Check, Star, Phone, Users, Zap } from 'lucide-react';
+import { Calendar, Clock, Shield, Check, Star, Phone, Users, Zap, Sparkles, Award, TrendingUp } from 'lucide-react';
+import Image from 'next/image';
 
 export default function RecurringCleaningPage() {
   const services = [
@@ -38,32 +39,164 @@ export default function RecurringCleaningPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Recurring Cleaning Services
-            </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Maintain a consistently clean home with our reliable recurring cleaning services. 
-              Choose weekly, bi-weekly, or monthly schedules that fit your lifestyle and budget.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:9044563851"
-                className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call for Quote
-              </a>
-              <a 
-                href="/contact-us"
-                className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-              >
-                <Calendar className="w-5 h-5" />
-                Schedule Service
-              </a>
+      {/* Enhanced Hero Section */}
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero1.png"
+            alt="Professional cleaning service"
+            fill
+            className="object-cover"
+            priority
+            quality={90}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-blue/80 via-primary-blue/70 to-accent-aqua/60"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Text Content */}
+            <div className="text-white">
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4" />
+                <span>Most Popular Service</span>
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Recurring Cleaning
+                <span className="block text-accent-aqua">Services</span>
+              </h1>
+              
+              <p className="text-xl text-white/90 max-w-2xl mb-8 leading-relaxed">
+                Maintain a consistently clean home with our reliable recurring cleaning services. 
+                Choose weekly, bi-weekly, or monthly schedules that fit your lifestyle and budget.
+              </p>
+              
+              {/* Key Benefits */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-accent-aqua" />
+                  </div>
+                  <span className="text-white/90 font-medium">Save up to 20%</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                    <Calendar className="w-5 h-5 text-accent-aqua" />
+                  </div>
+                  <span className="text-white/90 font-medium">Flexible scheduling</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-accent-aqua" />
+                  </div>
+                  <span className="text-white/90 font-medium">Same trusted team</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                    <Award className="w-5 h-5 text-accent-aqua" />
+                  </div>
+                  <span className="text-white/90 font-medium">Consistent quality</span>
+                </div>
+              </div>
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="tel:9044563851"
+                  className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call for Quote
+                </a>
+                <a 
+                  href="/contact-us"
+                  className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                >
+                  <Calendar className="w-5 h-5" />
+                  Schedule Service
+                </a>
+              </div>
+            </div>
+            
+            {/* Right Column - Pricing Card */}
+            <div className="hidden lg:block">
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/20">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Calendar className="w-8 h-8 text-primary-blue" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">Recurring Service Pricing</h3>
+                  <p className="text-gray-600">Save more with regular service</p>
+                </div>
+                
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center justify-between p-3 bg-gradient-to-r from-primary-blue/5 to-accent-aqua/5 rounded-lg">
+                    <span className="text-gray-900 font-medium">Weekly Cleaning</span>
+                    <span className="text-primary-blue font-bold text-lg">15% Off</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-gradient-to-r from-primary-blue/5 to-accent-aqua/5 rounded-lg">
+                    <span className="text-gray-900 font-medium">Bi-Weekly Cleaning</span>
+                    <span className="text-primary-blue font-bold text-lg">10% Off</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-gradient-to-r from-primary-blue/5 to-accent-aqua/5 rounded-lg">
+                    <span className="text-gray-900 font-medium">Monthly Cleaning</span>
+                    <span className="text-primary-blue font-bold text-lg">5% Off</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-gradient-to-r from-primary-blue/5 to-accent-aqua/5 rounded-lg">
+                    <span className="text-gray-900 font-medium">Quarterly Deep Clean</span>
+                    <span className="text-primary-blue font-bold text-lg">20% Off</span>
+                  </div>
+                </div>
+                
+                <div className="p-4 bg-accent-aqua/10 rounded-xl border border-accent-aqua/20">
+                  <p className="text-gray-700 text-sm text-center">
+                    <strong>Special Offer:</strong> New recurring clients get an additional 10% off their first month!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mobile Pricing Section */}
+      <section className="py-12 bg-gradient-to-br from-primary-blue/5 to-accent-aqua/5 lg:hidden">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-primary-blue/10">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Calendar className="w-8 h-8 text-primary-blue" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">Recurring Service Pricing</h3>
+              <p className="text-gray-600">Save more with regular service</p>
+            </div>
+            
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center justify-between p-3 bg-gradient-to-r from-primary-blue/5 to-accent-aqua/5 rounded-lg">
+                <span className="text-gray-900 font-medium">Weekly Cleaning</span>
+                <span className="text-primary-blue font-bold text-lg">15% Off</span>
+              </div>
+              <div className="flex items-center justify-between p-3 bg-gradient-to-r from-primary-blue/5 to-accent-aqua/5 rounded-lg">
+                <span className="text-gray-900 font-medium">Bi-Weekly Cleaning</span>
+                <span className="text-primary-blue font-bold text-lg">10% Off</span>
+              </div>
+              <div className="flex items-center justify-between p-3 bg-gradient-to-r from-primary-blue/5 to-accent-aqua/5 rounded-lg">
+                <span className="text-gray-900 font-medium">Monthly Cleaning</span>
+                <span className="text-primary-blue font-bold text-lg">5% Off</span>
+              </div>
+              <div className="flex items-center justify-between p-3 bg-gradient-to-r from-primary-blue/5 to-accent-aqua/5 rounded-lg">
+                <span className="text-gray-900 font-medium">Quarterly Deep Clean</span>
+                <span className="text-primary-blue font-bold text-lg">20% Off</span>
+              </div>
+            </div>
+            
+            <div className="p-4 bg-accent-aqua/10 rounded-xl border border-accent-aqua/20">
+              <p className="text-gray-700 text-sm text-center">
+                <strong>Special Offer:</strong> New recurring clients get an additional 10% off their first month!
+              </p>
             </div>
           </div>
         </div>
@@ -99,31 +232,45 @@ export default function RecurringCleaningPage() {
               </div>
             </div>
             
-            <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Recurring Service Pricing</h3>
+            <div className="bg-gradient-to-br from-primary-blue/5 to-accent-aqua/5 rounded-2xl p-8 border border-primary-blue/10">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Recurring Service?</h3>
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-900">Weekly Cleaning</span>
-                  <span className="text-primary-blue font-bold">15% Off</span>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-primary-blue/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Star className="w-4 h-4 text-primary-blue" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Consistent Quality</h4>
+                    <p className="text-gray-600 text-sm">Same team, same standards, every visit</p>
+                  </div>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-900">Bi-Weekly Cleaning</span>
-                  <span className="text-primary-blue font-bold">10% Off</span>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-accent-aqua/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Clock className="w-4 h-4 text-accent-aqua" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Time Savings</h4>
+                    <p className="text-gray-600 text-sm">No more searching for cleaners</p>
+                  </div>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-900">Monthly Cleaning</span>
-                  <span className="text-primary-blue font-bold">5% Off</span>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-accent-green/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <TrendingUp className="w-4 h-4 text-accent-green" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Cost Effective</h4>
+                    <p className="text-gray-600 text-sm">Save up to 20% with regular service</p>
+                  </div>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-900">Quarterly Deep Clean</span>
-                  <span className="text-primary-blue font-bold">20% Off</span>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-accent-coral/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Users className="w-4 h-4 text-accent-coral" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Trusted Relationship</h4>
+                    <p className="text-gray-600 text-sm">Build rapport with your cleaning team</p>
+                  </div>
                 </div>
-              </div>
-              <div className="mt-6 p-4 bg-primary-blue/10 rounded-xl">
-                <p className="text-gray-700 text-sm">
-                  <strong>Note:</strong> Discounts apply to standard cleaning rates. Contact us for 
-                  a personalized quote based on your home size and cleaning needs.
-                </p>
               </div>
             </div>
           </div>
@@ -303,6 +450,17 @@ export default function RecurringCleaningPage() {
           </div>
         </div>
       </section>
+      
+      {/* Floating Action Button for Mobile */}
+      <div className="fixed bottom-6 right-6 z-50 lg:hidden">
+        <a
+          href="tel:9044563851"
+          className="bg-accent-coral hover:bg-accent-coral/90 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110"
+          aria-label="Call for quote"
+        >
+          <Phone className="w-6 h-6" />
+        </a>
+      </div>
     </div>
   );
 }
