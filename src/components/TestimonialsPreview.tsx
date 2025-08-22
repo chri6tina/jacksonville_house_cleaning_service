@@ -52,10 +52,10 @@ const TestimonialsPreview: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             What Our Customers Say
           </h2>
-          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Don&apos;t just take our word for it. Here's what Jacksonville families and businesses 
             are saying about our cleaning services.
           </p>
@@ -68,10 +68,10 @@ const TestimonialsPreview: React.FC = () => {
               <div className="text-3xl md:text-4xl font-bold text-primary-blue mb-2">
                 {stat.number}
               </div>
-              <div className="text-charcoal font-medium mb-1">
+              <div className="text-gray-900 font-medium mb-1">
                 {stat.label}
               </div>
-              <div className="text-charcoal/60 text-sm">
+              <div className="text-gray-600 text-sm">
                 {stat.sublabel}
               </div>
             </div>
@@ -96,7 +96,7 @@ const TestimonialsPreview: React.FC = () => {
               </div>
 
               {/* Review Text */}
-              <p className="text-charcoal/80 mb-6 leading-relaxed italic">
+              <p className="text-gray-700 mb-6 leading-relaxed italic">
                 "{testimonial.review}"
               </p>
 
@@ -107,8 +107,8 @@ const TestimonialsPreview: React.FC = () => {
                     <User className="w-6 h-6 text-gray-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-charcoal">{testimonial.name}</div>
-                    <div className="flex items-center text-sm text-charcoal/60">
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                    <div className="flex items-center text-sm text-gray-600">
                       <MapPin className="w-4 h-4 mr-1" />
                       {testimonial.location}
                     </div>
@@ -127,10 +127,10 @@ const TestimonialsPreview: React.FC = () => {
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-charcoal mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Join Our Growing Family of Satisfied Customers
             </h3>
-            <p className="text-charcoal/70 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
               Experience the same level of excellence that has earned us hundreds of 5-star reviews. 
               Your satisfaction is our top priority.
             </p>

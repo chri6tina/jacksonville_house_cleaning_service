@@ -67,10 +67,10 @@ const WhyChooseUs: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Why Choose Jacksonville House Cleaning Service?
           </h2>
-          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             We don&apos;t just clean homes – we create healthier, more comfortable living spaces. 
             Our commitment to excellence sets us apart from the competition.
           </p>
@@ -83,7 +83,7 @@ const WhyChooseUs: React.FC = () => {
               <div className="text-4xl md:text-5xl font-bold text-primary-blue mb-2">
                 {stat.number}
               </div>
-              <div className="text-charcoal/70 font-medium">
+              <div className="text-gray-700 font-medium">
                 {stat.label}
               </div>
             </div>
@@ -100,10 +100,10 @@ const WhyChooseUs: React.FC = () => {
               <div className={`w-16 h-16 bg-${reason.color}/10 rounded-2xl flex items-center justify-center mb-4 mx-auto`}>
                 <reason.icon className={`w-8 h-8 text-${reason.color}`} />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3 text-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
                 {reason.title}
               </h3>
-              <p className="text-charcoal/70 text-center leading-relaxed">
+              <p className="text-gray-700 text-center leading-relaxed">
                 {reason.description}
               </p>
             </div>
@@ -111,12 +111,12 @@ const WhyChooseUs: React.FC = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-20 bg-blue-100 rounded-2xl p-8 text-charcoal">
+        <div className="mt-20 bg-blue-100 rounded-2xl p-8 text-gray-900">
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4 text-charcoal">
+            <h3 className="text-3xl font-bold mb-4 text-gray-900">
               Trusted by Jacksonville Families Since 2010
             </h3>
-            <p className="text-charcoal/70 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-700 text-lg max-w-2xl mx-auto">
               Join hundreds of satisfied customers who have made us their trusted cleaning partner. 
               Experience the difference that professional, reliable service makes.
             </p>
@@ -130,19 +130,19 @@ const WhyChooseUs: React.FC = () => {
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <div className="text-charcoal/70">Google Reviews</div>
+              <div className="text-gray-700">Google Reviews</div>
             </div>
             
             <div className="text-center">
               <div className="text-3xl font-bold mb-2 text-primary-blue">98%</div>
-              <div className="text-charcoal/70 mb-2">Customer Retention</div>
-              <div className="text-charcoal/60 text-sm">Year after year</div>
+              <div className="text-gray-700 mb-2">Customer Retention</div>
+              <div className="text-gray-600 text-sm">Year after year</div>
             </div>
             
             <div className="text-center">
               <div className="text-3xl font-bold mb-2 text-primary-blue">24hr</div>
-              <div className="text-charcoal/70 mb-2">Response Time</div>
-              <div className="text-charcoal/60 text-sm">Always available</div>
+              <div className="text-gray-700 mb-2">Response Time</div>
+              <div className="text-gray-600 text-sm">Always available</div>
             </div>
           </div>
         </div>

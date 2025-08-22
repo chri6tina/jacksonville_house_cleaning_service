@@ -85,10 +85,10 @@ const ServicesSection: React.FC = () => {
     <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             Our Cleaning Services
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto px-4">
             From regular maintenance to deep cleaning projects, we offer comprehensive cleaning solutions 
             tailored to your specific needs and schedule.
           </p>

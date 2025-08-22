@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
       }}
     >
       {/* Dark overlay for maximum text readability */}
-      <div className="absolute inset-0 bg-black/60 sm:bg-black/75"></div>
+      <div className="absolute inset-0 bg-black/70 sm:bg-black/75"></div>
 
       {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -160,10 +160,10 @@ const ServiceLocations: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Serving All of Jacksonville & Surrounding Areas
           </h2>
-          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             From the beaches to the suburbs, we provide professional cleaning services throughout 
             Northeast Florida. No area is too far for our experienced cleaning team.
           </p>
@@ -171,7 +171,7 @@ const ServiceLocations: React.FC = () => {
 
         {/* Popular Areas Grid */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-charcoal mb-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Popular Service Areas
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -181,7 +181,7 @@ const ServiceLocations: React.FC = () => {
                 className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 text-center"
               >
                 <MapPin className="w-6 h-6 text-primary-blue mx-auto mb-2" />
-                <span className="font-semibold text-charcoal">{area}</span>
+                <span className="font-semibold text-gray-900">{area}</span>
               </div>
             ))}
           </div>
@@ -195,15 +195,15 @@ const ServiceLocations: React.FC = () => {
               <div className="w-12 h-12 bg-primary-blue/10 rounded-xl flex items-center justify-center mr-4">
                 <MapPin className="w-6 h-6 text-primary-blue" />
               </div>
-              <h3 className="text-2xl font-bold text-charcoal">Northside & Arlington</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Northside & Arlington</h3>
             </div>
-            <p className="text-charcoal/70 mb-6">
+            <p className="text-gray-700 mb-6">
               Comprehensive cleaning services covering North Jacksonville, Arlington, and surrounding communities. 
               From historic neighborhoods to modern developments.
             </p>
             <div className="grid grid-cols-2 gap-2">
               {jacksonvilleAreas.northside.slice(0, 12).map((area, index) => (
-                <div key={index} className="flex items-center text-sm text-charcoal/80">
+                <div key={index} className="flex items-center text-sm text-gray-700">
                   <div className="w-2 h-2 bg-accent-aqua rounded-full mr-2"></div>
                   {area}
                 </div>
@@ -217,15 +217,15 @@ const ServiceLocations: React.FC = () => {
               <div className="w-12 h-12 bg-accent-aqua/10 rounded-xl flex items-center justify-center mr-4">
                 <MapPin className="w-6 h-6 text-accent-aqua" />
               </div>
-              <h3 className="text-2xl font-bold text-charcoal">Southside & Mandarin</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Southside & Mandarin</h3>
             </div>
-            <p className="text-charcoal/70 mb-6">
+            <p className="text-gray-700 mb-6">
               Premium cleaning services for South Jacksonville, Mandarin, and the Baymeadows corridor. 
               Serving upscale homes and professional offices.
             </p>
             <div className="grid grid-cols-2 gap-2">
               {jacksonvilleAreas.southside.slice(0, 12).map((area, index) => (
-                <div key={index} className="flex items-center text-sm text-charcoal/80">
+                <div key={index} className="flex items-center text-sm text-gray-700">
                   <div className="w-2 h-2 bg-accent-aqua rounded-full mr-2"></div>
                   {area}
                 </div>
@@ -239,15 +239,15 @@ const ServiceLocations: React.FC = () => {
               <div className="w-12 h-12 bg-accent-coral/10 rounded-xl flex items-center justify-center mr-4">
                 <MapPin className="w-6 h-6 text-accent-coral" />
               </div>
-              <h3 className="text-2xl font-bold text-charcoal">Beaches & Coastal Areas</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Beaches & Coastal Areas</h3>
             </div>
-            <p className="text-charcoal/70 mb-6">
+            <p className="text-gray-700 mb-6">
               Specialized cleaning for beachfront properties, vacation rentals, and coastal homes. 
               From Ponte Vedra to Amelia Island.
             </p>
             <div className="grid grid-cols-2 gap-2">
               {jacksonvilleAreas.beaches.slice(0, 12).map((area, index) => (
-                <div key={index} className="flex items-center text-sm text-charcoal/80">
+                <div key={index} className="flex items-center text-sm text-gray-700">
                   <div className="w-2 h-2 bg-accent-aqua rounded-full mr-2"></div>
                   {area}
                 </div>
@@ -261,15 +261,15 @@ const ServiceLocations: React.FC = () => {
               <div className="w-12 h-12 bg-accent-green/10 rounded-xl flex items-center justify-center mr-4">
                 <MapPin className="w-6 h-6 text-accent-green" />
               </div>
-              <h3 className="text-2xl font-bold text-charcoal">Westside & Suburbs</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Westside & Suburbs</h3>
             </div>
-            <p className="text-charcoal/70 mb-6">
+            <p className="text-gray-700 mb-6">
               Reliable cleaning services for West Jacksonville and suburban communities. 
               Including Orange Park, Fleming Island, and surrounding areas.
             </p>
             <div className="grid grid-cols-2 gap-2">
               {jacksonvilleAreas.westside.slice(0, 12).map((area, index) => (
-                <div key={index} className="flex items-center text-sm text-charcoal/80">
+                <div key={index} className="flex items-center text-sm text-gray-700">
                   <div className="w-2 h-2 bg-accent-aqua rounded-full mr-2"></div>
                   {area}
                 </div>

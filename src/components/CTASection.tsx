@@ -24,7 +24,7 @@ const CTASection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-blue-100 text-charcoal">
+    <section className="py-20 bg-blue-100 text-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Content */}
@@ -32,7 +32,7 @@ const CTASection: React.FC = () => {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Ready to Experience the Difference?
             </h2>
-            <p className="text-lg text-charcoal/70 mb-6">
+            <p className="text-lg text-gray-700 mb-6">
               Don&apos;t let cleaning stress you out. Our professional team is here to help you maintain a clean, healthy home.
             </p>
 
@@ -45,7 +45,7 @@ const CTASection: React.FC = () => {
                </div>
                <div>
                  <div className="font-semibold text-lg">{benefit.title}</div>
-                 <div className="text-charcoal/70">{benefit.description}</div>
+                 <div className="text-gray-700">{benefit.description}</div>
                </div>
                 </div>
               ))}
@@ -72,7 +72,7 @@ const CTASection: React.FC = () => {
 
                      {/* Right Side - Contact Info */}
            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-lg">
-             <h3 className="text-2xl font-bold mb-6 text-center text-charcoal">
+             <h3 className="text-2xl font-bold mb-6 text-center text-gray-900">
                Contact Information
              </h3>
             
@@ -83,10 +83,10 @@ const CTASection: React.FC = () => {
                    <Phone className="w-6 h-6 text-white" />
                  </div>
                  <div>
-                   <div className="font-semibold text-lg text-charcoal">Call Us Today</div>
+                   <div className="font-semibold text-lg text-gray-900">Call Us Today</div>
                    <a 
                      href="tel:9044563851"
-                     className="text-2xl font-bold text-charcoal hover:text-accent-coral transition-colors duration-300"
+                     className="text-2xl font-bold text-gray-900 hover:text-accent-coral transition-colors duration-300"
                    >
                      (904) 456-3851
                    </a>
@@ -99,10 +99,10 @@ const CTASection: React.FC = () => {
                    <Mail className="w-6 h-6 text-white" />
                  </div>
                  <div>
-                   <div className="font-semibold text-lg text-charcoal">Email Us</div>
+                   <div className="font-semibold text-lg text-gray-900">Email Us</div>
                    <a 
                      href="mailto:info@jaxcleaning.com"
-                     className="text-lg text-charcoal hover:text-accent-aqua transition-colors duration-300"
+                     className="text-lg text-gray-900 hover:text-accent-aqua transition-colors duration-300"
                    >
                      info@jaxcleaning.com
                    </a>
@@ -115,8 +115,8 @@ const CTASection: React.FC = () => {
                    <Clock className="w-6 h-6 text-white" />
                  </div>
                  <div>
-                   <div className="font-semibold text-lg text-charcoal">Business Hours</div>
-                   <div className="text-lg text-charcoal">
+                   <div className="font-semibold text-lg text-gray-900">Business Hours</div>
+                   <div className="text-lg text-gray-900">
                      Mon-Fri: 8AM-6PM<br />
                      Sat: 9AM-4PM<br />
                      Sun: By Appointment
@@ -127,8 +127,8 @@ const CTASection: React.FC = () => {
 
             {/* Service Areas Note */}
                          <div className="mt-8 p-4 bg-primary-blue/10 rounded-xl text-center">
-               <div className="font-semibold mb-2 text-charcoal">Serving All of Jacksonville</div>
-               <div className="text-charcoal/70 text-sm">
+               <div className="font-semibold mb-2 text-gray-900">Serving All of Jacksonville</div>
+               <div className="text-gray-700 text-sm">
                  From the beaches to the suburbs, we cover 50+ neighborhoods throughout Northeast Florida
                </div>
              </div>
@@ -140,15 +140,15 @@ const CTASection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
               <div className="text-3xl font-bold mb-2 text-primary-blue">500+</div>
-              <div className="text-charcoal/70">Happy Families Served</div>
+              <div className="text-gray-700">Happy Families Served</div>
             </div>
             <div className="flex flex-col items-center">
               <div className="text-3xl font-bold mb-2 text-primary-blue">13+</div>
-              <div className="text-charcoal/70">Years of Experience</div>
+              <div className="text-gray-700">Years of Experience</div>
             </div>
             <div className="flex flex-col items-center">
               <div className="text-3xl font-bold mb-2 text-primary-blue">100%</div>
-              <div className="text-charcoal/70">Satisfaction Guaranteed</div>
+              <div className="text-gray-700">Satisfaction Guaranteed</div>
             </div>
           </div>
         </div>

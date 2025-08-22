@@ -155,10 +155,10 @@ const FAQSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Get answers to the most common questions about our Jacksonville cleaning services. 
             Can&apos;t find what you're looking for? Contact us directly at (904) 456-3851.
           </p>
@@ -188,7 +188,7 @@ const FAQSection: React.FC = () => {
                         onClick={() => toggleItem(itemIndex)}
                         className="flex items-center justify-between w-full text-left focus:outline-none group"
                       >
-                        <h4 className="text-lg font-semibold text-charcoal group-hover:text-primary-blue transition-colors pr-4">
+                        <h4 className="text-lg font-semibold text-gray-900 group-hover:text-primary-blue transition-colors pr-4">
                           {item.question}
                         </h4>
                         {isOpen ? (
@@ -214,7 +214,7 @@ const FAQSection: React.FC = () => {
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-            <h3 className="text-2xl font-bold text-charcoal mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Still Have Questions?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
