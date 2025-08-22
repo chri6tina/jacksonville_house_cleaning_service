@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function CarpetCleaningPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section - Local Business Style */}
       <section className="relative py-20 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600"></div>
@@ -33,7 +33,7 @@ export default function CarpetCleaningPage() {
                 <Award className="w-6 h-6 text-emerald-200" />
               </div>
               <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
-              <p className="text-white/80 text-xs">Jacksonville business since 2015</p>
+              <p className="text-emerald-100 text-xs">Jacksonville business since 2015</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
@@ -41,7 +41,7 @@ export default function CarpetCleaningPage() {
                 <Truck className="w-6 h-6 text-emerald-200" />
               </div>
               <h3 className="font-bold text-white text-base mb-2">Same-Day Service</h3>
-              <p className="text-white/80 text-xs">Available throughout Jacksonville</p>
+              <p className="text-emerald-100 text-xs">Available throughout Jacksonville</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
@@ -49,7 +49,7 @@ export default function CarpetCleaningPage() {
                 <Star className="w-6 h-6 text-emerald-200" />
               </div>
               <h3 className="font-bold text-white text-base mb-2">100% Guarantee</h3>
-              <p className="text-white/80 text-xs">Satisfaction guaranteed</p>
+              <p className="text-emerald-100 text-xs">Satisfaction guaranteed</p>
             </div>
           </div>
 
@@ -76,10 +76,10 @@ export default function CarpetCleaningPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our Jacksonville Carpet Cleaning?
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We're your local carpet cleaning experts, serving Jacksonville homes and businesses with 
               professional equipment and eco-friendly solutions.
             </p>
@@ -90,32 +90,32 @@ export default function CarpetCleaningPage() {
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="w-8 h-8 text-emerald-600" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Advanced Technology</h3>
-              <p className="text-charcoal/70">Professional-grade equipment for deep cleaning</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Advanced Technology</h3>
+              <p className="text-gray-700">Professional-grade equipment for deep cleaning</p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Leaf className="w-8 h-8 text-emerald-600" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Eco-Friendly</h3>
-              <p className="text-charcoal/70">Safe for your family and pets</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Eco-Friendly Solutions</h3>
+              <p className="text-gray-700">Safe for your family and pets</p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-emerald-600" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Quick Drying</h3>
-              <p className="text-charcoal/70">Fast-drying technology for convenience</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Same-Day Service</h3>
+              <p className="text-gray-700">Available throughout Jacksonville</p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-emerald-600" />
+                <MapPin className="w-8 h-8 text-emerald-600" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Stain Protection</h3>
-              <p className="text-charcoal/70">Long-lasting stain resistance</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Jacksonville Local</h3>
+              <p className="text-gray-700">Your neighbors since 2015</p>
             </div>
           </div>
         </div>
@@ -125,53 +125,45 @@ export default function CarpetCleaningPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">
-              Our Jacksonville Carpet Cleaning Process
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Our Carpet Cleaning Process
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Professional carpet cleaning that removes deep dirt, stains, and allergens from your Jacksonville home.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              We follow a proven 4-step process to ensure your carpets are thoroughly cleaned and restored.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+            <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-emerald-600">1</span>
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Assessment</h3>
-              <p className="text-charcoal/70 text-sm">
-                Evaluate carpet condition and identify problem areas
-              </p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Inspection</h3>
+              <p className="text-gray-700">Assess carpet condition and identify problem areas</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+            <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-emerald-600">2</span>
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Pre-Treatment</h3>
-              <p className="text-charcoal/70 text-sm">
-                Apply specialized solutions for stains and heavy soil
-              </p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Pre-Treatment</h3>
+              <p className="text-gray-700">Apply specialized solutions to break down stains</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+            <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-emerald-600">3</span>
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Deep Cleaning</h3>
-              <p className="text-charcoal/70 text-sm">
-                Hot water extraction removes embedded dirt and allergens
-              </p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Deep Cleaning</h3>
+              <p className="text-gray-700">Extract dirt and stains with professional equipment</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+            <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-emerald-600">4</span>
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2">Protection</h3>
-              <p className="text-charcoal/70 text-sm">
-                Apply stain guard for long-lasting protection
-              </p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Final Inspection</h3>
+              <p className="text-gray-700">Ensure quality and customer satisfaction</p>
             </div>
           </div>
         </div>
@@ -181,91 +173,110 @@ export default function CarpetCleaningPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Jacksonville Carpet Cleaning Pricing
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Transparent pricing for professional carpet cleaning in Jacksonville. No hidden fees.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Choose the perfect carpet cleaning package for your Jacksonville home. 
+              All packages include our professional service and satisfaction guarantee.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-8 rounded-2xl text-center">
-              <h3 className="text-2xl font-bold text-charcoal mb-4">Room Cleaning</h3>
-              <div className="text-4xl font-bold text-emerald-600 mb-4">$50</div>
-              <p className="text-charcoal/70 mb-6">Per room, includes deep cleaning and stain treatment</p>
-              <ul className="text-left space-y-2 mb-6">
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-emerald-600 mr-2" />
-                  <span className="text-sm">Deep cleaning</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-emerald-600 mr-2" />
-                  <span className="text-sm">Stain treatment</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-emerald-600 mr-2" />
-                  <span className="text-sm">Deodorizing</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="block w-full bg-emerald-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
-              >
-                Get Quote
-              </Link>
-            </div>
-
-            <div className="bg-emerald-600 p-8 rounded-2xl text-center text-white relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent-coral text-white px-6 py-2 rounded-full text-sm font-semibold">
-                Most Popular
+            <div className="bg-white rounded-2xl shadow-lg border-2 border-emerald-200 p-8 hover:shadow-xl transition-all duration-300">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Car className="w-8 h-8 text-emerald-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Room Cleaning</h3>
+                <div className="text-3xl font-bold text-emerald-600 mb-2">From $50</div>
+                <p className="text-gray-700 text-sm">Perfect for individual rooms</p>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Whole House</h3>
-              <div className="text-4xl font-bold mb-4">$180</div>
-              <p className="mb-6 opacity-90">Complete home carpet cleaning package</p>
-              <ul className="text-left space-y-2 mb-6">
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-white mr-2" />
-                  <span className="text-sm">All rooms included</span>
+
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-start space-x-3">
+                  <Check className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Deep stain removal</span>
                 </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-white mr-2" />
-                  <span className="text-sm">Stain protection</span>
+                <li className="flex items-start space-x-3">
+                  <Check className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Odor elimination</span>
                 </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-white mr-2" />
-                  <span className="text-sm">Priority scheduling</span>
+                <li className="flex items-start space-x-3">
+                  <Check className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Fiber protection</span>
                 </li>
               </ul>
+
               <Link
                 href="/contact"
-                className="block w-full bg-white text-emerald-600 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="block w-full text-center py-3 px-6 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors duration-200"
               >
                 Get Quote
               </Link>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-2xl text-center">
-              <h3 className="text-2xl font-bold text-charcoal mb-4">Commercial</h3>
-              <div className="text-4xl font-bold text-emerald-600 mb-4">$250</div>
-              <p className="text-charcoal/70 mb-6">Office and commercial space cleaning</p>
-              <ul className="text-left space-y-2 mb-6">
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-emerald-600 mr-2" />
-                  <span className="text-sm">After-hours service</span>
+            <div className="bg-white rounded-2xl shadow-lg border-2 border-emerald-200 p-8 hover:shadow-xl transition-all duration-300">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Car className="w-8 h-8 text-emerald-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Whole House</h3>
+                <div className="text-3xl font-bold text-emerald-600 mb-2">From $150</div>
+                <p className="text-gray-700 text-sm">Complete home carpet cleaning</p>
+              </div>
+
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-start space-x-3">
+                  <Check className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">All rooms included</span>
                 </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-emerald-600 mr-2" />
-                  <span className="text-sm">Quick turnaround</span>
+                <li className="flex items-start space-x-3">
+                  <Check className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Bulk pricing discount</span>
                 </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-emerald-600 mr-2" />
-                  <span className="text-sm">Business hours available</span>
+                <li className="flex items-start space-x-3">
+                  <Check className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Priority scheduling</span>
                 </li>
               </ul>
+
               <Link
                 href="/contact"
-                className="block w-full bg-emerald-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                className="block w-full text-center py-3 px-6 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors duration-200"
+              >
+                Get Quote
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg border-2 border-emerald-200 p-8 hover:shadow-xl transition-all duration-300">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Car className="w-8 h-8 text-emerald-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Commercial</h3>
+                <div className="text-3xl font-bold text-emerald-600 mb-2">From $200</div>
+                <p className="text-gray-700 text-sm">Business and office cleaning</p>
+              </div>
+
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-start space-x-3">
+                  <Check className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">After-hours service</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Minimal disruption</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Regular maintenance plans</span>
+                </li>
+              </ul>
+
+              <Link
+                href="/contact"
+                className="block w-full text-center py-3 px-6 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors duration-200"
               >
                 Get Quote
               </Link>
@@ -278,10 +289,10 @@ export default function CarpetCleaningPage() {
       <section className="py-16 bg-emerald-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready for Fresh, Clean Carpets?
+            Ready for Cleaner Carpets?
           </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Contact us today for professional carpet cleaning in Jacksonville. 
+          <p className="text-xl text-emerald-100 mb-8">
+            Contact us today for carpet cleaning services in Jacksonville. 
             Free estimates and same-day service available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

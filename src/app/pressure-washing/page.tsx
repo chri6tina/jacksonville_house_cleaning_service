@@ -84,7 +84,7 @@ export default function PressureWashingPage() {
                 <Award className="w-6 h-6 text-cyan-200" />
               </div>
               <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
-              <p className="text-white/80 text-xs">Jacksonville business since 2015</p>
+              <p className="text-cyan-100 text-xs">Jacksonville business since 2015</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
@@ -92,7 +92,7 @@ export default function PressureWashingPage() {
                 <Truck className="w-6 h-6 text-cyan-200" />
               </div>
               <h3 className="font-bold text-white text-base mb-2">Same-Day Service</h3>
-              <p className="text-white/80 text-xs">Available throughout Jacksonville</p>
+              <p className="text-cyan-100 text-xs">Available throughout Jacksonville</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
@@ -100,39 +100,136 @@ export default function PressureWashingPage() {
                 <Star className="w-6 h-6 text-cyan-200" />
               </div>
               <h3 className="font-bold text-white text-base mb-2">100% Guarantee</h3>
-              <p className="text-white/80 text-xs">Satisfaction guaranteed</p>
+              <p className="text-cyan-100 text-xs">Satisfaction guaranteed</p>
             </div>
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:9044563851"
-              className="bg-white text-cyan-600 hover:bg-cyan-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+            <Link
+              href="/contact"
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors duration-200 flex items-center justify-center space-x-2"
             >
               <Phone className="w-5 h-5" />
-              Call for Quote
-            </a>
-            <Link 
-              href="/contact"
-              className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              <span>Get Free Quote</span>
+            </Link>
+            <Link
+              href="/services"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors duration-200 flex items-center justify-center space-x-2"
             >
-              <Calendar className="w-5 h-5" />
-              Schedule Service
+              <span>View All Services</span>
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Service Overview */}
-      <section className="py-20">
+      {/* Why Choose Us */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Jacksonville Pressure Washing Services
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Jacksonville Pressure Washing?
             </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              We're your local pressure washing experts, serving Jacksonville homes and businesses with 
+              professional equipment and eco-friendly solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-cyan-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Professional Equipment</h3>
+              <p className="text-gray-700">Commercial-grade pressure washers</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Leaf className="w-8 h-8 text-cyan-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Eco-Friendly Solutions</h3>
+              <p className="text-gray-700">Safe for plants and pets</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-cyan-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Same-Day Service</h3>
+              <p className="text-gray-700">Available throughout Jacksonville</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-cyan-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Jacksonville Local</h3>
+              <p className="text-gray-700">Your neighbors since 2015</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Process */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Our Pressure Washing Process
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              We follow a proven 4-step process to ensure your property is thoroughly cleaned and restored.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-cyan-600">1</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Assessment</h3>
+              <p className="text-gray-700">Evaluate surface condition and identify problem areas</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-cyan-600">2</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Pre-Treatment</h3>
+              <p className="text-gray-700">Apply eco-friendly solutions to break down grime</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-cyan-600">3</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Pressure Washing</h3>
+              <p className="text-gray-700">Professional cleaning with appropriate pressure settings</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-cyan-600">4</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Final Inspection</h3>
+              <p className="text-gray-700">Ensure quality and customer satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Jacksonville Pressure Washing Pricing
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Choose the perfect pressure washing package for your Jacksonville property. 
-              All packages include our eco-friendly solutions and satisfaction guarantee.
+              All packages include our professional service and satisfaction guarantee.
             </p>
           </div>
 
@@ -143,16 +240,16 @@ export default function PressureWashingPage() {
                   <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Droplets className="w-8 h-8 text-cyan-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-2">{service.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
                   <div className="text-3xl font-bold text-cyan-600 mb-2">{service.price}</div>
-                  <p className="text-charcoal/70 text-sm">{service.description}</p>
+                  <p className="text-gray-700 text-sm">{service.description}</p>
                 </div>
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-cyan-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-charcoal/80 text-sm">{feature}</span>
+                      <span className="text-gray-700 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -161,7 +258,7 @@ export default function PressureWashingPage() {
                   href="/contact"
                   className="block w-full text-center py-3 px-6 bg-cyan-600 text-white rounded-lg font-semibold hover:bg-cyan-700 transition-colors duration-200"
                 >
-                  Get Started
+                  Get Quote
                 </Link>
               </div>
             ))}
@@ -169,40 +266,13 @@ export default function PressureWashingPage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-              Why Choose Our Jacksonville Pressure Washing?
-            </h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              We're your local pressure washing experts, providing reliable, professional service that 
-              restores your Jacksonville property's beauty.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-cyan-600" />
-                </div>
-                <h3 className="text-xl font-bold text-charcoal mb-2">{benefit.title}</h3>
-                <p className="text-charcoal/70">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-cyan-600">
+      <section className="py-16 bg-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Restore Your Property's Beauty?
+            Ready for a Cleaner Property?
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-cyan-100 mb-8">
             Contact us today for pressure washing services in Jacksonville. 
             Free estimates and same-day service available.
           </p>
