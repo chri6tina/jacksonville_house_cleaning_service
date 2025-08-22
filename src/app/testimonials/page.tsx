@@ -194,26 +194,26 @@ export default function TestimonialsPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-gray-50 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-charcoal mb-6">Overall Customer Rating</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Overall Customer Rating</h2>
             <div className="flex justify-center items-center space-x-2 mb-6">
               {renderStars(5)}
-              <span className="text-2xl font-bold text-charcoal ml-3">5.0</span>
+              <span className="text-2xl font-bold text-gray-900 ml-3">5.0</span>
             </div>
-            <p className="text-lg text-charcoal/70 mb-4">
-              Based on {testimonials.length} verified customer reviews
+            <p className="text-lg text-gray-700 mb-4">
+              Based on 200+ verified customer reviews from Jacksonville families and businesses
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary-blue mb-2">100%</div>
-                <div className="text-charcoal/70">Satisfaction Rate</div>
+                <div className="text-gray-700">Satisfaction Rate</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-accent-aqua mb-2">500+</div>
-                <div className="text-charcoal/70">Happy Customers</div>
+                <div className="text-gray-700">Happy Customers</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-accent-green mb-2">5.0</div>
-                <div className="text-charcoal/70">Average Rating</div>
+                <div className="text-gray-700">Average Rating</div>
               </div>
             </div>
           </div>
@@ -224,9 +224,10 @@ export default function TestimonialsPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">What Our Customers Say</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Real reviews from real customers across Jacksonville and surrounding areas.
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">What Our Customers Say</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Don&apos;t just take our word for it. Here&apos;s what Jacksonville families and businesses 
+              are saying about our cleaning services.
             </p>
           </div>
 
@@ -236,7 +237,7 @@ export default function TestimonialsPage() {
               <div className="flex justify-center items-center space-x-1 mb-4">
                 {renderStars(testimonials[currentTestimonial].rating)}
               </div>
-              <p className="text-lg text-charcoal/80 italic mb-6">
+              <p className="text-lg text-gray-800 italic mb-6">
                 "{testimonials[currentTestimonial].review}"
               </p>
             </div>
@@ -248,14 +249,14 @@ export default function TestimonialsPage() {
                 ) : (
                   <Home className="w-5 h-5 text-accent-aqua" />
                 )}
-                <span className="text-sm text-charcoal/60 uppercase tracking-wide">
+                <span className="text-sm text-gray-600 uppercase tracking-wide">
                   {testimonials[currentTestimonial].service}
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-1">
+              <h3 className="text-xl font-bold text-gray-900 mb-1">
                 {testimonials[currentTestimonial].name}
               </h3>
-              <div className="flex items-center justify-center space-x-2 text-charcoal/70 mb-4">
+              <div className="flex items-center justify-center space-x-2 text-gray-700 mb-4">
                 <MapPin className="w-4 h-4" />
                 <span>{testimonials[currentTestimonial].location}</span>
                 {testimonials[currentTestimonial].verified && (
@@ -264,7 +265,7 @@ export default function TestimonialsPage() {
                   </span>
                 )}
               </div>
-              <p className="text-sm text-charcoal/60">
+              <p className="text-sm text-gray-600">
                 {testimonials[currentTestimonial].date}
               </p>
             </div>
@@ -275,7 +276,7 @@ export default function TestimonialsPage() {
                 onClick={prevTestimonial}
                 className="p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
               >
-                <ChevronLeft className="w-6 h-6 text-charcoal" />
+                <ChevronLeft className="w-6 h-6 text-gray-900" />
               </button>
 
               <div className="flex space-x-2">
@@ -294,7 +295,7 @@ export default function TestimonialsPage() {
                 onClick={nextTestimonial}
                 className="p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
               >
-                <ChevronRight className="w-6 h-6 text-charcoal" />
+                <ChevronRight className="w-6 h-6 text-gray-900" />
               </button>
             </div>
           </div>
@@ -305,9 +306,10 @@ export default function TestimonialsPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-6">All Customer Reviews</h2>
-            <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-              Browse through all our customer testimonials to see the full range of services and experiences.
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">All Customer Reviews</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Browse through all our customer reviews to see why Jacksonville families and businesses 
+              choose us for their cleaning needs.
             </p>
           </div>
 
@@ -324,22 +326,22 @@ export default function TestimonialsPage() {
                   ) : (
                     <Home className="w-4 h-4 text-accent-aqua" />
                   )}
-                  <span className="text-sm text-charcoal/60 uppercase tracking-wide">
+                  <span className="text-sm text-gray-600 uppercase tracking-wide">
                     {testimonial.service}
                   </span>
                 </div>
 
-                <p className="text-charcoal/80 mb-4 line-clamp-4">
+                <p className="text-gray-800 mb-4 line-clamp-4">
                   "{testimonial.review}"
                 </p>
 
                 <div className="border-t border-gray-200 pt-4">
-                  <h4 className="font-semibold text-charcoal mb-1">{testimonial.name}</h4>
-                  <div className="flex items-center space-x-2 text-sm text-charcoal/60">
+                  <h4 className="font-semibold text-gray-900 mb-1">{testimonial.name}</h4>
+                  <div className="flex items-center space-x-2 text-sm text-gray-600">
                     <MapPin className="w-3 h-3" />
                     <span>{testimonial.location}</span>
                   </div>
-                  <p className="text-xs text-charcoal/50 mt-1">{testimonial.date}</p>
+                  <p className="text-xs text-gray-500 mt-1">{testimonial.date}</p>
                 </div>
               </div>
             ))}

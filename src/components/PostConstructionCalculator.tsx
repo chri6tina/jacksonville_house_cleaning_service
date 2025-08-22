@@ -314,7 +314,7 @@ export default function PostConstructionCalculator() {
          <div className="p-4 sm:p-6 lg:p-8">
            {/* Project Type Selection */}
            <div className="mb-6 sm:mb-8">
-             <h3 className="text-lg sm:text-xl font-bold text-charcoal mb-3 sm:mb-4">Project Type</h3>
+             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Project Type</h3>
              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {[
                 { id: 'residential', label: 'Residential', icon: Home, description: 'Homes, apartments, condos' },
@@ -332,9 +332,9 @@ export default function PostConstructionCalculator() {
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <type.icon className="w-6 h-6 text-primary-blue" />
-                    <span className="font-semibold text-charcoal">{type.label}</span>
+                    <span className="font-semibold text-gray-900">{type.label}</span>
                   </div>
-                  <p className="text-sm text-charcoal/70">{type.description}</p>
+                  <p className="text-sm text-gray-700">{type.description}</p>
                 </div>
               ))}
             </div>
@@ -343,7 +343,7 @@ export default function PostConstructionCalculator() {
                      {/* Project Details */}
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
              <div>
-               <label className="block text-sm font-medium text-charcoal mb-2">
+               <label className="block text-sm font-medium text-gray-900 mb-2">
                  Square Footage
                </label>
                <input
@@ -358,7 +358,7 @@ export default function PostConstructionCalculator() {
              </div>
              
              <div>
-               <label className="block text-sm font-medium text-charcoal mb-2">
+               <label className="block text-sm font-medium text-gray-900 mb-2">
                  Construction Phase
                </label>
                <select
@@ -375,7 +375,7 @@ export default function PostConstructionCalculator() {
 
                      {/* Debris Amount */}
            <div className="mb-6 sm:mb-8">
-             <h3 className="text-lg sm:text-xl font-bold text-charcoal mb-3 sm:mb-4">Debris Amount</h3>
+             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Debris Amount</h3>
              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
               {[
                 { id: 'light', label: 'Light', description: 'Minimal debris' },
@@ -392,8 +392,8 @@ export default function PostConstructionCalculator() {
                       : 'border-gray-200 hover:border-primary-blue/50'
                   }`}
                 >
-                  <div className="font-semibold text-charcoal mb-1">{level.label}</div>
-                  <div className="text-sm text-charcoal/70">{level.description}</div>
+                  <div className="font-semibold text-gray-900 mb-1">{level.label}</div>
+                  <div className="text-sm text-gray-700">{level.description}</div>
                 </div>
               ))}
             </div>
@@ -401,7 +401,7 @@ export default function PostConstructionCalculator() {
 
                      {/* Special Requirements */}
            <div className="mb-6 sm:mb-8">
-             <h3 className="text-lg sm:text-xl font-bold text-charcoal mb-3 sm:mb-4">Special Requirements (Optional)</h3>
+             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Special Requirements (Optional)</h3>
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
               {specialRequirementsOptions.map(option => (
                 <div
@@ -421,8 +421,8 @@ export default function PostConstructionCalculator() {
                       className="w-4 h-4 text-accent-green"
                     />
                     <div>
-                      <div className="font-semibold text-charcoal">{option.label}</div>
-                      <div className="text-sm text-charcoal/70">{option.description}</div>
+                      <div className="font-semibold text-gray-900">{option.label}</div>
+                      <div className="text-sm text-gray-700">{option.description}</div>
                     </div>
                   </div>
                 </div>
@@ -432,7 +432,7 @@ export default function PostConstructionCalculator() {
 
                      {/* Timeline */}
            <div className="mb-6 sm:mb-8">
-             <h3 className="text-lg sm:text-xl font-bold text-charcoal mb-3 sm:mb-4">Timeline</h3>
+             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Timeline</h3>
              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {[
                 { id: 'standard', label: 'Standard', description: '5-7 business days', multiplier: 1.0 },
@@ -448,8 +448,8 @@ export default function PostConstructionCalculator() {
                       : 'border-gray-200 hover:border-primary-blue/50'
                   }`}
                 >
-                  <div className="font-semibold text-charcoal mb-1">{timeline.label}</div>
-                  <div className="text-sm text-charcoal/70 mb-2">{timeline.description}</div>
+                  <div className="font-semibold text-gray-900 mb-1">{timeline.label}</div>
+                  <div className="text-sm text-gray-700 mb-2">{timeline.description}</div>
                   <div className="text-xs text-primary-blue font-medium">
                     {timeline.multiplier > 1 ? `+${Math.round((timeline.multiplier - 1) * 100)}% fee` : 'No additional fee'}
                   </div>
@@ -486,13 +486,13 @@ export default function PostConstructionCalculator() {
          <div className="p-4 sm:p-6 lg:p-8">
            <div className="text-center mb-6 sm:mb-8">
              <CheckCircle className="w-12 h-12 sm:w-16 sm:h-16 text-accent-green mx-auto mb-3 sm:mb-4" />
-             <h3 className="text-xl sm:text-2xl font-bold text-charcoal mb-2">Your Project Estimate</h3>
-             <p className="text-charcoal/70">Based on your project specifications</p>
+             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Your Project Estimate</h3>
+             <p className="text-gray-700">Based on your project specifications</p>
            </div>
 
                      {/* Pricing Breakdown */}
            <div className="bg-gray-50 rounded-xl p-4 sm:p-6 mb-6 sm:mb-8">
-             <h4 className="text-base sm:text-lg font-semibold text-charcoal mb-3 sm:mb-4">Pricing Breakdown</h4>
+             <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Pricing Breakdown</h4>
              <div className="space-y-2 sm:space-y-3">
               <div className="flex justify-between">
                 <span>Base Price ({formData.projectType})</span>
@@ -533,31 +533,31 @@ export default function PostConstructionCalculator() {
 
                      {/* Project Summary */}
            <div className="bg-blue-50 rounded-xl p-4 sm:p-6 mb-6 sm:mb-8">
-             <h4 className="text-base sm:text-lg font-semibold text-charcoal mb-3 sm:mb-4">Project Summary</h4>
+             <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Project Summary</h4>
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               <div>
-                <span className="text-sm text-charcoal/70">Project Type:</span>
-                <div className="font-medium text-charcoal capitalize">{formData.projectType}</div>
+                <span className="text-sm text-gray-700">Project Type:</span>
+                <div className="font-medium text-gray-900 capitalize">{formData.projectType}</div>
               </div>
               <div>
-                <span className="text-sm text-charcoal/70">Square Footage:</span>
-                <div className="font-medium text-charcoal">{formData.squareFootage.toLocaleString()} sq ft</div>
+                <span className="text-sm text-gray-700">Square Footage:</span>
+                <div className="font-medium text-gray-900">{formData.squareFootage.toLocaleString()} sq ft</div>
               </div>
               <div>
-                <span className="text-sm text-charcoal/70">Construction Phase:</span>
-                <div className="font-medium text-charcoal capitalize">{formData.constructionPhase.replace('-', ' ')}</div>
+                <span className="text-sm text-gray-700">Construction Phase:</span>
+                <div className="font-medium text-gray-900 capitalize">{formData.constructionPhase.replace('-', ' ')}</div>
               </div>
               <div>
-                <span className="text-sm text-charcoal/70">Debris Level:</span>
-                <div className="font-medium text-charcoal capitalize">{formData.debrisAmount}</div>
+                <span className="text-sm text-gray-700">Debris Level:</span>
+                <div className="font-medium text-gray-900 capitalize">{formData.debrisAmount}</div>
               </div>
               <div>
-                <span className="text-sm text-charcoal/70">Timeline:</span>
-                <div className="font-medium text-charcoal capitalize">{formData.timeline}</div>
+                <span className="text-sm text-gray-700">Timeline:</span>
+                <div className="font-medium text-gray-900 capitalize">{formData.timeline}</div>
               </div>
               <div>
-                <span className="text-sm text-charcoal/70">Estimated Hours:</span>
-                <div className="font-medium text-charcoal">{pricing.estimatedHours} hours</div>
+                <span className="text-sm text-gray-700">Estimated Hours:</span>
+                <div className="font-medium text-gray-900">{pricing.estimatedHours} hours</div>
               </div>
             </div>
           </div>
@@ -575,7 +575,7 @@ export default function PostConstructionCalculator() {
              </button>
              <button
                onClick={() => setShowResults(false)}
-               className="w-full sm:w-auto bg-gray-200 text-charcoal px-6 sm:px-8 py-4 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+               className="w-full sm:w-auto bg-gray-200 text-gray-900 px-6 sm:px-8 py-4 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
              >
                Recalculate
              </button>
@@ -587,17 +587,17 @@ export default function PostConstructionCalculator() {
        {showForm && (
          <div className="p-4 sm:p-6 lg:p-8">
            <div className="text-center mb-6 sm:mb-8">
-             <h3 className="text-xl sm:text-2xl font-bold text-charcoal mb-2">Submit Your Project</h3>
-             <p className="text-charcoal/70">Provide additional details to receive a comprehensive proposal</p>
+             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Submit Your Project</h3>
+             <p className="text-gray-700">Provide additional details to receive a comprehensive proposal</p>
            </div>
 
                      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
              {/* Contact Information */}
              <div className="bg-gray-50 rounded-xl p-4 sm:p-6">
-               <h4 className="text-base sm:text-lg font-semibold text-charcoal mb-3 sm:mb-4">Contact Information</h4>
+               <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Contact Information</h4>
                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-charcoal mb-2">Full Name *</label>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">Full Name *</label>
                                    <input
                    type="text"
                    required
@@ -608,7 +608,7 @@ export default function PostConstructionCalculator() {
                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-charcoal mb-2">Email *</label>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">Email *</label>
                                    <input
                    type="email"
                    required
@@ -619,7 +619,7 @@ export default function PostConstructionCalculator() {
                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-charcoal mb-2">Phone *</label>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">Phone *</label>
                                    <input
                    type="tel"
                    required
@@ -630,7 +630,7 @@ export default function PostConstructionCalculator() {
                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-charcoal mb-2">Company</label>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">Company</label>
                                    <input
                    type="text"
                    value={formData.contactInfo.company}
@@ -644,10 +644,10 @@ export default function PostConstructionCalculator() {
 
                          {/* Project Address */}
              <div className="bg-gray-50 rounded-xl p-4 sm:p-6">
-               <h4 className="text-base sm:text-lg font-semibold text-charcoal mb-3 sm:mb-4">Project Address</h4>
+               <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Project Address</h4>
                <div className="space-y-3 sm:space-y-4">
                  <div>
-                   <label className="block text-sm font-medium text-charcoal mb-2">Street Address *</label>
+                   <label className="block text-sm font-medium text-gray-900 mb-2">Street Address *</label>
                    <input
                      type="text"
                      required
@@ -659,7 +659,7 @@ export default function PostConstructionCalculator() {
                  </div>
                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                                      <div>
-                     <label className="block text-sm font-medium text-charcoal mb-2">City *</label>
+                     <label className="block text-sm font-medium text-gray-900 mb-2">City *</label>
                      <input
                        type="text"
                        required
@@ -670,7 +670,7 @@ export default function PostConstructionCalculator() {
                      />
                    </div>
                    <div>
-                     <label className="block text-sm font-medium text-charcoal mb-2">ZIP Code *</label>
+                     <label className="block text-sm font-medium text-gray-900 mb-2">ZIP Code *</label>
                      <input
                        type="text"
                        required
@@ -686,10 +686,10 @@ export default function PostConstructionCalculator() {
 
             {/* Project Details */}
             <div className="bg-gray-50 rounded-xl p-4 sm:p-6">
-              <h4 className="text-base sm:text-lg font-semibold text-charcoal mb-3 sm:mb-4">Project Details</h4>
+              <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Project Details</h4>
               <div className="space-y-3 sm:space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-charcoal mb-2">Project Description</label>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">Project Description</label>
                   <textarea
                     value={formData.projectDetails.description}
                     onChange={(e) => handleInputChange('projectDetails.description', e.target.value)}
@@ -700,7 +700,7 @@ export default function PostConstructionCalculator() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-charcoal mb-2">Preferred Start Date</label>
+                    <label className="block text-sm font-medium text-gray-900 mb-2">Preferred Start Date</label>
                     <input
                       type="date"
                       value={formData.projectDetails.startDate}
@@ -709,7 +709,7 @@ export default function PostConstructionCalculator() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-charcoal mb-2">Target Completion Date</label>
+                    <label className="block text-sm font-medium text-gray-900 mb-2">Target Completion Date</label>
                     <input
                       type="date"
                       value={formData.projectDetails.completionDate}
@@ -723,16 +723,16 @@ export default function PostConstructionCalculator() {
 
             {/* Estimate Summary */}
             <div className="bg-primary-blue/10 rounded-xl p-4 sm:p-6 border border-primary-blue/20">
-              <h4 className="text-base sm:text-lg font-semibold text-charcoal mb-3 sm:mb-4">Your Estimate Summary</h4>
+              <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Your Estimate Summary</h4>
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
                 <div>
-                  <div className="text-sm text-charcoal/70">Total Estimate</div>
+                  <div className="text-sm text-gray-700">Total Estimate</div>
                   <div className="text-xl sm:text-2xl font-bold text-primary-blue">{formatCurrency(pricing.totalPrice)}</div>
-                  <div className="text-sm text-charcoal/70">{formData.squareFootage.toLocaleString()} sq ft • {pricing.estimatedHours} hours</div>
+                  <div className="text-sm text-gray-700">{formData.squareFootage.toLocaleString()} sq ft • {pricing.estimatedHours} hours</div>
                 </div>
                 <div className="text-left sm:text-right">
-                  <div className="text-sm text-charcoal/70">Timeline</div>
-                  <div className="font-medium text-charcoal capitalize">{formData.timeline}</div>
+                  <div className="text-sm text-gray-700">Timeline</div>
+                  <div className="font-medium text-gray-900 capitalize">{formData.timeline}</div>
                 </div>
               </div>
             </div>
@@ -741,8 +741,8 @@ export default function PostConstructionCalculator() {
              {submissionStatus === 'success' && (
                <div className="bg-accent-green/10 border border-accent-green/20 rounded-xl p-4 sm:p-6 text-center">
                  <CheckCircle className="w-12 h-12 sm:w-16 sm:h-16 text-accent-green mx-auto mb-3 sm:mb-4" />
-                 <h4 className="text-lg sm:text-xl font-bold text-charcoal mb-2">Project Submitted Successfully!</h4>
-                 <p className="text-charcoal/70">
+                 <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Project Submitted Successfully!</h4>
+                 <p className="text-gray-700">
                    Thank you for your submission. We'll contact you within 24 hours with a detailed proposal 
                    and answer any questions you may have.
                  </p>
@@ -754,8 +754,8 @@ export default function PostConstructionCalculator() {
                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                    <span className="text-red-600 text-xl sm:text-2xl">!</span>
                  </div>
-                 <h4 className="text-lg sm:text-xl font-bold text-charcoal mb-2">Submission Failed</h4>
-                 <p className="text-charcoal/70 mb-3 sm:mb-4">
+                 <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Submission Failed</h4>
+                 <p className="text-gray-700 mb-3 sm:mb-4">
                    There was an error submitting your project. Please try again or contact us directly.
                  </p>
                  <button
@@ -787,7 +787,7 @@ export default function PostConstructionCalculator() {
                      </div>
                    )}
                  </button>
-                 <p className="text-sm text-charcoal/70 mt-3">
+                 <p className="text-sm text-gray-700 mt-3">
                    We'll contact you within 24 hours with a detailed proposal and answer any questions.
                  </p>
                </div>
