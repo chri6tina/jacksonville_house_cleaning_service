@@ -51,7 +51,7 @@ export default function RecurringCleaningPage() {
             priority
             quality={90}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-blue/80 via-primary-blue/70 to-accent-aqua/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-blue/90 via-primary-blue/85 to-accent-aqua/80"></div>
         </div>
         
         {/* Content */}
@@ -59,46 +59,46 @@ export default function RecurringCleaningPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
             <div className="text-white">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 bg-white text-primary-blue px-4 py-2 rounded-full text-sm font-medium mb-6 border-2 border-white shadow-lg">
                 <Sparkles className="w-4 h-4" />
                 <span>Most Popular Service</span>
               </div>
               
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Recurring Cleaning
-                <span className="block text-accent-aqua">Services</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
+                Jacksonville Recurring Cleaning
+                <span className="block text-white mt-2 drop-shadow-lg">Services</span>
               </h1>
               
-              <p className="text-xl text-white/90 max-w-2xl mb-8 leading-relaxed">
-                Maintain a consistently clean home with our reliable recurring cleaning services. 
+              <p className="text-xl text-white mb-8 max-w-2xl leading-relaxed drop-shadow-md">
+                Maintain a consistently clean Jacksonville home with our reliable recurring cleaning services. 
                 Choose weekly, bi-weekly, or monthly schedules that fit your lifestyle and budget.
               </p>
               
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-accent-aqua" />
+                  <div className="w-10 h-10 bg-white/30 rounded-full flex items-center justify-center border border-white/20">
+                    <TrendingUp className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-white/90 font-medium">Save up to 20%</span>
+                  <span className="text-white font-medium drop-shadow-md">Save up to 20%</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <Calendar className="w-5 h-5 text-accent-aqua" />
+                  <div className="w-10 h-10 bg-white/30 rounded-full flex items-center justify-center border border-white/20">
+                    <Calendar className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-white/90 font-medium">Flexible scheduling</span>
+                  <span className="text-white font-medium drop-shadow-md">Flexible scheduling</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-accent-aqua" />
+                  <div className="w-10 h-10 bg-white/30 rounded-full flex items-center justify-center border border-white/20">
+                    <Shield className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-white/90 font-medium">Same trusted team</span>
+                  <span className="text-white font-medium drop-shadow-md">Same trusted team</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <Award className="w-5 h-5 text-accent-aqua" />
+                  <div className="w-10 h-10 bg-white/30 rounded-full flex items-center justify-center border border-white/20">
+                    <Award className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-white/90 font-medium">Consistent quality</span>
+                  <span className="text-white font-medium drop-shadow-md">Consistent quality</span>
                 </div>
               </div>
               
@@ -106,14 +106,14 @@ export default function RecurringCleaningPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
                   href="tel:9044563851"
-                  className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                  className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 border-2 border-accent-coral"
                 >
                   <Phone className="w-5 h-5" />
                   Call for Quote
                 </a>
                 <a 
                   href="/contact-us"
-                  className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                  className="bg-white text-primary-blue hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 border-2 border-white"
                 >
                   <Calendar className="w-5 h-5" />
                   Schedule Service
@@ -158,6 +158,68 @@ export default function RecurringCleaningPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Jacksonville Service Areas */}
+      <section className="py-16 bg-gradient-to-br from-primary-blue/5 to-accent-aqua/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              Serving All of Jacksonville & Surrounding Areas
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Our Jacksonville cleaning team provides recurring cleaning services throughout the entire Jacksonville metropolitan area
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-2">Jacksonville Beach</h3>
+              <p className="text-gray-600 text-sm">Coastal cleaning excellence</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-2">Mandarin</h3>
+              <p className="text-gray-600 text-sm">Family-friendly cleaning</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-2">Riverside</h3>
+              <p className="text-gray-600 text-sm">Historic district care</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-2">Southside</h3>
+              <p className="text-gray-600 text-sm">Modern home specialists</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-2">Arlington</h3>
+              <p className="text-gray-600 text-sm">Suburban cleaning experts</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-2">Ponte Vedra</h3>
+              <p className="text-gray-600 text-sm">Luxury home cleaning</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-2">Fleming Island</h3>
+              <p className="text-gray-600 text-sm">Island community service</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-2">And More!</h3>
+              <p className="text-gray-600 text-sm">Covering all Jacksonville areas</p>
+            </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <p className="text-gray-700 mb-4">
+              <strong>Don't see your area?</strong> We likely serve it! Contact us to confirm coverage.
+            </p>
+            <a 
+              href="tel:9044563851"
+              className="inline-flex items-center gap-2 text-primary-blue font-semibold hover:text-primary-blue/80 transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              Call (904) 456-3851 to check your area
+            </a>
           </div>
         </div>
       </section>
@@ -208,12 +270,12 @@ export default function RecurringCleaningPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Professional Recurring Cleaning
+                Jacksonville Recurring Cleaning
               </h2>
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Our recurring cleaning service provides consistent, reliable cleaning to maintain your 
+                Our Jacksonville recurring cleaning service provides consistent, reliable cleaning to maintain your 
                 home&apos;s cleanliness week after week. With flexible scheduling and discounted rates, 
-                you can enjoy a clean home without the hassle of finding and scheduling cleaners.
+                you can enjoy a clean Jacksonville home without the hassle of finding and scheduling cleaners.
               </p>
               
               <div className="space-y-4">
@@ -282,11 +344,11 @@ export default function RecurringCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              What&apos;s Included in Recurring Cleaning
+              What&apos;s Included in Jacksonville Recurring Cleaning
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Our recurring cleaning service provides consistent, reliable cleaning with added benefits 
-              for regular clients.
+              Our Jacksonville recurring cleaning service provides consistent, reliable cleaning with added benefits 
+              for regular clients throughout the Jacksonville area.
             </p>
           </div>
 
@@ -353,10 +415,10 @@ export default function RecurringCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Why Choose Our Recurring Cleaning Service?
+              Why Choose Our Jacksonville Recurring Cleaning Service?
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              We provide reliable, consistent cleaning services that fit your lifestyle and budget.
+              We provide reliable, consistent cleaning services throughout Jacksonville that fit your lifestyle and budget.
             </p>
           </div>
 
@@ -379,10 +441,10 @@ export default function RecurringCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Flexible Scheduling Options
+              Jacksonville Flexible Scheduling Options
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Choose the cleaning frequency that works best for your lifestyle and budget.
+              Choose the cleaning frequency that works best for your Jacksonville lifestyle and budget.
             </p>
           </div>
 
@@ -427,10 +489,10 @@ export default function RecurringCleaningPage() {
       <section className="py-20 bg-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Ready to Start Your Recurring Cleaning Service?
+            Ready to Start Your Jacksonville Recurring Cleaning Service?
           </h2>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free quote and to set up your recurring cleaning schedule.
+            Contact us today for a free Jacksonville cleaning quote and to set up your recurring cleaning schedule.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
@@ -447,6 +509,142 @@ export default function RecurringCleaningPage() {
               <Calendar className="w-5 h-5" />
               Get Free Quote
             </a>
+          </div>
+        </div>
+      </section>
+      
+      {/* Comprehensive FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              Jacksonville Recurring Cleaning FAQ
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Get answers to common questions about our Jacksonville recurring cleaning services
+            </p>
+          </div>
+          
+          <div className="space-y-6">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <Calendar className="w-6 h-6 text-primary-blue" />
+                How often can I schedule recurring cleaning?
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                We offer flexible scheduling options including weekly, bi-weekly, monthly, and quarterly cleaning. 
+                You can choose the frequency that best fits your lifestyle and budget. Most clients prefer bi-weekly 
+                cleaning as it provides the perfect balance of cleanliness and affordability.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <Shield className="w-6 h-6 text-primary-blue" />
+                What if I need to reschedule or cancel a cleaning?
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                We understand that life happens! You can reschedule or cancel your cleaning appointment up to 24 hours 
+                before the scheduled time at no charge. We'll work with you to find an alternative time that fits 
+                your schedule. For recurring clients, we offer priority rescheduling.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <TrendingUp className="w-6 h-6 text-primary-blue" />
+                How much can I save with recurring service?
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Recurring clients enjoy significant savings: Weekly cleaning gets 15% off, bi-weekly gets 10% off, 
+                monthly gets 5% off, and quarterly deep cleaning gets 20% off. New recurring clients receive an 
+                additional 10% off their first month. These discounts make regular cleaning more affordable than 
+                one-time services.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <Users className="w-6 h-6 text-primary-blue" />
+                Will I have the same cleaning team each time?
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Yes! We assign the same trusted cleaning team to your recurring service whenever possible. This 
+                ensures consistency in quality, builds trust, and allows the team to learn your preferences and 
+                home layout. If your regular team is unavailable, we'll send equally qualified professionals.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <Check className="w-6 h-6 text-primary-blue" />
+                What's included in each recurring cleaning visit?
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Each visit includes complete dusting, vacuuming, mopping, and sanitizing of all living spaces. 
+                We thoroughly clean kitchens and bathrooms, including surfaces, fixtures, and appliances. 
+                Bedrooms and living areas receive comprehensive cleaning. We also provide quality assurance 
+                checks to ensure consistent results every time.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <Clock className="w-6 h-6 text-primary-blue" />
+                How long does each cleaning session take?
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Cleaning time depends on your home's size and condition. A typical 2,000 sq ft home takes about 
+                2-3 hours for standard recurring cleaning. We'll provide an estimated time during your initial 
+                consultation. Our team works efficiently while maintaining high quality standards.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <Award className="w-6 h-6 text-primary-blue" />
+                Can I customize my cleaning plan?
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Absolutely! We create customized cleaning plans based on your specific needs and preferences. 
+                You can add or remove services, adjust cleaning frequency, and specify areas that need extra 
+                attention. We'll work with you to create the perfect cleaning schedule that fits your lifestyle.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <Zap className="w-6 h-6 text-primary-blue" />
+                What if I'm not satisfied with the cleaning?
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                We stand behind our work with a 100% satisfaction guarantee. If you're not completely satisfied 
+                with any cleaning service, we'll return to fix it at no additional cost. Your satisfaction is 
+                our priority, and we're committed to making it right every time.
+              </p>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-6">
+              Still have questions? We're here to help!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:9044563851"
+                className="bg-primary-blue hover:bg-primary-blue/90 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call Us
+              </a>
+              <a 
+                href="/contact-us"
+                className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              >
+                <Calendar className="w-5 h-5" />
+                Get Quote
+              </a>
+            </div>
           </div>
         </div>
       </section>
