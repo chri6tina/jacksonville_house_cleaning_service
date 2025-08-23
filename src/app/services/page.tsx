@@ -789,6 +789,113 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* All Services Grid */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">All Our Cleaning Services</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              From routine maintenance to specialized deep cleaning, we offer comprehensive cleaning solutions for every need.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Residential Services */}
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">Residential Services</h3>
+              <div className="space-y-3">
+                <Link href="/recurring-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Recurring Cleaning</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/standard-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Standard Cleaning</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/extreme-deep-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Deep Cleaning</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/move-in-move-out" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Move-In/Out Cleaning</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/apartment-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Apartment Cleaning</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/post-construction-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Post-Construction</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Specialized Services */}
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">Specialized Services</h3>
+              <div className="space-y-3">
+                <Link href="/carpet-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Carpet Cleaning</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/window-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Window Cleaning</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/pressure-washing" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Pressure Washing</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/air-duct-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Air Duct Cleaning</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/gutter-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Gutter Cleaning</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/pet-friendly-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Pet-Friendly Cleaning</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Commercial & Special */}
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">Commercial & Special</h3>
+              <div className="space-y-3">
+                <Link href="/commercial-office-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Commercial Office</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/medical-facility-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Medical Facility</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/event-venue-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Event Venue</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/vacation-rental-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Vacation Rental</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/senior-citizen-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Senior Citizen</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/emergency-cleaning" className="flex items-center justify-between text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  <span>Emergency Cleaning</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

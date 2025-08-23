@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { MapPin, Star, Clock, Shield } from 'lucide-react';
 
 const ServiceLocations: React.FC = () => {
@@ -175,15 +176,21 @@ const ServiceLocations: React.FC = () => {
             Popular Service Areas
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {popularAreas.map((area, index) => (
-              <div 
-                key={index}
-                className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 text-center"
-              >
-                <MapPin className="w-6 h-6 text-primary-blue mx-auto mb-2" />
-                <span className="font-semibold text-gray-900">{area}</span>
-              </div>
-            ))}
+            {popularAreas.map((area, index) => {
+              const areaSlug = area.toLowerCase().replace(/\s+/g, '-').replace(/[&]/g, 'and');
+              const areaPath = `/locations/${areaSlug}`;
+              
+              return (
+                <Link 
+                  key={index}
+                  href={areaPath}
+                  className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 text-center hover:bg-primary-blue/5 group"
+                >
+                  <MapPin className="w-6 h-6 text-primary-blue mx-auto mb-2 group-hover:scale-110 transition-transform duration-200" />
+                  <span className="font-semibold text-gray-900 group-hover:text-primary-blue transition-colors duration-200">{area}</span>
+                </Link>
+              );
+            })}
           </div>
         </div>
 

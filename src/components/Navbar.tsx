@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ChevronDown, Phone, MapPin, Star } from 'lucide-react';
 
 const Navbar: React.FC = () => {
@@ -41,9 +42,15 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary-blue rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">J</span>
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="relative w-40 h-40">
+                <Image
+                  src="/JHCSlogo.png"
+                  alt="JHCS Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
               <span className="text-gray-900 font-bold text-lg sm:text-xl hidden xs:block">
                 Jacksonville House Cleaning
@@ -68,13 +75,66 @@ const Navbar: React.FC = () => {
               </button>
               
               {isServicesDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-64 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
+                <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200 max-h-96 overflow-y-auto">
+                  <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
+                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Popular Services</span>
+                  </div>
                   <Link href="/post-construction-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
                     Post-Construction Cleaning
                   </Link>
-                  <Link href="/services" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
-                    All Services
+                  <Link href="/recurring-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Recurring Cleaning
                   </Link>
+                  <Link href="/standard-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Standard Cleaning
+                  </Link>
+                  <Link href="/deep-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Deep Cleaning
+                  </Link>
+                  <Link href="/move-in-move-out" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Move-In/Out Cleaning
+                  </Link>
+                  
+                  <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
+                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Services</span>
+                  </div>
+                  <Link href="/carpet-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Carpet Cleaning
+                  </Link>
+                  <Link href="/window-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Window Cleaning
+                  </Link>
+                  <Link href="/pressure-washing" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Pressure Washing
+                  </Link>
+                  <Link href="/air-duct-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Air Duct Cleaning
+                  </Link>
+                  <Link href="/gutter-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Gutter Cleaning
+                  </Link>
+                  
+                  <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
+                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Commercial & Special</span>
+                  </div>
+                  <Link href="/commercial-office-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Commercial Office
+                  </Link>
+                  <Link href="/medical-facility-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Medical Facility
+                  </Link>
+                  <Link href="/event-venue-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Event Venue
+                  </Link>
+                  <Link href="/pet-friendly-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Pet-Friendly
+                  </Link>
+                  
+                  <div className="px-4 py-2 bg-gray-50">
+                    <Link href="/services" className="block px-4 py-2 text-sm font-medium text-primary-blue hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                      View All Services →
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -84,6 +144,12 @@ const Navbar: React.FC = () => {
             </Link>
             <Link href="/pricing" className="text-gray-900 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
               Pricing
+            </Link>
+            <Link href="/locations" className="text-gray-900 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+              Service Areas
+            </Link>
+            <Link href="/blog" className="text-gray-900 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+              Blog
             </Link>
             <Link href="/contact" className="text-gray-900 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
               Contact
@@ -136,9 +202,23 @@ const Navbar: React.FC = () => {
               Services
             </Link>
             <Link
-              href="/about"
+              href="/locations"
               onClick={closeMobileMenu}
               className="text-gray-900 hover:text-primary-blue block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+            >
+              Service Areas
+            </Link>
+            <Link
+              href="/blog"
+              onClick={closeMobileMenu}
+              className="text-gray-900 hover:text-primary-blue block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/about"
+              onClick={closeMobileMenu}
+              className="text-base font-medium transition-colors duration-200"
             >
               About
             </Link>

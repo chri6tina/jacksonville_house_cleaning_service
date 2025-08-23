@@ -10,17 +10,23 @@ const Footer = () => {
     services: [
       { name: 'Post-Construction Cleaning', href: '/post-construction-cleaning' },
       { name: 'Recurring Cleaning', href: '/recurring-cleaning' },
+      { name: 'Standard Cleaning', href: '/standard-cleaning' },
       { name: 'Deep Cleaning', href: '/extreme-deep-cleaning' },
       { name: 'Move-In/Out Cleaning', href: '/move-in-move-out' },
+      { name: 'Apartment Cleaning', href: '/apartment-cleaning' },
       { name: 'Office Cleaning', href: '/office-cleaning' },
       { name: 'Carpet Cleaning', href: '/carpet-cleaning' },
       { name: 'Window Cleaning', href: '/window-cleaning' },
+      { name: 'Pressure Washing', href: '/pressure-washing' },
+      { name: 'Air Duct Cleaning', href: '/air-duct-cleaning' },
+      { name: 'Gutter Cleaning', href: '/gutter-cleaning' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Information', href: '/information' },
       { name: 'Testimonials', href: '/testimonials' },
       { name: 'Blog', href: '/blog' },
+      { name: 'Service Areas', href: '/locations' },
     ],
     support: [
       { name: 'Contact Us', href: '/contact' },
@@ -105,6 +111,75 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Specialized Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Specialized</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/medical-facility-cleaning" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Medical Facility
+                </Link>
+              </li>
+              <li>
+                <Link href="/event-venue-cleaning" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Event Venue
+                </Link>
+              </li>
+              <li>
+                <Link href="/vacation-rental-cleaning" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Vacation Rental
+                </Link>
+              </li>
+              <li>
+                <Link href="/commercial-office-cleaning" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Commercial Office
+                </Link>
+              </li>
+              <li>
+                <Link href="/pet-friendly-cleaning" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Pet-Friendly
+                </Link>
+              </li>
+              <li>
+                <Link href="/senior-citizen-cleaning" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Senior Citizen
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Blog & Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Blog & Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/blog/maintaining-clean-home" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Maintaining Clean Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/move-in-cleaning-essentials" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Move-In Cleaning Essentials
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/spring-cleaning-checklist" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Spring Cleaning Checklist
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/eco-friendly-cleaning-products" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Eco-Friendly Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/how-to-choose-the-right-cleaning-service" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Choosing Cleaning Service
+                </Link>
+              </li>
             </ul>
           </div>
 

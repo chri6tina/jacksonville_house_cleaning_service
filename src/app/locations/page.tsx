@@ -259,6 +259,107 @@ export default function LocationsPage() {
         </div>
       </section>
 
+      {/* All Service Areas Grid */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              All Jacksonville Service Areas
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We serve every neighborhood in Jacksonville and surrounding areas. Click on any area to see our local services.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Northside & Arlington */}
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-300 pb-2">Northside & Arlington</h3>
+              <div className="space-y-2">
+                <Link href="/locations/arlington" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Arlington
+                </Link>
+                <Link href="/locations/springfield" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Springfield
+                </Link>
+                <Link href="/locations/downtown-jacksonville" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Downtown Jacksonville
+                </Link>
+                <Link href="/locations/riverside" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Riverside
+                </Link>
+                <Link href="/locations/riverside-avondale" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Riverside Avondale
+                </Link>
+              </div>
+            </div>
+
+            {/* Southside & Mandarin */}
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-300 pb-2">Southside & Mandarin</h3>
+              <div className="space-y-2">
+                <Link href="/locations/southside" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Southside
+                </Link>
+                <Link href="/locations/mandarin" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Mandarin
+                </Link>
+                <Link href="/locations/san-marco" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  San Marco
+                </Link>
+                <Link href="/locations/baymeadows" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Baymeadows
+                </Link>
+                <Link href="/locations/deerwood" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Deerwood
+                </Link>
+                <Link href="/locations/murray-hill" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Murray Hill
+                </Link>
+              </div>
+            </div>
+
+            {/* Beaches & Coastal */}
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-300 pb-2">Beaches & Coastal</h3>
+              <div className="space-y-2">
+                <Link href="/locations/jacksonville-beach" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Jacksonville Beach
+                </Link>
+                <Link href="/locations/neptune-beach" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Neptune Beach
+                </Link>
+                <Link href="/locations/atlantic-beach" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Atlantic Beach
+                </Link>
+                <Link href="/locations/ponte-vedra-beach" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Ponte Vedra Beach
+                </Link>
+                <Link href="/locations/st-augustine" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  St. Augustine
+                </Link>
+              </div>
+            </div>
+
+            {/* Westside & Suburbs */}
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-300 pb-2">Westside & Suburbs</h3>
+              <div className="space-y-2">
+                <Link href="/locations/orange-park" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Orange Park
+                </Link>
+                <Link href="/locations/fleming-island" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Fleming Island
+                </Link>
+                <Link href="/locations/green-cove-springs" className="block text-gray-700 hover:text-primary-blue transition-colors duration-200">
+                  Green Cove Springs
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Local */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
