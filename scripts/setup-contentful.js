@@ -385,3 +385,4 @@ async function createSampleContent(environment) {
 // Run the setup
 setupContentful();
 
+
