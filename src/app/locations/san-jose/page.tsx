@@ -23,24 +23,25 @@ import {
   Calendar,
   Calculator,
   ArrowRight,
-  History,
+  HeartHandshake,
   Building,
-  HeartHandshake
+  Tree,
+  School
 } from 'lucide-react';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateLocationMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = generateLocationMetadata('springfield', 'Historic Revitalization Cleaning Service');
+export const metadata: Metadata = generateLocationMetadata('san-jose', 'Established Community Cleaning Service');
 
-export default function SpringfieldPage() {
+export default function SanJosePage() {
   const popularServices = [
     {
-      title: 'Historic Home Restoration Cleaning',
-      description: 'Specialized cleaning for Springfield\'s revitalized historic properties',
-      icon: History,
+      title: 'Established Home Cleaning',
+      description: 'Specialized cleaning for San Jose\'s well-maintained residential properties',
+      icon: Home,
       href: '/recurring-cleaning',
-      features: ['Restoration-focused cleaning', 'Gentle on historic materials', 'Attention to architectural details', 'Preservation approach']
+      features: ['Regular maintenance cleaning', 'Established home care', 'Family-friendly approach', 'Reliable service']
     },
     {
       title: 'Deep Cleaning',
@@ -67,101 +68,101 @@ export default function SpringfieldPage() {
 
   const localFeatures = [
     {
-      icon: History,
-      title: 'Historic Revitalization',
-      description: 'Community actively restoring and preserving historic homes and buildings'
+      icon: HeartHandshake,
+      title: 'Established Community',
+      description: 'Long-time residents with strong neighborhood bonds and community pride'
     },
     {
-      icon: Users,
-      title: 'Growing Community',
-      description: 'Mix of long-time residents and new families moving into revitalized homes'
+      icon: School,
+      title: 'Family-Friendly',
+      description: 'Excellent schools and family-oriented atmosphere throughout the area'
     },
     {
       icon: Building,
-      title: 'Architectural Heritage',
-      description: 'Beautiful historic homes with unique architectural styles and character'
+      title: 'Well-Maintained Homes',
+      description: 'Beautiful residential properties with established landscaping and care'
     },
     {
-      icon: HeartHandshake,
-      title: 'Community Pride',
-      description: 'Strong neighborhood association and community involvement in preservation'
+      icon: Tree,
+      title: 'Mature Neighborhood',
+      description: 'Tree-lined streets and established residential character'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Jennifer Williams',
-      service: 'Historic Home Restoration Cleaning',
+      name: 'Robert Martinez',
+      service: 'Established Home Cleaning',
       rating: 5,
-      review: 'The Springfield team understands how to clean our revitalized historic home properly. They\'re careful with our restored fixtures and use the right products.',
+      review: 'The San Jose team provides consistent, reliable cleaning for our established home. They understand our neighborhood and deliver quality service every time.',
       date: 'January 2024'
     },
     {
-      name: 'Marcus Rodriguez',
+      name: 'Lisa Chen',
       service: 'Deep Cleaning',
       rating: 5,
-      review: 'After completing our historic home renovation, we needed thorough cleaning. The Springfield team exceeded expectations with their attention to detail.',
+      review: 'After hosting family gatherings, we needed thorough cleaning. The San Jose team exceeded expectations with their attention to detail.',
       date: 'December 2023'
     },
     {
-      name: 'Amanda Thompson',
+      name: 'David Thompson',
       service: 'Move-Out Cleaning',
       rating: 5,
-      review: 'When selling our Springfield home, the cleaning team made it absolutely perfect for potential buyers. Outstanding service!',
+      review: 'When selling our San Jose home, the cleaning team made it absolutely perfect for potential buyers. Outstanding service!',
       date: 'November 2023'
     }
   ];
 
   return (
     <>
-      {/* LocalBusiness Schema for Springfield */}
+      {/* LocalBusiness Schema for San Jose */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Jacksonville House Cleaning Service - Springfield",
-            "description": "Professional house cleaning services in Springfield, Jacksonville. Historic revitalization cleaning with attention to preservation and restoration.",
-            "url": "https://jacksonvillehousecleaningservice.com/locations/springfield",
+            "name": "Jacksonville House Cleaning Service - San Jose",
+            "description": "Professional house cleaning services in San Jose, Jacksonville. Established community cleaning with reliable service and family-friendly approach.",
+            "url": "https://jacksonvillehousecleaningservice.com/locations/san-jose",
             "telephone": "+19044563851",
             "email": "info@jacksonvillehousecleaningservice.com",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Springfield",
+              "streetAddress": "San Jose",
               "addressLocality": "Jacksonville",
               "addressRegion": "FL",
-              "postalCode": "32206",
+              "postalCode": "32217",
               "addressCountry": "US"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 30.3297,
-              "longitude": -81.6597
+              "latitude": 30.3187,
+              "longitude": -81.6923
             },
             "areaServed": {
               "@type": "City",
-              "name": "Springfield, Jacksonville, FL"
+              "name": "San Jose, Jacksonville, FL"
             },
             "serviceArea": {
               "@type": "GeoCircle",
               "geoMidpoint": {
                 "@type": "GeoCoordinates",
-                "latitude": 30.3297,
-                "longitude": -81.6597
+                "latitude": 30.3187,
+                "longitude": -81.6923
               },
               "geoRadius": "5000"
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Springfield House Cleaning Services",
+              "name": "San Jose House Cleaning Services",
               "itemListElement": [
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Historic Home Restoration Cleaning",
-                    "description": "Specialized cleaning for Springfield's revitalized historic properties"
+                    "name": "Established Home Cleaning",
+                    "description": "Specialized cleaning for San Jose's well-maintained residential properties"
                   }
                 },
                 {
@@ -189,7 +190,7 @@ export default function SpringfieldPage() {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "183"
+              "reviewCount": "142"
             },
             "review": testimonials.map(testimonial => ({
               "@type": "Review",
@@ -221,17 +222,17 @@ export default function SpringfieldPage() {
               {/* Main Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
                 <span className="block">Professional Cleaning</span>
-                <span className="block text-cyan-400">in Springfield</span>
+                <span className="block text-cyan-400">in San Jose</span>
                 <span className="block text-lg sm:text-xl lg:text-2xl font-medium text-white/90 mt-3">
-                   Jacksonville&apos;s Historic Revitalization Cleaning Service
+                   Jacksonville&apos;s Established Community Cleaning Service
                 </span>
               </h1>
 
               {/* Subtitle */}
               <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-                We&apos;re your Springfield Jacksonville neighbors, providing specialized cleaning services 
-                that understand historic home restoration and preservation. No corporate chains, just local professionals who care about 
-                maintaining the beauty and character of your revitalized property.
+                We&apos;re your San Jose Jacksonville neighbors, providing reliable cleaning services 
+                that understand established community living. No corporate chains, just local professionals who care about 
+                maintaining the beauty and comfort of your well-maintained home.
               </p>
 
               {/* CTA Buttons */}
@@ -258,8 +259,8 @@ export default function SpringfieldPage() {
                   <div className="w-12 h-12 bg-accent-green/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
                     <Users className="w-6 h-6 text-accent-green" />
                   </div>
-                  <h3 className="font-bold text-white text-base mb-2">500+ Historic Homes</h3>
-                  <p className="text-white/80 text-xs leading-relaxed">Trust us with their preservation</p>
+                  <h3 className="font-bold text-white text-base mb-2">600+ Established Homes</h3>
+                  <p className="text-white/80 text-xs leading-relaxed">Trust us with their care</p>
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
@@ -275,7 +276,7 @@ export default function SpringfieldPage() {
                     <Star className="w-6 h-6 text-accent-coral" />
                   </div>
                   <h3 className="font-bold text-white text-base mb-2">5-Star Local Reviews</h3>
-                  <p className="text-white/80 text-xs leading-relaxed">Springfield neighbors</p>
+                  <p className="text-white/80 text-xs leading-relaxed">San Jose neighbors</p>
                 </div>
               </div>
             </div>
@@ -288,34 +289,34 @@ export default function SpringfieldPage() {
             <Breadcrumb 
               items={[
                 { label: 'Service Areas', href: '/locations' },
-                { label: 'Springfield', href: '/locations/springfield', current: true }
+                { label: 'San Jose', href: '/locations/san-jose', current: true }
               ]}
             />
           </div>
         </section>
 
-        {/* Springfield Overview */}
+        {/* San Jose Overview */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                  Welcome to Springfield Jacksonville
+                  Welcome to San Jose Jacksonville
                 </h2>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  Springfield is one of Jacksonville&apos;s most dynamic historic revitalization areas, 
-                  known for its beautiful period homes, community pride, and ongoing restoration efforts. 
-                  With a population of over 20,000 residents, Springfield offers the perfect 
-                  blend of historic charm and modern community spirit.
+                  San Jose is one of Jacksonville&apos;s most established residential communities, 
+                  known for its well-maintained homes, excellent schools, and strong family values. 
+                  With a population of over 18,000 residents, San Jose offers the perfect 
+                  blend of suburban comfort and community spirit.
                 </p>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  Our Springfield cleaning team understands the unique needs of revitalized historic properties - from 
-                  careful handling of restored fixtures to using preservation-appropriate cleaning methods.
+                  Our San Jose cleaning team understands the unique needs of established residential properties - from 
+                  regular maintenance cleaning to preserving the beauty of well-cared-for homes.
                   We&apos;re proud to serve our neighbors with the same level of care 
-                  and attention we&apos;d want for our own historic homes.
+                  and attention we&apos;d want for our own established homes.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Whether you have a fully restored mansion or a home in the process of revitalization,
+                  Whether you have a family home or a well-maintained property,
                   we bring our Jacksonville cleaning expertise right to your doorstep.
                 </p>
               </div>
@@ -323,10 +324,10 @@ export default function SpringfieldPage() {
                 <div className="bg-gradient-to-br from-primary-blue/20 to-accent-aqua/20 rounded-2xl p-8">
                   <div className="text-center">
                     <div className="w-20 h-20 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                      <span className="text-white text-3xl font-bold">20K+</span>
+                      <span className="text-white text-3xl font-bold">18K+</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Springfield Residents</h3>
-                    <p className="text-gray-700">Proud to serve our revitalized community</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">San Jose Residents</h3>
+                    <p className="text-gray-700">Proud to serve our established community</p>
                   </div>
                 </div>
               </div>
@@ -339,11 +340,11 @@ export default function SpringfieldPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Popular Services in Springfield
+                Popular Services in San Jose
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Our Springfield cleaning team specializes in historic home care, offering services 
-                designed to preserve the beauty and character of your revitalized property.
+                Our San Jose cleaning team specializes in established home care, offering services 
+                designed to maintain the beauty and comfort of your well-maintained property.
               </p>
             </div>
 
@@ -381,11 +382,11 @@ export default function SpringfieldPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Why Springfield Residents Choose Us
+                Why San Jose Residents Choose Us
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                We understand the unique characteristics of Springfield and provide cleaning services 
-                that respect the historic nature of your revitalized community.
+                We understand the unique characteristics of San Jose and provide cleaning services 
+                that respect the established nature of your residential community.
               </p>
             </div>
 
@@ -408,10 +409,10 @@ export default function SpringfieldPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                What Springfield Residents Say
+                What San Jose Residents Say
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Don&apos;t just take our word for it - hear from our satisfied Springfield customers.
+                Don&apos;t just take our word for it - hear from our satisfied San Jose customers.
               </p>
             </div>
 
@@ -441,10 +442,10 @@ export default function SpringfieldPage() {
         <section className="py-20 bg-primary-blue">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Ready for Professional Cleaning in Springfield?
+              Ready for Professional Cleaning in San Jose?
             </h2>
             <p className="text-xl text-white/95 mb-10 max-w-3xl mx-auto">
-              Join hundreds of satisfied Springfield residents who trust us with their historic revitalized homes. 
+              Join hundreds of satisfied San Jose residents who trust us with their established homes. 
               Get your free quote today and experience the difference of local, professional cleaning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

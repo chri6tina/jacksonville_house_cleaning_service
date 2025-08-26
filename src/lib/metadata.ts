@@ -191,6 +191,18 @@ export function generateLocationMetadata(location: string, theme: string): PageM
       description: `Professional house cleaning services in Murray Hill Jacksonville. Arts district cleaning with attention to creative spaces and artistic homes. Serving ZIP code 32205. Call ${SITE_CONFIG.phone} for your free quote!`,
       keywords: ['Murray Hill Jacksonville cleaning', 'Murray Hill house cleaning', 'Jacksonville 32205', 'arts district cleaning', 'creative space cleaning'],
       canonical: `${SITE_CONFIG.url}/locations/murray-hill`
+    },
+    'springfield': {
+      title: 'Springfield Jacksonville House Cleaning Service',
+      description: `Professional house cleaning services in Springfield Jacksonville. Historic revitalization cleaning with attention to preservation and restoration. Serving ZIP code 32206. Call ${SITE_CONFIG.phone} for your free quote!`,
+      keywords: ['Springfield Jacksonville cleaning', 'Springfield house cleaning', 'Jacksonville 32206', 'historic revitalization cleaning', 'historic home cleaning'],
+      canonical: `${SITE_CONFIG.url}/locations/springfield`
+    },
+    'san-jose': {
+      title: 'San Jose Jacksonville House Cleaning Service',
+      description: `Professional house cleaning services in San Jose Jacksonville. Established community cleaning with reliable service and family-friendly approach. Serving ZIP code 32217. Call ${SITE_CONFIG.phone} for your free quote!`,
+      keywords: ['San Jose Jacksonville cleaning', 'San Jose house cleaning', 'Jacksonville 32217', 'established community cleaning', 'family-friendly cleaning'],
+      canonical: `${SITE_CONFIG.url}/locations/san-jose`
     }
   };
 
