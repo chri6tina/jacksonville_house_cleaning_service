@@ -1,333 +1,472 @@
-import React from 'react';
-import { MapPin, Star, Shield, Check, Phone, Calendar, Users, Award, Clock, TrendingUp, Home, Building, Car } from 'lucide-react';
-import Image from 'next/image';
+import { Metadata } from 'next';
+import { 
+  MapPin, 
+  Star, 
+  Phone, 
+  Clock, 
+  Users, 
+  Shield, 
+  Building2, 
+  Home, 
+  Car, 
+  Wind, 
+  Sparkles, 
+  Truck, 
+  Hammer, 
+  PawPrint, 
+  Heart, 
+  PartyPopper, 
+  CheckCircle, 
+  Award, 
+  Zap,
+  Leaf,
+  Calendar,
+  Calculator,
+  ArrowRight,
+  Palette,
+  Music,
+  Camera,
+  Theater
+} from 'lucide-react';
+import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
+import { generateLocationMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = generateLocationMetadata('murray-hill', 'Arts District Cleaning Service');
 
 export default function MurrayHillPage() {
-  const services = [
-    'Standard House Cleaning',
-    'Deep Cleaning Services',
-    'Move-in/Move-out Cleaning',
-    'Post-Construction Cleanup',
-    'Carpet & Upholstery Cleaning',
-    'Window & Gutter Cleaning',
-    'Pressure Washing',
-    'Recurring Cleaning Plans'
-  ];
-
-  const benefits = [
+  const popularServices = [
     {
-      icon: Shield,
-      title: 'Licensed & Insured',
-      description: 'Complete peace of mind with full coverage'
+      title: 'Creative Space Cleaning',
+      description: 'Specialized cleaning for Murray Hill\'s artistic homes and studios',
+      icon: Palette,
+      href: '/recurring-cleaning',
+      features: ['Studio space cleaning', 'Art supply organization', 'Creative workspace maintenance', 'Gentle on artistic materials']
     },
     {
-      icon: Star,
-      title: '5-Star Rated',
-      description: 'Trusted by Murray Hill families'
+      title: 'Deep Cleaning',
+      description: 'Comprehensive cleaning for seasonal refresh',
+      icon: Sparkles,
+      href: '/extreme-deep-cleaning',
+      features: ['Deep appliance cleaning', 'Cabinet and drawer cleaning', 'Baseboard cleaning', 'Window cleaning']
     },
     {
-      icon: Clock,
-      title: 'Reliable Scheduling',
-      description: 'On-time service, every time'
+      title: 'Move-In/Move-Out',
+      description: 'Professional cleaning for real estate transactions',
+      icon: Truck,
+      href: '/move-in-move-out',
+      features: ['Pre-move out cleaning', 'Post-move in sanitization', 'Construction debris removal', 'Odor elimination']
     },
     {
-      icon: Users,
-      title: 'Local Team',
-      description: 'Jacksonville-based cleaning professionals'
+      title: 'Post-Construction',
+      description: 'Complete cleanup after renovation projects',
+      icon: Hammer,
+      href: '/post-construction-cleaning',
+      features: ['Construction dust removal', 'Fine debris elimination', 'Surface restoration', 'Move-in ready results']
     }
   ];
 
-  const communityFeatures = [
-    'Trendy, artistic community',
-    'Local coffee shops & breweries',
-    'Excellent schools nearby',
-    'Parks & green spaces',
-    'Easy access to downtown',
-    'Creative & diverse residents'
+  const localFeatures = [
+    {
+      icon: Palette,
+      title: 'Arts District',
+      description: 'Vibrant community of artists, musicians, and creative professionals'
+    },
+    {
+      icon: Users,
+      title: 'Diverse Community',
+      description: 'Mix of artists, young professionals, and long-time residents'
+    },
+    {
+      icon: Building2,
+      title: 'Historic Homes',
+      description: 'Charming bungalows and cottages with character and style'
+    },
+    {
+      icon: Music,
+      title: 'Cultural Hub',
+      description: 'Galleries, music venues, and creative spaces throughout the area'
+    }
   ];
 
-  const landmarks = [
-    'Murray Hill Theatre',
-    'Murray Hill Coffee',
-    'Murray Hill Park',
-    'Murray Hill Library',
-    'Murray Hill Shopping Center',
-    'Murray Hill Elementary School'
+  const testimonials = [
+    {
+      name: 'Sarah Martinez',
+      service: 'Creative Space Cleaning',
+      rating: 5,
+      review: 'The Murray Hill team understands how to clean my art studio without damaging my work. They\'re careful and thorough.',
+      date: 'January 2024'
+    },
+    {
+      name: 'Michael Chen',
+      service: 'Deep Cleaning',
+      rating: 5,
+      review: 'After hosting an art opening, we needed immaculate cleaning. The Murray Hill team exceeded expectations completely.',
+      date: 'December 2023'
+    },
+    {
+      name: 'Lisa Rodriguez',
+      service: 'Move-Out Cleaning',
+      rating: 5,
+      review: 'When selling our Murray Hill home, the cleaning team made it absolutely perfect for potential buyers. Outstanding service!',
+      date: 'November 2023'
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-blue/90 via-primary-blue/85 to-accent-aqua/80"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
-          <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-white text-primary-blue px-4 py-2 rounded-full text-sm font-medium mb-6 border-2 border-white shadow-lg">
-              <MapPin className="w-4 h-4" />
-              <span>Jacksonville Neighborhood</span>
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-              Murray Hill
-              <span className="block text-white mt-2 drop-shadow-lg">Cleaning Services</span>
-            </h1>
-            
-            <p className="text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-              Professional cleaning services for Murray Hill homes and businesses. 
-              Serving this vibrant Jacksonville neighborhood with reliable, quality cleaning solutions.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:9044563851"
-                className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 border-2 border-accent-coral"
-              >
-                <Phone className="w-5 h-5" />
-                Call for Quote
-              </a>
-              <a 
-                href="/contact-us"
-                className="bg-white text-primary-blue hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 border-2 border-white"
-              >
-                <Calendar className="w-5 h-5" />
-                Schedule Service
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+    <>
+      {/* LocalBusiness Schema for Murray Hill */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Jacksonville House Cleaning Service - Murray Hill",
+            "description": "Professional house cleaning services in Murray Hill, Jacksonville. Arts district cleaning with attention to creative spaces and artistic homes.",
+            "url": "https://jacksonvillehousecleaningservice.com/locations/murray-hill",
+            "telephone": "+19044563851",
+            "email": "info@jacksonvillehousecleaningservice.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Murray Hill",
+              "addressLocality": "Jacksonville",
+              "addressRegion": "FL",
+              "postalCode": "32205",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 30.3187,
+              "longitude": -81.6923
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Murray Hill, Jacksonville, FL"
+            },
+            "serviceArea": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 30.3187,
+                "longitude": -81.6923
+              },
+              "geoRadius": "5000"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Murray Hill House Cleaning Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Creative Space Cleaning",
+                    "description": "Specialized cleaning for Murray Hill's artistic homes and studios"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Deep Cleaning",
+                    "description": "Comprehensive cleaning for seasonal refresh"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Move-In/Move-Out Cleaning",
+                    "description": "Professional cleaning for real estate transactions"
+                  }
+                }
+              ]
+            },
+            "openingHours": "Mo-Su 08:00-18:00",
+            "priceRange": "$$",
+            "paymentAccepted": "Cash, Credit Card, Check",
+            "currenciesAccepted": "USD",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "156"
+            },
+            "review": testimonials.map(testimonial => ({
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": testimonial.name
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": testimonial.rating
+              },
+              "reviewBody": testimonial.review
+            })),
+            "sameAs": [
+              "https://facebook.com/jacksonvillehousecleaningservice",
+              "https://instagram.com/jacksonvillehousecleaningservice",
+              "https://twitter.com/jacksonvillehousecleaningservice"
+            ]
+          })
+        }}
+      />
 
-      {/* Services Overview */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Murray Hill Cleaning Services
-              </h2>
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Our Murray Hill cleaning team provides comprehensive cleaning services tailored to this 
-                trendy Jacksonville neighborhood. From regular maintenance to deep cleaning, 
-                we keep Murray Hill homes spotless and comfortable.
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="relative py-20 lg:py-24 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/90 to-accent-aqua/90"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              {/* Main Headline */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+                <span className="block">Professional Cleaning</span>
+                <span className="block text-cyan-400">in Murray Hill</span>
+                <span className="block text-lg sm:text-xl lg:text-2xl font-medium text-white/90 mt-3">
+                   Jacksonville&apos;s Arts District Cleaning Service
+                </span>
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
+                We&apos;re your Murray Hill Jacksonville neighbors, providing specialized cleaning services 
+                that understand creative spaces and artistic homes. No corporate chains, just local professionals who care about 
+                maintaining the beauty and functionality of your creative environment.
               </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Check className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-gray-900 font-medium">Licensed, bonded & insured</span>
-                </div>
-                <div className="flex items-center">
-                  <Check className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-gray-900 font-medium">Local Murray Hill team</span>
-                </div>
-                <div className="flex items-center">
-                  <Check className="w-6 h-6 text-primary-blue mr-3" />
-                  <span className="text-gray-900 font-medium">Flexible scheduling options</span>
-                </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a
+                  href="tel:+19044563851"
+                  className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call (904) 456-3851
+                </a>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-3"
+                >
+                  Get Free Quote
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
               </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-primary-blue/5 to-accent-aqua/5 rounded-2xl p-8 border border-primary-blue/10">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Us for Murray Hill?</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-primary-blue/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Star className="w-4 h-4 text-primary-blue" />
+
+              {/* Local Trust Indicators */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                  <div className="w-12 h-12 bg-accent-green/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                    <Users className="w-6 h-6 text-accent-green" />
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Local Expertise</h4>
-                    <p className="text-gray-600 text-sm">We understand Murray Hill homes and culture</p>
-                  </div>
+                  <h3 className="font-bold text-white text-base mb-2">400+ Creative Homes</h3>
+                  <p className="text-white/80 text-xs leading-relaxed">Trust us with their care</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-accent-aqua/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Clock className="w-4 h-4 text-accent-aqua" />
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                  <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                    <Shield className="w-6 h-6 text-primary-blue" />
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Reliable Service</h4>
-                    <p className="text-gray-600 text-sm">Consistent quality, on-time delivery</p>
-                  </div>
+                  <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
+                  <p className="text-white/80 text-xs leading-relaxed">Florida business license</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-accent-green/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <TrendingUp className="w-4 h-4 text-accent-green" />
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                  <div className="w-12 h-12 bg-accent-coral/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                    <Star className="w-6 h-6 text-accent-coral" />
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Creative Care</h4>
-                    <p className="text-gray-600 text-sm">Understanding of artistic & creative homes</p>
-                  </div>
+                  <h3 className="font-bold text-white text-base mb-2">5-Star Local Reviews</h3>
+                  <p className="text-white/80 text-xs leading-relaxed">Murray Hill neighbors</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Complete Cleaning Services for Murray Hill
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              From routine maintenance to specialized cleaning, we cover all your Murray Hill cleaning needs
-            </p>
+        {/* Breadcrumb Navigation */}
+        <section className="py-8 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Service Areas', href: '/locations' },
+                { label: 'Murray Hill', href: '/locations/murray-hill', current: true }
+              ]}
+            />
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 text-center">
-                <div className="w-12 h-12 bg-primary-blue/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Home className="w-6 h-6 text-primary-blue" />
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{service}</h3>
-                <p className="text-gray-600 text-sm">Professional service for Murray Hill homes</p>
+        </section>
+
+        {/* Murray Hill Overview */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                  Welcome to Murray Hill Jacksonville
+                </h2>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  Murray Hill is one of Jacksonville&apos;s most vibrant arts districts, 
+                  known for its creative community, historic homes, and cultural diversity. 
+                  With a population of over 15,000 residents, Murray Hill offers the perfect 
+                  blend of artistic energy and residential charm.
+                </p>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  Our Murray Hill cleaning team understands the unique needs of creative spaces - from 
+                  careful handling of artistic materials to maintaining organized studio environments. 
+                  We&apos;re proud to serve our neighbors with the same level of care 
+                  and attention we&apos;d want for our own creative spaces.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Whether you have an art studio, music room, or creative home, 
+                  we bring our Jacksonville cleaning expertise right to your doorstep.
+                </p>
               </div>
-            ))}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-primary-blue/20 to-accent-aqua/20 rounded-2xl p-8">
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                      <span className="text-white text-3xl font-bold">15K+</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Murray Hill Residents</h3>
+                    <p className="text-gray-700">Proud to serve our creative community</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Community Features */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+        {/* Popular Services */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Popular Services in Murray Hill
+              </h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Our Murray Hill cleaning team specializes in creative space care, offering services 
+                designed to maintain the beauty and functionality of your artistic environment.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {popularServices.map((service, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6">
+                  <div className="w-16 h-16 bg-primary-blue/10 rounded-xl flex items-center justify-center mb-4">
+                    <service.icon className="w-8 h-8 text-primary-blue" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-accent-green" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={service.href}
+                    className="inline-flex items-center gap-2 text-primary-blue font-medium hover:text-primary-blue/80 transition-colors"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Local Features */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Why Murray Hill Residents Choose Us
               </h2>
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Murray Hill is known for its artistic vibe and creative community. 
-                We understand the unique needs of this neighborhood and provide cleaning services 
-                that respect its character while maintaining high standards.
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                We understand the unique characteristics of Murray Hill and provide cleaning services 
+                that respect the creative nature of your artistic community.
               </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {communityFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-primary-blue" />
-                    <span className="text-gray-700">{feature}</span>
-                  </div>
-                ))}
-              </div>
             </div>
-            
-            <div className="bg-gradient-to-br from-accent-aqua/5 to-primary-blue/5 rounded-2xl p-8 border border-accent-aqua/10">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Murray Hill Community Highlights</h3>
-              <div className="space-y-4">
-                {landmarks.map((landmark, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <MapPin className="w-5 h-5 text-accent-aqua" />
-                    <span className="text-gray-700">{landmark}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Pricing */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Murray Hill Cleaning Pricing
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Competitive rates for quality cleaning services in the Murray Hill area
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center">
-              <div className="w-16 h-16 bg-accent-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-accent-green" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Standard Cleaning</h3>
-              <p className="text-gray-700 mb-4">Regular maintenance cleaning for Murray Hill homes</p>
-              <div className="text-primary-blue font-bold text-lg">Starting at $115</div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-primary-blue text-center">
-              <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Building className="w-8 h-8 text-primary-blue" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Deep Cleaning</h3>
-              <p className="text-gray-700 mb-4">Comprehensive cleaning for Murray Hill residences</p>
-              <div className="text-primary-blue font-bold text-lg">Starting at $190</div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center">
-              <div className="w-16 h-16 bg-accent-aqua/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Car className="w-8 h-8 text-accent-aqua" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Move-in/Out</h3>
-              <p className="text-gray-700 mb-4">Complete cleaning for Murray Hill transitions</p>
-              <div className="text-primary-blue font-bold text-lg">Starting at $240</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Why Murray Hill Residents Trust Us
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              We've built our reputation in Murray Hill through consistent quality and reliable service
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-8 h-8 text-primary-blue" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {localFeatures.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-accent-aqua/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-accent-aqua" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-700">{item.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Ready for Professional Cleaning in Murray Hill?
-          </h2>
-          <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free Murray Hill cleaning quote and experience the difference 
-            of working with a local cleaning team that understands your neighborhood.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:9044563851"
-              className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-            >
-              <Phone className="w-5 h-5" />
-              Call (904) 456-3851
-            </a>
-            <a 
-              href="/contact-us"
-              className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-            >
-              <Calendar className="w-5 h-5" />
-              Get Free Quote
-            </a>
+        {/* Testimonials */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                What Murray Hill Residents Say
+              </h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Don&apos;t just take our word for it - hear from our satisfied Murray Hill customers.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg p-6">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">&quot;{testimonial.review}&quot;</p>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                      <p className="text-sm text-gray-600">{testimonial.service}</p>
+                    </div>
+                    <p className="text-sm text-gray-500">{testimonial.date}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-primary-blue">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Ready for Professional Cleaning in Murray Hill?
+            </h2>
+            <p className="text-xl text-white/95 mb-10 max-w-3xl mx-auto">
+              Join hundreds of satisfied Murray Hill residents who trust us with their creative spaces. 
+              Get your free quote today and experience the difference of local, professional cleaning.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+19044563851"
+                className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
+              >
+                <Phone className="w-5 h-5" />
+                Call (904) 456-3851
+              </a>
+              <Link
+                href="/contact"
+                className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-3"
+              >
+                Get Free Quote
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

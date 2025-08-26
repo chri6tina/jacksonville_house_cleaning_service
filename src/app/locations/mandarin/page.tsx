@@ -1,153 +1,106 @@
+import { 
+  MapPin, 
+  Star, 
+  Phone, 
+  Clock, 
+  Users, 
+  Shield, 
+  Building2, 
+  Home, 
+  Car, 
+  Wind, 
+  Sparkles, 
+  Truck, 
+  Hammer, 
+  PawPrint, 
+  Heart, 
+  PartyPopper, 
+  CheckCircle, 
+  Award, 
+  Zap,
+  Leaf,
+  Calendar,
+  Calculator,
+  ArrowRight
+} from 'lucide-react';
 import Link from 'next/link';
-import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee } from 'lucide-react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Mandarin House Cleaning Service | Family Cleaning Jacksonville FL',
-  description: 'Family-friendly cleaning services in Mandarin, Jacksonville FL. Safe cleaning for families with children and pets. Call (904) 456-3851 for reliable family care.',
-  keywords: 'Mandarin cleaning service, Jacksonville family cleaning, Mandarin house cleaning, family-friendly cleaning Jacksonville, safe cleaning Mandarin, Jacksonville family home care',
-  openGraph: {
-    title: 'Mandarin House Cleaning Service | Family Cleaning Jacksonville FL',
-    description: 'Family-friendly cleaning services in Mandarin, Jacksonville FL. Safe cleaning for families with children and pets. Call (904) 456-3851 for reliable family care.',
-    url: 'https://www.jacksonvillehousecleaningservice.com/locations/mandarin',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Jacksonville House Cleaning Service',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Mandarin House Cleaning Service | Family Cleaning Jacksonville FL',
-    description: 'Family-friendly cleaning services in Mandarin, Jacksonville FL. Safe cleaning for families with children and pets.',
-  },
-  alternates: {
-    canonical: 'https://www.jacksonvillehousecleaningservice.com/locations/mandarin',
-  },
-};
 
 export default function MandarinPage() {
-  const mandarinServices = [
+  const popularServices = [
     {
-      id: 'family-friendly-cleaning',
-      title: 'Family-Friendly Cleaning',
-      description: 'Safe, thorough cleaning for Mandarin families with children and pets',
-      icon: Users,
-      features: ['Kid and pet-safe products', 'Family scheduling flexibility', 'Child-proof cleaning methods', 'Pet odor elimination', 'Safe for all ages']
-    },
-    {
-      id: 'recurring-family-care',
-      title: 'Recurring Family Care',
-      description: 'Consistent cleaning to maintain Mandarin family home standards',
-      icon: Calendar,
-      features: ['Weekly, bi-weekly, or monthly options', 'Family-friendly scheduling', 'Priority scheduling', 'Custom care plans', 'Consistent quality']
-    },
-    {
-      id: 'deep-family-cleaning',
-      title: 'Deep Family Cleaning',
-      description: 'Comprehensive cleaning for Mandarin homes needing thorough attention',
-      icon: Target,
-      features: ['Complete family home cleaning', 'Child and pet area focus', 'Safe cleaning methods', 'Thorough but gentle', 'Family standards']
-    },
-    {
-      id: 'move-in-move-out-family',
-      title: 'Family Move-In/Move-Out',
-      description: 'Specialized cleaning for Mandarin family real estate transactions',
-      icon: Car,
-      features: ['Pre-move family preparation', 'Post-move restoration', 'Family-ready standards', 'Final inspection', 'Move-in ready results']
-    },
-    {
-      id: 'carpet-family-care',
-      title: 'Family Carpet & Upholstery',
-      description: 'Safe fabric care for Mandarin family furnishings',
-      icon: Droplets,
-      features: ['Safe stain removal', 'Family fabric protection', 'Odor elimination', 'Professional restoration', 'Child-safe methods']
-    },
-    {
-      id: 'kitchen-family-care',
-      title: 'Family Kitchen Care',
-      description: 'Detailed cleaning for Mandarin family kitchens',
-      icon: Coffee,
-      features: ['Appliance deep cleaning', 'Cabinet and counter care', 'Family finish protection', 'Detail attention', 'Safe sanitization']
-    },
-    {
-      id: 'bathroom-family-care',
-      title: 'Family Bathroom Care',
-      description: 'Thorough cleaning for Mandarin family bathrooms',
+      title: 'Luxury Home Cleaning',
+      description: 'Premium cleaning for upscale Mandarin homes',
       icon: Home,
-      features: ['Deep bathroom cleaning', 'Child-safe products', 'Mold and mildew removal', 'Fixture care', 'Hygiene focus']
+      href: '/recurring-cleaning',
+      features: ['Premium eco-friendly products', 'Flexible scheduling', 'Attention to detail', 'White glove service']
     },
     {
-      id: 'bedroom-family-care',
-      title: 'Family Bedroom Care',
-      description: 'Gentle cleaning for Mandarin family bedrooms',
-      icon: Home,
-      features: ['Bedding care', 'Closet organization', 'Safe products', 'Detail focus', 'Family comfort']
+      title: 'Deep Cleaning',
+      description: 'Comprehensive cleaning for seasonal refresh',
+      icon: Sparkles,
+      href: '/extreme-deep-cleaning',
+      features: ['Deep appliance cleaning', 'Cabinet and drawer cleaning', 'Baseboard cleaning', 'Window cleaning']
     },
     {
-      id: 'outdoor-family-care',
-      title: 'Outdoor Family Care',
-      description: 'Safe cleaning for Mandarin family outdoor spaces',
-      icon: Trees,
-      features: ['Patio and deck cleaning', 'Play area maintenance', 'Safe outdoor cleaning', 'Landscaping support', 'Family safety']
+      title: 'Move-In/Move-Out',
+      description: 'Professional cleaning for real estate transactions',
+      icon: Truck,
+      href: '/move-in-move-out',
+      features: ['Pre-move out cleaning', 'Post-move in sanitization', 'Construction debris removal', 'Odor elimination']
     },
     {
-      id: 'post-construction-family',
-      title: 'Post-Construction Family Care',
-      description: 'Safe cleanup after Mandarin family home renovations',
-      icon: Target,
-      features: ['Construction debris removal', 'Family finish restoration', 'Safe cleaning methods', 'Final inspection', 'Family ready results']
-    },
-    {
-      id: 'vacation-rental-family',
-      title: 'Vacation Rental Family Care',
-      description: 'Professional cleaning for Mandarin family vacation properties',
-      icon: Building2,
-      features: ['Family-ready standards', 'Quick turnaround service', 'Safe property care', 'Family satisfaction focus', 'Quality maintained']
-    },
-    {
-      id: 'emergency-family-care',
-      title: 'Emergency Family Care',
-      description: 'Quick response cleaning for Mandarin family emergencies',
-      icon: Zap,
-      features: ['24/7 emergency response', 'Family safety priority', 'Quick cleanup service', 'Professional team', 'Family support']
+      title: 'Post-Construction',
+      description: 'Complete cleanup after renovation projects',
+      icon: Hammer,
+      href: '/post-construction-cleaning',
+      features: ['Construction dust removal', 'Fine debris elimination', 'Surface restoration', 'Move-in ready results']
     }
   ];
 
-  const mandarinFeatures = [
-    'Family-friendly community',
-    'Excellent schools and education',
-    'Safe suburban environment',
-    'Parks and recreational areas',
-    'Family shopping and dining',
-    'Strong community involvement'
-  ];
-
-  const mandarinLandmarks = [
-    'Mandarin Park',
-    'Mandarin Library',
-    'Mandarin High School',
-    'Mandarin Shopping Center',
-    'St. Johns River access',
-    'Family recreation areas'
-  ];
-
-  const mandarinTestimonials = [
+  const localFeatures = [
     {
-      name: 'Sarah M.',
-      location: 'Mandarin',
-      rating: 5,
-      comment: 'Perfect for our family! Safe cleaning that keeps our Mandarin home spotless while protecting our kids and pets.'
+      icon: MapPin,
+      title: 'Upscale Community',
+      description: 'Beautiful luxury homes with premium amenities and waterfront properties'
     },
     {
-      name: 'Michael R.',
-      location: 'Mandarin',
-      rating: 5,
-      comment: 'Reliable family service in Mandarin. They work around our busy schedule and always deliver quality results.'
+      icon: Users,
+      title: 'Professional Families',
+      description: 'High-end cleaning services for discerning homeowners and executives'
     },
     {
-      name: 'Jennifer L.',
-      location: 'Mandarin',
+      icon: Building2,
+      title: 'Business District',
+      description: 'Supporting Mandarin\'s professional offices and commercial properties'
+    },
+    {
+      icon: Leaf,
+      title: 'Riverside Living',
+      description: 'Beautiful St. Johns River views and natural surroundings'
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Dr. Sarah Johnson',
+      service: 'Luxury Home Cleaning',
       rating: 5,
-      comment: 'Great family cleaning service! Our Mandarin home has never been cleaner, and they use safe products for our children.'
+      review: 'The Mandarin team provides exceptional service for our luxury home. They understand the level of detail we expect.',
+      date: 'January 2024'
+    },
+    {
+      name: 'Michael Rodriguez',
+      service: 'Deep Cleaning',
+      rating: 5,
+      review: 'After hosting a corporate event, we needed thorough cleaning. The Mandarin team exceeded expectations.',
+      date: 'December 2023'
+    },
+    {
+      name: 'Lisa Thompson',
+      service: 'Move-Out Cleaning',
+      rating: 5,
+      review: 'When selling our Mandarin home, the move-out cleaning was perfect. Our realtor was impressed with the results.',
+      date: 'November 2023'
     }
   ];
 
@@ -160,24 +113,27 @@ export default function MandarinPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Jacksonville House Cleaning Service",
-            "description": "Family-friendly cleaning services in Mandarin, Jacksonville FL. Safe cleaning for families with children and pets.",
+            "name": "Jacksonville House Cleaning Service - Mandarin",
+            "description": "Professional house cleaning services in Mandarin Jacksonville, FL. Upscale community cleaning solutions for Mandarin homes with 25K+ residents served.",
             "url": "https://www.jacksonvillehousecleaningservice.com/locations/mandarin",
             "telephone": "+19044563851",
+            "email": "info@jacksonvillehousecleaningservice.com",
             "address": {
               "@type": "PostalAddress",
+              "streetAddress": "Mandarin Jacksonville",
               "addressLocality": "Jacksonville",
               "addressRegion": "FL",
+              "postalCode": "32223",
               "addressCountry": "US"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "30.3187",
-              "longitude": "-81.6920"
+              "latitude": "30.3322",
+              "longitude": "-81.6557"
             },
             "areaServed": {
               "@type": "City",
-              "name": "Mandarin"
+              "name": "Mandarin Jacksonville"
             },
             "serviceArea": {
               "@type": "City",
@@ -185,8 +141,8 @@ export default function MandarinPage() {
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Mandarin Cleaning Services",
-              "itemListElement": mandarinServices.map(service => ({
+              "name": "Mandarin Jacksonville Cleaning Services",
+              "itemListElement": popularServices.map(service => ({
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
@@ -198,214 +154,348 @@ export default function MandarinPage() {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "5.0",
-              "reviewCount": "180"
-            }
+              "reviewCount": "85"
+            },
+            "priceRange": "$$$",
+            "paymentAccepted": ["Cash", "Credit Card", "Check"],
+            "currenciesAccepted": "USD",
+            "openingHours": [
+              "Mo-Fr 08:00-18:00",
+              "Sa 08:00-16:00"
+            ],
+            "sameAs": [
+              "https://www.facebook.com/jacksonvillehousecleaningservice",
+              "https://www.google.com/maps?cid=123456789"
+            ],
+            "image": [
+              "https://www.jacksonvillehousecleaningservice.com/jhcs_hero2.png"
+            ],
+            "logo": "https://www.jacksonvillehousecleaningservice.com/logo.png"
           })
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-primary-blue/5 to-accent-aqua/5">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary-blue to-accent-aqua text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Users className="h-8 w-8 mr-3" />
-              <h1 className="text-4xl md:text-6xl font-bold">Mandarin</h1>
-            </div>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Family-friendly cleaning services for Mandarin homes with children and pets. 
-              Experience safe, thorough cleaning that works for busy families.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact?service=family-friendly-cleaning&location=mandarin"
-                className="bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Free Quote
-              </Link>
-              <Link 
-                href="/contact?service=recurring-family-care&location=mandarin"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors"
-              >
-                Schedule Service
-              </Link>
+      <div className="min-h-screen">
+        {/* Hero Section - Local Business Style */}
+        <section 
+          className="relative py-20 lg:py-24 overflow-hidden"
+          style={{
+            backgroundImage: 'url(/jhcs_hero2.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/60"></div>
+          
+          {/* Content Container */}
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              {/* Local Business Badge */}
+              <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
+                <MapPin className="w-4 h-4 text-primary-blue" />
+                Serving Mandarin Jacksonville Since 2015
+              </div>
+
+              {/* Main Headline */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+                <span className="block">Professional Cleaning</span>
+                <span className="block text-cyan-400">in Mandarin</span>
+                <span className="block text-lg sm:text-xl lg:text-2xl font-medium text-white/90 mt-3">
+                  Jacksonville&apos;s Upscale Community Cleaning Service
+                </span>
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
+                We&apos;re your Mandarin Jacksonville neighbors, providing premium, eco-friendly cleaning services 
+                that understand luxury homes and upscale living. No corporate chains, just local professionals who care about your 
+                home like it&apos;s our own.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a
+                  href="tel:+19044563851"
+                  className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call (904) 456-3851
+                </a>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-3"
+                >
+                  Get Free Quote
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+
+              {/* Local Trust Indicators */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                  <div className="w-12 h-12 bg-accent-green/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                    <Users className="w-6 h-6 text-accent-green" />
+                  </div>
+                  <h3 className="font-bold text-white text-base mb-2">500+ Local Families</h3>
+                  <p className="text-white/80 text-xs leading-relaxed">Trust us with their homes</p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                  <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                    <Shield className="w-6 h-6 text-primary-blue" />
+                  </div>
+                  <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
+                  <p className="text-white/80 text-xs leading-relaxed">Florida business license</p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                  <div className="w-12 h-12 bg-accent-coral/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                    <Star className="w-6 h-6 text-accent-coral" />
+                  </div>
+                  <h3 className="font-bold text-white text-base mb-2">5-Star Local Reviews</h3>
+                  <p className="text-white/80 text-xs leading-relaxed">Mandarin neighbors</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Mandarin Overview */}
         <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                  Welcome to Mandarin Jacksonville
+                </h2>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  Mandarin is one of Jacksonville&apos;s most prestigious and upscale communities, 
+                  known for its beautiful luxury homes, waterfront properties, and professional atmosphere. 
+                  With a population of over 25,000 residents, Mandarin offers the perfect blend of 
+                  sophisticated living and natural beauty.
+                </p>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  Our Mandarin cleaning team understands the unique needs of this community - from 
+                  luxury homes that require premium care to executive residences that need reliable 
+                  maintenance. We&apos;re proud to serve our neighbors with the same level of care 
+                  and attention we&apos;d want for our own homes.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Whether you live in a waterfront estate or a luxury residence, 
+                  we bring our Jacksonville cleaning expertise right to your doorstep.
+                </p>
+              </div>
+              <div className="relative">
+                <div className="bg-gradient-to-br from-primary-blue/20 to-accent-aqua/20 rounded-2xl p-8">
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                      <span className="text-white text-3xl font-bold">25K+</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Mandarin Residents</h3>
+                    <p className="text-gray-700">Proud to serve our community</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Local Features */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Family-Friendly Cleaning Services in Mandarin
-              </h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Safe, thorough cleaning services designed for Mandarin families with children and pets. 
-                Experience the difference of family-focused care that keeps your home clean and safe.
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Why Mandarin Loves Jacksonville House Cleaning Service</h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                We understand Mandarin&apos;s unique characteristics and tailor our services to meet the specific needs of this upscale community.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {mandarinServices.map((service) => (
-                <div key={service.id} className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="h-8 w-8 text-primary-blue mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {localFeatures.map((feature, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-200">
+                  <div className="w-16 h-16 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-primary-blue" />
                   </div>
-                  <p className="text-gray-700 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-accent-green mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link 
-                    href={`/contact?service=${service.id}&location=mandarin`}
-                    className="inline-block mt-6 bg-primary-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors"
-                  >
-                    Book Service
-                  </Link>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                  <p className="text-gray-700 text-sm">
+                    {feature.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Why Choose Us Section */}
-        <section className="py-20 bg-blue-100">
-          <div className="container mx-auto px-4">
+        {/* Popular Services */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Mandarin Families Choose Our Family Service
-              </h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                We understand the unique needs of families and provide safe, reliable service that works for busy schedules.
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Popular Cleaning Services in Mandarin</h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                From luxury home care to specialized deep cleaning, we offer comprehensive solutions 
+                tailored to Mandarin&apos;s unique needs and your specific requirements.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center">
-                <Shield className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Family Safe</h3>
-                <p className="text-gray-700">Safe cleaning products and methods that protect your children and pets.</p>
-              </div>
-              <div className="text-center">
-                <Calendar className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Family Flexible</h3>
-                <p className="text-gray-700">Flexible scheduling that works around your family's busy lifestyle.</p>
-              </div>
-              <div className="text-center">
-                <Users className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Family Focused</h3>
-                <p className="text-gray-700">Service designed specifically for families with children and pets.</p>
-              </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {popularServices.map((service, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <div className="p-6">
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="w-16 h-16 bg-primary-blue/20 rounded-full flex items-center justify-center">
+                        <service.icon className="w-8 h-8 text-primary-blue" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                        <p className="text-sm text-gray-600">{service.description}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3 mb-6">
+                      <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start space-x-3">
+                            <CheckCircle className="w-4 h-4 text-accent-green mt-0.5 flex-shrink-0" />
+                            <span className="text-sm text-gray-700">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="space-y-3">
+                      <Link
+                        href={service.href}
+                        className="w-full bg-primary-blue text-white py-3 px-4 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors duration-200 flex items-center justify-center space-x-2"
+                      >
+                        <span>Learn More</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                      <Link
+                        href={`/contact?service=${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="w-full border border-primary-blue text-primary-blue py-2 px-4 rounded-lg font-medium hover:bg-primary-blue hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2"
+                      >
+                        <span>Get Quote</span>
+                        <Calculator className="w-4 h-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Mandarin Features */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Mandarin: Family Living in the Heart of Jacksonville
-                </h2>
-                <p className="text-lg text-gray-700 mb-8">
-                  Mandarin is one of Jacksonville's most family-friendly communities, known for its excellent schools, 
-                  safe environment, and strong community spirit. Our family-focused cleaning services are designed to 
-                  support the busy lifestyle that Mandarin families lead.
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Community Features</h3>
-                    <ul className="space-y-2">
-                      {mandarinFeatures.map((feature, index) => (
-                        <li key={index} className="flex items-center">
-                          <CheckCircle className="h-5 w-5 text-accent-green mr-2" />
-                          <span className="text-gray-700">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Local Landmarks</h3>
-                    <ul className="space-y-2">
-                      {mandarinLandmarks.map((landmark, index) => (
-                        <li key={index} className="flex items-center">
-                          <MapPin className="h-4 w-4 text-primary-blue mr-2" />
-                          <span className="text-gray-700">{landmark}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Mandarin Service Pricing</h3>
+        {/* Service Areas & ZIP Codes */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Mandarin Service Areas</h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                We serve all of Mandarin Jacksonville and surrounding areas. Check if your address is in our service zone.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-4">Primary Service Areas</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">Family Standard Cleaning</span>
-                    <span className="font-semibold text-gray-900">From $120</span>
+                    <span className="text-gray-700">Mandarin Core</span>
+                    <span className="font-semibold text-gray-900">32223</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">Family Deep Cleaning</span>
-                    <span className="font-semibold text-gray-900">From $220</span>
+                    <span className="text-gray-700">Mandarin East</span>
+                    <span className="font-semibold text-gray-900">32257</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">Family Move-In/Out</span>
-                    <span className="font-semibold text-gray-900">From $280</span>
+                    <span className="text-gray-700">Mandarin West</span>
+                    <span className="font-semibold text-gray-900">32223</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">Family Maintenance</span>
-                    <span className="font-semibold text-gray-900">From $90</span>
+                    <span className="text-gray-700">Mandarin South</span>
+                    <span className="font-semibold text-gray-900">32257</span>
                   </div>
                 </div>
-                <Link 
-                  href="/pricing-calculator?location=mandarin"
-                  className="block w-full bg-primary-blue text-white text-center py-3 rounded-lg font-semibold mt-6 hover:bg-primary-blue/90 transition-colors"
-                >
-                  Get Detailed Pricing
-                </Link>
               </div>
+
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-4">Nearby Areas We Serve</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-700">Southside</span>
+                    <span className="font-semibold text-gray-900">32216, 32256</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-700">San Marco</span>
+                    <span className="font-semibold text-gray-900">32207</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-700">Downtown</span>
+                    <span className="font-semibold text-gray-900">32202, 32204</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-700">Arlington</span>
+                    <span className="font-semibold text-gray-900">32211, 32225</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-gray-600 mb-4">
+                <strong>Not sure if we serve your area?</strong> Call us at (904) 456-3851 or use our contact form.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-primary-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors duration-200"
+              >
+                <MapPin className="w-4 h-4" />
+                Check Service Availability
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+        {/* Customer Testimonials */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What Mandarin Families Say
-              </h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Don't just take our word for it. Here's what our Mandarin families have to say about our family service.
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">What Mandarin Residents Say</h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Don&apos;t just take our word for it. Here&apos;s what your Mandarin neighbors are saying about our cleaning services.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {mandarinTestimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg">
-                  <div className="flex items-center mb-4">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex items-center space-x-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-4 italic">"{testimonial.comment}"</p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.name.charAt(0)}
+                  
+                  <div className="flex items-center space-x-2 mb-3">
+                    <Home className="w-4 h-4 text-primary-blue" />
+                    <span className="text-sm text-gray-600 uppercase tracking-wide">
+                      {testimonial.service}
+                    </span>
+                  </div>
+
+                  <p className="text-gray-800 mb-4 line-clamp-4">
+                    "{testimonial.review}"
+                  </p>
+
+                  <div className="border-t border-gray-200 pt-4">
+                    <h4 className="font-semibold text-gray-900 mb-1">{testimonial.name}</h4>
+                    <div className="flex items-center space-x-2 text-sm text-gray-600">
+                      <MapPin className="w-3 h-3" />
+                      <span>Mandarin, Jacksonville</span>
                     </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                      <p className="text-gray-600 text-sm">{testimonial.location}</p>
-                    </div>
+                    <p className="text-xs text-gray-500 mt-1">{testimonial.date}</p>
                   </div>
                 </div>
               ))}
@@ -414,32 +504,28 @@ export default function MandarinPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-primary-blue to-accent-aqua text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready for Family-Friendly Care in Mandarin?
+        <section className="py-20 bg-gradient-to-r from-primary-blue to-accent-aqua">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready for Professional Cleaning in Mandarin?
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Experience the difference of safe, family-focused cleaning that works for your busy lifestyle. 
-              Get your free quote today and see why we're the preferred choice for Mandarin families.
+            <p className="text-xl text-white/90 mb-8">
+              Join hundreds of satisfied Mandarin residents who trust us with their cleaning needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact?service=family-friendly-cleaning&location=mandarin"
-                className="bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              <Link
+                href="/contact"
+                className="bg-accent-coral text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent-coral/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
               >
-                Get Free Quote
+                Get Your Free Quote
               </Link>
-              <Link 
-                href="/contact?service=recurring-family-care&location=mandarin"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors"
+              <a
+                href="tel:+19044563851"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors duration-200"
               >
-                Schedule Consultation
-              </Link>
-            </div>
-            <div className="mt-8 flex items-center justify-center">
-              <Phone className="h-5 w-5 mr-2" />
-              <span className="text-lg">Call (904) 456-3851 for immediate assistance</span>
+                <Phone className="w-5 h-5 inline mr-2" />
+                Call (904) 456-3851
+              </a>
             </div>
           </div>
         </section>

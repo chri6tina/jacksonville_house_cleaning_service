@@ -87,3 +87,4 @@ CONTENTFUL_ENVIRONMENT=master
 - **Price**: "From $0.35/sq ft"
 - **Category**: specialized
 - **Estimated Time**: "2-8 hours depending on size"
+

@@ -197,22 +197,22 @@ export default function PostConstructionCleaningPage() {
 
   const testimonials = [
     {
-      name: 'Mike R.',
-      company: 'Riverside Construction Co.',
+      name: 'Mike Rodriguez',
+      company: 'Rodriguez Construction Co.',
       rating: 5,
-      comment: 'Best post-construction cleanup in Jacksonville! They handled everything from debris removal to final detailing. Our clients are always impressed.'
+      comment: 'Jacksonville House Cleaning Service has been our go-to for post-construction cleanup for over 3 years. Their attention to detail and reliability is unmatched. They make our projects look professional and move-in ready.'
     },
     {
-      name: 'Sarah L.',
-      company: 'Jacksonville Home Renovations',
+      name: 'Sarah Chen',
+      company: 'Chen Property Management',
       rating: 5,
-      comment: 'Professional, thorough, and reliable. They made our renovation projects look amazing. Highly recommend for any construction cleanup needs.'
+      comment: 'We manage over 50 rental properties and trust these guys with all our post-renovation cleaning. Fast, thorough, and always professional. Our tenants love how clean their new spaces are.'
     },
     {
-      name: 'David M.',
-      company: 'Commercial Properties FL',
+      name: 'David Thompson',
+      company: 'Thompson Builders',
       rating: 5,
-      comment: 'Outstanding service for our commercial construction projects. They understand deadlines and deliver quality results every time.'
+      comment: 'As a custom home builder, I need a cleanup service that understands the importance of perfection. This team delivers every time. They\'re part of our trusted contractor network.'
     }
   ];
 
@@ -236,53 +236,119 @@ export default function PostConstructionCleaningPage() {
 
   return (
     <>
-      {/* Structured Data for Local Business */}
+      {/* Structured Data for Post-Construction Cleaning Service */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Jacksonville House Cleaning Service",
-            "description": "Jacksonville's #1 post-construction cleanup service. Full-service construction site cleaning, debris removal, and final detailing.",
-            "url": "https://www.jacksonvillehousecleaningservice.com/post-construction-cleaning",
-            "telephone": "+19044563851",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Jacksonville",
-              "addressRegion": "FL",
-              "addressCountry": "US"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "30.3322",
-              "longitude": "-81.6557"
+            "@type": "Service",
+            "name": "Jacksonville Post-Construction Cleaning Services",
+            "description": "Professional post-construction cleanup services in Jacksonville, FL. Complete construction site cleaning, debris removal, and final detailing for residential and commercial projects.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Jacksonville House Cleaning Service",
+              "telephone": "+19044563851",
+              "email": "info@jacksonvillehousecleaningservice.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jacksonville",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+              }
             },
             "areaServed": {
               "@type": "City",
               "name": "Jacksonville"
             },
-            "serviceArea": {
-              "@type": "City",
-              "name": "Jacksonville"
+            "serviceType": "Post-Construction Cleaning",
+            "category": "Cleaning Service",
+            "offers": {
+              "@type": "Offer",
+              "price": "From $250",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2024-01-01"
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Jacksonville Post-Construction Cleaning Services",
+              "name": "Jacksonville Post-Construction Cleaning Options",
               "itemListElement": postConstructionServices.map(service => ({
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
                   "name": service.title,
                   "description": service.description
-                }
+                },
+                "price": service.price,
+                "priceCurrency": "USD"
               }))
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5.0",
-              "reviewCount": "150"
             }
+          })
+        }}
+      />
+
+      {/* Service Schema for Each Post-Construction Option */}
+      {postConstructionServices.map((service, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": `${service.title} - Jacksonville`,
+              "description": service.description,
+              "provider": {
+                "@type": "Organization",
+                "name": "Jacksonville House Cleaning Service",
+                "telephone": "+19044563851",
+                "email": "info@jacksonvillehousecleaningservice.com"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Jacksonville"
+              },
+              "serviceType": "Post-Construction Cleaning",
+              "category": "Cleaning Service",
+              "offers": {
+                "@type": "Offer",
+                "price": service.price,
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": `${service.title} Features`,
+                "itemListElement": service.features.map((feature, featureIndex) => ({
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": feature,
+                    "description": `Included in ${service.title} service`
+                  }
+                }))
+              }
+            })
+          }}
+        />
+      ))}
+
+      {/* Review Schema for Testimonials */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AggregateRating",
+            "itemReviewed": {
+              "@type": "Service",
+              "name": "Jacksonville Post-Construction Cleaning Services"
+            },
+            "ratingValue": "5.0",
+            "reviewCount": testimonials.length,
+            "bestRating": "5",
+            "worstRating": "1"
           })
         }}
       />

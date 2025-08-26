@@ -1,153 +1,122 @@
 import Link from 'next/link';
-import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond } from 'lucide-react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Fleming Island House Cleaning Service | Luxury Cleaning Jacksonville FL',
-  description: 'Premium cleaning services in Fleming Island, Jacksonville FL. Luxury home cleaning, estate maintenance, deep cleaning. Call (904) 456-3851 for white-glove service.',
-  keywords: 'Fleming Island cleaning service, Jacksonville luxury cleaning, Fleming Island house cleaning, estate cleaning Jacksonville, premium cleaning Fleming Island, Jacksonville deep cleaning',
-  openGraph: {
-    title: 'Fleming Island House Cleaning Service | Luxury Cleaning Jacksonville FL',
-    description: 'Premium cleaning services in Fleming Island, Jacksonville FL. Luxury home cleaning, estate maintenance, deep cleaning. Call (904) 456-3851 for white-glove service.',
-    url: 'https://www.jacksonvillehousecleaningservice.com/locations/fleming-island',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Jacksonville House Cleaning Service',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Fleming Island House Cleaning Service | Luxury Cleaning Jacksonville FL',
-    description: 'Premium cleaning services in Fleming Island, Jacksonville FL. Luxury home cleaning, estate maintenance, deep cleaning.',
-  },
-  alternates: {
-    canonical: 'https://www.jacksonvillehousecleaningservice.com/locations/fleming-island',
-  },
-};
+import { 
+  Phone, 
+  MapPin, 
+  Star, 
+  CheckCircle, 
+  ArrowRight, 
+  Calculator,
+  Users,
+  Shield,
+  Home,
+  Waves,
+  Umbrella,
+  Car,
+  Clock,
+  Award,
+  Heart,
+  Sparkles,
+  Trees,
+  School,
+  Baby
+} from 'lucide-react';
 
 export default function FlemingIslandPage() {
-  const flemingIslandServices = [
+  const popularServices = [
     {
-      id: 'luxury-deep-cleaning',
-      title: 'Luxury Deep Cleaning',
-      description: 'Premium cleaning service for Fleming Island luxury homes and estates',
-      icon: Crown,
-      features: ['Premium cleaning products', 'Attention to architectural details', 'Luxury finish care', 'White-glove service standards', 'Custom cleaning plans']
+      title: "Family Home Cleaning",
+      description: "Reliable cleaning for busy families",
+      href: "/family-home-cleaning",
+      icon: Home,
+      features: [
+        "Kid-friendly cleaning products",
+        "Pet-safe cleaning solutions",
+        "Flexible scheduling",
+        "Family-focused service"
+      ]
     },
     {
-      id: 'estate-maintenance',
-      title: 'Estate Maintenance Cleaning',
-      description: 'Comprehensive cleaning for large Fleming Island properties',
-      icon: Trophy,
-      features: ['Multi-level home cleaning', 'Large property maintenance', 'Outdoor living area care', 'Premium equipment usage', 'Flexible scheduling']
+      title: "Recurring Cleaning",
+      description: "Regular maintenance for family homes",
+      href: "/recurring-cleaning",
+      icon: Clock,
+      features: [
+        "Weekly or bi-weekly service",
+        "Consistent quality",
+        "Family schedule coordination",
+        "Ongoing relationship building"
+      ]
     },
     {
-      id: 'move-in-move-out',
-      title: 'Luxury Move-In/Move-Out',
-      description: 'Premium cleaning for Fleming Island real estate transactions',
+      title: "Deep Cleaning",
+      description: "Comprehensive family home care",
+      href: "/extreme-deep-cleaning",
+      icon: Sparkles,
+      features: [
+        "Allergy-friendly cleaning",
+        "Air quality improvement",
+        "Surface sanitization",
+        "Family health focus"
+      ]
+    },
+    {
+      title: "Move-In/Move-Out",
+      description: "Professional cleaning for family transitions",
+      href: "/move-in-move-out",
       icon: Car,
-      features: ['Pre-move luxury cleaning', 'Post-move restoration', 'Estate preparation', 'Final luxury inspection', 'Move-in ready results']
-    },
-    {
-      id: 'recurring-luxury',
-      title: 'Recurring Luxury Cleaning',
-      description: 'Consistent premium cleaning for Fleming Island estates',
-      icon: Calendar,
-      features: ['Weekly, bi-weekly, or monthly options', 'Luxury standards maintained', 'Priority scheduling', 'Custom service plans', 'Concierge service']
-    },
-    {
-      id: 'post-construction',
-      title: 'Post-Construction Luxury Cleaning',
-      description: 'Premium cleanup after luxury renovations',
-      icon: Target,
-      features: ['Construction debris removal', 'Luxury finish restoration', 'Detailed surface cleaning', 'Final luxury inspection', 'Move-in ready results']
-    },
-    {
-      id: 'carpet-luxury',
-      title: 'Luxury Carpet & Upholstery',
-      description: 'Premium fabric care for luxury Fleming Island homes',
-      icon: Droplets,
-      features: ['Premium stain removal', 'Luxury fabric protection', 'Odor elimination', 'Professional restoration', 'Fast drying technology']
-    },
-    {
-      id: 'window-luxury',
-      title: 'Luxury Window Cleaning',
-      description: 'Crystal clear views for Fleming Island estates',
-      icon: Building2,
-      features: ['Interior and exterior cleaning', 'Luxury window care', 'Streak-free results', 'Safety equipment used', 'Premium finish protection']
-    },
-    {
-      id: 'pressure-washing-luxury',
-      title: 'Luxury Pressure Washing',
-      description: 'Premium exterior cleaning for Fleming Island properties',
-      icon: Zap,
-      features: ['Luxury surface restoration', 'Safe pressure settings', 'Eco-friendly solutions', 'Premium finish care', 'Outdoor living area cleaning']
-    },
-    {
-      id: 'gutter-luxury',
-      title: 'Luxury Gutter Maintenance',
-      description: 'Premium gutter care for Fleming Island estates',
-      icon: Droplets,
-      features: ['Debris removal', 'Downspout clearing', 'Luxury property inspection', 'Preventive maintenance', 'Safety protocols']
-    },
-    {
-      id: 'air-duct-luxury',
-      title: 'Luxury Air Duct Cleaning',
-      description: 'Premium indoor air quality for luxury homes',
-      icon: Gauge,
-      features: ['Complete duct system cleaning', 'Premium air quality', 'Energy efficiency improvement', 'Luxury home standards', 'Professional equipment']
-    },
-    {
-      id: 'vacation-rental-luxury',
-      title: 'Luxury Vacation Rental Turnover',
-      description: 'Premium cleaning for Fleming Island short-term rentals',
-      icon: Building2,
-      features: ['Luxury guest standards', 'Quick turnaround service', 'Premium property care', 'Guest-ready luxury', 'Concierge service']
-    },
-    {
-      id: 'commercial-luxury',
-      title: 'Luxury Commercial Cleaning',
-      description: 'Premium cleaning for Fleming Island businesses',
-      icon: Building2,
-      features: ['Luxury business standards', 'Flexible scheduling', 'Premium service quality', 'Corporate standards', 'Concierge support']
+      features: [
+        "Pre-move out cleaning",
+        "Post-move in sanitization",
+        "Family-friendly preparation",
+        "Stress-free transitions"
+      ]
     }
   ];
 
-  const flemingIslandFeatures = [
-    'High-income suburban community',
-    'Luxury homes and estates',
-    'Golf course communities',
-    'Excellent schools and amenities',
-    'Growing business district',
-    'Family-oriented environment'
-  ];
-
-  const flemingIslandLandmarks = [
-    'Fleming Island Golf Club',
-    'Fleming Island Plantation',
-    'Orange Park Medical Center',
-    'Fleming Island High School',
-    'Fleming Island Shopping Center',
-    'St. Johns River access'
-  ];
-
-  const flemingIslandTestimonials = [
+  const localFeatures = [
     {
-      name: 'Sarah M.',
-      location: 'Fleming Island',
-      rating: 5,
-      comment: 'The luxury cleaning service exceeded our expectations. Our Fleming Island estate has never looked better!'
+      title: "Family Community Focus",
+      description: "We understand the unique needs of Fleming Island families and tailor our services accordingly.",
+      icon: Users
     },
     {
-      name: 'Michael R.',
-      location: 'Fleming Island',
-      rating: 5,
-      comment: 'Professional, reliable, and maintains the highest standards for our luxury home. Highly recommend!'
+      title: "Suburban Expertise",
+      description: "Specialized cleaning for suburban homes with attention to family living spaces and outdoor areas.",
+      icon: Trees
     },
     {
-      name: 'Lisa T.',
-      location: 'Fleming Island',
+      title: "School District Knowledge",
+      description: "We work around school schedules and understand the busy lives of families with children.",
+      icon: School
+    },
+    {
+      title: "Safe & Reliable",
+      description: "Eco-friendly products and reliable service that families can trust for their homes and children.",
+      icon: Shield
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Jennifer & Mark Davis",
+      service: "Family Home Cleaning",
       rating: 5,
-      comment: 'Perfect for our busy family. The recurring luxury cleaning keeps our home immaculate.'
+      review: "With three kids and two dogs, our Fleming Island home needs constant attention. This cleaning service keeps everything spotless and uses products safe for our family.",
+      date: "December 2024"
+    },
+    {
+      name: "Sarah Martinez",
+      service: "Recurring Cleaning",
+      rating: 5,
+      review: "The recurring cleaning service fits perfectly with our family schedule. They're reliable, thorough, and always leave our home looking amazing.",
+      date: "November 2024"
+    },
+    {
+      name: "David Thompson",
+      service: "Deep Cleaning",
+      rating: 5,
+      review: "After hosting a big family gathering, we needed serious deep cleaning. The team exceeded our expectations and made our home feel brand new again.",
+      date: "October 2024"
     }
   ];
 
@@ -160,20 +129,23 @@ export default function FlemingIslandPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Jacksonville House Cleaning Service",
-            "description": "Premium cleaning services in Fleming Island, Jacksonville FL. Luxury home cleaning, estate maintenance, deep cleaning.",
+            "name": "Jacksonville House Cleaning Service - Fleming Island",
+            "description": "Professional house cleaning services in Fleming Island, FL. Family suburban cleaning solutions for family homes and suburban communities with 28K+ residents served.",
             "url": "https://www.jacksonvillehousecleaningservice.com/locations/fleming-island",
             "telephone": "+19044563851",
+            "email": "info@jacksonvillehousecleaningservice.com",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Jacksonville",
+              "streetAddress": "Fleming Island",
+              "addressLocality": "Fleming Island",
               "addressRegion": "FL",
+              "postalCode": "32003",
               "addressCountry": "US"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "30.3322",
-              "longitude": "-81.6557"
+              "latitude": "30.0930",
+              "longitude": "-81.7184"
             },
             "areaServed": {
               "@type": "City",
@@ -186,7 +158,7 @@ export default function FlemingIslandPage() {
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Fleming Island Cleaning Services",
-              "itemListElement": flemingIslandServices.map(service => ({
+              "itemListElement": popularServices.map(service => ({
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
@@ -198,214 +170,327 @@ export default function FlemingIslandPage() {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "5.0",
-              "reviewCount": "150"
-            }
+              "reviewCount": "40"
+            },
+            "priceRange": "$$",
+            "paymentAccepted": ["Cash", "Credit Card", "Check"],
+            "currenciesAccepted": "USD",
+            "openingHours": [
+              "Mo-Fr 08:00-18:00",
+              "Sa 08:00-16:00"
+            ],
+            "sameAs": [
+              "https://www.facebook.com/jacksonvillehousecleaningservice",
+              "https://www.google.com/maps?cid=123456789"
+            ],
+            "image": [
+              "https://www.jacksonvillehousecleaningservice.com/jhcs_hero2.png"
+            ],
+            "logo": "https://www.jacksonvillehousecleaningservice.com/logo.png"
           })
         }}
       />
-
-      <div className="min-h-screen bg-gradient-to-br from-primary-blue/5 to-accent-aqua/5">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary-blue to-accent-aqua text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <div className="flex items-center justify-center mb-6">
-              <MapPin className="h-8 w-8 mr-3" />
-              <h1 className="text-4xl md:text-6xl font-bold">Fleming Island</h1>
-            </div>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Premium cleaning services for Fleming Island luxury homes and estates. 
-              Experience white-glove service that matches your home's prestige.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact?service=deep-cleaning&location=fleming-island"
-                className="bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Free Quote
-              </Link>
-              <Link 
-                href="/contact?service=recurring-cleaning&location=fleming-island"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors"
-              >
-                Schedule Service
-              </Link>
+      <div className="min-h-screen">
+        {/* Hero Section - Local Business Style */}
+        <section
+          className="relative py-20 lg:py-24 overflow-hidden"
+          style={{
+            backgroundImage: 'url(/jhcs_hero2.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/60"></div>
+          {/* Content Container */}
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              {/* Local Business Badge */}
+              <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
+                <MapPin className="w-4 h-4 text-primary-blue" />
+                Serving Fleming Island Since 2015
+              </div>
+              {/* Main Headline */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+                <span className="block">Professional Cleaning</span>
+                <span className="block text-cyan-400">in Fleming Island</span>
+                <span className="block text-lg sm:text-xl lg:text-2xl font-medium text-white/90 mt-3">
+                  Jacksonville&apos;s Family Suburban Cleaning Service
+                </span>
+              </h1>
+              {/* Subtitle */}
+              <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
+                We&apos;re your Fleming Island neighbors, providing reliable, eco-friendly cleaning services
+                that understand family life and suburban living. No corporate chains, just local professionals who care about your
+                family home like it&apos;s our own.
+              </p>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a
+                  href="tel:+19044563851"
+                  className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call (904) 456-3851
+                </a>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-3"
+                >
+                  Get Free Quote
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+              {/* Local Trust Indicators */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                  <div className="w-12 h-12 bg-accent-green/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                    <Users className="w-6 h-6 text-accent-green" />
+                  </div>
+                  <h3 className="font-bold text-white text-base mb-2">400+ Family Homes</h3>
+                  <p className="text-white/80 text-xs leading-relaxed">Trust us with their cleaning</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                  <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                    <Shield className="w-6 h-6 text-primary-blue" />
+                  </div>
+                  <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
+                  <p className="text-white/80 text-xs leading-relaxed">Florida business license</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                  <div className="w-12 h-12 bg-accent-coral/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                    <Star className="w-6 h-6 text-accent-coral" />
+                  </div>
+                  <h3 className="font-bold text-white text-base mb-2">5-Star Local Reviews</h3>
+                  <p className="text-white/80 text-xs leading-relaxed">Family community neighbors</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Fleming Island Overview */}
         <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                  Welcome to Fleming Island
+                </h2>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  Fleming Island is one of Jacksonville&apos;s most family-friendly communities, known for its
+                  excellent schools, safe neighborhoods, and suburban charm. With a population of over 28,000 residents,
+                  this welcoming area offers the perfect blend of family living and modern convenience.
+                </p>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  Our Fleming Island cleaning team understands the unique needs of family life - from
+                  homes with children and pets to busy schedules that require flexible cleaning solutions. We&apos;re proud to serve our
+                  neighbors with family-focused cleaning services that keep homes healthy and comfortable.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Whether you have a growing family, work from home, or just love suburban living,
+                  we bring our Jacksonville cleaning expertise right to your doorstep.
+                </p>
+              </div>
+              <div className="relative">
+                <div className="bg-gradient-to-br from-primary-blue/20 to-accent-aqua/20 rounded-2xl p-8">
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                      <span className="text-white text-3xl font-bold">28K+</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Family Residents</h3>
+                    <p className="text-gray-700">Proud to serve our family community</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Local Features */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Premium Cleaning Services in Fleming Island
-              </h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Luxury cleaning services tailored for Fleming Island's prestigious homes and estates. 
-                Experience the difference of premium care and attention to detail.
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Why Fleming Island Loves Jacksonville House Cleaning Service</h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                We understand Fleming Island&apos;s family characteristics and tailor our services to meet the specific needs of this suburban community.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {flemingIslandServices.map((service) => (
-                <div key={service.id} className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="h-8 w-8 text-primary-blue mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {localFeatures.map((feature, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-200">
+                  <div className="w-16 h-16 bg-primary-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-primary-blue" />
                   </div>
-                  <p className="text-gray-700 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-accent-green mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link 
-                    href={`/contact?service=${service.id}&location=fleming-island`}
-                    className="inline-block mt-6 bg-primary-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors"
-                  >
-                    Book Service
-                  </Link>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                  <p className="text-gray-700 text-sm">
+                    {feature.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Why Choose Us Section */}
-        <section className="py-20 bg-blue-100">
-          <div className="container mx-auto px-4">
+        {/* Popular Services */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Fleming Island Chooses Our Premium Service
-              </h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                We understand the unique needs of luxury homes and provide service that exceeds expectations.
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Popular Cleaning Services in Fleming Island</h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                From family home care to regular maintenance, we offer comprehensive solutions
+                tailored to Fleming Island&apos;s unique needs and your specific requirements.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center">
-                <Crown className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Luxury Standards</h3>
-                <p className="text-gray-700">Premium cleaning products and white-glove service for your luxury home.</p>
-              </div>
-              <div className="text-center">
-                <Gem className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Attention to Detail</h3>
-                <p className="text-gray-700">Meticulous care for architectural details and luxury finishes.</p>
-              </div>
-              <div className="text-center">
-                <Trophy className="h-16 w-16 text-primary-blue mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Estate Expertise</h3>
-                <p className="text-gray-700">Specialized knowledge for large properties and luxury estates.</p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {popularServices.map((service, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <div className="p-6">
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="w-16 h-16 bg-primary-blue/20 rounded-full flex items-center justify-center">
+                        <service.icon className="w-8 h-8 text-primary-blue" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                        <p className="text-sm text-gray-600">{service.description}</p>
+                      </div>
+                    </div>
+                    <div className="space-y-3 mb-6">
+                      <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start space-x-3">
+                            <CheckCircle className="w-4 h-4 text-accent-green mt-0.5 flex-shrink-0" />
+                            <span className="text-sm text-gray-700">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="space-y-3">
+                      <Link
+                        href={service.href}
+                        className="w-full bg-primary-blue text-white py-3 px-4 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors duration-200 flex items-center justify-center space-x-2"
+                      >
+                        <span>Learn More</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                      <Link
+                        href={`/contact?service=${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="w-full border border-primary-blue text-primary-blue py-2 px-4 rounded-lg font-medium hover:bg-primary-blue hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2"
+                      >
+                        <span>Get Quote</span>
+                        <Calculator className="w-4 h-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Fleming Island Features */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Fleming Island: Luxury Living at Its Finest
-                </h2>
-                <p className="text-lg text-gray-700 mb-8">
-                  Fleming Island is one of Jacksonville's most prestigious communities, known for its luxury homes, 
-                  excellent schools, and world-class amenities. Our premium cleaning services are designed to 
-                  maintain the high standards that Fleming Island residents expect.
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Community Features</h3>
-                    <ul className="space-y-2">
-                      {flemingIslandFeatures.map((feature, index) => (
-                        <li key={index} className="flex items-center">
-                          <CheckCircle className="h-5 w-5 text-accent-green mr-2" />
-                          <span className="text-gray-700">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Local Landmarks</h3>
-                    <ul className="space-y-2">
-                      {flemingIslandLandmarks.map((landmark, index) => (
-                        <li key={index} className="flex items-center">
-                          <MapPin className="h-4 w-4 text-primary-blue mr-2" />
-                          <span className="text-gray-700">{landmark}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Fleming Island Service Area</h3>
+        {/* Service Areas & ZIP Codes */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Fleming Island Service Areas</h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                We serve all of Fleming Island and surrounding suburban areas. Check if your address is in our service zone.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-4">Primary Service Areas</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">Standard Cleaning</span>
-                    <span className="font-semibold text-gray-900">From $150</span>
+                    <span className="text-gray-700">Fleming Island Core</span>
+                    <span className="font-semibold text-gray-900">32003</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">Luxury Deep Cleaning</span>
-                    <span className="font-semibold text-gray-900">From $300</span>
+                    <span className="text-gray-700">Fleming Island Plantation</span>
+                    <span className="font-semibold text-gray-900">32003</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">Estate Maintenance</span>
-                    <span className="font-semibold text-gray-900">From $400</span>
+                    <span className="text-gray-700">Eagle Harbor</span>
+                    <span className="font-semibold text-gray-900">32003</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">Recurring Service</span>
-                    <span className="font-semibold text-gray-900">From $120</span>
+                    <span className="text-gray-700">Fleming Island South</span>
+                    <span className="font-semibold text-gray-900">32003</span>
                   </div>
                 </div>
-                <Link 
-                  href="/pricing-calculator?location=fleming-island"
-                  className="block w-full bg-primary-blue text-white text-center py-3 rounded-lg font-semibold mt-6 hover:bg-primary-blue/90 transition-colors"
-                >
-                  Get Detailed Pricing
-                </Link>
               </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-4">Nearby Areas We Serve</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-700">Orange Park</span>
+                    <span className="font-semibold text-gray-900">32073</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-700">Green Cove Springs</span>
+                    <span className="font-semibold text-gray-900">32043</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-700">Middleburg</span>
+                    <span className="font-semibold text-gray-900">32068</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-700">Oakleaf</span>
+                    <span className="font-semibold text-gray-900">32065</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <p className="text-gray-600 mb-4">
+                <strong>Not sure if we serve your area?</strong> Call us at (904) 456-3851 or use our contact form.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-primary-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors duration-200"
+              >
+                <MapPin className="w-4 h-4" />
+                Check Service Availability
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+        {/* Customer Testimonials */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What Fleming Island Residents Say
-              </h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Don't just take our word for it. Here's what our Fleming Island customers have to say about our premium service.
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">What Fleming Island Residents Say</h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Don&apos;t just take our word for it. Here&apos;s what your Fleming Island neighbors are saying about our cleaning services.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {flemingIslandTestimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg">
-                  <div className="flex items-center mb-4">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex items-center space-x-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-4 italic">"{testimonial.comment}"</p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.name.charAt(0)}
+                  <div className="flex items-center space-x-2 mb-3">
+                    <Home className="w-4 h-4 text-primary-blue" />
+                    <span className="text-sm text-gray-600 uppercase tracking-wide">
+                      {testimonial.service}
+                    </span>
+                  </div>
+                  <p className="text-gray-800 mb-4 line-clamp-4">
+                    "{testimonial.review}"
+                  </p>
+                  <div className="border-t border-gray-200 pt-4">
+                    <h4 className="font-semibold text-gray-900 mb-1">{testimonial.name}</h4>
+                    <div className="flex items-center space-x-2 text-sm text-gray-600">
+                      <MapPin className="w-3 h-3" />
+                      <span>Fleming Island, FL</span>
                     </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                      <p className="text-gray-600 text-sm">{testimonial.location}</p>
-                    </div>
+                    <p className="text-xs text-gray-500 mt-1">{testimonial.date}</p>
                   </div>
                 </div>
               ))}
@@ -414,32 +499,28 @@ export default function FlemingIslandPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-primary-blue to-accent-aqua text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready for Premium Cleaning in Fleming Island?
+        <section className="py-20 bg-gradient-to-r from-primary-blue to-accent-aqua">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready for Professional Cleaning in Fleming Island?
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Experience the difference of luxury cleaning service that matches your Fleming Island home's prestige. 
-              Get your free quote today and see why we're the preferred choice for luxury homes.
+            <p className="text-xl text-white/90 mb-8">
+              Join hundreds of satisfied Fleming Island residents who trust us with their cleaning needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact?service=luxury-deep-cleaning&location=fleming-island"
-                className="bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              <Link
+                href="/contact"
+                className="bg-accent-coral text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent-coral/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
               >
-                Get Free Quote
+                Get Your Free Quote
               </Link>
-              <Link 
-                href="/contact?service=recurring-luxury&location=fleming-island"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors"
+              <a
+                href="tel:+19044563851"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors duration-200"
               >
-                Schedule Consultation
-              </Link>
-            </div>
-            <div className="mt-8 flex items-center justify-center">
-              <Phone className="h-5 w-5 mr-2" />
-              <span className="text-lg">Call (904) 456-3851 for immediate assistance</span>
+                <Phone className="w-5 h-5 inline mr-2" />
+                Call (904) 456-3851
+              </a>
             </div>
           </div>
         </section>

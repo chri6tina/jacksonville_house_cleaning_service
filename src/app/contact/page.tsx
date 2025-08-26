@@ -1,8 +1,18 @@
-'use client';
-
+import { Metadata } from 'next';
 import { useState, useEffect, Suspense } from 'react';
 import { Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
+import Breadcrumb from '@/components/Breadcrumb';
+import { generateMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = generateMetadata({
+  title: 'Contact Jacksonville House Cleaning Service',
+  description: 'Get your free cleaning quote today. We serve all of Jacksonville and surrounding areas with professional, reliable house cleaning services. Call (904) 456-3851.',
+  keywords: ['Jacksonville cleaning contact', 'cleaning quote', 'cleaning service contact', 'Jacksonville cleaning phone'],
+  canonical: 'https://jacksonvillehousecleaningservice.com/contact'
+});
+
+'use client';
 
 function ContactForm() {
   const searchParams = useSearchParams();
@@ -98,152 +108,87 @@ function ContactForm() {
       if (response.ok) {
         setIsSubmitted(true);
         
-        // Reset form after submission
-        setTimeout(() => {
-          setIsSubmitted(false);
-          setFormData({
-            name: '',
-            phone: '',
-            email: '',
-            address: '',
-            propertyType: '',
-            services: [],
-            date: '',
-            time: '',
-            specialRequests: ''
-          });
-        }, 5000);
+        // Reset form
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          address: '',
+          propertyType: '',
+          services: [],
+          date: '',
+          time: '',
+          specialRequests: ''
+        });
       } else {
         throw new Error('Failed to submit form');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('Error submitting form:', error);
       alert('There was an error submitting your form. Please try again or call us directly.');
     }
   };
-
-  const availableServices = [
-    'Recurring House Cleaning',
-    'Deep Cleaning',
-    'Move-In/Move-Out Cleaning',
-    'Office Cleaning',
-    'Carpet & Upholstery Cleaning',
-    'Window Cleaning',
-    'Post-Construction Cleaning',
-    'Gutter Cleaning',
-    'Pressure Washing',
-    'Air Duct Cleaning',
-    'Pet-Friendly Cleaning',
-    'Senior Citizen Cleaning',
-    'Medical Facility Cleaning',
-    'Event Venue Cleaning',
-    'Vacation Rental Cleaning',
-    'Apartment Cleaning'
-  ];
-
-  const timeSlots = [
-    '8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM',
-    '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM',
-    '4:00 PM', '5:00 PM', '6:00 PM'
-  ];
 
   if (isSubmitted) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10">
         <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-md mx-4">
-          <CheckCircle className="w-20 h-20 text-accent-green mx-auto mb-6" />
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
-          <p className="text-gray-700 mb-6">
-            Your cleaning request has been submitted successfully. We&apos;ll contact you within 24 hours 
-            to confirm your appointment and provide a quote.
-          </p>
-          <div className="text-sm text-gray-600">
-            <p>Reference #: {Math.random().toString(36).substr(2, 9).toUpperCase()}</p>
+          <div className="w-16 h-16 bg-accent-green/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="w-8 h-8 text-accent-green" />
           </div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Thank You!</h2>
+          <p className="text-gray-700 mb-6">
+            Your message has been sent successfully. We'll get back to you within 2 hours.
+          </p>
+          <button
+            onClick={() => setIsSubmitted(false)}
+            className="bg-primary-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors"
+          >
+            Send Another Message
+          </button>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section - Local Business Style */}
-      <section 
-        className="relative py-20 lg:py-24 overflow-hidden"
-        style={{
-          backgroundImage: 'url(/hero1.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/60 sm:bg-black/75"></div>
-
-        {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10">
+      {/* Hero Section */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
-            {/* Local Business Badge */}
-            <div className="inline-flex items-center gap-2 bg-white text-gray-800 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-white shadow-lg">
-              <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-primary-blue" />
-              Call Your Jacksonville Neighbors
-            </div>
-
-            {/* Main Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight text-white drop-shadow-lg">
-              <span className="block">Contact & Booking</span>
-              <span className="block text-cyan-300 sm:text-cyan-400">Ready to Experience the Difference?</span>
-              <span className="block text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white mt-2 sm:mt-3 drop-shadow-md">
-                Get Your Free Jacksonville Cleaning Quote Today
-              </span>
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              Contact Jacksonville House Cleaning Service
             </h1>
-
-            {/* Subtitle */}
-            <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 drop-shadow-md">
-              Ready to experience the difference that professional cleaning makes? Contact us today 
-              for a free quote and let our Jacksonville team transform your space.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Get your free cleaning quote today. We serve all of Jacksonville and surrounding areas 
+              with professional, reliable house cleaning services.
             </p>
-
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mt-8 sm:mt-10 px-4">
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-green/30 sm:bg-accent-green/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-accent-green" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">24-Hour Response</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Quick turnaround</p>
-              </div>
-
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-blue/30 sm:bg-primary-blue/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary-blue" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Local Service</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Jacksonville team</p>
-              </div>
-
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center sm:col-span-2 lg:col-span-1">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-coral/30 sm:bg-accent-coral/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-accent-coral" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Free Estimates</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">No obligation</p>
-              </div>
-            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      {/* Breadcrumb Navigation */}
+      <div className="bg-gray-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <Breadcrumb 
+            items={[
+              { label: 'Contact', href: '/contact', current: true }
+            ]}
+          />
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Book Your Cleaning Service</h2>
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Get Your Free Quote</h2>
+            
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Personal Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -257,8 +202,9 @@ function ContactForm() {
                     placeholder="Your full name"
                   />
                 </div>
+                
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number *
                   </label>
                   <input
@@ -269,20 +215,19 @@ function ContactForm() {
                     value={formData.phone}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    placeholder="(904) 555-0123"
+                    placeholder="(904) 123-4567"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
-                  Email Address *
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  required
                   value={formData.email}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
@@ -291,49 +236,71 @@ function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="address" className="block text-sm font-medium text-gray-900 mb-2">
-                  Service Address *
+                <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-2">
+                  Property Address *
                 </label>
-                <textarea
+                <input
+                  type="text"
                   id="address"
                   name="address"
                   required
                   value={formData.address}
                   onChange={handleInputChange}
-                  rows={3}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                  placeholder="Full address including city and zip code"
+                  placeholder="123 Main St, Jacksonville, FL"
                 />
               </div>
 
-              <div>
-                <label htmlFor="propertyType" className="block text-sm font-medium text-gray-900 mb-2">
-                  Property Type *
-                </label>
-                <select
-                  id="propertyType"
-                  name="propertyType"
-                  required
-                  value={formData.propertyType}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                >
-                  <option value="">Select property type</option>
-                  <option value="house">House</option>
-                  <option value="apartment">Apartment/Condo</option>
-                  <option value="office">Office/Commercial</option>
-                  <option value="other">Other</option>
-                </select>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="propertyType" className="block text-sm font-medium text-gray-700 mb-2">
+                    Property Type
+                  </label>
+                  <select
+                    id="propertyType"
+                    name="propertyType"
+                    value={formData.propertyType}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  >
+                    <option value="">Select property type</option>
+                    <option value="single-family">Single Family Home</option>
+                    <option value="apartment">Apartment/Condo</option>
+                    <option value="townhouse">Townhouse</option>
+                    <option value="commercial">Commercial Property</option>
+                    <option value="vacation-rental">Vacation Rental</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-2">
+                    Preferred Date
+                  </label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    value={formData.date}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  />
+                </div>
               </div>
 
-              {/* Services Selection */}
               <div>
-                <label className="block text-sm font-medium text-gray-900 mb-3">
+                <label className="block text-sm font-medium text-gray-700 mb-3">
                   Services Needed *
                 </label>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {availableServices.map((service) => (
-                    <label key={service} className="flex items-center space-x-3">
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    'Recurring Cleaning',
+                    'Deep Cleaning',
+                    'Move-In/Out',
+                    'Post-Construction',
+                    'Vacation Rental',
+                    'Commercial Cleaning'
+                  ].map((service) => (
+                    <label key={service} className="flex items-center space-x-2">
                       <input
                         type="checkbox"
                         checked={formData.services.includes(service)}
@@ -346,119 +313,79 @@ function ContactForm() {
                 </div>
               </div>
 
-              {/* Date and Time */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="date" className="block text-sm font-medium text-gray-900 mb-2">
-                    Preferred Date *
-                  </label>
-                  <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    required
-                    value={formData.date}
-                    onChange={handleInputChange}
-                    min={new Date().toISOString().split('T')[0]}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="time" className="block text-sm font-medium text-gray-900 mb-2">
-                    Preferred Time *
-                  </label>
-                  <select
-                    id="time"
-                    name="time"
-                    required
-                    value={formData.time}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                  >
-                    <option value="">Select time</option>
-                    {timeSlots.map((time) => (
-                      <option key={time} value={time}>{time}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
               <div>
-                <label htmlFor="specialRequests" className="block text-sm font-medium text-gray-900 mb-2">
-                  Special Requests or Notes
+                <label htmlFor="specialRequests" className="block text-sm font-medium text-gray-700 mb-2">
+                  Special Requests or Additional Information
                 </label>
                 <textarea
                   id="specialRequests"
                   name="specialRequests"
+                  rows={4}
                   value={formData.specialRequests}
                   onChange={handleInputChange}
-                  rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                  placeholder="Any specific requirements, allergies, or special instructions..."
+                  placeholder="Tell us about your specific cleaning needs..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-accent-coral text-white py-4 px-6 rounded-lg text-lg font-semibold hover:bg-accent-coral/90 transition-colors duration-200"
+                className="w-full bg-primary-blue text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-primary-blue/90 transition-colors duration-200"
               >
-                Submit Booking Request
+                Get Free Quote
               </button>
             </form>
           </div>
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-              <p className="text-lg text-gray-700 mb-8">
-                Have questions or need immediate assistance? We&apos;re here to help!
-              </p>
-            </div>
-
             {/* Contact Details */}
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary-blue/20 rounded-full flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-primary-blue" />
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-primary-blue/20 rounded-full flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-primary-blue" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Phone</h3>
+                    <p className="text-gray-700">(904) 456-3851</p>
+                    <p className="text-sm text-gray-600">Available Mon-Fri, 8AM-6PM</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">Phone</h3>
-                  <p className="text-gray-700">(904) 456-3851</p>
-                  <p className="text-sm text-gray-600">Available Mon-Fri, 8AM-6PM</p>
-                </div>
-              </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-accent-aqua/20 rounded-full flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-accent-aqua" />
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-accent-aqua/20 rounded-full flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-accent-aqua" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Email</h3>
+                    <p className="text-gray-700">info@jaxcleaning.com</p>
+                    <p className="text-sm text-gray-600">We respond within 2 hours</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">Email</h3>
-                  <p className="text-gray-700">info@jaxcleaning.com</p>
-                  <p className="text-sm text-gray-600">We respond within 2 hours</p>
-                </div>
-              </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-accent-green/20 rounded-full flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-accent-green" />
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-accent-green/20 rounded-full flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-accent-green" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Service Area</h3>
+                    <p className="text-gray-700">Jacksonville, FL & Surrounding Areas</p>
+                    <p className="text-sm text-gray-600">Within 25 miles of downtown</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">Service Area</h3>
-                  <p className="text-gray-700">Jacksonville, FL & Surrounding Areas</p>
-                  <p className="text-sm text-gray-600">Within 25 miles of downtown</p>
-                </div>
-              </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-accent-coral/20 rounded-full flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-accent-coral" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">Business Hours</h3>
-                  <p className="text-gray-700">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                  <p className="text-sm text-gray-600">Saturday: 9:00 AM - 4:00 PM</p>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-accent-coral/20 rounded-full flex items-center justify-center">
+                    <Clock className="w-6 h-6 text-accent-coral" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Business Hours</h3>
+                    <p className="text-gray-700">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p className="text-sm text-gray-600">Saturday: 9:00 AM - 4:00 PM</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -504,17 +431,71 @@ function ContactForm() {
 
 export default function ContactPage() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10">
-        <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-md mx-4">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-blue mx-auto mb-4"></div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Loading...</h2>
-          <p className="text-gray-700">Preparing your contact form</p>
+    <>
+      {/* Structured Data for Contact Page */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Jacksonville House Cleaning Service",
+            "description": "Contact Jacksonville House Cleaning Service for free quotes on professional house cleaning services. Serving all of Jacksonville and surrounding areas.",
+            "url": "https://www.jacksonvillehousecleaningservice.com/contact",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Jacksonville House Cleaning Service",
+              "telephone": "+19044563851",
+              "email": "info@jaxcleaning.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jacksonville",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+19044563851",
+                "contactType": "customer service",
+                "availableLanguage": "English",
+                "hoursAvailable": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday", 
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ],
+                  "opens": "08:00",
+                  "closes": "18:00"
+                }
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Jacksonville"
+              },
+              "serviceArea": {
+                "@type": "City",
+                "name": "Jacksonville"
+              }
+            }
+          })
+        }}
+      />
+
+      <Suspense fallback={
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-blue/10 to-accent-aqua/10">
+          <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-md mx-4">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-blue mx-auto mb-4"></div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Loading...</h2>
+            <p className="text-gray-700">Preparing your contact form</p>
+          </div>
         </div>
-      </div>
-    }>
-      <ContactForm />
-    </Suspense>
+      }>
+        <ContactForm />
+      </Suspense>
+    </>
   );
 }
 

@@ -84,3 +84,11 @@ Your form will now:
 **Formspree is the fastest way to get your forms working! 🚀**
 
 No server setup, no email configuration, just copy-paste the ID and you're done.
+
+
+
+General Contact form - https://formspree.io/f/myzpryey
+move in/out = https://formspree.io/f/myzpryey
+Commercial Office clean = https://formspree.io/f/mkgzdnjz
+Carpet Cleaning - https://formspree.io/f/mrblngpo
+Standard Cleaning - https://formspree.io/f/mnnzeqpw

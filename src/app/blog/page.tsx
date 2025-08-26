@@ -10,6 +10,7 @@ import {
   Home,
   Truck
 } from 'lucide-react';
+import ArticleSchema from '@/components/ArticleSchema';
 
 export default function BlogPage() {
   const blogPosts = [
@@ -70,17 +71,30 @@ export default function BlogPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section - Local Business Style */}
-      <div 
-        className="relative py-20 overflow-hidden"
-        style={{
-          backgroundImage: 'url(/hero1.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
+    <>
+      {/* Article Schema for Blog Listing Page */}
+      <ArticleSchema
+        title="Cleaning Tips & Expert Advice - Jacksonville House Cleaning Service"
+        description="Discover professional cleaning insights, seasonal tips, and expert advice to keep your Jacksonville home clean, healthy, and beautiful year-round."
+        author="Jacksonville House Cleaning Service"
+        publishDate="2024-01-15"
+        articleBody="Our blog features comprehensive cleaning guides, eco-friendly tips, seasonal cleaning checklists, and expert advice for maintaining a clean and healthy home in Jacksonville. From choosing the right cleaning service to daily maintenance habits, we provide valuable insights for homeowners."
+        keywords={['cleaning tips', 'Jacksonville cleaning', 'house cleaning advice', 'cleaning guides', 'eco-friendly cleaning', 'spring cleaning', 'move-in cleaning']}
+        category="Cleaning Tips & Advice"
+        readingTime="10 min read"
+      />
+      
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section - Local Business Style */}
+        <div 
+          className="relative py-20 overflow-hidden"
+          style={{
+            backgroundImage: 'url(/hero1.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/70"></div>
         
@@ -200,5 +214,6 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

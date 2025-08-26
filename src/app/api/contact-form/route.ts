@@ -83,3 +83,4 @@ export async function GET() {
     note: 'Use POST method to submit contact forms'
   });
 }
+
