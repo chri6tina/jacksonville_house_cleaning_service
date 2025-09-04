@@ -24,8 +24,7 @@ import {
   Calculator,
   ArrowRight,
   Anchor,
-  Waves,
-  Boat
+  Waves
 } from 'lucide-react';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';

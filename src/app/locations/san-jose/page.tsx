@@ -25,7 +25,6 @@ import {
   ArrowRight,
   HeartHandshake,
   Building,
-  Tree,
   School
 } from 'lucide-react';
 import Link from 'next/link';
@@ -83,7 +82,7 @@ export default function SanJosePage() {
       description: 'Beautiful residential properties with established landscaping and care'
     },
     {
-      icon: Tree,
+      icon: Leaf,
       title: 'Mature Neighborhood',
       description: 'Tree-lined streets and established residential character'
     }

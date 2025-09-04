@@ -2,6 +2,14 @@
 
 import React, { useEffect } from 'react';
 
+// Google Analytics type declarations
+declare global {
+  function gtag(...args: any[]): void;
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 interface PerformanceMonitorProps {
   pageName: string;
   enableLogging?: boolean;
@@ -42,12 +50,11 @@ export default function PerformanceMonitor({ pageName, enableLogging = false }: 
     };
 
     // Import and observe Core Web Vitals
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(logPerformance);
-      getFID(logPerformance);
-      getFCP(logPerformance);
-      getLCP(logPerformance);
-      getTTFB(logPerformance);
+    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+      onCLS(logPerformance);
+      onFCP(logPerformance);
+      onLCP(logPerformance);
+      onTTFB(logPerformance);
     });
 
     // Monitor page load performance
@@ -89,8 +96,8 @@ export default function PerformanceMonitor({ pageName, enableLogging = false }: 
             console.log(`Resource Load - ${pageName}:`, {
               name: entry.name,
               duration: entry.duration,
-              size: entry.transferSize,
-              type: entry.initiatorType,
+              size: 'transferSize' in entry ? entry.transferSize : 'N/A',
+              type: 'initiatorType' in entry ? entry.initiatorType : 'N/A',
             });
           }
         }
@@ -141,12 +148,12 @@ export function usePerformanceMonitoring(pageName: string, enableLogging = false
     };
 
     // Import and observe Core Web Vitals
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(logPerformance);
-      getFID(logPerformance);
-      getFCP(logPerformance);
-      getLCP(logPerformance);
-      getTTFB(logPerformance);
+    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+      onCLS(logPerformance);
+      onINP(logPerformance);
+      onFCP(logPerformance);
+      onLCP(logPerformance);
+      onTTFB(logPerformance);
     });
   }, [pageName, enableLogging]);
 }

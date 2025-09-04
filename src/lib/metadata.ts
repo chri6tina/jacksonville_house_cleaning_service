@@ -90,7 +90,7 @@ export function generateMetadata({
     openGraph: {
       title: openGraph?.title || fullTitle,
       description: openGraph?.description || fullDescription,
-      type: openGraph?.type || 'website',
+      type: (openGraph?.type as 'website' | 'article' | 'book' | 'profile' | 'music.song' | 'music.album' | 'music.playlist' | 'music.radio_station' | 'video.movie' | 'video.episode' | 'video.tv_show' | 'video.other') || 'website',
       locale: 'en_US',
       siteName: SITE_CONFIG.name,
       url: canonical || SITE_CONFIG.url,

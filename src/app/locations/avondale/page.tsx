@@ -22,8 +22,7 @@ import {
   Leaf,
   Calendar,
   Calculator,
-  ArrowRight,
-  Tree
+  ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -80,8 +79,8 @@ export default function AvondalePage() {
       description: 'Preservation-focused community with stunning period homes'
     },
     {
-      icon: Tree,
-      title: 'Tree-Lined Streets',
+      icon: Leaf,
+      title: 'Tree-lined Streets',
       description: 'Mature oak trees and beautiful landscaping throughout the neighborhood'
     }
   ];
