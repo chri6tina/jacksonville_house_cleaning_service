@@ -1,6 +1,9 @@
 import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils, Building, Briefcase, Globe, Train, Bus, ShoppingBag, Heart, PawPrint, Umbrella, Sun, Anchor, Fish, Sailboat, HardHat, Wrench, Hammer, Truck, Trash2, Recycle, Wind } from 'lucide-react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import DeepCleaningHero from '@/components/DeepCleaningHero';
+import DeepCleaningCalculator from '@/components/DeepCleaningCalculator';
+import FAQSection from '@/components/FAQSection';
 
 export const metadata: Metadata = {
   title: 'Jacksonville Deep Cleaning Services #1 | Professional House Deep Cleaning FL',
@@ -200,21 +203,21 @@ export default function DeepCleaningPage() {
   ];
 
   const serviceAreas = [
-    'Jacksonville',
-    'Jacksonville Beach',
-    'Neptune Beach',
-    'Atlantic Beach',
-    'Ponte Vedra Beach',
-    'St. Augustine',
-    'Orange Park',
-    'Fleming Island',
-    'Green Cove Springs',
-    'Riverside & Avondale',
-    'San Marco',
-    'Mandarin',
-    'Southside',
-    'Arlington',
-    'Downtown Jacksonville'
+    { name: 'Jacksonville', url: '/locations' },
+    { name: 'Jacksonville Beach', url: '/locations/jacksonville-beach' },
+    { name: 'Neptune Beach', url: '/locations/neptune-beach' },
+    { name: 'Atlantic Beach', url: '/locations/atlantic-beach' },
+    { name: 'Ponte Vedra Beach', url: '/locations/ponte-vedra-beach' },
+    { name: 'St. Augustine', url: '/locations/st-augustine' },
+    { name: 'Orange Park', url: '/locations/orange-park' },
+    { name: 'Fleming Island', url: '/locations/fleming-island' },
+    { name: 'Green Cove Springs', url: '/locations/green-cove-springs' },
+    { name: 'Riverside & Avondale', url: '/locations/riverside-avondale' },
+    { name: 'San Marco', url: '/locations/san-marco' },
+    { name: 'Mandarin', url: '/locations/mandarin' },
+    { name: 'Southside', url: '/locations/southside' },
+    { name: 'Arlington', url: '/locations/arlington' },
+    { name: 'Downtown Jacksonville', url: '/locations/downtown-jacksonville' }
   ];
 
   return (
@@ -338,6 +341,15 @@ export default function DeepCleaningPage() {
 
       {/* Hero Section */}
       <DeepCleaningHero />
+
+      {/* Deep Cleaning Calculator Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <DeepCleaningCalculator />
+          </div>
+        </div>
+      </section>
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-white">
@@ -549,10 +561,14 @@ export default function DeepCleaningPage() {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {serviceAreas.map((area, index) => (
-              <div key={index} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-4 rounded-xl text-center">
-                <MapPin className="w-6 h-6 text-primary-blue mx-auto mb-2" />
-                <p className="text-sm font-medium text-gray-900">{area}</p>
-              </div>
+              <Link 
+                key={index} 
+                href={area.url}
+                className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-4 rounded-xl text-center hover:from-blue-100 hover:to-accent-aqua/20 transition-all duration-300 hover:shadow-md group"
+              >
+                <MapPin className="w-6 h-6 text-primary-blue mx-auto mb-2 group-hover:text-accent-aqua transition-colors duration-300" />
+                <p className="text-sm font-medium text-gray-900 group-hover:text-primary-blue transition-colors duration-300">{area.name}</p>
+              </Link>
             ))}
           </div>
         </div>
@@ -592,6 +608,13 @@ export default function DeepCleaningPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <FAQSection />
         </div>
       </section>
 

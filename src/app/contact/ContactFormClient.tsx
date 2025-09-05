@@ -88,7 +88,7 @@ function ContactForm() {
       formDataToSend.append('_captcha', 'false');
       
       // Submit to Formspree
-      const response = await fetch('https://formspree.io/f/myzpryey', {
+      const response = await fetch('https://formspree.io/f/xrblngeo', {
         method: 'POST',
         body: formDataToSend,
         headers: {

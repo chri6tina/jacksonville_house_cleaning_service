@@ -13,7 +13,7 @@ export default function DeepCleaningHero() {
     const formData = new FormData(e.currentTarget);
     
     try {
-      const response = await fetch('https://formspree.io/f/xrblngeo', {
+      const response = await fetch('https://formspree.io/f/mdklpjrq', {
         method: 'POST',
         body: formData,
         headers: {
