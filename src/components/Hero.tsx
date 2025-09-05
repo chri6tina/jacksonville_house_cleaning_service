@@ -2,19 +2,23 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Sparkles, Shield, Leaf, Star, CheckCircle, MapPin, Clock, Users, Award, Phone, Calendar } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section 
-      className="relative py-12 sm:py-16 lg:py-20 overflow-hidden"
-      style={{
-        backgroundImage: 'url(/jhcs_hero2.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
+    <section className="relative py-12 sm:py-16 lg:py-20 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/jhcs_hero2.png"
+          alt="Jacksonville House Cleaning Service Hero Background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+      
       {/* Dark overlay for maximum text readability */}
       <div className="absolute inset-0 bg-black/60 sm:bg-black/65"></div>
 
