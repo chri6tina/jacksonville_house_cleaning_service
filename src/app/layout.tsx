@@ -73,16 +73,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              var ahrefs_analytics_script = document.createElement('script');
-              ahrefs_analytics_script.async = true;
-              ahrefs_analytics_script.src = 'https://analytics.ahrefs.com/analytics.js';
-              ahrefs_analytics_script.setAttribute('data-key', 'SMECEsnHAn9OBCpmwyJBcA');
-              document.getElementsByTagName('head')[0].appendChild(ahrefs_analytics_script);
-            `,
-          }}
+        <script 
+          src="https://analytics.ahrefs.com/analytics.js" 
+          data-key="SMECEsnHAn9OBCpmwyJBcA" 
+          async
         />
       </head>
       <body
