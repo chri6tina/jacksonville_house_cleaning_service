@@ -151,6 +151,9 @@ const Navbar: React.FC = () => {
             <Link href="/blog" className="text-gray-900 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
               Blog
             </Link>
+            <Link href="/faq" className="text-gray-900 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+              FAQ
+            </Link>
             <Link href="/contact" className="text-gray-900 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
               Contact
             </Link>
@@ -214,6 +217,13 @@ const Navbar: React.FC = () => {
               className="text-gray-900 hover:text-primary-blue block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
             >
               Blog
+            </Link>
+            <Link
+              href="/faq"
+              onClick={closeMobileMenu}
+              className="text-gray-900 hover:text-primary-blue block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+            >
+              FAQ
             </Link>
             <Link
               href="/about"
