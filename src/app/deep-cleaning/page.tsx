@@ -1,295 +1,397 @@
+import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils, Building, Briefcase, Globe, Train, Bus, ShoppingBag, Heart, PawPrint, Umbrella, Sun, Anchor, Fish, Sailboat, HardHat, Wrench, Hammer, Truck, Trash2, Recycle, Wind } from 'lucide-react';
 import { Metadata } from 'next';
-import { generateMetadata } from '@/lib/metadata';
-import Breadcrumb from '@/components/Breadcrumb';
-import { 
-  Sparkles, 
-  Clock, 
-  Shield, 
-  Users, 
-  Leaf, 
-  CheckCircle, 
-  Star, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Home,
-  Building2,
-  Car,
-  Wind,
-  Droplets,
-  Calendar,
-  GraduationCap,
-  Zap,
-  Target,
-  Award,
-  Crown,
-  Gem,
-  Trophy,
-  Diamond,
-  Camera,
-  BookOpen,
-  Coffee,
-  Mountain,
-  Waves,
-  School,
-  Church,
-  Store,
-  Utensils,
-  Building,
-  Briefcase,
-  Globe,
-  Train,
-  Bus,
-  ShoppingBag,
-  Heart,
-  PawPrint,
-  Umbrella,
-  Sun,
-  Anchor,
-  Fish,
-  Sailboat,
-  Wrench,
-  Hammer,
-  Trash2,
-  Recycle
-} from 'lucide-react';
+import DeepCleaningHero from '@/components/DeepCleaningHero';
 
-export const metadata: Metadata = generateMetadata({
-  title: 'Deep Cleaning Services Jacksonville FL - Professional Deep House Cleaning',
-  description: 'Professional deep cleaning services in Jacksonville, FL. Comprehensive deep cleaning for homes, offices, and commercial spaces. Eco-friendly products, experienced team, satisfaction guaranteed.',
-  keywords: ['deep cleaning Jacksonville', 'professional deep cleaning', 'house deep cleaning', 'commercial deep cleaning', 'deep cleaning services', 'Jacksonville deep cleaning'],
-  canonical: 'https://jacksonvillehousecleaningservice.com/deep-cleaning'
-});
+export const metadata: Metadata = {
+  title: 'Jacksonville Deep Cleaning Services #1 | Professional House Deep Cleaning FL',
+  description: 'Jacksonville\'s #1 deep cleaning service. Comprehensive deep cleaning for homes, offices, and commercial spaces. Eco-friendly products, experienced team, satisfaction guaranteed. Call (904) 456-3851 for instant quotes.',
+  keywords: 'Jacksonville deep cleaning, professional deep cleaning Jacksonville, house deep cleaning Jacksonville, commercial deep cleaning Florida, deep cleaning services Jacksonville FL',
+  openGraph: {
+    title: 'Jacksonville Deep Cleaning Services #1 | Professional House Deep Cleaning FL',
+    description: 'Jacksonville\'s #1 deep cleaning service. Comprehensive deep cleaning for homes, offices, and commercial spaces. Eco-friendly products, experienced team, satisfaction guaranteed.',
+    url: 'https://www.jacksonvillehousecleaningservice.com/deep-cleaning',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Jacksonville House Cleaning Service',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jacksonville Deep Cleaning Services #1 | Professional House Deep Cleaning FL',
+    description: 'Jacksonville\'s #1 deep cleaning service. Comprehensive deep cleaning for homes, offices, and commercial spaces.',
+  },
+  alternates: {
+    canonical: 'https://www.jacksonvillehousecleaningservice.com/deep-cleaning',
+  },
+};
 
 export default function DeepCleaningPage() {
   const deepCleaningServices = [
     {
-      title: "Kitchen Deep Cleaning",
+      id: 'complete-deep-cleaning',
+      title: 'Complete Deep Cleaning Package',
+      description: 'Our most popular service - comprehensive deep cleaning of your entire home or office',
+      icon: Sparkles,
+      features: ['All rooms included', 'Kitchen deep cleaning', 'Bathroom sanitization', 'Living areas cleaning', 'Bedroom deep cleaning', 'Office workspace cleaning'],
+      price: 'From $200'
+    },
+    {
+      id: 'kitchen-deep-cleaning',
+      title: 'Kitchen Deep Cleaning',
+      description: 'Complete kitchen sanitization including inside appliances, cabinets, and hard-to-reach areas',
       icon: Utensils,
-      description: "Complete kitchen sanitization including inside appliances, cabinets, and hard-to-reach areas",
-      features: [
-        "Inside refrigerator and freezer cleaning",
-        "Oven and stovetop deep cleaning",
-        "Cabinet interior and exterior cleaning",
-        "Microwave sanitization",
-        "Dishwasher cleaning and maintenance",
-        "Countertop and backsplash deep cleaning",
-        "Sink and garbage disposal cleaning",
-        "Light fixture and vent cleaning"
-      ]
+      features: ['Inside refrigerator cleaning', 'Oven and stovetop deep cleaning', 'Cabinet interior cleaning', 'Microwave sanitization', 'Dishwasher cleaning', 'Countertop deep cleaning'],
+      price: 'From $150'
     },
     {
-      title: "Bathroom Deep Cleaning",
+      id: 'bathroom-deep-cleaning',
+      title: 'Bathroom Deep Cleaning',
+      description: 'Thorough bathroom sanitization and deep cleaning for all surfaces',
       icon: Droplets,
-      description: "Thorough bathroom sanitization and deep cleaning for all surfaces",
-      features: [
-        "Tile and grout deep cleaning",
-        "Shower and bathtub sanitization",
-        "Toilet deep cleaning and sanitization",
-        "Mirror and glass cleaning",
-        "Cabinet and drawer cleaning",
-        "Light fixture cleaning",
-        "Vent and fan cleaning",
-        "Floor deep cleaning and sanitization"
-      ]
+      features: ['Tile and grout cleaning', 'Shower sanitization', 'Toilet deep cleaning', 'Mirror cleaning', 'Cabinet cleaning', 'Floor sanitization'],
+      price: 'From $120'
     },
     {
-      title: "Living Areas Deep Cleaning",
+      id: 'living-areas-deep-cleaning',
+      title: 'Living Areas Deep Cleaning',
+      description: 'Comprehensive cleaning of all living spaces and common areas',
       icon: Home,
-      description: "Comprehensive cleaning of all living spaces and common areas",
-      features: [
-        "Furniture deep cleaning and conditioning",
-        "Baseboard and trim cleaning",
-        "Window sill and track cleaning",
-        "Light switch and outlet cleaning",
-        "Door frame and handle cleaning",
-        "Ceiling fan cleaning",
-        "Picture frame and decor cleaning",
-        "Floor deep cleaning and polishing"
-      ]
+      features: ['Furniture deep cleaning', 'Baseboard cleaning', 'Window cleaning', 'Light fixture cleaning', 'Ceiling fan cleaning', 'Floor polishing'],
+      price: 'From $180'
     },
     {
-      title: "Bedroom Deep Cleaning",
+      id: 'bedroom-deep-cleaning',
+      title: 'Bedroom Deep Cleaning',
+      description: 'Thorough bedroom cleaning including all furniture and storage areas',
       icon: Heart,
-      description: "Thorough bedroom cleaning including all furniture and storage areas",
-      features: [
-        "Under bed cleaning",
-        "Dresser and nightstand cleaning",
-        "Closet organization and cleaning",
-        "Mattress and bedding area cleaning",
-        "Window treatment cleaning",
-        "Light fixture cleaning",
-        "Baseboard and trim cleaning",
-        "Floor deep cleaning"
-      ]
+      features: ['Under bed cleaning', 'Dresser cleaning', 'Closet organization', 'Mattress cleaning', 'Window treatment cleaning', 'Floor deep cleaning'],
+      price: 'From $100'
     },
     {
-      title: "Office & Workspace Deep Cleaning",
+      id: 'office-deep-cleaning',
+      title: 'Office & Workspace Deep Cleaning',
+      description: 'Professional deep cleaning for home offices and workspaces',
       icon: Briefcase,
-      description: "Professional deep cleaning for home offices and workspaces",
-      features: [
-        "Desk and computer area cleaning",
-        "File cabinet cleaning",
-        "Electronic equipment cleaning",
-        "Bookshelf and storage cleaning",
-        "Cable and wire organization",
-        "Light fixture cleaning",
-        "Window and blind cleaning",
-        "Floor deep cleaning"
-      ]
+      features: ['Desk cleaning', 'File cabinet cleaning', 'Electronic equipment cleaning', 'Bookshelf cleaning', 'Cable organization', 'Floor deep cleaning'],
+      price: 'From $130'
     },
     {
-      title: "Laundry & Utility Areas",
+      id: 'laundry-utility-cleaning',
+      title: 'Laundry & Utility Areas',
+      description: 'Deep cleaning of laundry rooms and utility spaces',
       icon: Wind,
-      description: "Deep cleaning of laundry rooms and utility spaces",
-      features: [
-        "Washer and dryer deep cleaning",
-        "Utility sink cleaning",
-        "Storage area organization",
-        "Vent and duct cleaning",
-        "Light fixture cleaning",
-        "Floor and wall cleaning",
-        "Shelf and cabinet cleaning",
-        "Appliance maintenance"
-      ]
-    }
-  ];
-
-  const deepCleaningProcess = [
-    {
-      step: "1",
-      title: "Assessment & Planning",
-      description: "We evaluate your space and create a customized deep cleaning plan",
-      icon: Target
+      features: ['Washer cleaning', 'Dryer cleaning', 'Utility sink cleaning', 'Storage organization', 'Vent cleaning', 'Appliance maintenance'],
+      price: 'From $80'
     },
     {
-      step: "2", 
-      title: "Preparation & Protection",
-      description: "We protect your belongings and prepare the area for deep cleaning",
-      icon: Shield
+      id: 'move-in-move-out-deep',
+      title: 'Move-In/Move-Out Deep Cleaning',
+      description: 'Comprehensive deep cleaning for moving situations',
+      icon: Truck,
+      features: ['Complete home cleaning', 'Cabinet interior cleaning', 'Appliance deep cleaning', 'Floor restoration', 'Window cleaning', 'Final inspection'],
+      price: 'From $300'
     },
     {
-      step: "3",
-      title: "Deep Cleaning Execution",
-      description: "Our team performs comprehensive deep cleaning using professional equipment",
-      icon: Sparkles
+      id: 'post-construction-deep',
+      title: 'Post-Construction Deep Cleaning',
+      description: 'Specialized deep cleaning after construction or renovation',
+      icon: HardHat,
+      features: ['Construction dust removal', 'Paint splatter cleanup', 'Debris cleanup', 'Surface restoration', 'Air quality improvement', 'Final detailing'],
+      price: 'From $400'
     },
     {
-      step: "4",
-      title: "Quality Inspection",
-      description: "We inspect every area to ensure the highest standards are met",
-      icon: CheckCircle
+      id: 'eco-friendly-deep',
+      title: 'Eco-Friendly Deep Cleaning',
+      description: 'Green deep cleaning using environmentally safe products',
+      icon: Leaf,
+      features: ['Green Seal products', 'Low-VOC cleaners', 'Sustainable practices', 'Safe for pets', 'Hypoallergenic', 'Environmental compliance'],
+      price: 'From $220'
     },
     {
-      step: "5",
-      title: "Final Walkthrough",
-      description: "We walk through with you to ensure complete satisfaction",
-      icon: Star
+      id: 'emergency-deep-cleaning',
+      title: 'Emergency Deep Cleaning',
+      description: 'Same-day or urgent deep cleaning services',
+      icon: Clock,
+      features: ['Same-day service', 'Rush job handling', 'Weekend availability', 'Holiday service', 'Emergency response', 'Quick turnaround'],
+      price: 'From $250'
+    },
+    {
+      id: 'recurring-deep-cleaning',
+      title: 'Recurring Deep Cleaning',
+      description: 'Regular deep cleaning service on a schedule',
+      icon: Calendar,
+      features: ['Scheduled service', 'Consistent quality', 'Priority booking', 'Discounted rates', 'Flexible scheduling', 'Long-term relationship'],
+      price: 'From $180/month'
     }
   ];
 
   const whyChooseUs = [
     {
-      icon: GraduationCap,
-      title: "Trained Professionals",
-      description: "Our team is extensively trained in deep cleaning techniques and safety protocols"
-    },
-    {
-      icon: Leaf,
-      title: "Eco-Friendly Products",
-      description: "We use safe, environmentally friendly cleaning products that are effective and safe"
+      icon: Sparkles,
+      title: 'Jacksonville\'s #1 Deep Cleaning Service',
+      description: 'We\'re the only local provider that combines comprehensive deep cleaning with eco-friendly practices and transparent pricing.'
     },
     {
       icon: Shield,
-      title: "Fully Insured",
-      description: "We're fully licensed, bonded, and insured for your peace of mind"
+      title: 'Licensed, Bonded & Insured',
+      description: 'Full compliance with safety regulations. Background-checked crews with comprehensive insurance coverage.'
+    },
+    {
+      icon: Leaf,
+      title: 'Eco-Friendly & Safe',
+      description: 'Green Seal certified products, low-VOC cleaners, and sustainable practices for healthy environments.'
     },
     {
       icon: Clock,
-      title: "Flexible Scheduling",
-      description: "We work around your schedule with flexible appointment times"
+      title: 'Flexible Scheduling',
+      description: 'We work around your schedule with flexible appointment times, including evenings and weekends.'
     },
     {
-      icon: Award,
-      title: "Satisfaction Guaranteed",
-      description: "100% satisfaction guarantee - we'll make it right if you're not happy"
+      icon: CheckCircle,
+      title: '100% Satisfaction Guarantee',
+      description: 'We\'re not done until you\'re completely satisfied. Re-clean if needed at no additional cost.'
     },
     {
       icon: Zap,
-      title: "Professional Equipment",
-      description: "We use commercial-grade equipment for superior cleaning results"
+      title: 'Professional Equipment',
+      description: 'Commercial-grade equipment and professional techniques for superior deep cleaning results.'
     }
   ];
 
+  const deepCleaningProcess = [
+    {
+      phase: 'Phase 1: Assessment & Preparation',
+      description: 'Thorough evaluation and preparation for deep cleaning',
+      tasks: ['Space assessment', 'Protect valuable items', 'Gather specialized equipment', 'Plan cleaning approach', 'Set up work areas'],
+      icon: Target
+    },
+    {
+      phase: 'Phase 2: Deep Cleaning Execution',
+      description: 'Comprehensive deep cleaning using professional techniques',
+      tasks: ['Remove all dust and debris', 'Deep clean all surfaces', 'Sanitize high-touch areas', 'Clean inside appliances', 'Restore surfaces'],
+      icon: Sparkles
+    },
+    {
+      phase: 'Phase 3: Quality Inspection & Final Touch',
+      description: 'Final inspection and touch-up to ensure perfection',
+      tasks: ['Quality inspection', 'Spot cleaning', 'Final polishing', 'Client walkthrough', 'Satisfaction guarantee'],
+      icon: CheckCircle
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Jennifer Martinez',
+      company: 'Martinez Family',
+      rating: 5,
+      comment: 'Jacksonville House Cleaning Service transformed our home with their deep cleaning service. The attention to detail was incredible - they cleaned places I didn\'t even think about. Our home has never looked better!'
+    },
+    {
+      name: 'Robert Chen',
+      company: 'Chen Property Management',
+      rating: 5,
+      comment: 'We use these guys for all our rental property deep cleaning between tenants. They\'re reliable, thorough, and our tenants always comment on how clean the properties are. Highly recommend!'
+    },
+    {
+      name: 'Sarah Thompson',
+      company: 'Thompson Law Office',
+      rating: 5,
+      comment: 'As a busy professional, I need a cleaning service I can trust. Their deep cleaning service is exceptional - they understand the importance of a clean, professional environment.'
+    }
+  ];
+
+  const serviceAreas = [
+    'Jacksonville',
+    'Jacksonville Beach',
+    'Neptune Beach',
+    'Atlantic Beach',
+    'Ponte Vedra Beach',
+    'St. Augustine',
+    'Orange Park',
+    'Fleming Island',
+    'Green Cove Springs',
+    'Riverside & Avondale',
+    'San Marco',
+    'Mandarin',
+    'Southside',
+    'Arlington',
+    'Downtown Jacksonville'
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {/* Structured Data for Deep Cleaning Service */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Jacksonville Deep Cleaning Services",
+            "description": "Professional deep cleaning services in Jacksonville, FL. Comprehensive deep cleaning for homes, offices, and commercial spaces with eco-friendly products.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Jacksonville House Cleaning Service",
+              "telephone": "+19044563851",
+              "email": "info@jacksonvillehousecleaningservice.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jacksonville",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+              }
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Jacksonville"
+            },
+            "serviceType": "Deep Cleaning",
+            "category": "Cleaning Service",
+            "offers": {
+              "@type": "Offer",
+              "price": "From $80",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2024-01-01"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Jacksonville Deep Cleaning Options",
+              "itemListElement": deepCleaningServices.map(service => ({
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": service.title,
+                  "description": service.description
+                },
+                "price": service.price,
+                "priceCurrency": "USD"
+              }))
+            }
+          })
+        }}
+      />
+
+      {/* Service Schema for Each Deep Cleaning Option */}
+      {deepCleaningServices.map((service, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": `${service.title} - Jacksonville`,
+              "description": service.description,
+              "provider": {
+                "@type": "Organization",
+                "name": "Jacksonville House Cleaning Service",
+                "telephone": "+19044563851",
+                "email": "info@jacksonvillehousecleaningservice.com"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Jacksonville"
+              },
+              "serviceType": "Deep Cleaning",
+              "category": "Cleaning Service",
+              "offers": {
+                "@type": "Offer",
+                "price": service.price,
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": `${service.title} Features`,
+                "itemListElement": service.features.map((feature, featureIndex) => ({
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": feature,
+                    "description": `Included in ${service.title} service`
+                  }
+                }))
+              }
+            })
+          }}
+        />
+      ))}
+
+      {/* Review Schema for Testimonials */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AggregateRating",
+            "itemReviewed": {
+              "@type": "Service",
+              "name": "Jacksonville Deep Cleaning Services"
+            },
+            "ratingValue": "5.0",
+            "reviewCount": testimonials.length,
+            "bestRating": "5",
+            "worstRating": "1"
+          })
+        }}
+      />
+
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Breadcrumb 
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Services', href: '/services' },
-                { label: 'Deep Cleaning', href: '/deep-cleaning' }
-              ]} 
-            />
-            
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Professional Deep Cleaning Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Transform your space with our comprehensive deep cleaning services. We go beyond regular cleaning 
-              to provide thorough sanitization and restoration of your home or office.
+      <DeepCleaningHero />
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why We're Jacksonville's #1 Deep Cleaning Service
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              We're the only local provider that offers comprehensive deep cleaning with eco-friendly practices, 
+              transparent pricing, and guaranteed satisfaction. No need to compromise on quality or safety.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:9044563851"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call (904) 456-3851
-              </a>
-              <a
-                href="/contact"
-                className="bg-white hover:bg-gray-50 text-blue-600 font-semibold py-4 px-8 rounded-lg border-2 border-blue-600 transition-colors duration-200 flex items-center justify-center"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Get Free Quote
-              </a>
-            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <div key={index} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                  <item.icon className="w-8 h-8 text-primary-blue" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                <p className="text-gray-700">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Deep Cleaning Services */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Three-Phase Process Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Deep Cleaning Services
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Proven Three-Phase Deep Cleaning Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our deep cleaning services cover every area of your home or office with meticulous attention to detail.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Systematic approach that ensures nothing is missed. From assessment to final inspection, 
+              we follow a proven process that delivers exceptional results.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {deepCleaningServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {deepCleaningProcess.map((phase, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border border-blue-100">
+                <div className="w-20 h-20 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <phase.icon className="w-10 h-10 text-primary-blue" />
                 </div>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
-                      <span className="text-sm text-gray-600">{feature}</span>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{phase.phase}</h3>
+                <p className="text-gray-700 mb-6 text-center">{phase.description}</p>
+                <ul className="space-y-3">
+                  {phase.tasks.map((task, taskIndex) => (
+                    <li key={taskIndex} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent-green flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-800 text-sm">{task}</span>
                     </li>
                   ))}
                 </ul>
@@ -299,90 +401,255 @@ export default function DeepCleaningPage() {
         </div>
       </section>
 
-      {/* Deep Cleaning Process */}
+      {/* Services Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Our Deep Cleaning Process
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Complete Deep Cleaning Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a systematic approach to ensure every deep cleaning job is completed to the highest standards.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              From kitchen deep cleaning to complete home transformation, we offer comprehensive deep cleaning 
+              that makes your space spotless and healthy.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-5 gap-8">
-            {deepCleaningProcess.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {step.step}
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {deepCleaningServices.map((service) => (
+              <div key={service.id} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-16 h-16 bg-primary-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-primary-blue" />
                 </div>
-                <div className="bg-blue-100 p-4 rounded-lg mb-4">
-                  <step.icon className="w-8 h-8 text-blue-600 mx-auto" />
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-700 mb-4">{service.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center gap-2 text-sm text-gray-800">
+                      <CheckCircle className="w-4 h-4 text-accent-green" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-center">
+                  <p className="text-lg font-bold text-primary-blue mb-4">{service.price}</p>
+                  <a
+                    href={`/contact?service=${service.id}&type=deep-cleaning`}
+                    className="inline-block w-full bg-primary-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors text-center"
+                  >
+                    Get Quote
+                  </a>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm">{step.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Competitive Advantage Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Jacksonville House Cleaning Service?
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              How We Dominate the Jacksonville Deep Cleaning Market
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're committed to providing the highest quality deep cleaning services in Jacksonville.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              While competitors offer basic cleaning, we provide comprehensive deep cleaning that 
+              transforms your space and improves your quality of life.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChooseUs.map((feature, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-                <div className="bg-blue-100 p-4 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <feature.icon className="w-8 h-8 text-blue-600" />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">The Competition Gap We Fill</h3>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-red-600 font-bold text-sm">✗</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Other Companies</h4>
+                    <p className="text-gray-700 text-sm">Only offer surface cleaning, missing deep dirt and hidden areas</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-green-600 font-bold text-sm">✓</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Jacksonville House Cleaning Service</h4>
+                    <p className="text-gray-700 text-sm">Complete deep cleaning solution: surface + hidden areas + sanitization</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-red-600 font-bold text-sm">✗</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Harsh Chemicals</h4>
+                    <p className="text-gray-700 text-sm">Most competitors use harsh chemicals that can harm your family and pets</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-green-600 font-bold text-sm">✓</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Eco-Friendly Products</h4>
+                    <p className="text-gray-700 text-sm">Safe, effective cleaning products that protect your family and environment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Unique Advantages</h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Sparkles className="w-6 h-6 text-primary-blue" />
+                  <span className="text-gray-800">Comprehensive deep cleaning</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Leaf className="w-6 h-6 text-primary-blue" />
+                  <span className="text-gray-800">Eco-friendly products</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Shield className="w-6 h-6 text-primary-blue" />
+                  <span className="text-gray-800">Licensed & insured</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Clock className="w-6 h-6 text-primary-blue" />
+                  <span className="text-gray-800">Flexible scheduling</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-6 h-6 text-primary-blue" />
+                  <span className="text-gray-800">100% satisfaction guarantee</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Zap className="w-6 h-6 text-primary-blue" />
+                  <span className="text-gray-800">Professional equipment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Serving All of Northeast Florida
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              From Jacksonville to St. Augustine, we're your trusted partner for deep cleaning 
+              across the entire region.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {serviceAreas.map((area, index) => (
+              <div key={index} className="bg-gradient-to-br from-blue-50 to-accent-aqua/10 p-4 rounded-xl text-center">
+                <MapPin className="w-6 h-6 text-primary-blue mx-auto mb-2" />
+                <p className="text-sm font-medium text-gray-900">{area}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing & CTA */}
-      <section className="py-20 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Ready for a Deep Clean?
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-accent-aqua/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What Our Customers Say
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Don't just take our word for it. Here's what our customers are saying about 
+              our deep cleaning services.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-800 mb-6 italic">"{testimonial.comment}"</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.company}</p>
+                  </div>
+                  <div className="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center">
+                    <Home className="w-6 h-6 text-primary-blue" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary-blue">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Experience Jacksonville's #1 Deep Cleaning Service?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free quote on our professional deep cleaning services. 
-            We serve all of Jacksonville and surrounding areas.
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Join the families and businesses who trust us with their deep cleaning needs. 
+            Get an instant quote today and see why we're the powerhouse choice.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <a
               href="tel:9044563851"
-              className="bg-white hover:bg-gray-100 text-blue-600 font-semibold py-4 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center"
+              className="inline-flex items-center gap-2 bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              <Phone className="w-5 h-5 mr-2" />
+              <Phone className="w-5 h-5" />
               Call (904) 456-3851
             </a>
             <a
-              href="/contact"
-              className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 px-8 rounded-lg border-2 border-white transition-colors duration-200 flex items-center justify-center"
+              href="/contact?service=complete-deep-cleaning&type=deep-cleaning"
+              className="inline-flex items-center gap-2 bg-transparent text-white px-8 py-4 rounded-lg font-semibold border-2 border-white hover:bg-white/10 transition-colors"
             >
-              <Mail className="w-5 h-5 mr-2" />
-              Get Free Quote
+              Get Instant Quote
             </a>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="text-center text-white/80">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Sparkles className="w-6 h-6 text-white" />
+              </div>
+              <p className="text-sm">Deep Cleaning</p>
+            </div>
+            <div className="text-center text-white/80">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Leaf className="w-6 h-6 text-white" />
+              </div>
+              <p className="text-sm">Eco-Friendly</p>
+            </div>
+            <div className="text-center text-white/80">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <p className="text-sm">Licensed & Insured</p>
+            </div>
+            <div className="text-center text-white/80">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <CheckCircle className="w-6 h-6 text-white" />
+              </div>
+              <p className="text-sm">100% Guaranteed</p>
+            </div>
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
