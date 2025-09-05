@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useState } from 'react';
 import { 
   Home, 
   Sparkles, 
@@ -24,20 +26,22 @@ import {
   PawPrint,
   Heart,
   PartyPopper,
-  Umbrella
+  Umbrella,
+  Search,
+  Filter,
+  X,
+  ChevronDown,
+  Eye,
+  BookOpen
 } from 'lucide-react';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
-import { generateMetadata } from '@/lib/metadata';
-
-export const metadata: Metadata = generateMetadata({
-  title: 'Professional House Cleaning Services Jacksonville',
-  description: 'Comprehensive house cleaning services in Jacksonville, FL. From regular maintenance to deep cleaning and specialized services. Licensed, insured, and trusted by thousands of Jacksonville families.',
-  keywords: ['Jacksonville cleaning services', 'house cleaning', 'deep cleaning', 'move-in move-out cleaning', 'post-construction cleaning', 'recurring cleaning'],
-  canonical: 'https://jacksonvillehousecleaningservice.com/services'
-});
 
 export default function ServicesPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [showFilters, setShowFilters] = useState(false);
+
   const services = [
     {
       id: 'recurring',
@@ -65,7 +69,11 @@ export default function ServicesPage() {
       duration: '2-3 hours',
       frequency: 'Weekly, bi-weekly, or monthly',
       popular: true,
-      color: 'blue'
+      color: 'blue',
+      category: 'residential',
+      tags: ['regular', 'maintenance', 'weekly', 'bi-weekly', 'monthly'],
+      rating: 4.9,
+      reviews: 127
     },
     {
       id: 'deep-cleaning',
@@ -94,7 +102,11 @@ export default function ServicesPage() {
       duration: '4-6 hours',
       frequency: 'One-time or seasonal',
       popular: false,
-      color: 'purple'
+      color: 'purple',
+      category: 'residential',
+      tags: ['deep', 'seasonal', 'sanitization', 'intensive', 'thorough'],
+      rating: 4.8,
+      reviews: 89
     },
     {
       id: 'move-in-out',
@@ -123,7 +135,11 @@ export default function ServicesPage() {
       duration: '4-8 hours',
       frequency: 'One-time service',
       popular: true,
-      color: 'green'
+      color: 'green',
+      category: 'specialized',
+      tags: ['move-in', 'move-out', 'real-estate', 'relocation', 'inspection'],
+      rating: 4.9,
+      reviews: 156
     },
     {
       id: 'post-construction',
@@ -152,8 +168,28 @@ export default function ServicesPage() {
       duration: '6-10 hours',
       frequency: 'One-time service',
       popular: false,
-      color: 'orange'
+      color: 'orange',
+      category: 'specialized',
+      tags: ['construction', 'renovation', 'remodeling', 'debris', 'cleanup'],
+      rating: 4.7,
+      reviews: 73
     }
+  ];
+
+  // Filter services based on search term and category
+  const filteredServices = services.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const categories = [
+    { id: 'all', name: 'All Services', count: services.length },
+    { id: 'residential', name: 'Residential', count: services.filter(s => s.category === 'residential').length },
+    { id: 'specialized', name: 'Specialized', count: services.filter(s => s.category === 'specialized').length },
+    { id: 'commercial', name: 'Commercial', count: services.filter(s => s.category === 'commercial').length }
   ];
 
   return (
@@ -237,18 +273,6 @@ export default function ServicesPage() {
                 "price": service.pricing,
                 "priceCurrency": "USD",
                 "availability": "https://schema.org/InStock"
-              },
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": `${service.title} - Jacksonville`,
-                "itemListElement": service.features.map((feature, featureIndex) => ({
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": feature,
-                    "description": `Included in ${service.title} service`
-                  }
-                }))
               }
             })
           }}
@@ -256,35 +280,112 @@ export default function ServicesPage() {
       ))}
 
       <div className="min-h-screen">
-        {/* Hero Section */}
-        <section className="relative py-20 lg:py-24 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/90 to-accent-aqua/90"></div>
+        {/* Enhanced Hero Section */}
+        <section className="relative py-12 sm:py-16 lg:py-20 overflow-hidden">
+          {/* Background with animated elements */}
+          <div className="absolute inset-0 bg-blue-600"></div>
+          <div className="absolute inset-0 bg-blue-900/80"></div>
+          <div className="absolute inset-0 bg-[url('/hero1.png')] bg-cover bg-center opacity-20"></div>
+          
+          {/* Floating elements */}
+          <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-16 h-16 bg-accent-aqua/20 rounded-full animate-bounce"></div>
+          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-accent-coral/20 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-40 right-1/3 w-8 h-8 bg-white/15 rounded-full animate-bounce"></div>
+          
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              {/* Trust indicators */}
+              <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-white/90">
+                <div className="flex items-center gap-2">
+                  <Shield className="w-5 h-5 text-accent-aqua" />
+                  <span className="text-sm font-medium">Licensed & Insured</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <span className="text-sm font-medium">5-Star Rated</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Users className="w-5 h-5 text-accent-coral" />
+                  <span className="text-sm font-medium">1000+ Happy Customers</span>
+                </div>
+              </div>
+
+              {/* Main heading */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Professional House Cleaning
-                <span className="block text-cyan-300">Services in Jacksonville</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-accent-aqua">
+                  Services in Jacksonville
+                </span>
               </h1>
-              <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
+              
+              {/* Subheading */}
+              <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
                 From regular maintenance to deep cleaning and specialized services, we offer comprehensive 
-                cleaning solutions tailored to your needs. Licensed, insured, and trusted by thousands of 
-                Jacksonville families.
+                cleaning solutions tailored to your needs.
               </p>
+
+              {/* Key benefits */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="w-12 h-12 bg-accent-aqua/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Home className="w-6 h-6 text-accent-aqua" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Residential Cleaning</h3>
+                  <p className="text-white/80 text-sm">Regular maintenance and deep cleaning for your home</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="w-12 h-12 bg-accent-coral/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Building2 className="w-6 h-6 text-accent-coral" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Commercial Cleaning</h3>
+                  <p className="text-white/80 text-sm">Professional cleaning for offices and businesses</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="w-12 h-12 bg-accent-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Sparkles className="w-6 h-6 text-accent-green" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Specialized Services</h3>
+                  <p className="text-white/80 text-sm">Move-in/out, post-construction, and more</p>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="bg-accent-coral text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
+                  className="group bg-accent-coral text-white px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 shadow-2xl hover:shadow-accent-coral/25 hover:scale-105 flex items-center justify-center gap-3"
                 >
-                  Get Free Quote
-                  <ArrowRight className="w-5 h-5" />
+                  Get Your Free Quote
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
                   href="tel:+19044563851"
-                  className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-primary-blue px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-3"
+                  className="group bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-primary-blue px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 flex items-center justify-center gap-3"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-6 h-6 group-hover:scale-110 transition-transform" />
                   Call (904) 456-3851
                 </a>
+              </div>
+
+              {/* Additional trust indicators */}
+              <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-white/70">
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-accent-green" />
+                  <span className="text-sm">Free Estimates</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-accent-green" />
+                  <span className="text-sm">Satisfaction Guaranteed</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-accent-green" />
+                  <span className="text-sm">Eco-Friendly Products</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-accent-green" />
+                  <span className="text-sm">Flexible Scheduling</span>
+                </div>
               </div>
             </div>
           </div>
@@ -301,7 +402,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Main Services Grid */}
+        {/* Enhanced Services Directory */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -312,45 +413,192 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {services.map((service, index) => (
-                <div key={service.id} className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${
-                  service.popular ? 'border-primary-blue' : 'border-gray-100'
-                }`}>
-                  {service.popular && (
-                    <div className="bg-primary-blue text-white text-center py-2 rounded-t-2xl">
-                      <span className="text-sm font-semibold">Most Popular</span>
+            {/* Search and Filter Controls */}
+            <div className="mb-12">
+              <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+                {/* Search Bar */}
+                <div className="relative flex-1 max-w-md">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                  />
+                  {searchTerm && (
+                    <button
+                      onClick={() => setSearchTerm('')}
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                  )}
+                </div>
+
+                {/* Filter Button */}
+                <div className="relative">
+                  <button
+                    onClick={() => setShowFilters(!showFilters)}
+                    className="flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                  >
+                    <Filter className="w-5 h-5" />
+                    <span>Filter</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform ${showFilters ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {/* Filter Dropdown */}
+                  {showFilters && (
+                    <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 z-10">
+                      <div className="p-4">
+                        <h3 className="font-semibold text-gray-900 mb-3">Categories</h3>
+                        <div className="space-y-2">
+                          {categories.map((category) => (
+                            <button
+                              key={category.id}
+                              onClick={() => {
+                                setSelectedCategory(category.id);
+                                setShowFilters(false);
+                              }}
+                              className={`w-full text-left px-3 py-2 rounded-lg transition-colors duration-200 ${
+                                selectedCategory === category.id
+                                  ? 'bg-primary-blue text-white'
+                                  : 'hover:bg-gray-100'
+                              }`}
+                            >
+                              <div className="flex justify-between items-center">
+                                <span>{category.name}</span>
+                                <span className="text-sm opacity-75">({category.count})</span>
+                              </div>
+                            </button>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   )}
+                </div>
+              </div>
+
+              {/* Active Filters */}
+              {(searchTerm || selectedCategory !== 'all') && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {searchTerm && (
+                    <span className="inline-flex items-center gap-2 px-3 py-1 bg-primary-blue text-white rounded-full text-sm">
+                      Search: "{searchTerm}"
+                      <button
+                        onClick={() => setSearchTerm('')}
+                        className="hover:bg-white/20 rounded-full p-0.5"
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  )}
+                  {selectedCategory !== 'all' && (
+                    <span className="inline-flex items-center gap-2 px-3 py-1 bg-accent-aqua text-white rounded-full text-sm">
+                      Category: {categories.find(c => c.id === selectedCategory)?.name}
+                      <button
+                        onClick={() => setSelectedCategory('all')}
+                        className="hover:bg-white/20 rounded-full p-0.5"
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* Results Count */}
+            <div className="mb-8">
+              <p className="text-gray-600">
+                Showing {filteredServices.length} of {services.length} services
+              </p>
+            </div>
+
+            {/* Enhanced Service Cards Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {filteredServices.map((service, index) => (
+                <div key={service.id} className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 ${
+                  service.popular ? 'border-primary-blue' : 'border-gray-100'
+                } hover:scale-[1.02]`}>
+                  {service.popular && (
+                    <div className="bg-primary-blue text-white text-center py-2 rounded-t-2xl">
+                      <span className="text-sm font-semibold">⭐ Most Popular</span>
+                    </div>
+                  )}
+                  
                   <div className="p-8">
-                    <div className="flex items-center space-x-4 mb-6">
-                      <div className={`w-16 h-16 bg-${service.color === 'blue' ? 'primary-blue' : service.color === 'purple' ? 'purple' : service.color === 'green' ? 'accent-green' : 'orange'}/20 rounded-full flex items-center justify-center`}>
-                        <service.icon className={`w-8 h-8 text-${service.color === 'blue' ? 'primary-blue' : service.color === 'purple' ? 'purple' : service.color === 'green' ? 'accent-green' : 'orange'}`} />
+                    {/* Header with Icon and Rating */}
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="flex items-center space-x-4">
+                        <div className={`w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200 ${
+                          service.color === 'blue' ? 'bg-primary-blue/20' : 
+                          service.color === 'purple' ? 'bg-purple-500/20' : 
+                          service.color === 'green' ? 'bg-accent-green/20' : 
+                          'bg-orange-500/20'
+                        }`}>
+                          <service.icon className={`w-8 h-8 ${
+                            service.color === 'blue' ? 'text-primary-blue' : 
+                            service.color === 'purple' ? 'text-purple-500' : 
+                            service.color === 'green' ? 'text-accent-green' : 
+                            'text-orange-500'
+                          }`} />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary-blue transition-colors duration-200">{service.title}</h3>
+                          <p className="text-gray-600">{service.shortDescription}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
-                        <p className="text-gray-600">{service.shortDescription}</p>
+                      
+                      {/* Rating */}
+                      <div className="text-right">
+                        <div className="flex items-center gap-1 mb-1">
+                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                          <span className="font-semibold text-gray-900">{service.rating}</span>
+                        </div>
+                        <p className="text-sm text-gray-500">{service.reviews} reviews</p>
                       </div>
                     </div>
 
                     <p className="text-gray-700 mb-6 leading-relaxed">{service.description}</p>
 
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                        <span key={tagIndex} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Features and Benefits */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-gray-900 text-sm">What&apos;s Included:</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm flex items-center gap-2">
+                          <Check className="w-4 h-4 text-accent-green" />
+                          What&apos;s Included:
+                        </h4>
                         <ul className="space-y-2">
-                          {service.features.slice(0, 4).map((feature, featureIndex) => (
+                          {service.features.slice(0, 3).map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-start space-x-3">
                               <Check className="w-4 h-4 text-accent-green mt-0.5 flex-shrink-0" />
                               <span className="text-sm text-gray-700">{feature}</span>
                             </li>
                           ))}
+                          {service.features.length > 3 && (
+                            <li className="text-sm text-primary-blue font-medium">
+                              +{service.features.length - 3} more features
+                            </li>
+                          )}
                         </ul>
                       </div>
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm flex items-center gap-2">
+                          <Star className="w-4 h-4 text-accent-coral" />
+                          Key Benefits:
+                        </h4>
                         <ul className="space-y-2">
-                          {service.benefits.map((benefit, benefitIndex) => (
+                          {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-start space-x-3">
                               <Star className="w-4 h-4 text-accent-coral mt-0.5 flex-shrink-0" />
                               <span className="text-sm text-gray-700">{benefit}</span>
@@ -360,6 +608,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
 
+                    {/* Pricing Info */}
                     <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                       <div className="bg-gray-50 rounded-lg p-3">
                         <div className="text-sm text-gray-600">Starting Price</div>
@@ -375,26 +624,47 @@ export default function ServicesPage() {
                       </div>
                     </div>
 
+                    {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Link
                         href={`/contact?service=${service.id}`}
-                        className="flex-1 bg-primary-blue text-white py-3 px-4 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors duration-200 flex items-center justify-center space-x-2"
+                        className="flex-1 bg-primary-blue text-white py-3 px-4 rounded-lg font-semibold hover:bg-primary-blue/90 transition-colors duration-200 flex items-center justify-center space-x-2 group-hover:shadow-lg"
                       >
-                        <span>Get Quote</span>
                         <Calculator className="w-4 h-4" />
+                        <span>Get Quote</span>
                       </Link>
                       <Link
-                        href={`/${service.id === 'deep-cleaning' ? 'extreme-deep-cleaning' : service.id === 'move-in-out' ? 'move-in-move-out' : service.id === 'post-construction' ? 'post-construction-cleaning' : service.id}`}
+                        href={`/${service.id === 'deep-cleaning' ? 'deep-cleaning' : service.id === 'move-in-out' ? 'move-in-move-out' : service.id === 'post-construction' ? 'post-construction-cleaning' : service.id}`}
                         className="flex-1 border border-primary-blue text-primary-blue py-3 px-4 rounded-lg font-medium hover:bg-primary-blue hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2"
                       >
+                        <Eye className="w-4 h-4" />
                         <span>Learn More</span>
-                        <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+
+            {/* No Results */}
+            {filteredServices.length === 0 && (
+              <div className="text-center py-12">
+                <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Search className="w-12 h-12 text-gray-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>
+                <p className="text-gray-600 mb-4">Try adjusting your search or filter criteria</p>
+                <button
+                  onClick={() => {
+                    setSearchTerm('');
+                    setSelectedCategory('all');
+                  }}
+                  className="text-primary-blue hover:text-primary-blue/80 font-medium"
+                >
+                  Clear all filters
+                </button>
+              </div>
+            )}
           </div>
         </section>
 

@@ -66,13 +66,15 @@ const Navbar: React.FC = () => {
             
             {/* Services Dropdown */}
             <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={toggleServicesDropdown}
+              <Link
+                href="/services"
                 className="text-gray-900 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center space-x-1"
+                onMouseEnter={() => setIsServicesDropdownOpen(true)}
+                onMouseLeave={() => setIsServicesDropdownOpen(false)}
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
+              </Link>
               
               {isServicesDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200 max-h-96 overflow-y-auto">
@@ -228,7 +230,7 @@ const Navbar: React.FC = () => {
             <Link
               href="/about"
               onClick={closeMobileMenu}
-              className="text-base font-medium transition-colors duration-200"
+              className="text-gray-900 hover:text-primary-blue block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
             >
               About
             </Link>
