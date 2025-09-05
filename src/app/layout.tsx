@@ -22,6 +22,16 @@ export const metadata: Metadata = {
   authors: [{ name: "Jacksonville House Cleaning Service" }],
   creator: "Jacksonville House Cleaning Service",
   publisher: "Jacksonville House Cleaning Service",
+  icons: {
+    icon: [
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "16x16", type: "image/x-icon" }
+    ],
+    apple: [
+      { url: "/favicon.png", sizes: "180x180", type: "image/png" }
+    ],
+    shortcut: "/favicon.ico"
+  },
   robots: {
     index: true,
     follow: true,
@@ -73,6 +83,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="16x16" type="image/x-icon" />
+        <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" sizes="180x180" />
         <script 
           src="https://analytics.ahrefs.com/analytics.js" 
           data-key="SMECEsnHAn9OBCpmwyJBcA" 
