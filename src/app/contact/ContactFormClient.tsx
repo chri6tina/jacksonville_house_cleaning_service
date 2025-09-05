@@ -182,7 +182,7 @@ function ContactForm() {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base text-gray-900 bg-white"
                     placeholder="Your full name"
                   />
                 </div>
@@ -197,7 +197,7 @@ function ContactForm() {
                     required
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base text-gray-900 bg-white"
                     placeholder="(904) 456-3851"
                   />
                 </div>
@@ -215,7 +215,7 @@ function ContactForm() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base text-gray-900 bg-white"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -230,7 +230,7 @@ function ContactForm() {
                     required
                     value={formData.address}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base text-gray-900 bg-white"
                     placeholder="123 Main St, Jacksonville, FL"
                   />
                 </div>
@@ -248,7 +248,7 @@ function ContactForm() {
                     required
                     value={formData.propertyType}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base text-gray-900 bg-white"
                   >
                     <option value="">Select property type</option>
                     <option value="House">House</option>
@@ -292,7 +292,7 @@ function ContactForm() {
                     name="date"
                     value={formData.date}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base text-gray-900 bg-white"
                   />
                 </div>
                 <div>
@@ -304,7 +304,7 @@ function ContactForm() {
                     name="time"
                     value={formData.time}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                    className="w-full px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base text-gray-900 bg-white"
                   >
                     <option value="">Select time</option>
                     <option value="Morning (8AM-12PM)">Morning (8AM-12PM)</option>
@@ -325,7 +325,7 @@ function ContactForm() {
                   rows={4}
                   value={formData.specialRequests}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base text-gray-900 bg-white resize-none"
                   placeholder="Any specific requirements, allergies, or additional details..."
                 />
               </div>
