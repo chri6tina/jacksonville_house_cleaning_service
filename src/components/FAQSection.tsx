@@ -21,15 +21,15 @@ const FAQSection: React.FC = () => {
       icon: Sparkles,
       questions: [
         {
-          question: "What types of cleaning services do you offer?",
+          question: "What types of cleaning services does Jacksonville House Cleaning Service offer?",
           answer: "We provide standard house cleaning, deep cleaning, move-in/move-out cleaning, office cleaning, and customized recurring services (weekly, bi-weekly, or monthly)."
         },
         {
-          question: "How often should I have my home professionally cleaned?",
+          question: "How often should I have Jacksonville House Cleaning Service clean my home?",
           answer: "Most families choose bi-weekly service to maintain a clean home, but we offer flexible scheduling based on your lifestyle and budget."
         },
         {
-          question: "Do I need to be home during the cleaning?",
+          question: "Do I need to be home during Jacksonville House Cleaning Service cleaning?",
           answer: "Not at all. Many clients provide us with a key or door code, and we'll clean while you're away. It's your choice."
         }
       ]
@@ -39,15 +39,15 @@ const FAQSection: React.FC = () => {
       icon: Phone,
       questions: [
         {
-          question: "How much does house cleaning cost?",
+          question: "How much does Jacksonville House Cleaning Service cost?",
           answer: "Pricing depends on the size of your home, the type of cleaning, and frequency. Standard cleanings start at a flat rate or hourly rate, while deep cleanings are usually higher. We provide free quotes so you know exactly what to expect."
         },
         {
-          question: "Do you offer discounts for recurring services?",
+          question: "Does Jacksonville House Cleaning Service offer discounts for recurring services?",
           answer: "Yes. Weekly or bi-weekly clients receive discounted rates compared to one-time cleanings."
         },
         {
-          question: "What forms of payment do you accept?",
+          question: "What forms of payment does Jacksonville House Cleaning Service accept?",
           answer: "We accept credit/debit cards, checks, and online payments."
         }
       ]
@@ -57,11 +57,11 @@ const FAQSection: React.FC = () => {
       icon: Leaf,
       questions: [
         {
-          question: "Do I need to provide cleaning supplies?",
+          question: "Do I need to provide cleaning supplies for Jacksonville House Cleaning Service?",
           answer: "No. We bring all professional-grade supplies and equipment. If you prefer we use your products, just let us know."
         },
         {
-          question: "Do you use eco-friendly cleaning products?",
+          question: "Does Jacksonville House Cleaning Service use eco-friendly cleaning products?",
           answer: "Yes, we can use green/eco-friendly products upon request, safe for children and pets."
         }
       ]
@@ -71,15 +71,15 @@ const FAQSection: React.FC = () => {
       icon: Shield,
       questions: [
         {
-          question: "Are your cleaners insured and background-checked?",
+          question: "Are Jacksonville House Cleaning Service cleaners insured and background-checked?",
           answer: "Absolutely. Our team is fully insured, bonded, and background-checked for your peace of mind."
         },
         {
-          question: "What if I'm not satisfied with the cleaning?",
+          question: "What if I'm not satisfied with Jacksonville House Cleaning Service?",
           answer: "Customer satisfaction is guaranteed. If something isn't right, we'll come back and make it right."
         },
         {
-          question: "How do you handle pets during cleaning?",
+          question: "How does Jacksonville House Cleaning Service handle pets during cleaning?",
           answer: "We're pet-friendly and used to working in homes with dogs and cats. Let us know if you'd like pets crated or left in certain areas during service."
         }
       ]
@@ -89,15 +89,15 @@ const FAQSection: React.FC = () => {
       icon: Users,
       questions: [
         {
-          question: "Do you offer move-in/move-out cleaning?",
+          question: "Does Jacksonville House Cleaning Service offer move-in/move-out cleaning?",
           answer: "Yes. These cleanings include extra attention to kitchens, bathrooms, appliances, and baseboards—perfect for new homeowners or rental turnovers."
         },
         {
-          question: "Can you handle special requests?",
+          question: "Can Jacksonville House Cleaning Service handle special requests?",
           answer: "Definitely. We can customize your cleaning to focus on specific areas (like inside the fridge, oven, or windows)."
         },
         {
-          question: "Do you clean offices or commercial spaces too?",
+          question: "Does Jacksonville House Cleaning Service clean offices or commercial spaces too?",
           answer: "Yes. In addition to residential cleaning, we offer flexible janitorial and office cleaning services for businesses."
         }
       ]
