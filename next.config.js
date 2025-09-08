@@ -147,6 +147,16 @@ const nextConfig = {
         destination: '/services',
         permanent: true,
       },
+      {
+        source: '/about-us',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/contact-us',
+        destination: '/contact',
+        permanent: true,
+      },
     ];
   },
 
