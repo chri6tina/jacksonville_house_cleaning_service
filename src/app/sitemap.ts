@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://jacksonvillehousecleaningservice.com';
+  const baseUrl = 'https://www.jacksonvillehousecleaningservice.com';
   const currentDate = new Date();
 
   // Core pages
@@ -386,10 +386,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // Additional pages that exist
+  const additionalPages = [
+    {
+      url: `${baseUrl}/gallery`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/information`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/pricing-calculator`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/service-areas-map`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+  ];
+
   return [
     ...corePages,
     ...servicePages,
     ...locationPages,
     ...blogPosts,
+    ...additionalPages,
   ];
 }
