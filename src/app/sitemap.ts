@@ -414,11 +414,52 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // New specialized service pages
+  const specializedPages = [
+    {
+      url: `${baseUrl}/recurring`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/vacation-home-cleaning`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/golf-community-cleaning`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/family-home-cleaning`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/luxury-home-cleaning`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+  ];
+
   return [
     ...corePages,
     ...servicePages,
     ...locationPages,
     ...blogPosts,
     ...additionalPages,
+    ...specializedPages,
   ];
 }
