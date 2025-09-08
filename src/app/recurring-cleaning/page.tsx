@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calendar, Clock, Shield, Check, Star, Phone, Users, Zap, Sparkles, Award, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
+import RecurringCleaningCalculator from '@/components/RecurringCleaningCalculator';
 
 export default function RecurringCleaningPage() {
   const services = [
@@ -254,6 +255,13 @@ export default function RecurringCleaningPage() {
                 </a>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Quote Calculator Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <RecurringCleaningCalculator />
           </div>
         </section>
 
