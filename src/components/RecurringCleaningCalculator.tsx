@@ -59,25 +59,28 @@ const RecurringCleaningCalculator: React.FC = () => {
   const calculatePrice = () => {
     let basePrice = 0;
     
-    // Base price by home size
+    // Base price by square footage and layout (increased by ~5%)
     const sizePrices: { [key: string]: number } = {
-      'studio': 80,
-      '1-bedroom': 100,
-      '2-bedroom': 140,
-      '3-bedroom': 180,
-      '4-bedroom': 220,
-      '5-bedroom': 260,
-      '6-bedroom': 300
+      'under-1000': 125,    // Studio/1 bed, 1 bath (≤800 sq ft) - 2 hours
+      '1000-1500': 160,     // 2 bed/1 bath (~1,000 sq ft) - 2.5-3 hours
+      '1500-2000': 190,     // 2 bed/2 bath (~1,200 sq ft) - 3-3.5 hours
+      '2000-2500': 250,     // 3 bed/2 bath (~1,500-1,800 sq ft) - 4-5 hours
+      '2500-3000': 315,     // 3 bed/3 bath (~2,000 sq ft) - 5-5.5 hours
+      '3000-3500': 380,     // 4 bed/2 bath (~2,200 sq ft) - 5.5-6 hours
+      '3500-4000': 440,     // 4 bed/3 bath (~2,500-3,000 sq ft) - 6-7 hours
+      'over-4000': 505      // 5+ bed/4+ bath (3,500+ sq ft) - 8-10 hours
     };
     
     basePrice = sizePrices[data.homeSize] || 0;
     
-    // Add for additional bedrooms/bathrooms
-    if (data.bedrooms > 2) {
-      basePrice += (data.bedrooms - 2) * 20;
-    }
+    // Add for additional bathrooms (increased by ~5%)
     if (data.bathrooms > 2) {
-      basePrice += (data.bathrooms - 2) * 15;
+      basePrice += (data.bathrooms - 2) * 32;
+    }
+    
+    // Add for additional bedrooms (increased by ~5%)
+    if (data.bedrooms > 4) {
+      basePrice += (data.bedrooms - 4) * 21;
     }
     
     // Home condition multiplier
@@ -89,20 +92,20 @@ const RecurringCleaningCalculator: React.FC = () => {
     };
     basePrice *= conditionMultipliers[data.homeCondition] || 1.0;
     
-    // Additional charges
-    if (data.petHair) basePrice += 20;
-    if (data.highTraffic) basePrice += 15;
+    // Additional charges (increased by ~5%)
+    if (data.petHair) basePrice += 26;      // 20-30 minutes extra
+    if (data.highTraffic) basePrice += 21;  // 15-20 minutes extra
     
-    // Additional services
+    // Additional services (increased by ~5%)
     const servicePrices: { [key: string]: number } = {
-      'deep-clean': 50,
-      'inside-appliances': 30,
-      'inside-cabinets': 25,
-      'baseboards': 20,
-      'light-fixtures': 15,
-      'window-cleaning': 40,
-      'garage': 30,
-      'laundry': 25
+      'deep-clean': 63,        // 1 hour of deep cleaning
+      'inside-appliances': 37, // 30-45 minutes
+      'inside-cabinets': 26,   // 20-30 minutes
+      'baseboards': 21,        // 15-20 minutes
+      'light-fixtures': 16,    // 10-15 minutes
+      'window-cleaning': 53,   // 45-60 minutes
+      'garage': 32,            // 30-40 minutes
+      'laundry': 32            // 25-30 minutes
     };
     
     data.additionalServices.forEach(service => {
@@ -144,7 +147,7 @@ const RecurringCleaningCalculator: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('/api/contact-form', {
+      const response = await fetch('https://formspree.io/f/mblaqejr', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -153,26 +156,46 @@ const RecurringCleaningCalculator: React.FC = () => {
           name: data.name,
           email: data.email,
           phone: data.phone,
-          message: `Recurring Cleaning Quote Request:
+          address: data.address,
+          homeSize: data.homeSize,
+          bedrooms: data.bedrooms,
+          bathrooms: data.bathrooms,
+          homeCondition: data.homeCondition,
+          petHair: data.petHair,
+          highTraffic: data.highTraffic,
+          frequency: data.frequency,
+          additionalServices: data.additionalServices.join(', ') || 'None',
+          estimatedPrice: `$${estimatedPrice}`,
+          message: data.message || 'None',
+          serviceType: 'Recurring Cleaning Quote',
+          detailedMessage: `RECURRING CLEANING QUOTE REQUEST
           
-Home Details:
-- Size: ${data.homeSize}
+CUSTOMER INFORMATION:
+- Name: ${data.name}
+- Email: ${data.email}
+- Phone: ${data.phone}
+- Address: ${data.address}
+
+HOME DETAILS:
+- Square Footage: ${data.homeSize}
 - Bedrooms: ${data.bedrooms}
 - Bathrooms: ${data.bathrooms}
-- Condition: ${data.homeCondition}
-- Pet Hair: ${data.petHair ? 'Yes' : 'No'}
-- High Traffic: ${data.highTraffic ? 'Yes' : 'No'}
+- Home Condition: ${data.homeCondition}
+- Pet Hair Present: ${data.petHair ? 'Yes' : 'No'}
+- High Traffic Area: ${data.highTraffic ? 'Yes' : 'No'}
 
-Service Details:
-- Frequency: ${data.frequency}
+SERVICE PREFERENCES:
+- Cleaning Frequency: ${data.frequency}
 - Additional Services: ${data.additionalServices.join(', ') || 'None'}
 
-Estimated Price: $${estimatedPrice} per visit
+QUOTE DETAILS:
+- Estimated Price: $${estimatedPrice} per visit
+- Frequency Discount Applied: ${data.frequency === 'weekly' ? '15%' : data.frequency === 'bi-weekly' ? '10%' : '5%'}
 
-Address: ${data.address}
+CUSTOMER NOTES:
+${data.message || 'No additional notes provided'}
 
-Additional Message: ${data.message || 'None'}`,
-          serviceType: 'Recurring Cleaning Quote'
+This quote was generated automatically by the website calculator.`
         }),
       });
 
@@ -204,14 +227,14 @@ Additional Message: ${data.message || 'None'}`,
   };
 
   const additionalServices = [
-    { id: 'deep-clean', label: 'Deep Clean (First Visit)', price: 50 },
-    { id: 'inside-appliances', label: 'Inside Appliances', price: 30 },
-    { id: 'inside-cabinets', label: 'Inside Cabinets', price: 25 },
-    { id: 'baseboards', label: 'Baseboards & Trim', price: 20 },
-    { id: 'light-fixtures', label: 'Light Fixtures', price: 15 },
-    { id: 'window-cleaning', label: 'Window Cleaning', price: 40 },
-    { id: 'garage', label: 'Garage Cleaning', price: 30 },
-    { id: 'laundry', label: 'Laundry Service', price: 25 }
+    { id: 'deep-clean', label: 'Deep Clean (First Visit)', price: 63 },
+    { id: 'inside-appliances', label: 'Inside Appliances', price: 37 },
+    { id: 'inside-cabinets', label: 'Inside Cabinets', price: 26 },
+    { id: 'baseboards', label: 'Baseboards & Trim', price: 21 },
+    { id: 'light-fixtures', label: 'Light Fixtures', price: 16 },
+    { id: 'window-cleaning', label: 'Window Cleaning', price: 53 },
+    { id: 'garage', label: 'Garage Cleaning', price: 32 },
+    { id: 'laundry', label: 'Laundry Service', price: 32 }
   ];
 
   return (
@@ -237,7 +260,7 @@ Additional Message: ${data.message || 'None'}`,
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 <Home className="w-4 h-4 inline mr-2" />
-                Home Size
+                Home Square Footage
               </label>
               <select
                 value={data.homeSize}
@@ -245,14 +268,15 @@ Additional Message: ${data.message || 'None'}`,
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
                 required
               >
-                <option value="">Select home size</option>
-                <option value="studio">Studio (0-1 bedroom)</option>
-                <option value="1-bedroom">1 Bedroom</option>
-                <option value="2-bedroom">2 Bedrooms</option>
-                <option value="3-bedroom">3 Bedrooms</option>
-                <option value="4-bedroom">4 Bedrooms</option>
-                <option value="5-bedroom">5 Bedrooms</option>
-                <option value="6-bedroom">6+ Bedrooms</option>
+                <option value="">Select square footage</option>
+                <option value="under-1000">Under 1,000 sq ft</option>
+                <option value="1000-1500">1,000 - 1,500 sq ft</option>
+                <option value="1500-2000">1,500 - 2,000 sq ft</option>
+                <option value="2000-2500">2,000 - 2,500 sq ft</option>
+                <option value="2500-3000">2,500 - 3,000 sq ft</option>
+                <option value="3000-3500">3,000 - 3,500 sq ft</option>
+                <option value="3500-4000">3,500 - 4,000 sq ft</option>
+                <option value="over-4000">Over 4,000 sq ft</option>
               </select>
             </div>
 
@@ -347,7 +371,7 @@ Additional Message: ${data.message || 'None'}`,
                     onChange={(e) => handleInputChange('petHair', e.target.checked)}
                     className="mr-3 h-4 w-4 text-primary-blue focus:ring-primary-blue border-gray-300 rounded"
                   />
-                  <span className="text-sm text-gray-700">Pet hair present (+$20)</span>
+                  <span className="text-sm text-gray-700">Pet hair present (+$26)</span>
                 </label>
                 <label className="flex items-center">
                   <input
@@ -356,7 +380,7 @@ Additional Message: ${data.message || 'None'}`,
                     onChange={(e) => handleInputChange('highTraffic', e.target.checked)}
                     className="mr-3 h-4 w-4 text-primary-blue focus:ring-primary-blue border-gray-300 rounded"
                   />
-                  <span className="text-sm text-gray-700">High traffic area (+$15)</span>
+                  <span className="text-sm text-gray-700">High traffic area (+$21)</span>
                 </label>
               </div>
             </div>
@@ -493,34 +517,34 @@ Additional Message: ${data.message || 'None'}`,
         {/* Price Display & Benefits */}
         <div className="space-y-6">
           {/* Price Card */}
-          <div className="bg-gradient-to-br from-primary-blue to-accent-aqua rounded-2xl p-8 text-white">
+          <div className="bg-gray-900 rounded-2xl p-8 text-white shadow-2xl border-2 border-primary-blue">
             <div className="text-center mb-6">
-              <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <div className="inline-flex items-center gap-2 bg-primary-blue px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <DollarSign className="w-4 h-4" />
                 <span>Estimated Price</span>
               </div>
-              <div className="text-5xl font-bold mb-2">${estimatedPrice}</div>
-              <p className="text-white/90">per cleaning visit</p>
+              <div className="text-5xl font-bold mb-2 text-white">${estimatedPrice}</div>
+              <p className="text-gray-200 font-medium">per cleaning visit</p>
             </div>
 
             <div className="space-y-3 mb-6">
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-white" />
-                <span className="text-white/90">Frequency: {data.frequency}</span>
+              <div className="flex items-center gap-3 bg-gray-800 rounded-lg p-3 border border-gray-700">
+                <CheckCircle className="w-5 h-5 text-primary-blue" />
+                <span className="text-white font-medium">Frequency: {data.frequency}</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Home className="w-5 h-5 text-white" />
-                <span className="text-white/90">Size: {data.homeSize || 'Not selected'}</span>
+              <div className="flex items-center gap-3 bg-gray-800 rounded-lg p-3 border border-gray-700">
+                <Home className="w-5 h-5 text-primary-blue" />
+                <span className="text-white font-medium">Size: {data.homeSize ? data.homeSize.replace('-', ' - ').replace('under', 'Under').replace('over', 'Over') + ' sq ft' : 'Not selected'}</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Users className="w-5 h-5 text-white" />
-                <span className="text-white/90">{data.bedrooms} bed, {data.bathrooms} bath</span>
+              <div className="flex items-center gap-3 bg-gray-800 rounded-lg p-3 border border-gray-700">
+                <Users className="w-5 h-5 text-primary-blue" />
+                <span className="text-white font-medium">{data.bedrooms} bed, {data.bathrooms} bath</span>
               </div>
             </div>
 
-            <div className="bg-white/20 rounded-lg p-4">
-              <h4 className="font-semibold mb-2">What's Included:</h4>
-              <ul className="text-sm space-y-1 text-white/90">
+            <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+              <h4 className="font-semibold mb-2 text-white">What's Included:</h4>
+              <ul className="text-sm space-y-1 text-gray-200">
                 <li>• Complete dusting & vacuuming</li>
                 <li>• Kitchen & bathroom cleaning</li>
                 <li>• Floor mopping & sanitizing</li>
