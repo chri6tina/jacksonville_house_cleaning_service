@@ -77,7 +77,11 @@ const Navbar: React.FC = () => {
               </Link>
               
               {isServicesDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200 max-h-96 overflow-y-auto">
+                <div 
+                  className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200 max-h-96 overflow-y-auto"
+                  onMouseEnter={() => setIsServicesDropdownOpen(true)}
+                  onMouseLeave={() => setIsServicesDropdownOpen(false)}
+                >
                   <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
                     <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Popular Services</span>
                   </div>
