@@ -121,6 +121,19 @@ const Navbar: React.FC = () => {
                   </Link>
                   
                   <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
+                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">New Services</span>
+                  </div>
+                  <Link href="/laundry-services" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Laundry & Ironing
+                  </Link>
+                  <Link href="/organizing-services" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Home Organizing
+                  </Link>
+                  <Link href="/green-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Green Cleaning
+                  </Link>
+                  
+                  <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
                     <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Commercial & Special</span>
                   </div>
                   <Link href="/commercial-office-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
