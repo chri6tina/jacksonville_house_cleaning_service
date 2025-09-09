@@ -132,6 +132,15 @@ const Navbar: React.FC = () => {
                   <Link href="/green-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
                     Green Cleaning
                   </Link>
+                  <Link href="/upholstery-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Upholstery Cleaning
+                  </Link>
+                  <Link href="/appliance-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Appliance Cleaning
+                  </Link>
+                  <Link href="/garage-cleaning" className="block px-4 py-2 text-sm text-gray-900 hover:bg-primary-blue hover:text-white transition-colors duration-200">
+                    Garage Cleaning
+                  </Link>
                   
                   <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
                     <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Commercial & Special</span>
