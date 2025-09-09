@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     site: "@jacksonvillehousecleaningservice",
   },
   alternates: {
-    canonical: "https://jacksonvillehousecleaningservice.com",
+    canonical: "https://www.jacksonvillehousecleaningservice.com",
   },
   verification: {
     google: "your-google-verification-code", // Replace with actual verification code

@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: 'Premium luxury home cleaning services in Jacksonville. Professional cleaning for high-end homes, estates, and luxury properties. White-glove service with attention to detail.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.jacksonvillehousecleaningservice.com/luxury-home-cleaning',
+  },
 };
 
 const features = [

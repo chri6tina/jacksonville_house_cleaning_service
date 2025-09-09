@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: 'Professional cleaning services for golf communities in Jacksonville including Ponte Vedra, TPC Sawgrass, and Sawgrass Country Club. Luxury home cleaning for discerning residents.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.jacksonvillehousecleaningservice.com/golf-community-cleaning',
+  },
 };
 
 const features = [

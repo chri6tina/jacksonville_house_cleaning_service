@@ -7,7 +7,7 @@ export const metadata: Metadata = generateMetadata({
   title: 'Frequently Asked Questions - Jacksonville House Cleaning Service',
   description: 'Get answers to common questions about our professional cleaning services in Jacksonville, FL. Learn about pricing, scheduling, safety, and more.',
   keywords: ['Jacksonville cleaning FAQ', 'house cleaning questions', 'cleaning service FAQ', 'Jacksonville cleaning answers'],
-  canonical: 'https://jacksonvillehousecleaningservice.com/faq'
+  canonical: 'https://www.jacksonvillehousecleaningservice.com/faq'
 });
 
 export default function FAQPage() {

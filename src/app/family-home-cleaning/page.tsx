@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: 'Professional family home cleaning services in Jacksonville. Safe, eco-friendly cleaning for families with children and pets. Flexible scheduling and reliable service.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.jacksonvillehousecleaningservice.com/family-home-cleaning',
+  },
 };
 
 const features = [

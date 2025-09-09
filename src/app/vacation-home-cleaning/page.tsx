@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: 'Professional vacation home cleaning and turnover services in Jacksonville. Reliable cleaning for Airbnb, VRBO, and rental properties. Same-day service available.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.jacksonvillehousecleaningservice.com/vacation-home-cleaning',
+  },
 };
 
 const features = [
