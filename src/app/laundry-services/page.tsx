@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { 
   Shirt, 
-  Iron, 
+  Sparkles as Iron, 
   Clock, 
   Shield, 
   Star, 

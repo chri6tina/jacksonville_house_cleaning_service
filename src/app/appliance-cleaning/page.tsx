@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { 
   Refrigerator, 
   Microwave, 
-  Stove, 
-  Dishwasher, 
+  ChefHat as Stove, 
+  Droplets as Dishwasher, 
   WashingMachine, 
   CheckCircle, 
   Shield, 
