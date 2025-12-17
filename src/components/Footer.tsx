@@ -32,6 +32,7 @@ const Footer = () => {
       { name: 'Contact Us', href: '/contact' },
       { name: 'Service Areas', href: '/locations' },
       { name: 'Pricing', href: '/pricing' },
+      { name: 'Free Pickup & Donation', href: '/free-pickup' },
     ]
   };
 

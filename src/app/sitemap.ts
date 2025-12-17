@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { pickupCategories } from './free-pickup/categories';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.jacksonvillehousecleaningservice.com';
@@ -414,6 +415,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // Free pickup pages
+  const freePickupPages = [
+    {
+      url: `${baseUrl}/free-pickup`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    ...pickupCategories.map(category => ({
+      url: `${baseUrl}/free-pickup/${category.slug}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+  ];
+
   // New specialized service pages
   const specializedPages = [
     {
@@ -497,5 +514,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogPosts,
     ...additionalPages,
     ...specializedPages,
+    ...freePickupPages,
   ];
 }
