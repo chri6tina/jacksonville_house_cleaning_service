@@ -29,7 +29,6 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     openGraph: {
       title: `Free ${categoryData.name} Pickup in Jacksonville, Florida`,
       description: `${categoryData.description} Schedule your free pickup today!`,
-      url: `https://www.jacksonvillehousecleaningservice.com/free-pickup/${category}`,
     },
   });
 }

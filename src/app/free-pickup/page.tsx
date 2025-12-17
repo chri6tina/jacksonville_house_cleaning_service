@@ -12,7 +12,6 @@ export const metadata: Metadata = genMeta({
   openGraph: {
     title: 'Free Pickup & Donation Service Jacksonville FL',
     description: 'Free pickup service in Jacksonville, Florida for 100+ categories of items. Electronics, books, jewelry, collectibles, and more.',
-    url: 'https://www.jacksonvillehousecleaningservice.com/free-pickup',
   },
 });
 
