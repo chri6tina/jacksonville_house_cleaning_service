@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Facebook, Instagram, Youtube, Twitter, Mail, Phone, MapPin, Clock, Sparkles } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Clock, Sparkles } from 'lucide-react';
+import { SITE_CONFIG } from '@/lib/metadata';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -37,10 +38,9 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com', color: 'hover:text-blue-400' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com', color: 'hover:text-pink-400' },
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com', color: 'hover:text-red-400' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com', color: 'hover:text-blue-300' },
+    { name: 'Facebook', icon: Facebook, href: SITE_CONFIG.social.facebook, color: 'hover:text-blue-400' },
+    { name: 'Instagram', icon: Instagram, href: SITE_CONFIG.social.instagram, color: 'hover:text-pink-400' },
+    { name: 'Twitter', icon: Twitter, href: SITE_CONFIG.social.twitter, color: 'hover:text-blue-300' },
   ];
 
   return (
@@ -62,17 +62,27 @@ const Footer = () => {
             
             {/* Contact Info */}
             <div className="space-y-3">
-                             <div className="flex items-center space-x-3">
-                 <Phone className="w-4 h-4 text-blue-400" />
-                 <span className="text-gray-300">(904) 456-3851</span>
-               </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-blue-400" />
+                <a
+                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                  href={`tel:${SITE_CONFIG.phone}`}
+                >
+                  (904) 456-3851
+                </a>
+              </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-blue-400" />
-                <span className="text-gray-300">info@jaxcleaning.com</span>
+                <a
+                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                  href={`mailto:${SITE_CONFIG.email}`}
+                >
+                  {SITE_CONFIG.email}
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-blue-400" />
-                <span className="text-gray-300">Jacksonville, FL</span>
+                <span className="text-gray-300">{SITE_CONFIG.address}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="w-4 h-4 text-blue-400" />

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PerformanceMonitor from "@/components/PerformanceMonitor";
+import { SITE_CONFIG } from "@/lib/metadata";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -90,6 +91,41 @@ export default function RootLayout({
           src="https://analytics.ahrefs.com/analytics.js" 
           data-key="SMECEsnHAn9OBCpmwyJBcA" 
           async
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": SITE_CONFIG.name,
+              "url": SITE_CONFIG.url,
+              "logo": `${SITE_CONFIG.url}${SITE_CONFIG.logo}`,
+              "telephone": SITE_CONFIG.phone,
+              "email": SITE_CONFIG.email,
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jacksonville",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+              },
+              "openingHours": "Mo-Fr 08:00-18:00",
+              "priceRange": "$$",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": SITE_CONFIG.phone,
+                "contactType": "customer service",
+                "areaServed": "US",
+                "availableLanguage": ["English"]
+              },
+              "areaServed": ["Jacksonville, FL", "Northeast Florida"],
+              "sameAs": [
+                SITE_CONFIG.social.facebook,
+                SITE_CONFIG.social.instagram,
+                SITE_CONFIG.social.twitter
+              ]
+            })
+          }}
         />
       </head>
       <body

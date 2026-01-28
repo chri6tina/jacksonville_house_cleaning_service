@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight, Home } from 'lucide-react';
+import { SITE_CONFIG } from '@/lib/metadata';
 
 export interface BreadcrumbItem {
   label: string;
@@ -25,7 +26,7 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
         '@type': 'ListItem',
         'position': index + 1,
         'name': item.label,
-        'item': item.href ? `${process.env.NEXT_PUBLIC_SITE_URL || 'https://jacksonvillehousecleaning.com'}${item.href}` : undefined
+        'item': item.href ? `${SITE_CONFIG.url}${item.href}` : undefined
       }))
     };
 

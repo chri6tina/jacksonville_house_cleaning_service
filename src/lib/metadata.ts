@@ -25,7 +25,7 @@ export interface PageMetadata {
 
 export const SITE_CONFIG = {
   name: 'Jacksonville House Cleaning Service',
-  url: 'https://jacksonvillehousecleaningservice.com',
+  url: 'https://www.jacksonvillehousecleaningservice.com',
   logo: '/JHCSlogo.png',
   phone: '+19044563851',
   email: 'info@jacksonvillehousecleaningservice.com',
