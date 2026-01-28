@@ -251,7 +251,16 @@ export function generateServiceMetadata(service: string): PageMetadata {
   };
 }
 
-export function generateLocationServiceMetadata(location: string, service: string): PageMetadata {
+export function generateLocationServiceMetadata(location?: string, service?: string): PageMetadata {
+  if (!location || !service) {
+    return {
+      title: 'Local Cleaning Services',
+      description: `Professional cleaning services in Jacksonville. Call ${SITE_CONFIG.phone} for your free quote!`,
+      keywords: ['Jacksonville cleaning service', 'local cleaning', 'house cleaning'],
+      canonical: `${SITE_CONFIG.url}/locations`
+    };
+  }
+
   const locationName = location
     .split('-')
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))

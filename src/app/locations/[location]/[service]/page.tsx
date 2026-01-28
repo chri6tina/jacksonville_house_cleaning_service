@@ -20,7 +20,14 @@ export function generateMetadata({
 }: {
   params: { location: string; service: string };
 }): Metadata {
-  return buildMetadata(generateLocationServiceMetadata(params.location, params.service));
+  const location = getLocationBySlug(params.location);
+  const service = getServiceBySlug(params.service);
+
+  if (!location || !service) {
+    return buildMetadata(generateLocationServiceMetadata());
+  }
+
+  return buildMetadata(generateLocationServiceMetadata(location.slug, service.slug));
 }
 
 export default function LocationServiceRoute({
