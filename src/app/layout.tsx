@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     canonical: "https://www.jacksonvillehousecleaningservice.com",
   },
   verification: {
-    google: "your-google-verification-code", // Replace with actual verification code
+    google: "YSK-awvb6pUtBiHkcl4Ay8IRFtYnx647RIq3KlXikxE",
   },
 };
 

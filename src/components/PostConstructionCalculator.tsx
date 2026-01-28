@@ -8,6 +8,7 @@ interface CalculatorForm {
   squareFootage: number;
   constructionPhase: string;
   debrisAmount: string;
+  basicTasks: string[];
   specialRequirements: string[];
   timeline: string;
   contactInfo: {
@@ -48,6 +49,7 @@ export default function PostConstructionCalculator() {
     squareFootage: 1000,
     constructionPhase: 'post-construction',
     debrisAmount: 'medium',
+    basicTasks: [],
     specialRequirements: [],
     timeline: 'standard',
     contactInfo: {
@@ -126,6 +128,15 @@ export default function PostConstructionCalculator() {
     { id: 'eco-friendly', label: 'Eco-Friendly Products', description: 'Green cleaning solutions' }
   ];
 
+  const basicTasksOptions = [
+    { id: 'dusting', label: 'Dust all surfaces', description: 'Walls, baseboards, vents, fixtures' },
+    { id: 'floors', label: 'Floor cleaning', description: 'Vacuuming, mopping, and polish prep' },
+    { id: 'windows', label: 'Window cleaning', description: 'Glass, frames, and track detailing' },
+    { id: 'bathrooms', label: 'Bathrooms sanitized', description: 'Toilets, sinks, showers, mirrors' },
+    { id: 'kitchens', label: 'Kitchen cleanup', description: 'Cabinets, counters, appliances' },
+    { id: 'trash', label: 'Debris removal', description: 'Haul away light construction debris' },
+  ];
+
   const calculatePricing = () => {
     setIsCalculating(true);
     
@@ -175,6 +186,15 @@ export default function PostConstructionCalculator() {
     }));
   };
 
+  const handleBasicTaskToggle = (taskId: string) => {
+    setFormData(prev => ({
+      ...prev,
+      basicTasks: prev.basicTasks.includes(taskId)
+        ? prev.basicTasks.filter(id => id !== taskId)
+        : [...prev.basicTasks, taskId]
+    }));
+  };
+
   const handleInputChange = (field: string, value: any) => {
     if (field.includes('.')) {
       const [parent, child] = field.split('.');
@@ -213,6 +233,7 @@ export default function PostConstructionCalculator() {
       formDataToSend.append('squareFootage', formData.squareFootage.toString());
       formDataToSend.append('constructionPhase', formData.constructionPhase);
       formDataToSend.append('debrisAmount', formData.debrisAmount);
+      formDataToSend.append('basicTasks', formData.basicTasks.join(', '));
       formDataToSend.append('specialRequirements', formData.specialRequirements.join(', '));
       formDataToSend.append('timeline', formData.timeline);
       formDataToSend.append('name', formData.contactInfo.name);
@@ -252,6 +273,7 @@ export default function PostConstructionCalculator() {
             squareFootage: 1000,
             constructionPhase: 'post-construction',
             debrisAmount: 'medium',
+            basicTasks: [],
             specialRequirements: [],
             timeline: 'standard',
             contactInfo: {
@@ -340,38 +362,70 @@ export default function PostConstructionCalculator() {
             </div>
           </div>
 
-                     {/* Project Details */}
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
-             <div>
-               <label className="block text-sm font-medium text-gray-900 mb-2">
-                 Square Footage
-               </label>
-               <input
-                 type="number"
-                 value={formData.squareFootage}
-                 onChange={(e) => handleInputChange('squareFootage', parseInt(e.target.value) || 0)}
-                 className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                 placeholder="1000"
-                 min="100"
-                 max="50000"
-               />
-             </div>
-             
-             <div>
-               <label className="block text-sm font-medium text-gray-900 mb-2">
-                 Construction Phase
-               </label>
-               <select
-                 value={formData.constructionPhase}
-                 onChange={(e) => handleInputChange('constructionPhase', e.target.value)}
-                 className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-               >
-                 <option value="post-construction">Post-Construction</option>
-                 <option value="during-construction">During Construction</option>
-                 <option value="new-construction">New Construction</option>
-               </select>
-             </div>
-           </div>
+          {/* Project Details */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+            <div>
+              <label className="block text-sm font-medium text-gray-900 mb-2">
+                Square Footage
+              </label>
+              <input
+                type="number"
+                value={formData.squareFootage}
+                onChange={(e) => handleInputChange('squareFootage', parseInt(e.target.value) || 0)}
+                className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                placeholder="1000"
+                min="100"
+                max="50000"
+              />
+              <p className="text-xs text-gray-600 mt-2">Estimate total cleaned square footage.</p>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-900 mb-2">
+                Construction Phase
+              </label>
+              <select
+                value={formData.constructionPhase}
+                onChange={(e) => handleInputChange('constructionPhase', e.target.value)}
+                className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+              >
+                <option value="post-construction">Post-Construction</option>
+                <option value="during-construction">During Construction</option>
+                <option value="new-construction">New Construction</option>
+              </select>
+            </div>
+          </div>
+
+          {/* Basic Cleanup Tasks */}
+          <div className="mb-6 sm:mb-8">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Basic Cleanup Tasks</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
+              {basicTasksOptions.map(option => (
+                <div
+                  key={option.id}
+                  onClick={() => handleBasicTaskToggle(option.id)}
+                  className={`p-4 border-2 rounded-xl cursor-pointer transition-all ${
+                    formData.basicTasks.includes(option.id)
+                      ? 'border-primary-blue bg-primary-blue/10'
+                      : 'border-gray-200 hover:border-primary-blue/50'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      checked={formData.basicTasks.includes(option.id)}
+                      onChange={() => {}}
+                      className="w-4 h-4 text-primary-blue"
+                    />
+                    <div>
+                      <div className="font-semibold text-gray-900">{option.label}</div>
+                      <div className="text-sm text-gray-700">{option.description}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
                      {/* Debris Amount */}
            <div className="mb-6 sm:mb-8">
@@ -560,6 +614,18 @@ export default function PostConstructionCalculator() {
                 <div className="font-medium text-gray-900">{pricing.estimatedHours} hours</div>
               </div>
             </div>
+            {formData.basicTasks.length > 0 && (
+              <div className="mt-4">
+                <span className="text-sm text-gray-700">Basic Tasks Selected:</span>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {formData.basicTasks.map((task) => (
+                    <span key={task} className="bg-white border border-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
+                      {basicTasksOptions.find((option) => option.id === task)?.label || task}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
                      {/* Action Buttons */}

@@ -250,3 +250,26 @@ export function generateServiceMetadata(service: string): PageMetadata {
     canonical: `${SITE_CONFIG.url}/${service}`
   };
 }
+
+export function generateLocationServiceMetadata(location: string, service: string): PageMetadata {
+  const locationName = location
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+  const serviceName = service
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+
+  return {
+    title: `${serviceName} in ${locationName}`,
+    description: `Professional ${serviceName.toLowerCase()} in ${locationName}, Jacksonville. Local teams, reliable scheduling, and spotless results. Call ${SITE_CONFIG.phone} for a free quote.`,
+    keywords: [
+      `${serviceName} ${locationName}`,
+      `${locationName} cleaning service`,
+      `${serviceName} Jacksonville`,
+      'Jacksonville cleaning service'
+    ],
+    canonical: `${SITE_CONFIG.url}/locations/${location}/${service}`
+  };
+}

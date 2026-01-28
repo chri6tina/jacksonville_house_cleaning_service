@@ -148,6 +148,48 @@ export default function PostConstructionHero() {
                   </select>
                 </div>
 
+                <div>
+                  <label className="block text-sm font-bold mb-2">Square Footage</label>
+                  <input
+                    type="number"
+                    name="square_footage"
+                    min="100"
+                    max="50000"
+                    className="w-full px-3 md:px-4 py-2 md:py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-sm md:text-base"
+                    placeholder="e.g. 2500"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-bold mb-2">Basic Cleanup Tasks</label>
+                  <div className="grid grid-cols-1 gap-2 text-sm text-gray-700">
+                    <label className="flex items-center gap-2">
+                      <input type="checkbox" name="basic_tasks" value="Dust all surfaces" className="w-4 h-4" />
+                      Dust all surfaces
+                    </label>
+                    <label className="flex items-center gap-2">
+                      <input type="checkbox" name="basic_tasks" value="Floor cleaning" className="w-4 h-4" />
+                      Floor cleaning
+                    </label>
+                    <label className="flex items-center gap-2">
+                      <input type="checkbox" name="basic_tasks" value="Window cleaning" className="w-4 h-4" />
+                      Window cleaning
+                    </label>
+                    <label className="flex items-center gap-2">
+                      <input type="checkbox" name="basic_tasks" value="Bathrooms sanitized" className="w-4 h-4" />
+                      Bathrooms sanitized
+                    </label>
+                    <label className="flex items-center gap-2">
+                      <input type="checkbox" name="basic_tasks" value="Kitchen cleanup" className="w-4 h-4" />
+                      Kitchen cleanup
+                    </label>
+                    <label className="flex items-center gap-2">
+                      <input type="checkbox" name="basic_tasks" value="Debris removal" className="w-4 h-4" />
+                      Debris removal
+                    </label>
+                  </div>
+                </div>
+
                 {/* Hidden fields for Formspree */}
                 <input type="hidden" name="_subject" value="New Post-Construction Quote Request" />
                 <input type="hidden" name="_next" value={typeof window !== 'undefined' ? window.location.href : ''} />
