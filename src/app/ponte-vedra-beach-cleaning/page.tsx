@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'ponte-vedra-beach-c
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Ponte Vedra Beach Cleaning',
-  description: pageData?.description ?? 'Cleaning services for Ponte Vedra Beach.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/ponte-vedra-beach-cleaning`,
-  keywords: ['Ponte Vedra Beach cleaning', 'Ponte Vedra cleaning service', 'cleaning services Ponte Vedra Beach'],
+  keywords: ["Ponte Vedra Beach Cleaning cleaning","Ponte Vedra Beach Cleaning service","Jacksonville cleaning"],
 });
 
 export default function PonteVedraBeachCleaningPage() {

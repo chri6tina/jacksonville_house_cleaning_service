@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'riverside-cleaning-
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Riverside Cleaning Jacksonville',
-  description: pageData?.description ?? 'Cleaning services for Riverside Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/riverside-cleaning-jacksonville`,
-  keywords: ['Riverside Jacksonville cleaning', 'Riverside house cleaning', 'cleaning services Riverside'],
+  keywords: ["Riverside Cleaning Jacksonville cleaning","Riverside Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function RiversideCleaningJacksonvillePage() {

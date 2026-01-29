@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'jacksonville-beach-
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Jacksonville Beach Cleaning',
-  description: pageData?.description ?? 'Cleaning services for Jacksonville Beach.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/jacksonville-beach-cleaning`,
-  keywords: ['Jacksonville Beach cleaning', 'beach house cleaning', 'cleaning services Jacksonville Beach'],
+  keywords: ["Jacksonville Beach Cleaning cleaning","Jacksonville Beach Cleaning service","Jacksonville cleaning"],
 });
 
 export default function JacksonvilleBeachCleaningPage() {

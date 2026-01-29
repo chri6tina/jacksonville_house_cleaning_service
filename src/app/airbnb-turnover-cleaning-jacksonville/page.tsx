@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'airbnb-turnover-cle
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Airbnb Turnover Cleaning Jacksonville',
-  description: pageData?.description ?? 'Turnover cleaning service for Jacksonville short-term rentals.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/airbnb-turnover-cleaning-jacksonville`,
-  keywords: ['airbnb cleaning Jacksonville', 'turnover cleaning', 'short-term rental cleaning'],
+  keywords: ["Airbnb Turnover Cleaning Jacksonville cleaning","Airbnb Turnover Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function AirbnbTurnoverCleaningJacksonvillePage() {

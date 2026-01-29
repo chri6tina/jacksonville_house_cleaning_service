@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'orange-park-cleanin
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Orange Park Cleaning',
-  description: pageData?.description ?? 'Cleaning services for Orange Park.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/orange-park-cleaning`,
-  keywords: ['Orange Park cleaning', 'Orange Park house cleaning', 'cleaning services Orange Park'],
+  keywords: ["Orange Park Cleaning cleaning","Orange Park Cleaning service","Jacksonville cleaning"],
 });
 
 export default function OrangeParkCleaningPage() {

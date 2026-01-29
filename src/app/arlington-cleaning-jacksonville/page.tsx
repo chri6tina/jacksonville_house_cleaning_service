@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'arlington-cleaning-
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Arlington Cleaning Jacksonville',
-  description: pageData?.description ?? 'Cleaning services for Arlington Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/arlington-cleaning-jacksonville`,
-  keywords: ['Arlington Jacksonville cleaning', 'Arlington house cleaning', 'cleaning services Arlington'],
+  keywords: ["Arlington Cleaning Jacksonville cleaning","Arlington Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function ArlingtonCleaningJacksonvillePage() {

@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'commercial-cleaning
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Commercial Cleaning Jacksonville',
-  description: pageData?.description ?? 'Commercial cleaning services in Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/commercial-cleaning-jacksonville`,
-  keywords: ['commercial cleaning Jacksonville', 'business cleaning Jacksonville', 'commercial janitorial'],
+  keywords: ["Commercial Cleaning Jacksonville cleaning","Commercial Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function CommercialCleaningJacksonvillePage() {

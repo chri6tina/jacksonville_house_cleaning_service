@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'pressure-washing-ja
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Pressure Washing Jacksonville',
-  description: pageData?.description ?? 'Pressure washing services in Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/pressure-washing-jacksonville`,
-  keywords: ['pressure washing Jacksonville', 'exterior cleaning Jacksonville', 'driveway cleaning Jacksonville'],
+  keywords: ["Pressure Washing Jacksonville cleaning","Pressure Washing Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function PressureWashingJacksonvillePage() {

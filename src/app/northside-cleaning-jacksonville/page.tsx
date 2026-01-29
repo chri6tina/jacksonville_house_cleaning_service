@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'northside-cleaning-
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Northside Cleaning Jacksonville',
-  description: pageData?.description ?? 'Cleaning services for Northside Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/northside-cleaning-jacksonville`,
-  keywords: ['Northside Jacksonville cleaning', 'Northside house cleaning', 'cleaning services Northside'],
+  keywords: ["Northside Cleaning Jacksonville cleaning","Northside Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function NorthsideCleaningJacksonvillePage() {

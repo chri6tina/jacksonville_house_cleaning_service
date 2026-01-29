@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'medical-office-clea
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Medical Office Cleaning Jacksonville',
-  description: pageData?.description ?? 'Medical office cleaning service in Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/medical-office-cleaning-jacksonville`,
-  keywords: ['medical office cleaning Jacksonville', 'clinic cleaning', 'healthcare cleaning'],
+  keywords: ["Medical Office Cleaning Jacksonville cleaning","Medical Office Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function MedicalOfficeCleaningJacksonvillePage() {

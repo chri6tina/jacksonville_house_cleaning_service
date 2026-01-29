@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'westside-cleaning-j
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Westside Cleaning Jacksonville',
-  description: pageData?.description ?? 'Cleaning services for Westside Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/westside-cleaning-jacksonville`,
-  keywords: ['Westside Jacksonville cleaning', 'Westside house cleaning', 'cleaning services Westside'],
+  keywords: ["Westside Cleaning Jacksonville cleaning","Westside Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function WestsideCleaningJacksonvillePage() {

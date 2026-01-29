@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'jacksonville-cleani
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Jacksonville Cleaning Checklist',
-  description: pageData?.description ?? 'Jacksonville cleaning checklist and prep tips.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/jacksonville-cleaning-checklist`,
-  keywords: ['Jacksonville cleaning checklist', 'cleaning checklist', 'home cleaning tips Jacksonville'],
+  keywords: ["Jacksonville Cleaning Checklist cleaning","Jacksonville Cleaning Checklist service","Jacksonville cleaning"],
 });
 
 export default function JacksonvilleCleaningChecklistPage() {

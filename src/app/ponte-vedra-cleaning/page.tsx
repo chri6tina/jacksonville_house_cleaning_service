@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'ponte-vedra-cleanin
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Ponte Vedra Cleaning',
-  description: pageData?.description ?? 'Cleaning services for Ponte Vedra.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/ponte-vedra-cleaning`,
-  keywords: ['Ponte Vedra cleaning', 'Ponte Vedra house cleaning', 'cleaning services Ponte Vedra'],
+  keywords: ["Ponte Vedra Cleaning cleaning","Ponte Vedra Cleaning service","Jacksonville cleaning"],
 });
 
 export default function PonteVedraCleaningPage() {

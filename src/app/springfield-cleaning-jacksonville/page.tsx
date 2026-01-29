@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'springfield-cleanin
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Springfield Cleaning Jacksonville',
-  description: pageData?.description ?? 'Cleaning services for Springfield Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/springfield-cleaning-jacksonville`,
-  keywords: ['Springfield Jacksonville cleaning', 'Springfield house cleaning', 'cleaning services Springfield'],
+  keywords: ["Springfield Cleaning Jacksonville cleaning","Springfield Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function SpringfieldCleaningJacksonvillePage() {

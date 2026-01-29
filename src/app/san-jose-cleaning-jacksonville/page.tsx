@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'san-jose-cleaning-j
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'San Jose Cleaning Jacksonville',
-  description: pageData?.description ?? 'Cleaning services for San Jose Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/san-jose-cleaning-jacksonville`,
-  keywords: ['San Jose Jacksonville cleaning', 'San Jose house cleaning', 'cleaning services San Jose'],
+  keywords: ["San Jose Cleaning Jacksonville cleaning","San Jose Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function SanJoseCleaningJacksonvillePage() {

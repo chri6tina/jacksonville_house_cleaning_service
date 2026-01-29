@@ -6,10 +6,10 @@ import { SITE_CONFIG, generateMetadata as buildMetadata } from '@/lib/metadata';
 const pageData = localSeoPages.find((page) => page.slug === 'jacksonville-cleaning-32221');
 
 export const metadata: Metadata = buildMetadata({
-  title: pageData?.title ?? 'Jacksonville 32221 House Cleaning',
-  description: pageData?.description ?? 'House cleaning services for Jacksonville 32221.',
+  title: pageData?.title ?? 'Jacksonville Cleaning 32221',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/jacksonville-cleaning-32221`,
-  keywords: ['Jacksonville 32221 cleaning', '32221 house cleaning', 'cleaning services 32221'],
+  keywords: ["Jacksonville Cleaning 32221 cleaning","Jacksonville Cleaning 32221 service","Jacksonville cleaning"],
 });
 
 export default function JacksonvilleCleaning32221Page() {

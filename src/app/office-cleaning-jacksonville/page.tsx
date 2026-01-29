@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'office-cleaning-jac
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Office Cleaning Jacksonville',
-  description: pageData?.description ?? 'Office cleaning services in Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/office-cleaning-jacksonville`,
-  keywords: ['office cleaning Jacksonville', 'office cleaning service', 'commercial office cleaning'],
+  keywords: ["Office Cleaning Jacksonville cleaning","Office Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function OfficeCleaningJacksonvillePage() {

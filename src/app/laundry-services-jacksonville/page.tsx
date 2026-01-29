@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'laundry-services-ja
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Laundry Services Jacksonville',
-  description: pageData?.description ?? 'Laundry services in Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/laundry-services-jacksonville`,
-  keywords: ['laundry services Jacksonville', 'wash and fold Jacksonville', 'linen service Jacksonville'],
+  keywords: ["Laundry Services Jacksonville cleaning","Laundry Services Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function LaundryServicesJacksonvillePage() {

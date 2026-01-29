@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'fleming-island-clea
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Fleming Island Cleaning',
-  description: pageData?.description ?? 'Cleaning services for Fleming Island.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/fleming-island-cleaning`,
-  keywords: ['Fleming Island cleaning', 'Fleming Island house cleaning', 'cleaning services Fleming Island'],
+  keywords: ["Fleming Island Cleaning cleaning","Fleming Island Cleaning service","Jacksonville cleaning"],
 });
 
 export default function FlemingIslandCleaningPage() {

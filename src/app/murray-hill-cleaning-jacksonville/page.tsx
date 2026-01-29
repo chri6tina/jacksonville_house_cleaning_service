@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'murray-hill-cleanin
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Murray Hill Cleaning Jacksonville',
-  description: pageData?.description ?? 'Cleaning services for Murray Hill Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/murray-hill-cleaning-jacksonville`,
-  keywords: ['Murray Hill Jacksonville cleaning', 'Murray Hill house cleaning', 'cleaning services Murray Hill'],
+  keywords: ["Murray Hill Cleaning Jacksonville cleaning","Murray Hill Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function MurrayHillCleaningJacksonvillePage() {

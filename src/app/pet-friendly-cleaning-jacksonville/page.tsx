@@ -6,10 +6,10 @@ import { SITE_CONFIG, generateMetadata as buildMetadata } from '@/lib/metadata';
 const pageData = localSeoPages.find((page) => page.slug === 'pet-friendly-cleaning-jacksonville');
 
 export const metadata: Metadata = buildMetadata({
-  title: pageData?.title ?? 'Pet-Friendly Cleaning Jacksonville',
-  description: pageData?.description ?? 'Pet-friendly cleaning services in Jacksonville.',
+  title: pageData?.title ?? 'Pet Friendly Cleaning Jacksonville',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/pet-friendly-cleaning-jacksonville`,
-  keywords: ['pet-friendly cleaning Jacksonville', 'safe cleaning for pets', 'pet-safe cleaning'],
+  keywords: ["Pet Friendly Cleaning Jacksonville cleaning","Pet Friendly Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function PetFriendlyCleaningJacksonvillePage() {

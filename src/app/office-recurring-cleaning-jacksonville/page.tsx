@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'office-recurring-cl
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Office Recurring Cleaning Jacksonville',
-  description: pageData?.description ?? 'Recurring office cleaning service in Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/office-recurring-cleaning-jacksonville`,
-  keywords: ['office cleaning Jacksonville', 'recurring office cleaning', 'commercial cleaning Jacksonville'],
+  keywords: ["Office Recurring Cleaning Jacksonville cleaning","Office Recurring Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function OfficeRecurringCleaningJacksonvillePage() {

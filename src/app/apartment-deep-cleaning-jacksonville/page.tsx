@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'apartment-deep-clea
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Apartment Deep Cleaning Jacksonville',
-  description: pageData?.description ?? 'Apartment deep cleaning service in Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/apartment-deep-cleaning-jacksonville`,
-  keywords: ['apartment deep cleaning Jacksonville', 'apartment cleaning Jacksonville', 'deep cleaning apartments'],
+  keywords: ["Apartment Deep Cleaning Jacksonville cleaning","Apartment Deep Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function ApartmentDeepCleaningJacksonvillePage() {

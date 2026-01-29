@@ -6,10 +6,10 @@ import { SITE_CONFIG, generateMetadata as buildMetadata } from '@/lib/metadata';
 const pageData = localSeoPages.find((page) => page.slug === 'post-construction-cleaning-cost-jacksonville');
 
 export const metadata: Metadata = buildMetadata({
-  title: pageData?.title ?? 'Post-Construction Cleaning Cost Jacksonville',
-  description: pageData?.description ?? 'Post-construction cleaning cost guide for Jacksonville.',
+  title: pageData?.title ?? 'Post Construction Cleaning Cost Jacksonville',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/post-construction-cleaning-cost-jacksonville`,
-  keywords: ['post-construction cleaning cost Jacksonville', 'construction cleanup pricing', 'Jacksonville cleanup estimate'],
+  keywords: ["Post Construction Cleaning Cost Jacksonville cleaning","Post Construction Cleaning Cost Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function PostConstructionCleaningCostJacksonvillePage() {

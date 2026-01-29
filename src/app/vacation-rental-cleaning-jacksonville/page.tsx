@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'vacation-rental-cle
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Vacation Rental Cleaning Jacksonville',
-  description: pageData?.description ?? 'Vacation rental cleaning services in Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/vacation-rental-cleaning-jacksonville`,
-  keywords: ['vacation rental cleaning Jacksonville', 'short-term rental cleaning', 'rental turnover cleaning'],
+  keywords: ["Vacation Rental Cleaning Jacksonville cleaning","Vacation Rental Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function VacationRentalCleaningJacksonvillePage() {

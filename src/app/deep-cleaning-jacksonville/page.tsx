@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'deep-cleaning-jacks
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Deep Cleaning Jacksonville',
-  description: pageData?.description ?? 'Deep cleaning services in Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/deep-cleaning-jacksonville`,
-  keywords: ['deep cleaning Jacksonville', 'deep clean service', 'home deep cleaning Jacksonville'],
+  keywords: ["Deep Cleaning Jacksonville cleaning","Deep Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function DeepCleaningJacksonvillePage() {

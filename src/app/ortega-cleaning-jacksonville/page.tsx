@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'ortega-cleaning-jac
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Ortega Cleaning Jacksonville',
-  description: pageData?.description ?? 'Cleaning services for Ortega Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/ortega-cleaning-jacksonville`,
-  keywords: ['Ortega Jacksonville cleaning', 'Ortega house cleaning', 'cleaning services Ortega'],
+  keywords: ["Ortega Cleaning Jacksonville cleaning","Ortega Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function OrtegaCleaningJacksonvillePage() {

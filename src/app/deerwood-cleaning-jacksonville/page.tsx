@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'deerwood-cleaning-j
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Deerwood Cleaning Jacksonville',
-  description: pageData?.description ?? 'Cleaning services for Deerwood Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/deerwood-cleaning-jacksonville`,
-  keywords: ['Deerwood Jacksonville cleaning', 'Deerwood house cleaning', 'cleaning services Deerwood'],
+  keywords: ["Deerwood Cleaning Jacksonville cleaning","Deerwood Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function DeerwoodCleaningJacksonvillePage() {

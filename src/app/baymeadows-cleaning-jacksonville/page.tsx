@@ -7,9 +7,9 @@ const pageData = localSeoPages.find((page) => page.slug === 'baymeadows-cleaning
 
 export const metadata: Metadata = buildMetadata({
   title: pageData?.title ?? 'Baymeadows Cleaning Jacksonville',
-  description: pageData?.description ?? 'Cleaning services for Baymeadows Jacksonville.',
+  description: pageData?.description ?? 'Jacksonville cleaning service information.',
   canonical: `${SITE_CONFIG.url}/baymeadows-cleaning-jacksonville`,
-  keywords: ['Baymeadows Jacksonville cleaning', 'Baymeadows house cleaning', 'cleaning services Baymeadows'],
+  keywords: ["Baymeadows Cleaning Jacksonville cleaning","Baymeadows Cleaning Jacksonville service","Jacksonville cleaning"],
 });
 
 export default function BaymeadowsCleaningJacksonvillePage() {
