@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, Building2, Sparkles, Star, MapPin, CheckCircle, ArrowRight, Shield, Users, Leaf, Clock } from 'lucide-react';
+import { localSeoPages } from '@/data/localSeoPages';
 
 export const metadata: Metadata = {
   title: 'Professional Cleaning Services in Jacksonville | House Cleaning Services',
@@ -51,6 +52,11 @@ const additionalServices = [
   { name: 'Pressure Washing', href: '/pressure-washing' },
   { name: 'Air Duct Cleaning', href: '/air-duct-cleaning' }
 ];
+
+const localSeoLinks = localSeoPages.map((page) => ({
+  name: page.title,
+  href: `/${page.slug}`,
+}));
 
 export default function ServicesPage() {
   return (
@@ -149,6 +155,31 @@ export default function ServicesPage() {
                 <span className="text-gray-700 group-hover:text-blue-600 font-medium">
                   {service.name}
                 </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Jacksonville Cleaning Guides */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Jacksonville Cleaning Guides
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Local resources and service guides to help you choose the right cleaning solution in Jacksonville.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {localSeoLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="bg-white border border-gray-200 rounded-lg p-4 text-gray-800 hover:border-blue-200 hover:text-blue-600 transition-colors"
+              >
+                {link.name}
               </Link>
             ))}
           </div>

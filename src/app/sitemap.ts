@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { pickupCategories } from './free-pickup/categories';
 import { locations, services } from '@/lib/locationServiceData';
 import { getPostConstructionServices } from '@/lib/contentful';
+import { localSeoPages } from '@/data/localSeoPages';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.jacksonvillehousecleaningservice.com';
@@ -526,6 +527,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
+  const localSeoLandingPages = localSeoPages.map((page) => ({
+    url: `${baseUrl}/${page.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   return [
     ...corePages,
     ...servicePages,
@@ -536,5 +544,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...freePickupPages,
     ...locationServicePages,
     ...postConstructionServicePages,
+    ...localSeoLandingPages,
   ];
 }
