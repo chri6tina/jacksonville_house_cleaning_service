@@ -1,9 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Send, ArrowRight } from 'lucide-react';
+import { Send, ArrowRight, ShieldCheck } from 'lucide-react';
 
-const QuickQuoteForm: React.FC = () => {
+interface QuickQuoteFormProps {
+  initialService?: string;
+}
+
+const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ initialService = '' }) => {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -18,17 +22,17 @@ const QuickQuoteForm: React.FC = () => {
 
   if (status === 'success') {
     return (
-      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20 text-center text-white h-full flex flex-col justify-center min-h-[350px]">
-        <div className="w-16 h-16 bg-accent-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
-          <Send className="w-8 h-8 text-accent-green" />
+      <div className="bg-white rounded-2xl p-8 sm:p-10 border border-gray-100 text-center flex flex-col justify-center min-h-[440px] shadow-xl animate-fade-in">
+        <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6">
+          <Send className="w-8 h-8 text-green-600 translate-x-1 -translate-y-1" />
         </div>
-        <h3 className="text-2xl font-bold mb-2">Quote Requested!</h3>
-        <p className="text-white/90">
-          Thank you. One of our local Jacksonville team members will contact you shortly with your estimate.
+        <h3 className="text-3xl font-bold mb-3 text-gray-900 tracking-tight">Quote Requested!</h3>
+        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+          Thank you! One of our local Jacksonville team members will reach out shortly to finalize your estimate.
         </p>
         <button 
           onClick={() => setStatus('idle')}
-          className="mt-6 underline text-white/70 hover:text-white text-sm transition-colors"
+          className="text-primary-blue font-semibold hover:text-blue-800 transition-colors hover:underline underline-offset-4"
         >
           Submit another request
         </button>
@@ -37,78 +41,108 @@ const QuickQuoteForm: React.FC = () => {
   }
 
   return (
-    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl relative w-full overflow-hidden">
-      {/* Glossy gradient overlay */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-accent-coral/20 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-blue/20 rounded-full blur-3xl -ml-32 -mb-32 pointer-events-none" />
+    <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-2xl border border-gray-100 flex flex-col justify-center min-h-[440px]">
       
-      <div className="relative z-10">
-        <div className="text-center mb-6">
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 drop-shadow-sm">
-            Get a Quick Quote
-          </h3>
-          <p className="text-white/90 text-sm">
-            Takes 30 seconds. No obligation.
-          </p>
+      <div className="mb-8">
+        <div className="inline-flex items-center gap-2 mb-3">
+          <ShieldCheck className="w-5 h-5 text-primary-blue" />
+          <span className="text-sm font-bold text-primary-blue uppercase tracking-wider">Trusted Local Service</span>
+        </div>
+        <h3 className="text-3xl font-extrabold text-gray-900 mb-2 tracking-tight">
+          Get a Free Quote
+        </h3>
+        <p className="text-gray-600">
+          Fast, easy, and no obligation.
+        </p>
+      </div>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label htmlFor="quick-name" className="text-sm font-semibold text-gray-700 mb-1 block">Full Name</label>
+          <input 
+            type="text" 
+            id="quick-name"
+            name="name" 
+            required
+            placeholder="Full Name" 
+            className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue outline-none transition-all placeholder:text-gray-400 font-medium text-gray-900"
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="quick-contact" className="text-sm font-semibold text-gray-700 mb-1 block">Phone or Email</label>
+          <input 
+            type="text" 
+            id="quick-contact"
+            name="contact" 
+            required
+            placeholder="(904) 555-0123" 
+            className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue outline-none transition-all placeholder:text-gray-400 font-medium text-gray-900"
+          />
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label htmlFor="quick-name" className="sr-only">Your Name</label>
-            <input 
-              type="text" 
-              id="quick-name"
-              name="name" 
+        {/* New Square Footage Dropdown */}
+        <div>
+          <label htmlFor="quick-sqft" className="text-sm font-semibold text-gray-700 mb-1 block">Estimated Square Footage</label>
+          <div className="relative">
+            <select 
+              id="quick-sqft"
+              name="sqft" 
               required
-              placeholder="Your Name" 
-              className="w-full px-4 py-3 sm:py-4 rounded-xl bg-white text-gray-900 border-0 focus:ring-2 focus:ring-accent-coral shadow-inner outline-none transition-all placeholder:text-gray-400 font-medium"
-            />
+              className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue outline-none transition-all font-medium appearance-none cursor-pointer text-gray-900"
+              defaultValue=""
+            >
+              <option value="" disabled className="text-gray-500">Select Approximate Size</option>
+              <option value="under-1000">Under 1,000 sq ft</option>
+              <option value="1000-2000">1,000 - 2,000 sq ft</option>
+              <option value="2000-3000">2,000 - 3,000 sq ft</option>
+              <option value="3000-4000">3,000 - 4,000 sq ft</option>
+              <option value="over-4000">Over 4,000 sq ft</option>
+            </select>
+            <div className="pointer-events-none absolute right-4 top-0 bottom-0 flex items-center text-gray-500">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </div>
           </div>
-          
-          <div>
-            <label htmlFor="quick-contact" className="sr-only">Phone Number or Email</label>
-            <input 
-              type="text" 
-              id="quick-contact"
-              name="contact" 
-              required
-              placeholder="Phone Number or Email" 
-              className="w-full px-4 py-3 sm:py-4 rounded-xl bg-white text-gray-900 border-0 focus:ring-2 focus:ring-accent-coral shadow-inner outline-none transition-all placeholder:text-gray-400 font-medium"
-            />
-          </div>
+        </div>
 
-          <div>
-            <label htmlFor="quick-service" className="sr-only">Service Needed</label>
+        <div>
+          <label htmlFor="quick-service" className="text-sm font-semibold text-gray-700 mb-1 block">Service Needed</label>
+          <div className="relative">
             <select 
               id="quick-service"
               name="service" 
               required
-              className="w-full px-4 py-3 sm:py-4 rounded-xl bg-white text-gray-900 border-0 focus:ring-2 focus:ring-accent-coral shadow-inner outline-none transition-all font-medium appearance-none cursor-pointer text-base"
-              defaultValue=""
+              className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue outline-none transition-all font-medium appearance-none cursor-pointer text-gray-900"
+              defaultValue={initialService}
             >
-              <option value="" disabled>Select a Service</option>
-              <option value="recurring">Recurring Cleaning</option>
-              <option value="deep">Deep Cleaning</option>
+              <option value="" disabled className="text-gray-500">Select a Service Type</option>
+              <option value="recurring">Regular Recurring Cleaning</option>
+              <option value="deep">One-Time Deep Clean</option>
               <option value="move">Move-In / Move-Out</option>
               <option value="post-construction">Post-Construction</option>
+              {/* If a custom service is passed from a unique service page, render it dynamically */}
+              {initialService && initialService !== 'recurring' && initialService !== 'deep' && initialService !== 'move' && initialService !== 'post-construction' && (
+                <option value={initialService}>{initialService.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</option>
+              )}
               <option value="other">Other / Not Sure</option>
             </select>
-            {/* Custom downward arrow for select */}
-            <div className="pointer-events-none absolute right-4 top-[148px] sm:top-[160px] bottom-0 flex items-center px-2 text-gray-500">
-              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            <div className="pointer-events-none absolute right-4 top-0 bottom-0 flex items-center text-gray-500">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
             </div>
           </div>
+        </div>
 
-          <button 
-            type="submit" 
-            disabled={status === 'submitting'}
-            className="w-full bg-accent-coral hover:bg-accent-coral/90 text-white font-bold py-3 sm:py-4 rounded-xl shadow-[0_4px_14px_0_rgba(255,107,107,0.39)] hover:shadow-[0_6px_20px_rgba(255,107,107,0.23)] transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed text-base sm:text-lg mt-2"
-          >
-            {status === 'submitting' ? 'Sending...' : 'Request Quote'}
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </form>
-      </div>
+        <button 
+          type="submit" 
+          disabled={status === 'submitting'}
+          className="w-full flex items-center justify-center gap-2 bg-primary-blue hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-200 disabled:opacity-70 disabled:cursor-not-allowed mt-4 shadow-sm"
+        >
+          <span className="text-lg">
+            {status === 'submitting' ? 'Sending...' : 'Request My Estimate'}
+          </span>
+          <ArrowRight className="w-5 h-5" />
+        </button>
+      </form>
     </div>
   );
 };
