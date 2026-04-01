@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PerformanceMonitor from "@/components/PerformanceMonitor";
+import VisitorTracker from "@/components/VisitorTracker";
 import { SITE_CONFIG } from "@/lib/metadata";
 
 const geistSans = Geist({
@@ -131,6 +132,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <VisitorTracker />
         <PerformanceMonitor pageName="Root Layout" enableLogging={false} />
         <Navbar />
         <main>{children}</main>

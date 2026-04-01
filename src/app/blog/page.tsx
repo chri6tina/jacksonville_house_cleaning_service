@@ -1,219 +1,162 @@
 import Link from 'next/link';
-import { 
-  Calendar, 
-  Clock, 
-  User, 
-  ArrowLeft, 
-  ArrowRight,
-  Lightbulb,
-  Leaf,
-  Home,
-  Truck
-} from 'lucide-react';
-import ArticleSchema from '@/components/ArticleSchema';
+import { Calendar, User, ArrowRight, Sparkles, BookOpen } from 'lucide-react';
+import { supabase } from '@/lib/supabase';
 
-export default function BlogPage() {
-  const blogPosts = [
-    {
-      title: "How to Choose the Right Cleaning Service for Your Home",
-      description: "Essential factors to consider when selecting a professional cleaning service",
-      href: "/blog/how-to-choose-the-right-cleaning-service",
-      readTime: "5 min read",
-      date: "January 15, 2024",
-      category: "Cleaning Guides",
-      icon: Lightbulb
-    },
-    {
-      title: "The Benefits of Eco-Friendly Cleaning Products",
-      description: "Why making the switch to green cleaning is better for your family and the environment",
-      href: "/blog/eco-friendly-cleaning-products",
-      readTime: "4 min read",
-      date: "January 10, 2024",
-      category: "Eco-Friendly",
-      icon: Leaf
-    },
-    {
-      title: "Complete Spring Cleaning Checklist for Jacksonville Homes",
-      description: "Comprehensive spring cleaning guide tailored to our local climate",
-      href: "/blog/spring-cleaning-checklist",
-      readTime: "7 min read",
-      date: "January 5, 2024",
-      category: "Seasonal Tips",
-      icon: Home
-    },
-    {
-      title: "Essential Move-In Cleaning Checklist for New Homeowners",
-      description: "Complete guide to preparing your new home for move-in",
-      href: "/blog/move-in-cleaning-essentials",
-      readTime: "6 min read",
-      date: "December 28, 2023",
-      category: "Move-In/Out",
-      icon: Truck
-    },
-    {
-      title: "Daily Habits to Maintain a Clean Home Between Professional Cleanings",
-      description: "Simple routines to keep your home looking great between visits",
-      href: "/blog/maintaining-clean-home",
-      readTime: "4 min read",
-      date: "December 20, 2023",
-      category: "Maintenance",
-      icon: Lightbulb
-    }
-  ];
+// Revalidate every hour, or force dynamic depending on preference.
+// Since blogs are added automatically, forcing dynamic ensures instant cache-busting.
+export const dynamic = 'force-dynamic';
 
-  const categories = [
-    { name: "All Posts", count: blogPosts.length, active: true },
-    { name: "Cleaning Guides", count: 2, active: false },
-    { name: "Eco-Friendly", count: 1, active: false },
-    { name: "Seasonal Tips", count: 1, active: false },
-    { name: "Move-In/Out", count: 1, active: false },
-    { name: "Maintenance", count: 1, active: false }
-  ];
+export default async function BlogIndex() {
+  // Query Supabase for all blogs, ordered by newest first
+  const { data: blogs, error } = await supabase
+    .from('blogs')
+    .select('*')
+    .order('date', { ascending: false });
+
+  if (error) {
+    console.error('Failed to load blogs from Supabase:', error);
+  }
+
+  const posts = blogs || [];
+  const featuredPost = posts.length > 0 ? posts[0] : null;
+  const standardPosts = posts.length > 1 ? posts.slice(1) : [];
 
   return (
-    <>
-      {/* Article Schema for Blog Listing Page */}
-      <ArticleSchema
-        title="Cleaning Tips & Expert Advice - Jacksonville House Cleaning Service"
-        description="Discover professional cleaning insights, seasonal tips, and expert advice to keep your Jacksonville home clean, healthy, and beautiful year-round."
-        author="Jacksonville House Cleaning Service"
-        publishDate="2024-01-15"
-        articleBody="Our blog features comprehensive cleaning guides, eco-friendly tips, seasonal cleaning checklists, and expert advice for maintaining a clean and healthy home in Jacksonville. From choosing the right cleaning service to daily maintenance habits, we provide valuable insights for homeowners."
-        keywords={['cleaning tips', 'Jacksonville cleaning', 'house cleaning advice', 'cleaning guides', 'eco-friendly cleaning', 'spring cleaning', 'move-in cleaning']}
-        category="Cleaning Tips & Advice"
-        readingTime="10 min read"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section - Local Business Style */}
-        <div 
-          className="relative py-20 overflow-hidden"
-          style={{
-            backgroundImage: 'url(/hero1.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/70"></div>
+    <div className="min-h-screen bg-gray-50 pb-24">
+      {/* Ultra-Premium Glassmorphic Hero Section */}
+      <section className="relative w-full overflow-hidden bg-[#fafafa] pt-32 pb-40 lg:pt-40 lg:pb-52 flex flex-col items-center justify-center border-b border-gray-100">
         
-        {/* Content Container */}
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-6">
-              <Link href="/information" className="inline-flex items-center gap-2 text-blue-100 hover:text-white transition-colors">
-                <ArrowLeft className="w-4 h-4" />
-                Back to Information
-              </Link>
-              <span className="text-blue-100">|</span>
-              <span className="text-blue-100">Blog</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Cleaning Tips & Expert Advice
-            </h1>
-            <p className="text-xl text-white/95 max-w-3xl">
-              Discover professional cleaning insights, seasonal tips, and expert advice to keep your
-              Jacksonville home clean, healthy, and beautiful year-round.
-            </p>
-          </div>
-        </div>
-      </div>
+        {/* Animated Mesh Gradient Blobs */}
+        <div className="absolute top-0 left-1/4 w-[40rem] h-[40rem] bg-blue-400 rounded-full mix-blend-multiply filter blur-[128px] opacity-30 animate-[spin_30s_linear_infinite]"></div>
+        <div className="absolute -bottom-32 right-1/4 w-[30rem] h-[30rem] bg-cyan-300 rounded-full mix-blend-multiply filter blur-[96px] opacity-40 animate-[spin_20s_linear_infinite_reverse]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35rem] h-[35rem] bg-indigo-300 rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
 
-      {/* Categories Filter */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-wrap gap-4">
-            {categories.map((category, index) => (
-              <button
-                key={index}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  category.active
-                    ? 'bg-primary-blue text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {category.name} ({category.count})
-              </button>
-            ))}
-          </div>
+        {/* Diagonal Soft Grid Overlay */}
+        <div 
+          className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+          style={{ backgroundImage: 'linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
         </div>
-      </div>
 
-      {/* Blog Posts Grid */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
-              <article key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-4">
-                    <post.icon className="w-5 h-5 text-primary-blue" />
-                    <span className="text-sm text-gray-500">{post.category}</span>
-                  </div>
-                  
-                  <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h2>
-                  
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {post.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{post.date}</span>
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+          
+          {/* Glass Badge */}
+          <div className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-xl px-5 py-2.5 rounded-full border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] mb-10 transform hover:scale-105 transition-transform duration-300 cursor-default">
+            <Sparkles className="w-4 h-4 text-blue-500" />
+            <span className="text-xs font-bold tracking-[0.2em] text-blue-900 uppercase">Expert Insights & Advice</span>
+          </div>
+          
+          {/* Elegant Typography */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-8 tracking-tight leading-[1.1]">
+            Elevate Your <span className="relative whitespace-nowrap">
+              <span className="absolute -bottom-2 md:-bottom-4 left-0 w-full h-3 md:h-5 bg-cyan-200/60 -z-10 rounded-sm skew-x-12"></span>
+              Living Space
+            </span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed mb-6">
+            Master-class cleaning strategies, inside tips, and design ideas from Jacksonville's top-rated professionals.
+          </p>
+          
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-10">
+        {posts.length === 0 ? (
+          <div className="bg-white rounded-3xl shadow-xl p-16 text-center border border-gray-100">
+            <BookOpen className="w-16 h-16 text-gray-300 mx-auto mb-6" />
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Our blog is currently empty.</h2>
+            <p className="text-gray-500 text-lg">Check back soon for our first expert article!</p>
+          </div>
+        ) : (
+          <>
+            {/* Featured Post Card */}
+            {featuredPost && (
+              <div className="mb-16 group">
+                <Link href={`/blog/${featuredPost.slug}`} className="block">
+                  <div className="bg-white rounded-[2rem] shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 transform hover:-translate-y-2">
+                    <div className="flex flex-col lg:flex-row">
+                      {/* Gradient/Image Placeholder for Featured Post */}
+                      <div className="lg:w-1/2 relative min-h-[300px] lg:min-h-full bg-gradient-to-br from-blue-100 to-cyan-50 flex items-center justify-center overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent mix-blend-multiply"></div>
+                        <img 
+                          src="/blog_default_thumbnail.png" 
+                          alt="Featured Blog Header" 
+                          className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="relative z-10 bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-sm border border-white/50 m-8 text-center">
+                          <Sparkles className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                          <span className="uppercase tracking-widest text-sm font-bold text-blue-900">Featured Article</span>
+                        </div>
+                      </div>
+                      
+                      {/* Featured Content Area */}
+                      <div className="lg:w-1/2 p-10 lg:p-16 flex flex-col justify-center bg-white relative">
+                        <div className="flex items-center space-x-4 mb-6 text-sm font-medium text-gray-500">
+                          <span className="flex items-center"><Calendar className="w-4 h-4 mr-1.5" /> {new Date(featuredPost.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                          <span>•</span>
+                          <span className="flex items-center text-blue-600 bg-blue-50 px-3 py-1 rounded-full"><User className="w-4 h-4 mr-1.5" /> {featuredPost.author}</span>
+                        </div>
+                        <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-6 leading-tight group-hover:text-blue-600 transition-colors">
+                          {featuredPost.title}
+                        </h2>
+                        <p className="text-lg text-gray-600 mb-8 leading-relaxed line-clamp-3">
+                          {featuredPost.excerpt}
+                        </p>
+                        <div className="mt-auto">
+                          <span className="inline-flex items-center font-bold text-blue-600 text-lg group-hover:gap-3 transition-all">
+                            Read Full Article <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4" />
-                      <span>{post.readTime}</span>
-                    </div>
                   </div>
-                  
-                  <Link 
-                    href={post.href}
-                    className="inline-flex items-center gap-2 text-primary-blue font-medium hover:text-primary-blue/80 transition-colors"
-                  >
-                    Read Full Article
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
+                </Link>
+              </div>
+            )}
+
+            {/* Standard Posts Grid */}
+            {standardPosts.length > 0 && (
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                  More Recent Articles
+                  <div className="ml-4 h-px bg-gray-200 flex-grow"></div>
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {standardPosts.map((post: any) => (
+                    <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
+                      <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full overflow-hidden transform hover:-translate-y-1">
+                        <div className="h-48 bg-gray-100 relative overflow-hidden">
+                          <img 
+                            src="/blog_default_thumbnail.png" 
+                            alt={`${post.title} thumbnail`}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          />
+                        </div>
+                        <div className="p-8 flex flex-col flex-grow">
+                          <div className="flex flex-wrap items-center gap-3 mb-4 text-xs font-medium text-gray-500">
+                            <span className="bg-gray-100 px-3 py-1 rounded-full">{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                            <span className="text-blue-600 line-clamp-1">{post.author}</span>
+                          </div>
+                          <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2 leading-tight">
+                            {post.title}
+                          </h3>
+                          <p className="text-gray-600 mb-6 line-clamp-3 text-sm flex-grow">
+                            {post.excerpt}
+                          </p>
+                          <div className="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between text-blue-600 font-semibold text-sm">
+                            <span>Read Article</span>
+                            <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-blue-100 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Need Professional Cleaning Services?
-            </h2>
-            <p className="text-gray-700 text-lg mb-8">
-              While our blog provides great tips for maintenance, professional cleaning services 
-              ensure your home gets the deep cleaning it deserves.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-accent-coral hover:bg-accent-coral/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Get Free Quote
-              </Link>
-              <a 
-                href="tel:9044563851"
-                className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Call (904) 456-3851
-              </a>
-            </div>
-          </div>
-        </div>
+              </div>
+            )}
+          </>
+        )}
       </div>
     </div>
-    </>
   );
 }

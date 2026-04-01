@@ -1,0 +1,24 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/generate-blog",
+      "schedule": "0 10 * * 1,4" 
+    },
+    {
+      "path": "/api/cron/qa-sentinel",
+      "schedule": "0 8 * * *" 
+    },
+    {
+      "path": "/api/cron/strategist",
+      "schedule": "0 9 * * 5" 
+    },
+    {
+      "path": "/api/cron/overseer",
+      "schedule": "0 12 * * *" 
+    },
+    {
+      "path": "/api/cron/link-weaver",
+      "schedule": "0 14 * * 0"
+    }
+  ]
+}

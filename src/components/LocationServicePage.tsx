@@ -50,6 +50,34 @@ export default function LocationServicePage({ location, service }: LocationServi
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": `Jacksonville House Cleaning Service - ${location.name}`,
+            "description": `Professional ${service.name.toLowerCase()} in ${location.name}, Jacksonville FL.`,
+            "url": `https://www.jacksonvillehousecleaningservice.com/locations/${location.slug}/${service.slug}`,
+            "telephone": "+19044563851",
+            "areaServed": {
+              "@type": "City",
+              "name": location.name
+            },
+            "serviceArea": {
+              "@type": "City",
+              "name": location.name
+            },
+            "makesOffer": {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": service.name
+              }
+            }
+          })
+        }}
+      />
       <section className="relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
