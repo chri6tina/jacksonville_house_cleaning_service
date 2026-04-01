@@ -2,16 +2,16 @@ import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import { getServiceRoleClient } from '@/lib/supabase';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 export async function GET(request: Request) {
   // Simple auth to prevent unauthorized cron triggers
   const authHeader = request.headers.get('authorization');
   if (process.env.NODE_ENV !== 'development' && authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
     return new Response('Unauthorized', { status: 401 });
   }
+
+  const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY || 'dummy_key',
+  });
 
   try {
     // 1. Generate Blog Content using OpenAI
