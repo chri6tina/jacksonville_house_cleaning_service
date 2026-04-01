@@ -219,88 +219,63 @@ export default function PostConstructionCalculator() {
     setSubmissionStatus('idle');
     
     try {
-      const submissionData = {
-        ...formData,
-        pricing: {
-          totalPrice: pricing.totalPrice,
-          estimatedHours: pricing.estimatedHours
+      const payload = {
+        source: 'Post Construction Calculator',
+        name: formData.contactInfo.name,
+        phone: formData.contactInfo.phone,
+        email: formData.contactInfo.email,
+        squareFootage: formData.squareFootage.toString(),
+        message: formData.projectDetails.description,
+        estimatedPrice: `$${pricing.totalPrice}`,
+        rawDetails: {
+          projectType: formData.projectType,
+          constructionPhase: formData.constructionPhase,
+          debrisAmount: formData.debrisAmount,
+          timeline: formData.timeline,
+          basicTasks: formData.basicTasks.join(', '),
+          specialRequirements: formData.specialRequirements.join(', ')
         }
       };
-      
-      // Create FormData for Formspree
-      const formDataToSend = new FormData();
-      formDataToSend.append('projectType', formData.projectType);
-      formDataToSend.append('squareFootage', formData.squareFootage.toString());
-      formDataToSend.append('constructionPhase', formData.constructionPhase);
-      formDataToSend.append('debrisAmount', formData.debrisAmount);
-      formDataToSend.append('basicTasks', formData.basicTasks.join(', '));
-      formDataToSend.append('specialRequirements', formData.specialRequirements.join(', '));
-      formDataToSend.append('timeline', formData.timeline);
-      formDataToSend.append('name', formData.contactInfo.name);
-      formDataToSend.append('email', formData.contactInfo.email);
-      formDataToSend.append('phone', formData.contactInfo.phone);
-      formDataToSend.append('company', formData.contactInfo.company);
-      formDataToSend.append('address', formData.contactInfo.address);
-      formDataToSend.append('city', formData.contactInfo.city);
-      formDataToSend.append('zipCode', formData.contactInfo.zipCode);
-      formDataToSend.append('description', formData.projectDetails.description);
-      formDataToSend.append('startDate', formData.projectDetails.startDate);
-      formDataToSend.append('completionDate', formData.projectDetails.completionDate);
-      formDataToSend.append('totalPrice', pricing.totalPrice.toString());
-      formDataToSend.append('estimatedHours', pricing.estimatedHours.toString());
-      
-      // Add Formspree hidden fields
-      formDataToSend.append('_subject', 'New Post-Construction Calculator Quote Request');
-      formDataToSend.append('_next', typeof window !== 'undefined' ? window.location.href : '');
-      formDataToSend.append('_captcha', 'false');
-      
-      const response = await fetch('https://formspree.io/f/xrblngeo', {
+
+      const response = await fetch('/api/telegram', {
         method: 'POST',
-        body: formDataToSend,
-        headers: {
-          'Accept': 'application/json'
-        }
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       });
+
+      if (!response.ok) throw new Error('API Reject');
       
-      if (response.ok) {
-        const result = await response.json();
-        setSubmissionStatus('success');
-        
-        // Reset form after successful submission
-        setTimeout(() => {
-          setFormData({
-            projectType: 'residential',
-            squareFootage: 1000,
-            constructionPhase: 'post-construction',
-            debrisAmount: 'medium',
-            basicTasks: [],
-            specialRequirements: [],
-            timeline: 'standard',
-            contactInfo: {
-              name: '',
-              email: '',
-              phone: '',
-              company: '',
-              address: '',
-              city: '',
-              zipCode: ''
-            },
-            projectDetails: {
-              description: '',
-              startDate: '',
-              completionDate: ''
-            }
-          });
-          setShowResults(false);
-          setShowForm(false);
-          setSubmissionStatus('idle');
-        }, 3000);
-        
-      } else {
-        const error = await response.json();
-        console.error('Submission failed:', error);
-        setSubmissionStatus('error');
-      }
+      setSubmissionStatus('success');
+      
+      // Reset form after successful submission
+      setTimeout(() => {
+        setFormData({
+          projectType: 'residential',
+          squareFootage: 1000,
+          constructionPhase: 'post-construction',
+          debrisAmount: 'medium',
+          basicTasks: [],
+          specialRequirements: [],
+          timeline: 'standard',
+          contactInfo: {
+            name: '',
+            email: '',
+            phone: '',
+            company: '',
+            address: '',
+            city: '',
+            zipCode: ''
+          },
+          projectDetails: {
+            description: '',
+            startDate: '',
+            completionDate: ''
+          }
+        });
+        setShowResults(false);
+        setShowForm(false);
+        setSubmissionStatus('idle');
+      }, 3000);
       
     } catch (error) {
       console.error('Error submitting project:', error);

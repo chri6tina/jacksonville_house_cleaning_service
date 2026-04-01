@@ -20,6 +20,7 @@ function ContactForm() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [apiError, setApiError] = useState(false);
 
   // Handle URL query parameters to pre-fill form
   useEffect(() => {
@@ -68,32 +69,28 @@ function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setApiError(false);
     
     try {
-      // Create FormData for Formspree
-      const formDataToSend = new FormData();
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('phone', formData.phone);
-      formDataToSend.append('email', formData.email);
-      formDataToSend.append('address', formData.address);
-      formDataToSend.append('propertyType', formData.propertyType);
-      formDataToSend.append('services', formData.services.join(', '));
-      formDataToSend.append('date', formData.date);
-      formDataToSend.append('time', formData.time);
-      formDataToSend.append('specialRequests', formData.specialRequests);
-      
-      // Add Formspree hidden fields
-      formDataToSend.append('_subject', 'New Contact Form Submission - Jacksonville Cleaning Service');
-      formDataToSend.append('_next', typeof window !== 'undefined' ? window.location.href : '');
-      formDataToSend.append('_captcha', 'false');
-      
-      // Submit to Formspree
-      const response = await fetch('https://formspree.io/f/xrblngeo', {
-        method: 'POST',
-        body: formDataToSend,
-        headers: {
-          'Accept': 'application/json'
+      const payload = {
+        source: 'Main Contact Page',
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        message: formData.specialRequests,
+        rawDetails: {
+          address: formData.address,
+          propertyType: formData.propertyType,
+          services: formData.services.join(', '),
+          preferredDate: formData.date,
+          preferredTime: formData.time
         }
+      };
+      
+      const response = await fetch('/api/telegram', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       });
 
       if (response.ok) {
@@ -110,13 +107,47 @@ function ContactForm() {
           specialRequests: ''
         });
       } else {
-        throw new Error('Form submission failed');
+        throw new Error('API Reject');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('There was an error submitting your form. Please try again.');
+      setApiError(true);
     }
   };
+
+  if (apiError) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-6 sm:py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-white rounded-lg shadow-xl p-6 sm:p-8 text-center">
+            <div className="mx-auto h-12 w-12 sm:h-16 sm:w-16 bg-red-100 text-red-600 flex items-center justify-center rounded-full mb-4 sm:mb-6">
+              <span className="text-2xl font-bold">!</span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Oops! Connection Error
+            </h1>
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+              We're unable to process the form automatically right now. Please call us directly so we can get your quote started!
+            </p>
+            <a
+              href="tel:9044563851"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 text-base sm:text-lg inline-block mb-4 shadow-sm"
+            >
+              Call (904) 456-3851
+            </a>
+            <div className="block">
+              <button
+                onClick={() => setApiError(false)}
+                className="text-gray-500 hover:text-gray-800 transition-colors underline-offset-4 font-medium"
+              >
+                Try form again
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (isSubmitted) {
     return (

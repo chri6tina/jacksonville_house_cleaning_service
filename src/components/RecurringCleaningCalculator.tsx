@@ -145,80 +145,52 @@ const RecurringCleaningCalculator: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
     
     try {
-      const response = await fetch('https://formspree.io/f/mblaqejr', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          address: data.address,
-          homeSize: data.homeSize,
+      const payload = {
+        source: 'Recurring Cleaning Calculator',
+        name: data.name,
+        phone: data.phone,
+        email: data.email,
+        squareFootage: data.homeSize.replace('-', ' to ').replace('under', 'Under').replace('over', 'Over'),
+        estimatedPrice: `$${estimatedPrice} per visit`,
+        message: data.message,
+        rawDetails: {
           bedrooms: data.bedrooms,
           bathrooms: data.bathrooms,
           homeCondition: data.homeCondition,
           petHair: data.petHair,
           highTraffic: data.highTraffic,
           frequency: data.frequency,
-          additionalServices: data.additionalServices.join(', ') || 'None',
-          estimatedPrice: `$${estimatedPrice}`,
-          message: data.message || 'None',
-          serviceType: 'Recurring Cleaning Quote',
-          detailedMessage: `RECURRING CLEANING QUOTE REQUEST
-          
-CUSTOMER INFORMATION:
-- Name: ${data.name}
-- Email: ${data.email}
-- Phone: ${data.phone}
-- Address: ${data.address}
+          additionalServices: data.additionalServices.join(', ') || 'None'
+        }
+      };
 
-HOME DETAILS:
-- Square Footage: ${data.homeSize}
-- Bedrooms: ${data.bedrooms}
-- Bathrooms: ${data.bathrooms}
-- Home Condition: ${data.homeCondition}
-- Pet Hair Present: ${data.petHair ? 'Yes' : 'No'}
-- High Traffic Area: ${data.highTraffic ? 'Yes' : 'No'}
-
-SERVICE PREFERENCES:
-- Cleaning Frequency: ${data.frequency}
-- Additional Services: ${data.additionalServices.join(', ') || 'None'}
-
-QUOTE DETAILS:
-- Estimated Price: $${estimatedPrice} per visit
-- Frequency Discount Applied: ${data.frequency === 'weekly' ? '15%' : data.frequency === 'bi-weekly' ? '10%' : '5%'}
-
-CUSTOMER NOTES:
-${data.message || 'No additional notes provided'}
-
-This quote was generated automatically by the website calculator.`
-        }),
+      const response = await fetch('/api/telegram', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       });
 
-      if (response.ok) {
-        setSubmitStatus('success');
-        setData({
-          homeSize: '',
-          bedrooms: 1,
-          bathrooms: 1,
-          frequency: 'weekly',
-          additionalServices: [],
-          homeCondition: 'good',
-          petHair: false,
-          highTraffic: false,
-          name: '',
-          email: '',
-          phone: '',
-          address: '',
-          message: ''
-        });
-      } else {
-        setSubmitStatus('error');
-      }
+      if (!response.ok) throw new Error('API Reject');
+
+      setSubmitStatus('success');
+      setData({
+        homeSize: '',
+        bedrooms: 1,
+        bathrooms: 1,
+        frequency: 'weekly',
+        additionalServices: [],
+        homeCondition: 'good',
+        petHair: false,
+        highTraffic: false,
+        name: '',
+        email: '',
+        phone: '',
+        address: '',
+        message: ''
+      });
     } catch (error) {
       setSubmitStatus('error');
     } finally {

@@ -26,6 +26,7 @@ export default function DeepCleaningCalculator({ className = '' }: DeepCleaningC
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [apiError, setApiError] = useState(false);
   const [estimatedPrice, setEstimatedPrice] = useState<number | null>(null);
 
   const propertyTypes = [
@@ -150,73 +151,84 @@ export default function DeepCleaningCalculator({ className = '' }: DeepCleaningC
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setApiError(false);
 
-    const formDataToSend = new FormData();
-    
-    // Add all form data
-    Object.entries(formData).forEach(([key, value]) => {
-      if (key === 'additionalServices') {
-        formDataToSend.append(key, JSON.stringify(value));
-      } else {
-        formDataToSend.append(key, String(value));
-      }
-    });
-
-    // Calculate estimate for inclusion in form data
     const calculatedEstimate = calculateEstimateForSubmission();
-    console.log('Calculated estimate:', calculatedEstimate); // Debug log
     
-    // Add Formspree hidden fields
-    formDataToSend.append('_subject', 'New Deep Cleaning Calculator Quote Request');
-    formDataToSend.append('_next', typeof window !== 'undefined' ? window.location.href : '');
-    formDataToSend.append('_captcha', 'false');
-    
-    // Add calculated estimate to form data
-    if (calculatedEstimate && calculatedEstimate > 0) {
-      const priceRange = `$${calculatedEstimate - 50} - $${calculatedEstimate + 50}`;
-      console.log('Adding price to form:', priceRange); // Debug log
-      formDataToSend.append('estimated_price', priceRange);
-      formDataToSend.append('base_estimate', calculatedEstimate.toString());
-      formDataToSend.append('quote_amount', `$${calculatedEstimate}`);
-      formDataToSend.append('price_quote', `Estimated Price: ${priceRange}`);
-    } else {
-      console.log('No valid estimate calculated'); // Debug log
-      formDataToSend.append('quote_amount', 'Unable to calculate');
-      formDataToSend.append('price_quote', 'Price calculation failed');
-    }
+    const payload = {
+      source: 'Deep Cleaning Calculator',
+      name: formData.contactName,
+      phone: formData.contactPhone,
+      email: formData.contactEmail,
+      squareFootage: formData.squareFootage,
+      message: formData.message,
+      estimatedPrice: calculatedEstimate ? `$${calculatedEstimate - 50} - $${calculatedEstimate + 50}` : undefined,
+      rawDetails: {
+        bedrooms: formData.bedrooms,
+        bathrooms: formData.bathrooms,
+        propertyType: formData.propertyType,
+        timeline: formData.timeline,
+        frequency: formData.cleaningFrequency,
+        specialRequests: formData.specialRequests,
+        additionalServices: formData.additionalServices.join(', ')
+      }
+    };
     
     try {
-      const response = await fetch('https://formspree.io/f/mdklpjrq', {
+      const response = await fetch('/api/telegram', {
         method: 'POST',
-        body: formDataToSend,
-        headers: {
-          'Accept': 'application/json'
-        }
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       });
 
-      if (response.ok) {
-        setSubmitted(true);
-        calculateEstimate();
-        // Scroll to top of calculator to show the quote
-        setTimeout(() => {
-          const calculatorElement = document.getElementById('deep-cleaning-calculator');
-          if (calculatorElement) {
-            calculatorElement.scrollIntoView({ 
-              behavior: 'smooth', 
-              block: 'start' 
-            });
-          }
-        }, 100);
-      } else {
-        throw new Error('Form submission failed');
-      }
+      if (!response.ok) throw new Error('API Reject');
+      
+      setSubmitted(true);
+      calculateEstimate();
+      setTimeout(() => {
+        const calculatorElement = document.getElementById('deep-cleaning-calculator');
+        if (calculatorElement) {
+          calculatorElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('There was an error submitting your request. Please try again or call us directly.');
+      setApiError(true);
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  if (apiError) {
+    return (
+      <div className={`bg-white rounded-2xl shadow-xl p-8 ${className}`}>
+        <div className="text-center">
+          <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Shield className="w-8 h-8 text-red-600" />
+          </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">Oops! Connection Error</h3>
+          <p className="text-gray-600 mb-6">
+            We're unable to process the calculator results automatically right now. Please call us directly so we can get your quote started!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+19044563851"
+              className="inline-flex items-center justify-center px-6 py-3 bg-primary-blue text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call (904) 456-3851
+            </a>
+            <button
+              onClick={() => setApiError(false)}
+              className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              Try form again
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (submitted) {
     return (

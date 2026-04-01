@@ -14,10 +14,28 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ initialService = '' }) 
     e.preventDefault();
     setStatus('submitting');
     
-    // Simulate API call for now, since we are doing CRO
-    setTimeout(() => {
+    const formData = new FormData(e.currentTarget);
+    const payload = {
+      source: 'Quick Quote Form',
+      name: formData.get('name') as string,
+      phone: formData.get('contact') as string,
+      squareFootage: formData.get('sqft') as string,
+      serviceNeeded: formData.get('service') as string,
+    };
+
+    try {
+      const response = await fetch('/api/telegram', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) throw new Error('API Reject');
       setStatus('success');
-    }, 1200);
+    } catch (err) {
+      console.error('Submission error:', err);
+      setStatus('error');
+    }
   };
 
   if (status === 'success') {
@@ -35,6 +53,32 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ initialService = '' }) 
           className="text-primary-blue font-semibold hover:text-blue-800 transition-colors hover:underline underline-offset-4"
         >
           Submit another request
+        </button>
+      </div>
+    );
+  }
+
+  if (status === 'error') {
+    return (
+      <div className="bg-white rounded-2xl p-8 sm:p-10 border border-gray-100 text-center flex flex-col justify-center min-h-[440px] shadow-xl animate-fade-in">
+        <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6">
+          <ShieldCheck className="w-8 h-8 text-red-600" />
+        </div>
+        <h3 className="text-3xl font-bold mb-3 text-gray-900 tracking-tight">Oops! Connection Error</h3>
+        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+          We're unable to process the form automatically right now. Please call us directly so we can get your quote started!
+        </p>
+        <a 
+          href="tel:9044563851"
+          className="bg-primary-blue text-white font-bold py-4 px-8 rounded-lg hover:bg-blue-700 transition-colors shadow-sm mb-4 inline-block"
+        >
+          Call (904) 456-3851
+        </a>
+        <button 
+          onClick={() => setStatus('idle')}
+          className="text-gray-500 font-medium hover:text-gray-800 transition-colors text-sm hover:underline"
+        >
+          Try form again
         </button>
       </div>
     );

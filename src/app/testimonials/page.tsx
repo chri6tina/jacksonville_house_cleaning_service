@@ -1,5 +1,5 @@
-import { Sparkles } from 'lucide-react';
 'use client';
+import { Sparkles } from 'lucide-react';
 
 import { useState } from 'react';
 import { Star, Quote, ChevronLeft, ChevronRight, MapPin, Home, Building2, Users, Check } from 'lucide-react';
