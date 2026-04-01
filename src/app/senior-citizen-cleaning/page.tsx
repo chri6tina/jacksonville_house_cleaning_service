@@ -1,3 +1,4 @@
+import UniversalServiceHero from '@/components/UniversalServiceHero';
 import { 
   Heart, 
   Check, 
@@ -156,41 +157,13 @@ export default function SeniorCitizenCleaningPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-pink-50 to-rose-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-6">
-            <Star className="w-6 h-6 text-pink-600" />
-            <span className="text-pink-600 font-semibold">Phase 2 New Service</span>
-            <Star className="w-6 h-6 text-pink-600" />
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Senior Citizen <span className="text-pink-600">Cleaning Service</span>
-          </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
-            Gentle, accessible cleaning services designed specifically for seniors, with companionship 
-            and care that goes beyond just cleaning. Starting at just $100.
-          </p>
-          
-          {/* Quick Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact?service=senior-citizen-cleaning"
-              className="bg-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-pink-700 transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <span>Get Free Quote</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="tel:+19045551234"
-              className="border-2 border-pink-600 text-pink-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-pink-600 hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Call Now</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Senior Citizen Cleaning Service"
+        subtitle="Gentle, accessible cleaning services designed specifically for seniors, with companionship and care that goes beyond just cleaning. Starting at just $100."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="senior-citizen-cleaning"
+      />
 
       {/* Services Overview */}
       <section className="py-20 bg-white">
@@ -205,13 +178,13 @@ export default function SeniorCitizenCleaningPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg border-2 border-pink-200 p-8 hover:shadow-xl transition-all duration-300">
+              <div key={index} className="bg-white rounded-2xl shadow-lg border-2 border-blue-200 p-8 hover:shadow-xl transition-all duration-300">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <service.icon className="w-8 h-8 text-pink-600" />
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <service.icon className="w-8 h-8 text-primary-blue" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                  <div className="text-3xl font-bold text-pink-600 mb-2">{service.price}</div>
+                  <div className="text-3xl font-bold text-primary-blue mb-2">{service.price}</div>
                   <p className="text-gray-700 text-sm mb-4">{service.description}</p>
                   <div className="text-sm text-gray-600 mb-4">Duration: {service.duration}</div>
                 </div>
@@ -219,7 +192,7 @@ export default function SeniorCitizenCleaningPage() {
                 <ul className="space-y-2 mb-6">
                   {service.includes.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start space-x-3">
-                      <Check className="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary-blue mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700 text-sm">{item}</span>
                     </li>
                   ))}
@@ -227,7 +200,7 @@ export default function SeniorCitizenCleaningPage() {
 
                 <a
                   href="/contact?service=senior-citizen-cleaning"
-                  className="block w-full text-center py-3 px-6 bg-pink-600 text-white rounded-lg font-semibold hover:bg-pink-700 transition-colors duration-200"
+                  className="block w-full text-center py-3 px-6 bg-primary-blue text-white rounded-lg font-semibold hover:bg-primary-blue transition-colors duration-200"
                 >
                   Get Quote
                 </a>
@@ -250,8 +223,8 @@ export default function SeniorCitizenCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="w-4 h-4 text-pink-600" />
+                <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check className="w-4 h-4 text-primary-blue" />
                 </div>
                 <p className="text-gray-700">{benefit}</p>
               </div>
@@ -273,8 +246,8 @@ export default function SeniorCitizenCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {process.map((step) => (
               <div key={step.step} className="text-center">
-                <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-pink-600">{step.step}</span>
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-primary-blue">{step.step}</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
                 <p className="text-gray-700 text-sm">{step.description}</p>
@@ -298,8 +271,8 @@ export default function SeniorCitizenCleaningPage() {
             {specialConsiderations.map((consideration, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg p-8">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <consideration.icon className="w-8 h-8 text-pink-600" />
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <consideration.icon className="w-8 h-8 text-primary-blue" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{consideration.area}</h3>
                 </div>
@@ -340,24 +313,24 @@ export default function SeniorCitizenCleaningPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-pink-600">
+      <section className="py-20 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Gentle, Caring Cleaning?</h2>
-          <p className="text-xl text-pink-100 mb-8">
+          <p className="text-xl text-blue-100 mb-8">
             Contact us today to schedule your senior citizen cleaning service. 
             We provide the care and companionship your loved ones deserve.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact?service=senior-citizen-cleaning"
-              className="bg-white text-pink-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
+              className="bg-white text-primary-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
             >
               <span>Get Free Quote</span>
               <ArrowRight className="w-5 h-5" />
             </a>
             <a
               href="tel:+19045551234"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors duration-200 flex items-center justify-center space-x-2"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors duration-200 flex items-center justify-center space-x-2"
             >
               <Phone className="w-5 h-5" />
               <span>Call Now</span>

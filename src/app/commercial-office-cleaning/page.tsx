@@ -1,3 +1,4 @@
+import UniversalServiceHero from '@/components/UniversalServiceHero';
 import { 
   Building2, 
   Check, 
@@ -161,41 +162,13 @@ export default function CommercialOfficeCleaningPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-50 to-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-6">
-            <Star className="w-6 h-6 text-accent-coral" />
-            <span className="text-accent-coral font-semibold">Phase 3 Premium Service</span>
-            <Star className="w-6 h-6 text-accent-coral" />
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Commercial <span className="text-slate-600">Office Cleaning</span>
-          </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
-            Professional office cleaning services that maintain your business&apos;s professional image, 
-            improve workplace health, and boost employee productivity. Starting at just $200.
-          </p>
-          
-          {/* Quick Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact?service=commercial-office-cleaning"
-              className="bg-slate-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-700 transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <span>Get Free Quote</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="tel:+19045551234"
-              className="border-2 border-slate-600 text-slate-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-600 hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Call Now</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Commercial Office Cleaning"
+        subtitle="Professional office cleaning services that maintain your business&apos;s professional image, improve workplace health, and boost employee productivity. Starting at just $200."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="commercial-office-cleaning"
+      />
 
       {/* Services Overview */}
       <section className="py-20">

@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 import { Calendar, User, ArrowRight, Sparkles, BookOpen } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 
@@ -23,42 +25,13 @@ export default async function BlogIndex() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-24">
-      {/* Ultra-Premium Glassmorphic Hero Section */}
-      <section className="relative w-full overflow-hidden bg-[#fafafa] pt-32 pb-40 lg:pt-40 lg:pb-52 flex flex-col items-center justify-center border-b border-gray-100">
-        
-        {/* Animated Mesh Gradient Blobs */}
-        <div className="absolute top-0 left-1/4 w-[40rem] h-[40rem] bg-blue-400 rounded-full mix-blend-multiply filter blur-[128px] opacity-30 animate-[spin_30s_linear_infinite]"></div>
-        <div className="absolute -bottom-32 right-1/4 w-[30rem] h-[30rem] bg-cyan-300 rounded-full mix-blend-multiply filter blur-[96px] opacity-40 animate-[spin_20s_linear_infinite_reverse]"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35rem] h-[35rem] bg-indigo-300 rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
-
-        {/* Diagonal Soft Grid Overlay */}
-        <div 
-          className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-          style={{ backgroundImage: 'linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-          
-          {/* Glass Badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-xl px-5 py-2.5 rounded-full border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] mb-10 transform hover:scale-105 transition-transform duration-300 cursor-default">
-            <Sparkles className="w-4 h-4 text-blue-500" />
-            <span className="text-xs font-bold tracking-[0.2em] text-blue-900 uppercase">Expert Insights & Advice</span>
-          </div>
-          
-          {/* Elegant Typography */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-8 tracking-tight leading-[1.1]">
-            Elevate Your <span className="relative whitespace-nowrap">
-              <span className="absolute -bottom-2 md:-bottom-4 left-0 w-full h-3 md:h-5 bg-cyan-200/60 -z-10 rounded-sm skew-x-12"></span>
-              Living Space
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed mb-6">
-            Master-class cleaning strategies, inside tips, and design ideas from Jacksonville's top-rated professionals.
-          </p>
-          
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Elevate Your Living Space"
+        subtitle="Master-class cleaning strategies, inside tips, and design ideas from Jacksonville's top-rated professionals."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="blog"
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-10">
         {posts.length === 0 ? (

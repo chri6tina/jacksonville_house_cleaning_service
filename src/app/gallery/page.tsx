@@ -14,6 +14,8 @@ import {
   Calendar
 } from 'lucide-react';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 
 export default function GalleryPage() {
   const galleryCategories = [
@@ -147,72 +149,13 @@ export default function GalleryPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Local Business Style */}
-      <section 
-        className="relative py-20 lg:py-24 overflow-hidden"
-        style={{
-          backgroundImage: 'url(/jhcs_hero2.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/60"></div>
-        
-        {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {/* Local Business Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
-              <Camera className="w-4 h-4 text-primary-blue" />
-              Jacksonville Cleaning Portfolio
-            </div>
-
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-              <span className="block">See Our</span>
-              <span className="block text-cyan-400">Jacksonville Work</span>
-              <span className="block text-lg sm:text-xl lg:text-2xl font-medium text-white/90 mt-3">
-                Before & After Transformations
-              </span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Browse our portfolio of cleaning projects across Jacksonville. From residential homes 
-              to commercial spaces, see the dramatic difference our professional cleaning services make.
-            </p>
-
-            {/* Local Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-accent-green/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                  <Camera className="w-6 h-6 text-accent-green" />
-                </div>
-                <h3 className="font-bold text-white text-base mb-2">Real Projects</h3>
-                <p className="text-white/80 text-xs leading-relaxed">Jacksonville homes & businesses</p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                  <Star className="w-6 h-6 text-primary-blue" />
-                </div>
-                <h3 className="font-bold text-white text-base mb-2">5-Star Results</h3>
-                <p className="text-white/80 text-xs leading-relaxed">Customer satisfaction guaranteed</p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-accent-coral/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                  <MapPin className="w-6 h-6 text-accent-coral" />
-                </div>
-                <h3 className="font-bold text-white text-base mb-2">Local Expertise</h3>
-                <p className="text-white/80 text-xs leading-relaxed">Jacksonville area specialists</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="See Our Jacksonville Work Before & After Transformations"
+        subtitle="Browse our portfolio of cleaning projects across Jacksonville. From residential homes to commercial spaces, see the dramatic difference our professional cleaning services make."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="gallery"
+      />
 
       {/* Gallery Categories */}
       <section className="py-20 bg-gray-50">

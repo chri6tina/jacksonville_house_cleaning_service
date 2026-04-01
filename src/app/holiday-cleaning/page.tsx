@@ -2,6 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 import { Calendar, Star, Phone, Clock, Users, Shield, Sparkles, Home, Trees, Gift, Snowflake, Sun, Leaf, CheckCircle } from 'lucide-react';
 
 export default function HolidayCleaningPage() {
@@ -86,90 +88,13 @@ export default function HolidayCleaningPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section
-        className="relative py-8 sm:py-12 lg:py-16 overflow-hidden"
-        style={{
-          backgroundImage: 'url(/hero1.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/60 sm:bg-black/75"></div>
-
-        {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {/* Local Business Badge */}
-            <div className="inline-flex items-center gap-2 bg-white text-gray-800 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-white shadow-lg">
-              <Calendar className="w-3 h-3 sm:w-4 sm:h-4 text-primary-blue" />
-              Jacksonville Holiday Cleaning Since 2015
-            </div>
-
-            {/* Main Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight text-white drop-shadow-lg">
-              <span className="block">Holiday Cleaning</span>
-              <span className="block text-cyan-300 sm:text-cyan-400">Services</span>
-              <span className="block text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white mt-2 sm:mt-3 drop-shadow-md">
-                Make Your Jacksonville Home Holiday-Ready
-              </span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 drop-shadow-md">
-              Professional holiday cleaning services to prepare your home for celebrations, 
-              keep it clean during the season, and restore it to perfection afterward.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-10 px-4">
-              <Link
-                href="/contact"
-                className="bg-accent-coral hover:bg-accent-coral/90 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 sm:gap-3"
-              >
-                <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
-                Book Holiday Cleaning
-              </Link>
-              <a
-                href="tel:9044563851"
-                className="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white hover:bg-white hover:text-gray-800 px-6 sm:px-8 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
-              >
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                Call (904) 456-3851
-              </a>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mt-8 sm:mt-10 px-4">
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-green/30 sm:bg-accent-green/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-accent-green" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Licensed & Insured</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Jacksonville trusted</p>
-              </div>
-
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-blue/30 sm:bg-primary-blue/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary-blue" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Flexible Scheduling</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Holiday availability</p>
-              </div>
-
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center sm:col-span-2 lg:col-span-1">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-coral/30 sm:bg-accent-coral/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Star className="w-5 h-5 sm:w-6 sm:h-6 text-accent-coral" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">5-Star Service</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Jacksonville rated</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Holiday Cleaning Services Make Your Jacksonville Home Holiday-Ready"
+        subtitle="Professional holiday cleaning services to prepare your home for celebrations, keep it clean during the season, and restore it to perfection afterward."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="holiday-cleaning"
+      />
 
       {/* Holiday Packages */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">

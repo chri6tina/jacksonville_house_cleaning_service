@@ -1,3 +1,4 @@
+import UniversalServiceHero from '@/components/UniversalServiceHero';
 import { 
   Calendar, 
   Check, 
@@ -158,41 +159,13 @@ export default function VacationRentalCleaningPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-cyan-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-6">
-            <Star className="w-6 h-6 text-accent-coral" />
-            <span className="text-accent-coral font-semibold">Phase 2 New Service</span>
-            <Star className="w-6 h-6 text-accent-coral" />
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Vacation Rental Turnover Cleaning
-          </h1>
-          <p className="text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed mb-8">
-            Professional cleaning services that keep your vacation rental spotless between guests. 
-            Fast, thorough, and guaranteed to impress.
-          </p>
-          
-          {/* Quick Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact?service=vacation-rental-cleaning"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <span>Get Free Quote</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="tel:+19045551234"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Call Now</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Vacation Rental Turnover Cleaning"
+        subtitle="Professional cleaning services that keep your vacation rental spotless between guests. Fast, thorough, and guaranteed to impress."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="vacation-rental-cleaning"
+      />
 
       {/* Services Overview */}
       <section className="py-20">

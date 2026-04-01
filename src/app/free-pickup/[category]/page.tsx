@@ -1,7 +1,10 @@
+import { Sparkles } from 'lucide-react';
 import { Metadata } from 'next';
 import { pickupCategories, getRelatedCategories } from '../categories';
 import { generateMetadata as genMeta } from '@/lib/metadata';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 import { Phone, MapPin, Truck, Recycle, CheckCircle, Heart, ArrowRight, Gift, Package } from 'lucide-react';
 
 interface CategoryPageProps {
@@ -105,75 +108,13 @@ export default async function CategoryPickupPage({ params }: CategoryPageProps) 
 
   return (
     <>
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": `Free ${categoryData.name} Pickup Service Jacksonville`,
-            "description": categoryData.description,
-            "provider": {
-              "@type": "Organization",
-              "name": "Jacksonville House Cleaning Service",
-              "telephone": "+19044563851",
-              "email": "info@jacksonvillehousecleaningservice.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Jacksonville",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-              }
-            },
-            "areaServed": {
-              "@type": "City",
-              "name": "Jacksonville"
-            },
-            "serviceType": "Pickup Service",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD",
-              "availability": "https://schema.org/InStock",
-              "description": "Free pickup service"
-            }
-          })
-        }}
+      <UniversalServiceHero 
+        title="Free {categoryData.name} Pickup in Jacksonville, Florida"
+        subtitle="{categoryData.description}"
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="general"
       />
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-white/20 rounded-full p-3 mb-6">
-              <Package className="w-12 h-12" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Free {categoryData.name} Pickup in Jacksonville, Florida
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              {categoryData.description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:9044563851"
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
-              >
-                <Phone className="w-5 h-5" />
-                Call (904) 456-3851
-              </a>
-              <Link
-                href="/contact?service=free-pickup&category=free-pickup"
-                className="inline-flex items-center gap-2 bg-transparent text-white px-8 py-4 rounded-lg font-semibold border-2 border-white hover:bg-white/10 transition-colors text-lg"
-              >
-                Schedule Free Pickup
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gray-50">

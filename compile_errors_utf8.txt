@@ -1,0 +1,16 @@
+﻿src/app/about/page.tsx(242,9): error TS17015: Expected corresponding closing tag for JSX fragment.
+src/app/about/page.tsx(243,5): error TS1109: Expression expected.
+src/app/about/page.tsx(243,7): error TS1109: Expression expected.
+src/app/about/page.tsx(244,3): error TS1109: Expression expected.
+src/app/extreme-deep-cleaning/page.tsx(166,9): error TS17015: Expected corresponding closing tag for JSX fragment.
+src/app/extreme-deep-cleaning/page.tsx(167,5): error TS1109: Expression expected.
+src/app/extreme-deep-cleaning/page.tsx(167,7): error TS1109: Expression expected.
+src/app/extreme-deep-cleaning/page.tsx(168,3): error TS1109: Expression expected.
+src/app/pricing/page.tsx(349,9): error TS17015: Expected corresponding closing tag for JSX fragment.
+src/app/pricing/page.tsx(350,5): error TS1109: Expression expected.
+src/app/pricing/page.tsx(350,7): error TS1109: Expression expected.
+src/app/pricing/page.tsx(351,3): error TS1109: Expression expected.
+src/app/recurring-cleaning/page.tsx(192,9): error TS17015: Expected corresponding closing tag for JSX fragment.
+src/app/recurring-cleaning/page.tsx(193,5): error TS1109: Expression expected.
+src/app/recurring-cleaning/page.tsx(193,7): error TS1109: Expression expected.
+src/app/recurring-cleaning/page.tsx(194,3): error TS1109: Expression expected.

@@ -1,5 +1,8 @@
+import { Sparkles } from 'lucide-react';
 import { Check, Star, Clock, Users, Home, Building2, Calculator, Phone, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 
 export default function PricingPage() {
   const pricingPackages = [
@@ -102,149 +105,13 @@ export default function PricingPage() {
 
   return (
     <>
-      {/* Structured Data for Pricing Page */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Jacksonville House Cleaning Service Pricing",
-            "description": "Transparent pricing for professional house cleaning services in Jacksonville, FL. Get detailed quotes for standard, deep, and eco-friendly cleaning packages.",
-            "url": "https://www.jacksonvillehousecleaningservice.com/pricing",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Jacksonville House Cleaning Service",
-              "telephone": "+19044563851",
-              "email": "info@jaxcleaning.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Jacksonville",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-              },
-              "areaServed": {
-                "@type": "City",
-                "name": "Jacksonville"
-              },
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Jacksonville House Cleaning Pricing",
-                "itemListElement": [
-                  ...pricingPackages.map(pkg => ({
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": pkg.name,
-                      "description": pkg.description
-                    },
-                    "price": pkg.price,
-                    "priceCurrency": "USD",
-                    "availability": "https://schema.org/InStock"
-                  })),
-                  ...commercialServices.map(service => ({
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": service.name,
-                      "description": service.description
-                    },
-                    "price": service.price,
-                    "priceCurrency": "USD",
-                    "availability": "https://schema.org/InStock"
-                  }))
-                ]
-              }
-            }
-          })
-        }}
+      <UniversalServiceHero 
+        title="Transparent Jacksonville Cleaning Pricing"
+        subtitle="Get clear, upfront pricing for all our professional cleaning services. No hidden fees, no surprises - just honest, transparent pricing for quality service."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="pricing"
       />
-
-      {/* Offer Schema for Each Pricing Package */}
-      {pricingPackages.map((pkg, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": `${pkg.name} - Jacksonville`,
-                "description": pkg.description,
-                "provider": {
-                  "@type": "Organization",
-                  "name": "Jacksonville House Cleaning Service"
-                },
-                "areaServed": {
-                  "@type": "City",
-                  "name": "Jacksonville"
-                },
-                "serviceType": "House Cleaning",
-                "category": "Cleaning Service"
-              },
-              "price": pkg.price,
-              "priceCurrency": "USD",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01",
-              "url": `https://www.jacksonvillehousecleaningservice.com${pkg.href}`
-            })
-          }}
-        />
-      ))}
-
-      {/* Offer Schema for Commercial Services */}
-      {commercialServices.map((service, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": `${service.name} - Jacksonville`,
-                "description": service.description,
-                "provider": {
-                  "@type": "Organization",
-                  "name": "Jacksonville House Cleaning Service"
-                },
-                "areaServed": {
-                  "@type": "City",
-                  "name": "Jacksonville"
-                },
-                "serviceType": "Commercial Cleaning",
-                "category": "Cleaning Service"
-              },
-              "price": service.price,
-              "priceCurrency": "USD",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01",
-              "url": `https://www.jacksonvillehousecleaningservice.com${service.href}`
-            })
-          }}
-        />
-      ))}
-
-      <div className="min-h-screen bg-gradient-to-br from-primary-blue/5 to-accent-aqua/5">
-        {/* Hero Section */}
-        <section className="py-20 bg-white border-b border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Transparent Jacksonville Cleaning Pricing
-            </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-              Get clear, upfront pricing for all our professional cleaning services. 
-              No hidden fees, no surprises - just honest, transparent pricing for quality service.
-            </p>
-            <div className="inline-flex items-center gap-2 bg-primary-blue/10 text-primary-blue px-6 py-3 rounded-full text-sm font-semibold border border-primary-blue/20">
-              <Calculator className="w-4 h-4" />
-              <span>Free Quotes Available</span>
-            </div>
-          </div>
-        </section>
 
         {/* Pricing Packages */}
         <section className="py-20">
@@ -480,8 +347,6 @@ export default function PricingPage() {
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </>
   );
 }
-

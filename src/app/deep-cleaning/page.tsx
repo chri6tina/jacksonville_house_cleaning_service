@@ -1,7 +1,7 @@
 import { Phone, MapPin, Star, Clock, Shield, CheckCircle, Sparkles, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils, Building, Briefcase, Globe, Train, Bus, ShoppingBag, Heart, PawPrint, Umbrella, Sun, Anchor, Fish, Sailboat, HardHat, Wrench, Hammer, Truck, Trash2, Recycle, Wind } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import DeepCleaningHero from '@/components/DeepCleaningHero';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
 import DeepCleaningCalculator from '@/components/DeepCleaningCalculator';
 import FAQSection from '@/components/FAQSection';
 
@@ -340,7 +340,13 @@ export default function DeepCleaningPage() {
       />
 
       {/* Hero Section */}
-      <DeepCleaningHero />
+      <UniversalServiceHero 
+        title="Jacksonville Deep Cleaning Services"
+        subtitle="Jacksonville's #1 deep cleaning service. Comprehensive deep cleaning for homes, offices, and commercial spaces. Eco-friendly products, experienced team, satisfaction guaranteed."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="deep-cleaning"
+      />
 
       {/* Deep Cleaning Calculator Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">

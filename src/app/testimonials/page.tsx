@@ -1,7 +1,10 @@
+import { Sparkles } from 'lucide-react';
 'use client';
 
 import { useState } from 'react';
 import { Star, Quote, ChevronLeft, ChevronRight, MapPin, Home, Building2, Users, Check } from 'lucide-react';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 
 export default function TestimonialsPage() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -122,73 +125,13 @@ export default function TestimonialsPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Local Business Style */}
-      <section 
-        className="relative py-20 lg:py-24 overflow-hidden"
-        style={{
-          backgroundImage: 'url(/hero1.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/70"></div>
-        
-        {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {/* Local Business Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
-              <Star className="w-4 h-4 text-primary-blue" />
-              What Jacksonville Families Say
-            </div>
-
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-              <span className="block">Real Reviews from</span>
-              <span className="block text-cyan-400">Jacksonville Neighbors</span>
-              <span className="block text-lg sm:text-xl lg:text-2xl font-medium text-white/90 mt-3">
-                See Why 500+ Local Families Trust Us
-              </span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Don&apos;t just take our word for it - hear from the Jacksonville families and businesses 
-              who've experienced our cleaning services firsthand. These are real reviews from real 
-              people in your community.
-            </p>
-
-            {/* Local Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-accent-green/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                  <Star className="w-6 h-6 text-accent-green" />
-                </div>
-                <h3 className="font-bold text-white text-base mb-2">4.9/5 Stars</h3>
-                <p className="text-white/80 text-xs leading-relaxed">Average rating</p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                  <Users className="w-6 h-6 text-primary-blue" />
-                </div>
-                <h3 className="font-bold text-white text-base mb-2">500+ Reviews</h3>
-                <p className="text-white/80 text-xs leading-relaxed">Jacksonville customers</p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-accent-coral/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                  <Check className="w-6 h-6 text-accent-coral" />
-                </div>
-                <h3 className="font-bold text-white text-base mb-2">100% Satisfaction</h3>
-                <p className="text-white/80 text-xs leading-relaxed">Guaranteed</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Real Reviews from Jacksonville Neighbors See Why 500+ Local Families Trust Us"
+        subtitle="Don&apos;t just take our word for it - hear from the Jacksonville families and businesses who've experienced our cleaning services firsthand. These are real reviews from real people in your community."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="testimonials"
+      />
 
       {/* Overall Rating */}
       <section className="py-16 bg-white">

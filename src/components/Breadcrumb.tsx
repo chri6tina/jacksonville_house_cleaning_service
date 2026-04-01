@@ -43,8 +43,8 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
         }}
       />
       
-      {/* Visual breadcrumb navigation */}
-      <nav className={`flex items-center space-x-2 text-sm text-gray-600 ${className}`} aria-label="Breadcrumb">
+      {/* Visual breadcrumb navigation (Hidden from UI based on user request, but schema is kept for SEO) */}
+      <nav className={`hidden ${className}`} aria-label="Breadcrumb">
         <Link 
           href="/" 
           className="flex items-center hover:text-primary-blue transition-colors"

@@ -1,76 +1,18 @@
 import { Wind, Sparkles, Clock, Users, Shield, Leaf, Check, Star, ArrowRight, Phone, MapPin, Award, Truck } from 'lucide-react';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 
 export default function WindowCleaningPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Local Business Style */}
-      <section className="relative py-20 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-600 to-blue-600"></div>
-        
-        {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Local Business Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
-            <MapPin className="w-4 h-4 text-sky-600" />
-            Jacksonville Window Cleaning Experts
-          </div>
-
-                      <div className="flex justify-center mb-6">
-              <Wind className="w-16 h-16 text-sky-200" />
-            </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Professional Window Cleaning
-          </h1>
-          <p className="text-xl sm:text-2xl text-sky-100 mb-8 max-w-3xl mx-auto">
-            Crystal clear windows for your Jacksonville home with our professional window cleaning services
-          </p>
-          
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-              <div className="w-12 h-12 bg-sky-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                <Award className="w-6 h-6 text-sky-200" />
-              </div>
-              <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
-              <p className="text-sky-100 text-xs">Jacksonville business since 2015</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-              <div className="w-12 h-12 bg-sky-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                <Truck className="w-6 h-6 text-sky-200" />
-              </div>
-              <h3 className="font-bold text-white text-base mb-2">Same-Day Service</h3>
-              <p className="text-sky-100 text-xs">Available throughout Jacksonville</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-              <div className="w-12 h-12 bg-sky-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                <Star className="w-6 h-6 text-sky-200" />
-              </div>
-              <h3 className="font-bold text-white text-base mb-2">100% Guarantee</h3>
-              <p className="text-sky-100 text-xs">Satisfaction guaranteed</p>
-            </div>
-          </div>
-
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-sky-600 px-8 py-3 rounded-lg font-semibold hover:bg-sky-50 transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Get Free Quote</span>
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-sky-600 transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <span>View All Services</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Professional Window Cleaning"
+        subtitle="Crystal clear windows for your Jacksonville home with our professional window cleaning services"
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="window-cleaning"
+      />
 
       {/* Why Choose Us */}
       <section className="py-16 bg-white">

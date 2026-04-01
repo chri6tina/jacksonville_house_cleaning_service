@@ -1,3 +1,4 @@
+import UniversalServiceHero from '@/components/UniversalServiceHero';
 import { Metadata } from 'next';
 import { 
   Leaf, 
@@ -159,32 +160,14 @@ export default function GreenCleaningPage() {
         ]}
       />
 
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-green-50 to-green-100 min-h-[60vh] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-100/50 to-green-200/50"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Green Cleaning Services
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Eco-friendly, non-toxic cleaning that's safe for your family, pets, and the environment
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors"
-            >
-              Get Free Quote
-            </Link>
-            <Link 
-              href="tel:9045550123" 
-              className="bg-accent-aqua text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent-aqua/90 transition-colors"
-            >
-              Call (904) 555-0123
-            </Link>
-          </div>
-        </div>
-      </div>
+      
+      <UniversalServiceHero 
+        title="Green Cleaning Services"
+        subtitle="Eco-friendly, non-toxic cleaning that's safe for your family, pets, and the environment"
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="green-cleaning"
+      />
 
       {/* Services Section */}
       <section className="py-20 bg-white">

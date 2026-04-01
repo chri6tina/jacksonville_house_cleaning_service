@@ -1,5 +1,8 @@
+import { Sparkles } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 import { Calendar, Users, Shield, Star, Clock, CheckCircle, ArrowRight, Home, MapPin, Phone, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -68,34 +71,13 @@ const locations = [
 export default function VacationHomeCleaningPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Vacation Home Cleaning Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Professional turnover cleaning for Airbnb, VRBO, and rental properties in Jacksonville
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-              >
-                Get Free Quote
-              </Link>
-              <Link 
-                href="/pricing" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                View Pricing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Vacation Home Cleaning Services"
+        subtitle="Professional turnover cleaning for Airbnb, VRBO, and rental properties in Jacksonville"
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="vacation-home-cleaning"
+      />
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">

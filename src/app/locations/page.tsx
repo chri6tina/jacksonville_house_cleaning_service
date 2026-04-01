@@ -1,5 +1,7 @@
 import { MapPin, Star, Phone, Clock, Users, Shield, Building2, Home, Car, Wind, Sparkles, Truck, Hammer, PawPrint, Heart, PartyPopper, CheckCircle, Award, Zap } from 'lucide-react';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 
 export default function LocationsPage() {
   const locations = [
@@ -106,73 +108,13 @@ export default function LocationsPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Local Business Style */}
-      <section 
-        className="relative py-20 lg:py-24 overflow-hidden"
-        style={{
-          backgroundImage: 'url(/hero1.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/70"></div>
-        
-        {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {/* Local Business Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
-              <MapPin className="w-4 h-4 text-primary-blue" />
-              Serving All of Jacksonville & Beyond
-            </div>
-
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-              <span className="block">Jacksonville</span>
-              <span className="block text-cyan-400">Service Areas</span>
-              <span className="block text-lg sm:text-xl lg:text-2xl font-medium text-white/90 mt-3">
-                From the Beaches to Downtown, We&apos;re Your Local Cleaning Team
-              </span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-              As your Jacksonville neighbors, we&apos;re proud to serve homes and businesses throughout 
-              the city and surrounding communities. No matter where you are in the area, we bring 
-              the same quality service and local care.
-            </p>
-
-            {/* Local Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-accent-green/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                  <MapPin className="w-6 h-6 text-accent-green" />
-                </div>
-                <h3 className="font-bold text-white text-base mb-2">25+ Areas</h3>
-                <p className="text-white/80 text-xs leading-relaxed">Jacksonville & surrounding</p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                  <Truck className="w-6 h-6 text-primary-blue" />
-                </div>
-                <h3 className="font-bold text-white text-base mb-2">Local Team</h3>
-                <p className="text-white/80 text-xs leading-relaxed">Jacksonville residents</p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-accent-coral/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                  <Clock className="w-6 h-6 text-accent-coral" />
-                </div>
-                <h3 className="font-bold text-white text-base mb-2">Flexible Scheduling</h3>
-                <p className="text-white/80 text-xs leading-relaxed">Work around your schedule</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Jacksonville Service Areas From the Beaches to Downtown, We&apos;re Your Local Cleaning Team"
+        subtitle="As your Jacksonville neighbors, we&apos;re proud to serve homes and businesses throughout the city and surrounding communities. No matter where you are in the area, we bring the same quality service and local care."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="locations"
+      />
 
       {/* Service Areas Overview */}
       <section className="py-20 bg-white">

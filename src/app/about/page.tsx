@@ -1,228 +1,18 @@
 import { Shield, Leaf, Users, Award, MapPin, Clock, Star, CheckCircle, TrendingUp, Heart, Building2, Sparkles, Truck, Car, Wind, Hammer, Fan, Droplets, Gauge, PawPrint, PartyPopper, Home } from 'lucide-react';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 
 export default function AboutPage() {
   return (
     <>
-      {/* Structured Data for About Page */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AboutPage",
-            "name": "About Jacksonville House Cleaning Service",
-            "description": "Learn about Jacksonville House Cleaning Service, a family-owned business serving Jacksonville since 2015. Meet our team and discover our commitment to quality cleaning services.",
-            "url": "https://www.jacksonvillehousecleaningservice.com/about",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Jacksonville House Cleaning Service",
-              "alternateName": "JHCS",
-              "description": "Jacksonville's trusted house cleaning service since 2015. Family-owned business providing professional, eco-friendly cleaning services to Jacksonville families.",
-              "url": "https://www.jacksonvillehousecleaningservice.com",
-              "telephone": "+19044563851",
-              "email": "info@jaxcleaning.com",
-              "foundingDate": "2015",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Jacksonville",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-              },
-              "areaServed": {
-                "@type": "City",
-                "name": "Jacksonville"
-              },
-              "serviceArea": {
-                "@type": "City",
-                "name": "Jacksonville"
-              },
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Jacksonville House Cleaning Services",
-                "itemListElement": [
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Recurring House Cleaning",
-                      "description": "Weekly, bi-weekly, or monthly cleaning services"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Deep Cleaning",
-                      "description": "Comprehensive deep cleaning services"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Move-In/Move-Out Cleaning",
-                      "description": "Professional move-in and move-out cleaning"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Post-Construction Cleaning",
-                      "description": "Construction site cleanup and restoration"
-                    }
-                  }
-                ]
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "500",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "award": [
-                "Licensed by State of Florida",
-                "Jacksonville Business License",
-                "500+ Happy Families Served"
-              ],
-              "brand": "Jacksonville House Cleaning Service",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+19044563851",
-                "contactType": "customer service",
-                "availableLanguage": "English",
-                "hoursAvailable": {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday"
-                  ],
-                  "opens": "08:00",
-                  "closes": "18:00"
-                }
-              },
-              "employee": [
-                {
-                  "@type": "Person",
-                  "name": "Sarah Johnson",
-                  "jobTitle": "Founder & CEO",
-                  "description": "15+ years experience in professional cleaning services"
-                },
-                {
-                  "@type": "Person",
-                  "name": "Maria Garcia",
-                  "jobTitle": "Customer Relations",
-                  "description": "4+ years experience, ensures exceptional customer service"
-                },
-                {
-                  "@type": "Person",
-                  "name": "James Wilson",
-                  "jobTitle": "Operations Manager",
-                  "description": "10+ years experience, oversees all operations"
-                }
-              ]
-            }
-          })
-        }}
+      <UniversalServiceHero 
+        title="Meet Your Jacksonville Neighbors The Team Behind Your Clean Home"
+        subtitle="We&apos;re not just another cleaning company - we're your neighbors in Jacksonville. Our family-owned business has been serving this community for years, building trust one clean home at a time."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="about"
       />
-
-      {/* Person Schema for Team Members */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Sarah Johnson",
-            "jobTitle": "Founder & CEO",
-            "worksFor": {
-              "@type": "Organization",
-              "name": "Jacksonville House Cleaning Service"
-            },
-            "description": "15+ years experience in professional cleaning services",
-            "knowsAbout": ["House Cleaning", "Business Management", "Customer Service"],
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Jacksonville",
-              "addressRegion": "FL"
-            }
-          })
-        }}
-      />
-
-      <div className="min-h-screen">
-        {/* Hero Section - Local Business Style */}
-        <section 
-          className="relative py-20 lg:py-24 overflow-hidden"
-          style={{
-            backgroundImage: 'url(/hero1.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/70"></div>
-          
-          {/* Content Container */}
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              {/* Local Business Badge */}
-              <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
-                <MapPin className="w-4 h-4 text-primary-blue" />
-                Jacksonville Family Business Since 2015
-              </div>
-
-              {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                <span className="block">Meet Your</span>
-                <span className="block text-cyan-400">Jacksonville Neighbors</span>
-                <span className="block text-lg sm:text-xl lg:text-2xl font-medium text-white/90 mt-3">
-                  The Team Behind Your Clean Home
-                </span>
-              </h1>
-
-              {/* Subtitle */}
-              <p className="text-xl text-white/95 mb-10 max-w-4xl mx-auto leading-relaxed">
-                We&apos;re not just another cleaning company - we're your neighbors in Jacksonville. 
-                Our family-owned business has been serving this community for years, building 
-                trust one clean home at a time.
-              </p>
-
-              {/* Local Trust Indicators */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                  <div className="w-12 h-12 bg-accent-green/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                    <Users className="w-6 h-6 text-accent-green" />
-                  </div>
-                  <h3 className="font-bold text-white text-base mb-2">Local Team</h3>
-                  <p className="text-white/80 text-xs leading-relaxed">Jacksonville residents</p>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                  <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                    <Shield className="w-6 h-6 text-primary-blue" />
-                  </div>
-                  <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
-                  <p className="text-white/80 text-xs leading-relaxed">Florida business</p>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                  <div className="w-12 h-12 bg-accent-coral/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                    <Star className="w-6 h-6 text-accent-coral" />
-                  </div>
-                  <h3 className="font-bold text-white text-base mb-2">Community Trusted</h3>
-                  <p className="text-white/80 text-xs leading-relaxed">500+ happy families</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Our Story Section */}
         <section className="py-20 bg-white">
@@ -449,8 +239,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </>
   );
 }
-

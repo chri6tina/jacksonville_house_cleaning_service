@@ -1,5 +1,7 @@
 import { Stethoscope, Sparkles, Clock, Users, Shield, Leaf, Check, Star, ArrowRight, Phone, MapPin, Award, Truck, Calendar, Zap } from 'lucide-react';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 
 export default function MedicalFacilityCleaningPage() {
   const services = [
@@ -54,74 +56,13 @@ export default function MedicalFacilityCleaningPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Local Business Style */}
-      <section className="relative py-20 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-pink-600"></div>
-        
-        {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Local Business Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/95 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-white/50 shadow-lg">
-            <MapPin className="w-4 h-4 text-red-600" />
-            Jacksonville Medical Facility Cleaning Experts
-          </div>
-
-          <div className="flex justify-center mb-6">
-            <Stethoscope className="w-16 h-16 text-red-200" />
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Medical Facility Cleaning Services
-          </h1>
-          <p className="text-xl sm:text-2xl text-red-100 mb-8 max-w-3xl mx-auto">
-            Professional medical facility cleaning in Jacksonville with hospital-grade standards. 
-            We maintain sterile environments and ensure patient safety through rigorous cleaning protocols.
-          </p>
-          
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-              <div className="w-12 h-12 bg-red-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                <Award className="w-6 h-6 text-red-200" />
-              </div>
-              <h3 className="font-bold text-white text-base mb-2">Licensed & Insured</h3>
-              <p className="text-white/80 text-xs">Jacksonville business since 2015</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-              <div className="w-12 h-12 bg-red-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                <Truck className="w-6 h-6 text-red-200" />
-              </div>
-              <h3 className="font-bold text-white text-base mb-2">Same-Day Service</h3>
-              <p className="text-white/80 text-xs">Available throughout Jacksonville</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-              <div className="w-12 h-12 bg-red-200/20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                <Star className="w-6 h-6 text-red-200" />
-              </div>
-              <h3 className="font-bold text-white text-base mb-2">100% Guarantee</h3>
-              <p className="text-white/80 text-xs">Satisfaction guaranteed</p>
-            </div>
-          </div>
-
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:9044563851"
-              className="bg-white text-red-600 hover:bg-red-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-            >
-              <Phone className="w-5 h-5" />
-              Call for Quote
-            </a>
-            <Link 
-              href="/contact"
-              className="border-2 border-white text-white hover:bg-white hover:text-red-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-            >
-              <Calendar className="w-5 h-5" />
-              Schedule Service
-            </Link>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Medical Facility Cleaning Services"
+        subtitle="Professional medical facility cleaning in Jacksonville with hospital-grade standards. We maintain sterile environments and ensure patient safety through rigorous cleaning protocols."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="medical-facility-cleaning"
+      />
 
       {/* Service Overview */}
       <section className="py-20">

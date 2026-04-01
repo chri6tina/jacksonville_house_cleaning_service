@@ -2,6 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 import { AlertTriangle, Clock, Phone, Shield, Sparkles, Home, Building2, Users, CheckCircle, Zap, Star, MapPin } from 'lucide-react';
 
 export default function EmergencyCleaningPage() {
@@ -95,89 +97,13 @@ export default function EmergencyCleaningPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section
-        className="relative py-8 sm:py-12 lg:py-16 overflow-hidden"
-        style={{
-          backgroundImage: 'url(/hero1.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/60 sm:bg-black/75"></div>
-
-        {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {/* Emergency Badge */}
-            <div className="inline-flex items-center gap-2 bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-red-400 shadow-lg">
-              <AlertTriangle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
-              Jacksonville Emergency Cleaning - Same Day Service
-            </div>
-
-            {/* Main Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight text-white drop-shadow-lg">
-              <span className="block">Emergency Cleaning</span>
-              <span className="block text-red-300 sm:text-red-400">Same Day Service</span>
-              <span className="block text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white mt-2 sm:mt-3 drop-shadow-md">
-                When You Need Cleaning Fast in Jacksonville
-              </span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 drop-shadow-md">
-              Urgent cleaning emergencies? We respond within 2-4 hours across Jacksonville. 
-              Same-day service for property showings, guest arrivals, business meetings, and more.
-            </p>
-
-            {/* Emergency CTA */}
-            <div className="bg-red-500/90 backdrop-blur-sm rounded-2xl p-6 mb-8 sm:mb-10 max-w-2xl mx-auto">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <div className="text-center sm:text-left">
-                  <h3 className="text-white font-bold text-lg mb-2">Need Cleaning NOW?</h3>
-                  <p className="text-white/90 text-sm">Call for immediate response</p>
-                </div>
-                <a
-                  href="tel:9044563851"
-                  className="bg-white text-red-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-bold text-lg transition-colors duration-200 flex items-center gap-3 whitespace-nowrap"
-                >
-                  <Phone className="w-5 h-5" />
-                  (904) 456-3851
-                </a>
-              </div>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mt-8 sm:mt-10 px-4">
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-red-500/30 sm:bg-red-500/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">2-4 Hour Response</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Emergency speed</p>
-              </div>
-
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-blue/30 sm:bg-primary-blue/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary-blue" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Licensed & Insured</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Jacksonville trusted</p>
-              </div>
-
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center sm:col-span-2 lg:col-span-1">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-green/30 sm:bg-accent-green/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Star className="w-5 h-5 sm:w-6 sm:h-6 text-accent-green" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Quality Guaranteed</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Satisfaction assured</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Emergency Cleaning Same Day Service When You Need Cleaning Fast in Jacksonville"
+        subtitle="Urgent cleaning emergencies? We respond within 2-4 hours across Jacksonville. Same-day service for property showings, guest arrivals, business meetings, and more."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="emergency-cleaning"
+      />
 
       {/* Emergency Services */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">

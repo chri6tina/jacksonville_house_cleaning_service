@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 import { Calculator, Home, Building2, MapPin, Phone, Clock, Shield, Star, Users, CheckCircle, DollarSign, Sparkles } from 'lucide-react';
 
 export default function PricingCalculatorPage() {
@@ -84,72 +86,13 @@ export default function PricingCalculatorPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section
-        className="relative py-8 sm:py-12 lg:py-16 overflow-hidden"
-        style={{
-          backgroundImage: 'url(/hero1.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/60 sm:bg-black/75"></div>
-
-        {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {/* Local Business Badge */}
-            <div className="inline-flex items-center gap-2 bg-white text-gray-800 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-white shadow-lg">
-              <Calculator className="w-3 h-3 sm:w-4 sm:h-4 text-primary-blue" />
-              Jacksonville Pricing Calculator - Get Instant Quotes
-            </div>
-
-            {/* Main Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight text-white drop-shadow-lg">
-              <span className="block">Cleaning Service</span>
-              <span className="block text-cyan-300 sm:text-cyan-400">Pricing Calculator</span>
-              <span className="block text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white mt-2 sm:mt-3 drop-shadow-md">
-                Get Instant Quotes for Jacksonville Cleaning Services
-              </span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 drop-shadow-md">
-              Use our interactive calculator to get instant pricing for your cleaning needs. 
-              Transparent pricing with no hidden fees - just honest Jacksonville rates.
-            </p>
-
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mt-8 sm:mt-10 px-4">
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-green/30 sm:bg-accent-green/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <DollarSign className="w-5 h-5 sm:w-6 sm:h-6 text-accent-green" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">No Hidden Fees</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Transparent pricing</p>
-              </div>
-
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-blue/30 sm:bg-primary-blue/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary-blue" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Licensed & Insured</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">Jacksonville trusted</p>
-              </div>
-
-              <div className="bg-white/20 sm:bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/30 sm:border-white/20 hover:bg-white/25 sm:hover:bg-white/15 transition-all duration-300 text-center sm:col-span-2 lg:col-span-1">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-coral/30 sm:bg-accent-coral/20 rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-                  <Star className="w-5 h-5 sm:w-6 sm:h-6 text-accent-coral" />
-                </div>
-                <h3 className="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2 drop-shadow-sm">Instant Quotes</h3>
-                <p className="text-white text-xs leading-relaxed drop-shadow-sm">No waiting required</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Cleaning Service Pricing Calculator Get Instant Quotes for Jacksonville Cleaning Services"
+        subtitle="Use our interactive calculator to get instant pricing for your cleaning needs. Transparent pricing with no hidden fees - just honest Jacksonville rates."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="pricing-calculator"
+      />
 
       {/* Pricing Calculator */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">

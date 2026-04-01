@@ -1,3 +1,4 @@
+import UniversalServiceHero from '@/components/UniversalServiceHero';
 import { 
   Calendar, 
   Check, 
@@ -165,41 +166,13 @@ export default function EventVenueCleaningPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-violet-50 to-purple-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-6">
-            <Star className="w-6 h-6 text-violet-600" />
-            <span className="text-violet-600 font-semibold">Phase 3 Premium Service</span>
-            <Star className="w-6 h-6 text-violet-600" />
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Event Venue <span className="text-violet-600">Cleaning</span>
-          </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
-            Professional venue cleaning services that ensure your event space always makes a perfect 
-            first impression and meets the highest standards. Starting at just $300.
-          </p>
-          
-          {/* Quick Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact?service=event-venue-cleaning"
-              className="bg-violet-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-violet-700 transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <span>Get Free Quote</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="tel:+19045551234"
-              className="border-2 border-violet-600 text-violet-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-violet-600 hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Call Now</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Event Venue Cleaning"
+        subtitle="Professional venue cleaning services that ensure your event space always makes a perfect first impression and meets the highest standards. Starting at just $300."
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="event-venue-cleaning"
+      />
 
       {/* Services Overview */}
       <section className="py-20 bg-white">

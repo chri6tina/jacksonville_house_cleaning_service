@@ -1,5 +1,8 @@
+import { Sparkles } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import UniversalServiceHero from '@/components/UniversalServiceHero';
+
 import { Home, Shield, Star, Clock, CheckCircle, ArrowRight, MapPin, Users, Leaf, Heart, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -66,34 +69,13 @@ const familyBenefits = [
 export default function FamilyHomeCleaningPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-pink-600 via-pink-700 to-pink-800 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Family Home Cleaning Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-pink-100">
-              Safe, eco-friendly cleaning for Jacksonville families with children and pets
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-pink-50 transition-colors"
-              >
-                Get Free Quote
-              </Link>
-              <Link 
-                href="/pricing" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors"
-              >
-                View Pricing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UniversalServiceHero 
+        title="Family Home Cleaning Services"
+        subtitle="Safe, eco-friendly cleaning for Jacksonville families with children and pets"
+        Icon={Sparkles}
+        primaryColor="blue"
+        formServiceType="family-home-cleaning"
+      />
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
@@ -110,7 +92,7 @@ export default function FamilyHomeCleaningPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-primary-blue w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
@@ -135,7 +117,7 @@ export default function FamilyHomeCleaningPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <div key={index} className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-pink-500 mr-3 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
                     <span className="text-gray-700">{service}</span>
                   </div>
                 ))}
@@ -146,7 +128,7 @@ export default function FamilyHomeCleaningPage() {
               <div className="space-y-4">
                 {familyBenefits.map((benefit, index) => (
                   <div key={index} className="flex items-start">
-                    <Heart className="h-5 w-5 text-pink-500 mr-3 mt-1 flex-shrink-0" />
+                    <Heart className="h-5 w-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
                     <span className="text-gray-700">{benefit}</span>
                   </div>
                 ))}
@@ -157,7 +139,7 @@ export default function FamilyHomeCleaningPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-pink-50">
+      <section className="py-20 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -171,42 +153,42 @@ export default function FamilyHomeCleaningPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Small Family Home</h3>
-              <div className="text-3xl font-bold text-pink-600 mb-4">$120-180</div>
+              <div className="text-3xl font-bold text-primary-blue mb-4">$120-180</div>
               <p className="text-gray-600 mb-6">Perfect for apartments and small homes</p>
               <ul className="space-y-2">
                 <li className="flex items-center">
-                  <CheckCircle className="h-4 w-4 text-pink-500 mr-2" />
+                  <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
                   <span className="text-sm text-gray-600">2-3 hours cleaning</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-4 w-4 text-pink-500 mr-2" />
+                  <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
                   <span className="text-sm text-gray-600">Eco-friendly products</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-4 w-4 text-pink-500 mr-2" />
+                  <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
                   <span className="text-sm text-gray-600">Weekly service available</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-2 border-pink-600">
-              <div className="bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 inline-block">
+            <div className="bg-white rounded-xl shadow-lg p-8 border-2 border-primary-blue">
+              <div className="bg-primary-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 inline-block">
                 Most Popular
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Family Home</h3>
-              <div className="text-3xl font-bold text-pink-600 mb-4">$200-300</div>
+              <div className="text-3xl font-bold text-primary-blue mb-4">$200-300</div>
               <p className="text-gray-600 mb-6">Ideal for most family homes</p>
               <ul className="space-y-2">
                 <li className="flex items-center">
-                  <CheckCircle className="h-4 w-4 text-pink-500 mr-2" />
+                  <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
                   <span className="text-sm text-gray-600">3-4 hours cleaning</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-4 w-4 text-pink-500 mr-2" />
+                  <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
                   <span className="text-sm text-gray-600">Child-safe products</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-4 w-4 text-pink-500 mr-2" />
+                  <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
                   <span className="text-sm text-gray-600">Pet hair removal</span>
                 </li>
               </ul>
@@ -214,19 +196,19 @@ export default function FamilyHomeCleaningPage() {
 
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Large Family Home</h3>
-              <div className="text-3xl font-bold text-pink-600 mb-4">$350-500</div>
+              <div className="text-3xl font-bold text-primary-blue mb-4">$350-500</div>
               <p className="text-gray-600 mb-6">Perfect for large families</p>
               <ul className="space-y-2">
                 <li className="flex items-center">
-                  <CheckCircle className="h-4 w-4 text-pink-500 mr-2" />
+                  <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
                   <span className="text-sm text-gray-600">4-5 hours cleaning</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-4 w-4 text-pink-500 mr-2" />
+                  <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
                   <span className="text-sm text-gray-600">Team cleaning</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-4 w-4 text-pink-500 mr-2" />
+                  <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
                   <span className="text-sm text-gray-600">Playroom organization</span>
                 </li>
               </ul>
@@ -236,24 +218,24 @@ export default function FamilyHomeCleaningPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-pink-600 text-white">
+      <section className="py-20 bg-primary-blue text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Give Your Family the Gift of Time
           </h2>
-          <p className="text-xl mb-8 text-pink-100">
+          <p className="text-xl mb-8 text-blue-100">
             Spend more time with your family while we keep your home clean and healthy
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
-              className="bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-pink-50 transition-colors"
+              className="bg-white text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
             >
               Get Free Quote
             </Link>
             <Link 
               href="/pricing-calculator" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors"
             >
               Calculate Price
             </Link>
