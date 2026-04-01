@@ -50,7 +50,7 @@ const ServiceCard = ({ title, description, icon: Icon, href, features, isPopular
           href={href}
           className="inline-flex items-center text-primary-blue hover:text-primary-blue/80 font-semibold transition-colors duration-200 group"
         >
-          Learn More
+          Get a Quote
           <svg 
             className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" 
             fill="none" 
