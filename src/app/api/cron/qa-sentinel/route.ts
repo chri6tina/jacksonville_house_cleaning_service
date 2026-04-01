@@ -8,9 +8,9 @@ export const maxDuration = 60;
 
 const CRITICAL_ROUTES = [
   '/',
-  '/services/house-cleaning',
-  '/services/deep-cleaning',
-  '/services/move-in-move-out',
+  '/services',
+  '/deep-cleaning',
+  '/move-in-move-out',
   '/blog',
   '/contact'
 ];
