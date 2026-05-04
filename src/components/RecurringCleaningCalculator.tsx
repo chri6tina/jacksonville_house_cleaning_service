@@ -17,6 +17,7 @@ import {
   Shield,
   Award
 } from 'lucide-react';
+import { sendTelegramLeadNotification, submitToFormspree } from '@/lib/formspree';
 
 interface CalculatorData {
   homeSize: string;
@@ -167,13 +168,8 @@ const RecurringCleaningCalculator: React.FC = () => {
         }
       };
 
-      const response = await fetch('/api/telegram', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      if (!response.ok) throw new Error('API Reject');
+      await submitToFormspree(payload, 'New Cleaning Quote Request - Recurring Calculator');
+      await sendTelegramLeadNotification(payload);
 
       setSubmitStatus('success');
       setData({

@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint",
     "setup-contentful": "node scripts/setup-contentful.js",
     "contentful:sync": "node scripts/setup-contentful.js"
   },

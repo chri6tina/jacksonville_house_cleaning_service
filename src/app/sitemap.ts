@@ -3,6 +3,7 @@ import { pickupCategories } from './free-pickup/categories';
 import { locations, services } from '@/lib/locationServiceData';
 import { getPostConstructionServices } from '@/lib/contentful';
 import { localSeoPages } from '@/data/localSeoPages';
+import { supabase } from '@/lib/supabase';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.jacksonvillehousecleaningservice.com';
@@ -356,8 +357,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Blog posts (example - add more as they're created)
-  const blogPosts = [
+  const { data: generatedBlogs } = await supabase
+    .from('blogs')
+    .select('slug, date')
+    .order('date', { ascending: false })
+    .limit(500);
+
+  // Static starter blog posts plus autonomous Supabase posts.
+  const staticBlogPosts = [
     {
       url: `${baseUrl}/blog/how-to-choose-the-right-cleaning-service`,
       lastModified: currentDate,
@@ -389,6 +396,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     },
   ];
+  const generatedBlogPosts = (generatedBlogs ?? []).map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: post.date ? new Date(post.date) : currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.65,
+  }));
 
   // Additional pages that exist
   const additionalPages = [
@@ -538,7 +551,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...corePages,
     ...servicePages,
     ...locationPages,
-    ...blogPosts,
+    ...staticBlogPosts,
+    ...generatedBlogPosts,
     ...additionalPages,
     ...specializedPages,
     ...freePickupPages,

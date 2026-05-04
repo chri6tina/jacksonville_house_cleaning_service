@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Calculator, HardHat, Building2, Home, Truck, Zap, Target, Shield, Leaf, Clock, CheckCircle, Send, Phone, Mail, MapPin } from 'lucide-react';
+import { sendTelegramLeadNotification, submitToFormspree } from '@/lib/formspree';
 
 interface CalculatorForm {
   projectType: string;
@@ -237,13 +238,8 @@ export default function PostConstructionCalculator() {
         }
       };
 
-      const response = await fetch('/api/telegram', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      if (!response.ok) throw new Error('API Reject');
+      await submitToFormspree(payload, 'New Cleaning Quote Request - Post Construction Calculator');
+      await sendTelegramLeadNotification(payload);
       
       setSubmissionStatus('success');
       

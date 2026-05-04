@@ -2,18 +2,19 @@ import { NextResponse } from 'next/server';
 import { logAgentExecution } from '@/lib/agents';
 import { sendTelegramMessage } from '@/lib/telegram';
 import { getServiceRoleClient } from '@/lib/supabase';
+import { chooseNextSeoTopic, fetchExistingBlogs, unauthorizedIfInvalidCron } from '@/lib/seo-autonomy';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60; 
 
 export async function GET(req: Request) {
-  const authHeader = req.headers.get('authorization');
-  if (process.env.NODE_ENV !== 'development' && authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return new NextResponse('Unauthorized', { status: 401 });
-  }
+  const unauthorized = unauthorizedIfInvalidCron(req);
+  if (unauthorized) return unauthorized;
 
   try {
     const supabase = getServiceRoleClient();
+    const existingBlogs = await fetchExistingBlogs(supabase);
+    const nextTopic = chooseNextSeoTopic(existingBlogs);
     
     // Evaluate how many blogs currently exist in the SEO Matrix
     const { count: blogCount, error: countErr } = await supabase
@@ -35,9 +36,10 @@ export async function GET(req: Request) {
       You are the elite Webmaster AI Strategist for 'Jacksonville House Cleaning Service'.
       Currently, the site has ${blogCount} SEO articles successfully published in the database.
       Recent robotic agent health checks show: ${JSON.stringify(recentLogs)}.
+      The next recommended topic from the live topic matrix is: ${JSON.stringify(nextTopic)}.
       
       Generate a VERY short (3-4 sentences), highly actionable "Weekly Webmaster Report" for the CEO. 
-      Recommend exactly ONE new SEO blog topic they should configure the Autowriter to write next, 
+      Recommend exactly ONE new SEO blog topic the Autowriter should write next,
       and confirm the current health of the automated bots. 
       
       CRITICAL RULE: Format this gracefully using exclusively HTML tags supported by Telegram (b, i, u, s, code, a href). 

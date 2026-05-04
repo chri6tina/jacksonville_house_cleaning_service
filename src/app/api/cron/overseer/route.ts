@@ -1,14 +1,13 @@
 import { NextResponse } from 'next/server';
 import { sendTelegramMessage } from '@/lib/telegram';
 import { getServiceRoleClient } from '@/lib/supabase';
+import { unauthorizedIfInvalidCron } from '@/lib/seo-autonomy';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET(req: Request) {
-  const authHeader = req.headers.get('authorization');
-  if (process.env.NODE_ENV !== 'development' && authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return new NextResponse('Unauthorized', { status: 401 });
-  }
+  const unauthorized = unauthorizedIfInvalidCron(req);
+  if (unauthorized) return unauthorized;
 
   try {
     const supabase = getServiceRoleClient();
@@ -27,11 +26,22 @@ export async function GET(req: Request) {
       throw new Error(`Overseer failed to read agent logs matrix: ${error.message}`);
     }
 
-    // Identify Any completely flatlined bots
-    const requiredAgents = ['QA_Sentinel', 'Strategist', 'Link_Weaver'];
+    // Identify Any completely flatlined bots (72h pulse required)
+    const requiredDailyAgents = ['QA_Sentinel'];
+    const requiredRecentAgents = [
+      { name: 'AI_Blog_Writer', hours: 96 },
+      { name: 'Strategist', hours: 192 },
+      { name: 'Link_Weaver', hours: 216 },
+    ];
     const activeAgents = new Set(logs?.map(log => log.agent_name) || []);
     
-    const awolAgents = requiredAgents.filter(agent => !activeAgents.has(agent));
+    // Some agents run weekly/twice weekly, so each gets its own pulse window.
+    const awolAgents = requiredDailyAgents.filter(agent => !activeAgents.has(agent));
+    for (const agent of requiredRecentAgents) {
+      const cutoff = new Date(Date.now() - agent.hours * 60 * 60 * 1000).toISOString();
+      const hasPulse = logs?.some(log => log.agent_name === agent.name && log.executed_at >= cutoff);
+      if (!hasPulse) awolAgents.push(agent.name);
+    }
     const failedAgents = logs?.filter(log => log.status === 'FAILED') || [];
 
     // The Master Alarm condition

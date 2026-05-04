@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { logAgentExecution } from '@/lib/agents';
 import { SITE_CONFIG } from '@/lib/metadata';
+import { unauthorizedIfInvalidCron } from '@/lib/seo-autonomy';
 
 export const dynamic = 'force-dynamic';
 // Max execution time for hobbies is 10s, pros is much longer. This pinging shouldn't take long.
@@ -12,14 +13,14 @@ const CRITICAL_ROUTES = [
   '/deep-cleaning',
   '/move-in-move-out',
   '/blog',
-  '/contact'
+  '/contact',
+  '/sitemap.xml',
+  '/robots.txt'
 ];
 
 export async function GET(req: Request) {
-  const authHeader = req.headers.get('authorization');
-  if (process.env.NODE_ENV !== 'development' && authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return new NextResponse('Unauthorized', { status: 401 });
-  }
+  const unauthorized = unauthorizedIfInvalidCron(req);
+  if (unauthorized) return unauthorized;
 
   const baseUrl = SITE_CONFIG?.url || 'https://jacksonvillehousecleaningservice.com';
   const failedRoutes: string[] = [];
@@ -45,7 +46,7 @@ export async function GET(req: Request) {
     }
 
     // Completely successful run!
-    await logAgentExecution('QA_Sentinel', 'SUCCESS', 'All 6 critical routing paths and APIs returned 200 OK.');
+    await logAgentExecution('QA_Sentinel', 'SUCCESS', `All ${CRITICAL_ROUTES.length} critical routing paths returned 200 OK.`);
     
     return NextResponse.json({ 
       success: true, 

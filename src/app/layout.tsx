@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.url),
   title: "Jacksonville House Cleaning Service - Professional Cleaning Services",
   description: "Professional residential and commercial cleaning services in Jacksonville, FL. Eco-friendly products, experienced staff, and guaranteed satisfaction. Book your cleaning today!",
   keywords: "Jacksonville cleaning service, house cleaning, office cleaning, deep cleaning, move-in move-out cleaning, eco-friendly cleaning, post-construction cleaning, recurring cleaning",

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Send, ArrowRight, ShieldCheck } from 'lucide-react';
+import { sendTelegramLeadNotification, submitToFormspree } from '@/lib/formspree';
 
 interface QuickQuoteFormProps {
   initialService?: string;
@@ -24,13 +25,8 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ initialService = '' }) 
     };
 
     try {
-      const response = await fetch('/api/telegram', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-
-      if (!response.ok) throw new Error('API Reject');
+      await submitToFormspree(payload, 'New Cleaning Quote Request - Quick Quote Form');
+      await sendTelegramLeadNotification(payload);
       setStatus('success');
     } catch (err) {
       console.error('Submission error:', err);

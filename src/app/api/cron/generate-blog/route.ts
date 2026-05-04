@@ -1,94 +1,132 @@
-import { NextResponse } from 'next/server';
-import OpenAI from 'openai';
-import { getServiceRoleClient } from '@/lib/supabase';
+import { NextResponse } from "next/server";
+import OpenAI from "openai";
+import { logAgentExecution } from "@/lib/agents";
+import { getServiceRoleClient } from "@/lib/supabase";
+import {
+  auditSeoDraft,
+  buildWriterPrompt,
+  chooseNextSeoTopic,
+  ensureUniqueSlug,
+  fetchExistingBlogs,
+  injectInternalLinks,
+  parseJsonObject,
+  unauthorizedIfInvalidCron,
+} from "@/lib/seo-autonomy";
+
+export const dynamic = "force-dynamic";
+export const maxDuration = 300;
 
 export async function GET(request: Request) {
-  // Simple auth to prevent unauthorized cron triggers
-  const authHeader = request.headers.get('authorization');
-  if (process.env.NODE_ENV !== 'development' && authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return new Response('Unauthorized', { status: 401 });
-  }
+  const unauthorized = unauthorizedIfInvalidCron(request);
+  if (unauthorized) return unauthorized;
 
-  const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY || 'dummy_key',
-  });
+  const url = new URL(request.url);
 
   try {
-    // 1. Generate Blog Content using OpenAI
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o",
-      messages: [
-        { 
-          role: "system", 
-          content: "You are an expert SEO content writer for a local Jacksonville House Cleaning Service. You write heavily optimized, informative, and engaging blog posts in clear JSON format."
-        },
-        { 
-          role: "user", 
-          content: `Write a localized SEO blog post about house cleaning in Jacksonville, FL. 
-          Pick a random, hyper-relevant topic (e.g., 'Combatting humidity mold in Florida homes', 'Spring cleaning tips for Jacksonville apartments', etc.).
-          
-          CRITICAL RULES:
-          1. NEVER use the word "Conclusion" or "In conclusion" as a heading or in the text. It sounds like AI. End the article naturally with a compelling final thought or call to action.
-          2. Write in a highly professional, human, and engaging tone. Avoid generic AI fluff.
+    if (!process.env.OPENAI_API_KEY) {
+      throw new Error("OPENAI_API_KEY is not configured.");
+    }
 
-          Return your response EXACTLY as a JSON object with this shape:
-          {
-            "title": "A catchy, SEO-optimized title",
-            "slug": "url-friendly-slug",
-            "excerpt": "A two-sentence meta description.",
-            "content": "The full blog post content formatted beautifully in Markdown, spanning at least 1,200 words, utilizing extensive H2s, H3s, actionable bullet points, and deep dive sections for maximum SEO value.",
-            "author": "Jacksonville Cleaning Team"
-          }`
-        }
+    const supabase = getServiceRoleClient();
+    const existingBlogs = await fetchExistingBlogs(supabase);
+    const topic = chooseNextSeoTopic(existingBlogs);
+    const recentTitles = existingBlogs.map((blog) => blog.title);
+
+    if (url.searchParams.get("dryRun") === "1") {
+      return NextResponse.json({
+        success: true,
+        dryRun: true,
+        nextTopic: topic,
+        existingBlogCount: existingBlogs.length,
+      });
+    }
+
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        {
+          role: "system",
+          content:
+            "You are an expert local SEO editor for a Jacksonville house cleaning company. Write useful, specific, human articles that can rank without sounding synthetic.",
+        },
+        {
+          role: "user",
+          content: buildWriterPrompt(topic, recentTitles),
+        },
       ],
-      response_format: { type: "json_object" }
+      response_format: { type: "json_object" },
     });
 
-    const aiResponse = JSON.parse(completion.choices[0].message.content || "{}");
-    
-    // Fallback data mapping
+    const aiResponse = parseJsonObject<{
+      title?: string;
+      slug?: string;
+      excerpt?: string;
+      content?: string;
+      author?: string;
+    }>(completion.choices[0].message.content || "{}");
+
+    const title = String(aiResponse.title || topic.title).trim();
+    const excerpt = String(aiResponse.excerpt || "").trim();
+    const rawContent = String(aiResponse.content || "").trim();
+    const slug = await ensureUniqueSlug(supabase, String(aiResponse.slug || topic.slug), title);
+    const linked = injectInternalLinks(rawContent, topic.internalLinks);
+    const audit = auditSeoDraft({ title, excerpt, content: linked.content, topic });
+
+    if (!audit.passed) {
+      await logAgentExecution(
+        "AI_Blog_Writer",
+        "FAILED",
+        `Rejected draft for "${topic.title}": ${audit.issues.join(" ")}`
+      );
+      return NextResponse.json({ success: false, rejected: true, audit }, { status: 422 });
+    }
+
     const blogPost = {
-      title: aiResponse.title,
-      slug: aiResponse.slug,
-      excerpt: aiResponse.excerpt,
-      content: aiResponse.content,
+      title,
+      slug,
+      excerpt,
+      content: linked.content,
       author: aiResponse.author || "Jacksonville Cleaning Team",
     };
 
-    // 2. Push directly to Supabase PostreSQL
-    const supabase = getServiceRoleClient();
-    
-    // We use the Service Role Client to bypass Row Level Security 
-    // since this is a secure, server-side autonomous cron job.
     const { data: insertedData, error: dbError } = await supabase
-      .from('blogs')
+      .from("blogs")
       .insert([blogPost])
       .select()
       .single();
 
     if (dbError) {
-      console.error('Database Insertion Error:', dbError);
       throw new Error(`Failed to save to Supabase: ${dbError.message}`);
     }
 
-    // 3. Dispatch Live Telegram Alert!
     try {
-      const { sendTelegramMessage } = await import('@/lib/telegram');
-      const articleUrl = `https://jacksonvillehousecleaningservice.com/blog/${aiResponse.slug}`;
-      const msg = `🚀 <b>New Auto-Blog Published!</b>\n\n🤖 <b>Title:</b> ${aiResponse.title}\n\n<i>The AI Bot has successfully generated a 1,200+ word semantic SEO article and pushed it into your database.</i>\n\n🔗 <a href="${articleUrl}">View Live Article</a>`;
-      await sendTelegramMessage(msg);
-    } catch (e) {
-      console.error("Non-fatal Telegram notification error", e);
+      const { sendTelegramMessage } = await import("@/lib/telegram");
+      const articleUrl = `https://www.jacksonvillehousecleaningservice.com/blog/${slug}`;
+      await sendTelegramMessage(
+        `🚀 <b>New Auto-Blog Published</b>\n\n<b>Title:</b> ${title}\n<b>Keyword:</b> ${topic.primaryKeyword}\n<b>Words:</b> ${audit.wordCount}\n<b>Internal links added:</b> ${linked.changes}\n\n<a href="${articleUrl}">View Live Article</a>`
+      );
+    } catch (error) {
+      console.error("Non-fatal Telegram notification error", error);
     }
 
-    return NextResponse.json({ 
-      success: true, 
-      message: 'AI Blog successfully generated and saved to Supabase!',
-      post: insertedData
-    });
+    await logAgentExecution(
+      "AI_Blog_Writer",
+      "SUCCESS",
+      `Published "${title}" targeting "${topic.primaryKeyword}" at /blog/${slug}. Word count: ${audit.wordCount}. Internal links added: ${linked.changes}.`
+    );
 
-  } catch (error: any) {
-    console.error('Error in AI Blog Pipeline:', error);
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+    return NextResponse.json({
+      success: true,
+      message: "AI Blog successfully generated and saved to Supabase.",
+      post: insertedData,
+      audit,
+      topic,
+    });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : "Unknown error";
+    console.error("Error in AI Blog Pipeline:", error);
+    await logAgentExecution("AI_Blog_Writer", "FAILED", message);
+    return NextResponse.json({ success: false, error: message }, { status: 500 });
   }
 }

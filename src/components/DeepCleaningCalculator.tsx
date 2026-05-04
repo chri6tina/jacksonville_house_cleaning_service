@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Calculator, Home, Building2, Car, Droplets, Gauge, Calendar, GraduationCap, Users, Leaf, Zap, Target, Award, Crown, Gem, Trophy, Diamond, Trees, Camera, BookOpen, Coffee, Mountain, Waves, School, Church, Store, Utensils, Building, Briefcase, Globe, Train, Bus, ShoppingBag, Heart, PawPrint, Umbrella, Sun, Anchor, Fish, Sailboat, HardHat, Wrench, Hammer, Truck, Trash2, Recycle, Wind, Phone, Mail, MapPin, Shield, CheckCircle, Sparkles, Clock, Star } from 'lucide-react';
+import { sendTelegramLeadNotification, submitToFormspree } from '@/lib/formspree';
 
 interface DeepCleaningCalculatorProps {
   className?: string;
@@ -175,13 +176,8 @@ export default function DeepCleaningCalculator({ className = '' }: DeepCleaningC
     };
     
     try {
-      const response = await fetch('/api/telegram', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      if (!response.ok) throw new Error('API Reject');
+      await submitToFormspree(payload, 'New Cleaning Quote Request - Deep Cleaning Calculator');
+      await sendTelegramLeadNotification(payload);
       
       setSubmitted(true);
       calculateEstimate();

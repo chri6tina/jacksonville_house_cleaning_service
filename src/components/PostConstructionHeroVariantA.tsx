@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Phone, Star, Shield, Clock, CheckCircle, HardHat, Truck, Leaf } from 'lucide-react';
+import { submitToFormspree } from '@/lib/formspree';
 
 interface FormData {
   name: string;
@@ -62,40 +63,27 @@ export default function PostConstructionHeroVariantA() {
     setIsSubmitting(true);
     
     try {
-      // Create FormData for Formspree
-      const formDataToSend = new FormData();
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('phone', formData.phone);
-      formDataToSend.append('propertyType', formData.propertyType);
-      formDataToSend.append('serviceNeeded', formData.serviceNeeded);
-      formDataToSend.append('targetDate', formData.targetDate);
-      
-      // Add Formspree hidden fields
-      formDataToSend.append('_subject', 'New Post-Construction Quote Request - Variant A');
-      formDataToSend.append('_next', typeof window !== 'undefined' ? window.location.href : '');
-      formDataToSend.append('_captcha', 'false');
-      
-      const response = await fetch('https://formspree.io/f/xrblngeo', {
-        method: 'POST',
-        body: formDataToSend,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
+      await submitToFormspree(
+        {
+          source: 'Post Construction Hero Variant A',
+          name: formData.name,
+          phone: formData.phone,
+          propertyType: formData.propertyType,
+          serviceNeeded: formData.serviceNeeded,
+          targetDate: formData.targetDate,
+          utmSource: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_source') || '' : '',
+        },
+        'New Post-Construction Quote Request - Variant A'
+      );
 
-      if (response.ok) {
-        // Fire analytics event
-        if (typeof window !== 'undefined' && (window as any).dataLayer) {
-          (window as any).dataLayer.push({
-            event: 'hero_form_submit',
-            form_type: 'post_construction_hero_variant_a'
-          });
-        }
-        
-        setIsSubmitted(true);
-      } else {
-        throw new Error('Failed to submit form');
+      if (typeof window !== 'undefined' && (window as any).dataLayer) {
+        (window as any).dataLayer.push({
+          event: 'hero_form_submit',
+          form_type: 'post_construction_hero_variant_a'
+        });
       }
+
+      setIsSubmitted(true);
     } catch (error) {
       console.error('Form submission error:', error);
       alert('There was an error submitting your form. Please try again or call us directly.');

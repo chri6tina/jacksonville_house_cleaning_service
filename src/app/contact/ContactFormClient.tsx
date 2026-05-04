@@ -4,6 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 import Breadcrumb from '@/components/Breadcrumb';
+import { sendTelegramLeadNotification, submitToFormspree } from '@/lib/formspree';
 
 function ContactForm() {
   const searchParams = useSearchParams();
@@ -87,28 +88,21 @@ function ContactForm() {
         }
       };
       
-      const response = await fetch('/api/telegram', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
+      await submitToFormspree(payload, 'New Cleaning Quote Request - Main Contact Page');
+      await sendTelegramLeadNotification(payload);
 
-      if (response.ok) {
-        setIsSubmitted(true);
-        setFormData({
-          name: '',
-          phone: '',
-          email: '',
-          address: '',
-          propertyType: '',
-          services: [],
-          date: '',
-          time: '',
-          specialRequests: ''
-        });
-      } else {
-        throw new Error('API Reject');
-      }
+      setIsSubmitted(true);
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        address: '',
+        propertyType: '',
+        services: [],
+        date: '',
+        time: '',
+        specialRequests: ''
+      });
     } catch (error) {
       console.error('Error submitting form:', error);
       setApiError(true);
