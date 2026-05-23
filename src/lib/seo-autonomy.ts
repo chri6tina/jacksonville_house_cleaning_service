@@ -5,9 +5,7 @@ import { SITE_CONFIG } from "@/lib/metadata";
 type ConfiguredSupabaseClient = SupabaseClient<
   Record<string, never>,
   "public",
-  string,
-  Record<string, never>,
-  Record<string, never>
+  string
 >;
 
 export type SeoTopic = {
