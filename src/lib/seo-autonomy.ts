@@ -2,6 +2,14 @@ import { NextResponse } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { SITE_CONFIG } from "@/lib/metadata";
 
+type ConfiguredSupabaseClient = SupabaseClient<
+  Record<string, never>,
+  "public",
+  string,
+  Record<string, never>,
+  Record<string, never>
+>;
+
 export type SeoTopic = {
   title: string;
   slug: string;
@@ -175,7 +183,7 @@ export function parseJsonObject<T extends Record<string, unknown>>(raw: string):
   return JSON.parse(match ? match[0] : cleaned) as T;
 }
 
-export async function fetchExistingBlogs(supabase: SupabaseClient): Promise<BlogRecord[]> {
+export async function fetchExistingBlogs(supabase: ConfiguredSupabaseClient): Promise<BlogRecord[]> {
   const { data, error } = await supabase
     .from("blogs")
     .select("id, title, slug, excerpt, content, author, date")
@@ -200,7 +208,7 @@ export function chooseNextSeoTopic(existingBlogs: BlogRecord[], today = new Date
 }
 
 export async function ensureUniqueSlug(
-  supabase: SupabaseClient,
+  supabase: ConfiguredSupabaseClient,
   desiredSlug: string,
   fallbackTitle: string
 ): Promise<string> {
